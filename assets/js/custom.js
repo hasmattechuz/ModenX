@@ -1,14 +1,14 @@
 function videoPlayer() {
-  const video = document.querySelector("#video-player");
-  const toggleBtn = document.querySelector("#btn-toggle1");
+  const $video = $("#video-player");
+  const $toggleBtn = $("#btn-toggle1");
 
-  toggleBtn.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      toggleBtn.textContent = "Pause";
+  $toggleBtn.on("click", function () {
+    if ($video.get(0).paused) {
+      $video.get(0).play();
+      $toggleBtn.text("Pause");
     } else {
-      video.pause();
-      toggleBtn.textContent = "Play";
+      $video.get(0).pause();
+      $toggleBtn.text("Play");
     }
   });
 }
@@ -82,7 +82,7 @@ $(document).ready(function () {
     } else {
       $("header").removeClass("to-top");
     }
-
-    videoPlayer();
   });
+
+  videoPlayer();
 });
