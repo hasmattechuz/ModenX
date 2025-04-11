@@ -215,19 +215,6 @@ a {
   z-index: 99;
 }
 
-header {
-  padding: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-  z-index: 9;
-}
-
 .menu-close {
   display: inline-flex;
   width: 80px;
@@ -301,6 +288,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   transition: all 0.8s ease-in-out;
+  text-transform: uppercase;
 }
 
 nav.open-nav {
@@ -311,13 +299,14 @@ nav.open-nav {
 
 .nav-left ul li a {
   color: var(--white);
-  font-family: var(--title-font);
-  font-size: 58px;
+  font-size: 36px;
   line-height: 1.44;
   height: 100%;
   transition: all 0.5s ease-in-out;
   transform: translateY(100px);
   opacity: 0;
+  font-weight: 700;
+  display: block;
 }
 
 nav.open-nav .nav-left ul li a {
@@ -340,6 +329,22 @@ nav.open-nav ul li:nth-child(3) a {
 
 nav.open-nav ul li:nth-child(4) a {
   transition-delay: 1.5s;
+}
+
+nav.open-nav ul li:nth-child(5) a {
+  transition-delay: 1.7s;
+}
+
+nav.open-nav ul li:nth-child(6) a {
+  transition-delay: 1.9s;
+}
+
+nav.open-nav ul li:nth-child(7) a {
+  transition-delay: 2s;
+}
+
+nav.open-nav ul li:nth-child(8) a {
+  transition-delay: 2.1s;
 }
 
 .nav-left ul li:not(:last-child) {
@@ -549,6 +554,11 @@ body.nav-active .menu-btn__line-right {
   display: block;
 }
 
+.main-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 header.nav-up {
   transform: translateY(-100%);
   transition: all 0.5s ease;
@@ -572,6 +582,29 @@ header.nav-down .navbar .navbar-brand {
   width: 120px;
 }
 
+@keyframes border-transform {
+  0%, 100% {
+    border-radius: 83% 57% 64% 66%/65% 50% 62% 88%;
+  }
+  14% {
+    border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+    border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+    border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+    border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+    border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+    border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
 /* Footers style  */
 /* footer ant-animation */
 @keyframes walkingAntOne {
