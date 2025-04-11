@@ -480,8 +480,8 @@ nav.open-nav .social-icons {
   height: 2px;
   width: 25px;
   display: block;
-  background-color: var(--white);
-  margin-bottom: 7px;
+  background-color: var(--mx-yellow);
+  margin-bottom: 5px;
   cursor: pointer;
   -webkit-transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
   transition: background-color 0.5s ease, -webkit-transform 0.2s ease;
@@ -512,22 +512,24 @@ nav.open-nav .social-icons {
 }
 
 body.nav-active .menu-btn__line {
-  background-color: #8d793d;
   -webkit-transform: translate(0px, 0px) rotate(-45deg);
   transform: translate(0px, 0px) rotate(-45deg);
+  display: none;
 }
 
 body.nav-active .menu-btn__line-left {
-  width: 15px;
-  -webkit-transform: translate(2px, 4px) rotate(45deg);
-  transform: translate(2px, 4px) rotate(45deg);
+  width: 25px;
+  -webkit-transform: translate(0px, 3px) rotate(45deg);
+  transform: translate(0px, 3px) rotate(45deg);
+  display: block;
 }
 
 body.nav-active .menu-btn__line-right {
-  width: 15px;
+  width: 25px;
   float: right;
-  -webkit-transform: translate(-3px, -3.5px) rotate(45deg);
-  transform: translate(-3px, -3.5px) rotate(45deg);
+  -webkit-transform: translate(0px, -4px) rotate(-45deg);
+  transform: translate(0px, -4px) rotate(-45deg);
+  display: block;
 }
 
 header.nav-up {

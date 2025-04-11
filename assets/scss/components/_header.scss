@@ -104,15 +104,15 @@ nav.open-nav .social-icons {transform: translateY(0); opacity: 1; transition: al
     align-items: center;
     justify-content: center;
     flex-direction: column;background-color: var(--mx-blue);animation: border-transform 7s linear infinite;transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1), right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1), transform 250ms 1100ms ease, width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1), height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);border-radius: 6px;}
-.menu-btn__line {height: 2px;width: 25px;display: block;background-color: var(--white);margin-bottom: 7px;cursor: pointer;-webkit-transition: background-color .5s ease, -webkit-transform .2s ease;transition: background-color .5s ease, -webkit-transform .2s ease;transition: transform .2s ease, background-color .5s ease;transition: transform .2s ease, background-color .5s ease, -webkit-transform .2s ease;}
+.menu-btn__line {height: 2px;width: 25px;display: block;background-color: var(--mx-yellow);margin-bottom: 5px;cursor: pointer;-webkit-transition: background-color .5s ease, -webkit-transform .2s ease;transition: background-color .5s ease, -webkit-transform .2s ease;transition: transform .2s ease, background-color .5s ease;transition: transform .2s ease, background-color .5s ease, -webkit-transform .2s ease;}
 .menu-btn__line-left {width: 25px;-webkit-transition: all 200ms linear;transition: all 200ms linear;}
 .menu-btn__line-right {width:25px;float: right;-webkit-transition: all 200ms linear;-moz-transition: all 200ms linear;-o-transition: all 200ms linear;-ms-transition: all 200ms linear;transition: all 200ms linear;margin: 0;}
 .menu-btn:hover .menu-btn__line-left,
 .menu-btn:hover .menu-btn__line-right {width: 16.5px;}
 
-body.nav-active .menu-btn__line {background-color: #8d793d;-webkit-transform: translate(0px, 0px) rotate(-45deg);transform: translate(0px, 0px) rotate(-45deg);}
-body.nav-active .menu-btn__line-left {width: 15px;-webkit-transform: translate(2px, 4px) rotate(45deg);transform: translate(2px, 4px) rotate(45deg);}
-body.nav-active .menu-btn__line-right {width: 15px;float: right;-webkit-transform: translate(-3px, -3.5px) rotate(45deg);transform: translate(-3px, -3.5px) rotate(45deg);}
+body.nav-active .menu-btn__line {-webkit-transform: translate(0px, 0px) rotate(-45deg);transform: translate(0px, 0px) rotate(-45deg);display: none;}
+body.nav-active .menu-btn__line-left {width: 25px;-webkit-transform: translate(0px, 3px) rotate(45deg);transform: translate(0px, 3px) rotate(45deg);display: block;}
+body.nav-active .menu-btn__line-right {width: 25px;float: right;-webkit-transform: translate(0px, -4px) rotate(-45deg);transform: translate(0px, -4px) rotate(-45deg);display: block;}
 
 
 header.nav-up { transform: translateY(-100%); transition: all 0.5s ease;}
