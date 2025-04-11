@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="header-menu-btn">
-                        <button class="btn btn-menu" id="menu-btn">
+                        <button class="btn-ico-cst btn-menu" id="menu-btn">
                             <span class="menu-icon">menu</span>
                         </button>
                     </div>
@@ -96,15 +96,44 @@
                             </div>
                         </div>
 
-                        <div class="right-dv">
+                        <div class="phygital-right-dv">
                             <div class="video-group">
-                                <video class="video" src="https://modenx.com/wp-content/uploads/2024/02/modenx.mp4" autoplay="" loop="" controls="" muted="muted" playsinline="" controlslist="nodownload"></video>
+                                <video 
+                                    class="video-player"
+                                    poster="assets/images/home/video-poster.webp"
+                                    id="video-player" 
+                                    src="https://modenx.com/wp-content/uploads/2024/02/modenx.mp4" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline 
+                                    controlslist="nodownload">
+                                </video>
+                                
                                 <div class="btn-video-dv">
-                                    <button class="btn-video btn-play">Play</button>
+                                    <button class="btn-ico-cst btn-video" id="btn-toggle1">Pause</button>
                                 </div>
+                            </div>
+
+                            <div class="img-stroke2">
+                                <img src="assets/images/stroke/stroke1.svg" alt="img" class="stroke" />
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </section>
+
+            <section class="blue-block-section blue-fre-section">
+                <div class="container-fluid">
+                    <div class="blue-block-inner">
+                        <div class="img-dv">
+                            <img src="assets/images/home/illustartion1.png" alt="" class="img-fluid" />
+                        </div>
+                        <div class="content-dv">
+                            <h2>Tailored Retail Solution for a <br> <b>Future-Ready Experience</b></h2>
+                            <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping. That's why we offer solutions designed to overcome your challenges and enhance every interaction.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -118,6 +147,6 @@
         
     <script src="assets/js/jquery.min.js" defer></script>
     <script src="assets/js/swiper-bundle.min.js" defer></script>
-    <script src="assets/js/custom.js" defer></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
