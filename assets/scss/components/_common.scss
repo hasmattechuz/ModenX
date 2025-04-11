@@ -1,0 +1,159 @@
+:root {
+    // --font-family: 'Manrope', sans-serif;
+    --font-family: 'Montserrat', sans-serif;
+
+    --white: #fff;
+    --black: #000;
+    --mx-blue: #074BB6;
+    --mx-yellow: #DCF343;
+    --mx-black: #212021;
+    --mx-grey: #F4F4F4;
+
+    --heading1: 72px;
+    --headingLH1: 90px;
+    --heading2: 48px;
+    --headingLH2: 59px;
+    --heading3: 36px;
+    --headingLH3: 54px;
+    --p: 20px;
+    --pLH: 34px;
+
+    --gutter: 35px;
+}
+
+// Global Styles
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-size: var(--p);
+    line-height: var(--pLH);
+    font-weight: 400;
+    font-family: var(--font-family);
+    color: var(--black);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1,
+.h1 {
+    font-size: var(--heading1);
+    line-height: var(--headingLH1);
+
+    strong {
+        color: var(--mx-blue);
+    }
+}
+
+h2,
+.h2 {
+    font-size: var(--heading2);
+    line-height: var(--headingLH2);
+
+    strong {
+        color: var(--mx-blue);
+    }
+}
+
+h3,
+.h3 {
+    font-size: var(--heading3);
+    line-height: var(--headingLH3);
+
+    strong {
+        color: var(--mx-blue);
+    }
+}
+
+h4 {
+    font-size: var(--p);
+    line-height: var(--pLH);
+    font-weight: 700;
+}
+
+p {
+    font-size: var(--p);
+    line-height: var(--pLH);
+    font-weight: 400;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 1920px) {
+        max-width: 1920px;
+    }
+}
+
+.btn,
+button,
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    color: var(--mx-blue);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 33px;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid var(--mx-yellow);
+    background: var(--mx-yellow);
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 40px;
+}
+
+.btn:hover {
+    color: var(--mx-yellow);
+    border: 1px solid var(--mx-blue);
+    background: var(--mx-blue);
+}
+
+.content-dv {
+    h2 {
+        margin-bottom: 35px;
+    }
+}
+
+.desc-global {
+    margin-bottom: 35px;
+}
+
+.btn-dv .btn {
+    width: 420px;
+    max-width: 100%;
+}
