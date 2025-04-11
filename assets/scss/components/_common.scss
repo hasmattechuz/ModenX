@@ -143,6 +143,23 @@ a {
     background: var(--mx-blue);
 }
 
+.btn-ico-cst {
+    color: var(--mx-yellow);
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--mx-blue);
+    background: var(--mx-blue);
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    min-width: 53px;
+    height: 53px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
 .content-dv {
     h2 {
         margin-bottom: 35px;
