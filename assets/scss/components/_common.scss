@@ -184,3 +184,32 @@ img {
 .mb-0 {
     margin-bottom: 0 !important;
 }
+
+/* Grid CSS */
+$col-gap: 35px;
+$col-widths: (12.5%, 25%, 37.5%, 50%, 62.5%, 75%, 87.5%, 100%);
+$col-names: (1, 2, 3, 4, 5, 6, 7, 8);
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$col-gap;
+  margin-left: -$col-gap;
+}
+
+[class^="col-"] {
+  position: relative;
+  padding-right: $col-gap;
+  padding-left: $col-gap;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+@for $i from 1 through length($col-widths) {
+  .col-#{nth($col-names, $i)} {
+    flex: 0 0 nth($col-widths, $i);
+    max-width: nth($col-widths, $i);
+  }
+}
+
+/* End of Grid CSS */
