@@ -216,13 +216,99 @@ input[type=checkbox] + label:before {
 input[type=checkbox] + label:after {
    content: "";
    transition: .2s;
+   position: absolute;
+   background: url(../../assets/images/arrow.svg) no-repeat; 
+   left: 5px;
+   top: 0;   
+   transform: scale(0);
+    transition: 0.2s ease-in-out;
 }
 
 input[type=checkbox]:checked + label:after {
-    background: url(../../assets/images/arrow.svg) no-repeat;
-    position: absolute;
-    left: 5px;
-    top: 0;
+    transform: scale(1);  
     width: 36px;
     height: 25px;
+   
 }
+
+.select2-container--default{
+    .select2-selection{
+        border-radius: 50px;
+        background: var(--mx-grey);
+        border: none;
+        padding: 26px 37px;
+        color: #A7A9AC;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 34px;
+        border: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        height: auto;
+        .select2-selection__arrow{
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            height: 15px;
+            background: url(../../assets/images/arrow-down.svg) no-repeat; 
+            background-size: contain;
+            b{
+                display: none;
+            }
+        }
+    }
+    .select2-selection__rendered{
+        width: 100%;
+    }
+    .select2-dropdown{
+        background: var(--mx-grey); 
+        border: none;
+    }
+    .select2-search__field{
+        border-radius: 20px;
+        border: none;
+        padding: 10px;
+        margin-bottom: 5px;
+        border: none;
+    }
+    .select2-results__option{
+        &.select2-results__option--highlighted.select2-results__option--selectable{
+            background-color:var(--mx-blue);
+        }
+    }
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+// down arrow animation
+
+.down-arrow{    
+    svg{
+        .svg-elem-1 {
+            fill: transparent;
+            -webkit-transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+            transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+        }
+        .svg-elem-2 {
+            fill: transparent;
+            -webkit-transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+            transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+        }
+        &.active{
+            .svg-elem-1{
+                 fill: var(--mx-yellow);
+            }
+            .svg-elem-2 {
+                 fill: var(--mx-yellow);
+            }
+        }
+    }
+  } 

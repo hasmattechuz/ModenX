@@ -208,15 +208,88 @@ input[type=checkbox] + label:before {
 input[type=checkbox] + label:after {
   content: "";
   transition: 0.2s;
+  position: absolute;
+  background: url(../../assets/images/arrow.svg) no-repeat;
+  left: 5px;
+  top: 0;
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
 }
 
 input[type=checkbox]:checked + label:after {
-  background: url(../../assets/images/arrow.svg) no-repeat;
-  position: absolute;
-  left: 5px;
-  top: 0;
+  transform: scale(1);
   width: 36px;
   height: 25px;
+}
+
+.select2-container--default .select2-selection {
+  border-radius: 50px;
+  background: var(--mx-grey);
+  border: none;
+  padding: 26px 37px;
+  color: #A7A9AC;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  height: auto;
+}
+.select2-container--default .select2-selection .select2-selection__arrow {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  height: 15px;
+  background: url(../../assets/images/arrow-down.svg) no-repeat;
+  background-size: contain;
+}
+.select2-container--default .select2-selection .select2-selection__arrow b {
+  display: none;
+}
+.select2-container--default .select2-selection__rendered {
+  width: 100%;
+}
+.select2-container--default .select2-dropdown {
+  background: var(--mx-grey);
+  border: none;
+}
+.select2-container--default .select2-search__field {
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: none;
+}
+.select2-container--default .select2-results__option.select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--mx-blue);
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.down-arrow svg .svg-elem-1 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+  transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.8s;
+}
+.down-arrow svg .svg-elem-2 {
+  fill: transparent;
+  -webkit-transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+  transition: fill 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9s;
+}
+.down-arrow svg.active .svg-elem-1 {
+  fill: var(--mx-yellow);
+}
+.down-arrow svg.active .svg-elem-2 {
+  fill: var(--mx-yellow);
 }
 
 .header {
@@ -273,6 +346,7 @@ input[type=checkbox]:checked + label:after {
 
 .nav-active {
   overflow: hidden;
+  padding-right: 15px;
 }
 .nav-active .menu-right .right-btn {
   opacity: 1;
@@ -1439,13 +1513,63 @@ footer .footer-mobile {
   grid-template-columns: 1fr 1fr;
 }
 
+.update-section {
+  padding: 70px 0;
+}
+.update-section .swiper-slide {
+  border-radius: 30px;
+  overflow: hidden;
+}
+.update-section .content-sec {
+  background: var(--mx-blue);
+  position: absolute;
+  bottom: 0;
+  padding: 10px 28px;
+  display: flex;
+  align-items: center;
+}
+.update-section .content-sec h3 {
+  color: var(--white);
+}
+.update-section .swiper-pagination {
+  position: relative;
+  margin-top: 35px;
+}
+.update-section .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 10px;
+  background: rgba(33, 32, 33, 0.5);
+  min-width: 91px;
+  height: 7px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+}
+.update-section .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  content: "";
+  background-color: var(--mx-yellow);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: fill 5s;
+  border-radius: 10px;
+}
+
 .contact-sec {
   padding: 70px 0;
 }
+.contact-sec h2 span {
+  position: relative;
+}
+.contact-sec h2 .down-arrow {
+  position: absolute;
+  top: -80px;
+  right: -420px;
+}
 .contact-sec .form {
-  display: grid;
-  grid-template-columns: 1fr 646px;
-  gap: 36px;
+  display: flex;
+  gap: var(--gutter);
   margin-top: 55px;
 }
 .contact-sec .common-form {
@@ -1454,7 +1578,7 @@ footer .footer-mobile {
 }
 .contact-sec .common-form .form-control {
   border-radius: 50px;
-  background: #F4F4F4;
+  background: var(--mx-grey);
   padding: 26px 37px;
   color: #A7A9AC;
   font-family: Montserrat;
@@ -1491,12 +1615,74 @@ footer .footer-mobile {
   font-style: normal;
   font-weight: 400;
 }
-.contact-sec .swiper .swiper-slide {
+.contact-sec .contact-detail {
   border-radius: 30px;
   background: var(--mx-blue);
-  color: #fff;
   padding: 64px 92px;
+  max-width: 646px;
+  min-height: 620px;
+  max-height: 620px;
+}
+.contact-sec .contact-detail h3 {
   color: var(--white);
+  margin-bottom: var(--gutter);
+}
+.contact-sec .contact-detail h3 b {
+  color: var(--mx-yellow);
+}
+.contact-sec .swiper .swiper-slide {
+  color: #fff;
+  color: var(--white);
+  display: grid;
+  gap: 20px;
+}
+.contact-sec .swiper .swiper-slide a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: var(--gutter);
+}
+.contact-sec .swiper .swiper-slide a img {
+  max-width: 50px;
+}
+.contact-sec .swiper .swiper-slide a:first-child {
+  align-items: flex-start;
+}
+.contact-sec .swiper .swiper-slide a strong span {
+  display: block;
+}
+.contact-sec .swiper .swiper-pagination {
+  position: relative;
+  margin-top: 35px;
+}
+.contact-sec .swiper .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 10px;
+  background: rgba(33, 32, 33, 0.5);
+  min-width: 91px;
+  height: 7px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+}
+.contact-sec .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  content: "";
+  background-color: var(--mx-yellow);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: fill 5s;
+  border-radius: 10px;
+}
+
+@keyframes fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
