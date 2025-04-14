@@ -13,36 +13,6 @@ function videoPlayer() {
   });
 }
 
-function masonryLayout() {
-  const masonryLayout = document.querySelector(".masonry-layout");
-  let masonryInstance;
-
-  function initializeMasonry() {
-      if (window.innerWidth > 767) {
-          if (!masonryInstance) {
-              masonryInstance = new Masonry(masonryLayout, {
-                  itemSelector: ".masonry-item",
-                  columnWidth: ".masonry-item", // Use the width of the item for column sizing
-                  percentPosition: true, // Enable percentage-based positioning
-                  gutter: 35,   
-              });
-          }
-      } else {
-          if (masonryInstance) {
-              masonryInstance.destroy(); // Destroy Masonry instance on mobile
-              masonryInstance = null;
-              masonryLayout.style.removeProperty("position"); // Reset inline styles
-          }
-      }
-  }
-
-  // Initialize Masonry on page load
-  initializeMasonry();
-
-  // Reinitialize Masonry on window resize
-  window.addEventListener("resize", initializeMasonry);
-}
-
 $(document).ready(function () {
 
 
@@ -118,7 +88,6 @@ $(document).ready(function () {
   });
 
   videoPlayer();
-  masonryLayout();
 });
 
 
