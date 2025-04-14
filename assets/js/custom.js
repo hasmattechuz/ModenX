@@ -44,6 +44,9 @@ function masonryLayout() {
 }
 
 $(document).ready(function () {
+
+
+
   $(".menu-btn").click(function () {
     $("nav").toggleClass("open-nav");
     $("body").toggleClass("nav-active");
@@ -118,8 +121,10 @@ $(document).ready(function () {
   masonryLayout();
 });
 
+
+// swiper menu
 if (window.innerWidth < 768) {
-  const swiper = new Swiper(".swiper", {
+  const swiper = new Swiper(".swiper-menu", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
@@ -143,3 +148,13 @@ if (window.innerWidth < 768) {
     },
   });
 }
+
+const swiper = new Swiper('.swiper-contact', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+
