@@ -185,31 +185,44 @@ img {
     margin-bottom: 0 !important;
 }
 
-/* Grid CSS */
-$col-gap: 35px;
-$col-widths: (12.5%, 25%, 37.5%, 50%, 62.5%, 75%, 87.5%, 100%);
-$col-names: (1, 2, 3, 4, 5, 6, 7, 8);
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -$col-gap;
-  margin-left: -$col-gap;
+input[type=checkbox] + label {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    cursor: pointer;
+    padding: 0;
+    color: #000;
+    position: relative;
 }
 
-[class^="col-"] {
-  position: relative;
-  padding-right: $col-gap;
-  padding-left: $col-gap;
-  box-sizing: border-box;
-  flex: 0 0 auto;
+input[type=checkbox] {
+  display: none;
 }
 
-@for $i from 1 through length($col-widths) {
-  .col-#{nth($col-names, $i)} {
-    flex: 0 0 nth($col-widths, $i);
-    max-width: nth($col-widths, $i);
-  }
+input[type=checkbox] + label:before {
+  content: "";
+  border: 1px solid #000;
+  border-radius:5px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
 }
 
-/* End of Grid CSS */
+input[type=checkbox] + label:after {
+   content: "";
+   transition: .2s;
+}
+
+input[type=checkbox]:checked + label:after {
+    background: url(../../assets/images/arrow.svg) no-repeat;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 36px;
+    height: 25px;
+}

@@ -7,6 +7,7 @@
     <title>Home - modenX</title>
     <link rel="stylesheet" href="./assets/fonts/montserrat/stylesheet.css" onload="this.media='all'">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" onload="this.media='all'">
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" onload="this.media='all'">
 </head>
     
@@ -16,8 +17,9 @@
             <div class="container-fluid">
                 <div class="header-inner">
                     <div class="header-logo">
-                        <a href="#" class="logo-link">
-                            <img src="assets/images/modenX-black.svg" alt="Logo" class="img-fluid img-logo" />
+                        <a href="#" class="logo-link">                            
+                            <img src="assets/images/modenX-black.svg" alt="Logo" class="img-fluid img-logo black-logo" />
+                            <img src="assets/images/modenX-white.svg" alt="Logo" class="img-fluid img-logo white-logo" />
                         </a>
                     </div>
                     <div class="header-menu header-menu-top">
@@ -80,31 +82,41 @@
                                     </div>
 
                                     <!-- Swiper -->
-                                    <div class="swiper">
+                                    <div class="swiper swiper-menu">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <a href="#">
-                                                    <strong>India modenX India (P) Ltd.</strong>
-                                                    <br>#6, Basement, Old #74 & New #139 R. Balakrishna Chettiyar Complex Panna Plaza Arcot Road, Kodambakkam, Chennai, Tamil Nadu - 600 024
+                                                    <img src="assets/images/home/location.svg" alt=""> 
+                                                    <span>
+                                                        <strong>India modenX India (P) Ltd.</strong>
+                                                        <br>#6, Basement, Old #74 & New #139 R. Balakrishna Chettiyar Complex Panna Plaza Arcot Road, Kodambakkam, Chennai, Tamil Nadu - 600 024
+                                                   </span>     
                                                 </a>
 
                                                 <a href="tel:+91 80 6235 8634">
+                                                    <img src="assets/images/home/phone.svg" alt=""> 
                                                   +91 80 6235 8634
                                                 </a>
                                                 <a href="mailto:support-india@modenx.com">
+                                                    <img src="assets/images/home/email.svg" alt=""> 
                                                    support-india@modenx.com
                                                 </a>
                                             </div>
                                              <div class="swiper-slide">
                                                 <a href="#">
-                                                    <strong>United States modenX (P) Ltd.</strong>
-                                                    <br>#3, World Trade Center New York, USA NY - 10070
+                                                    <img src="assets/images/home/location.svg" alt=""> 
+                                                    <span>
+                                                        <strong>United States modenX (P) Ltd.</strong>
+                                                        <br>#3, World Trade Center New York, USA NY - 10070
+                                                    </span>
                                                 </a>
 
                                                 <a href="tel: +1 718 496 9071">
+                                                <img src="assets/images/home/phone.svg" alt=""> 
                                                   +1 718 496 9071
                                                 </a>
                                                 <a href="mailto:support-usa@modenx.com">
+                                                   <img src="assets/images/home/email.svg" alt=""> 
                                                    support-usa@modenx.com
                                                 </a>
                                             </div>                                       
@@ -112,11 +124,9 @@
                                         </div>
 
                                         <!-- Optional navigation buttons -->
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-
-                                        <!-- Optional pagination -->
-                                        <div class="swiper-pagination"></div>
+                                        <!-- <div class="swiper-button-next"></div>
+                                        <div class="swiper-button-prev"></div> -->
+                                     
                                     </div>
                                </div>
 
@@ -500,6 +510,96 @@
                     </div>
                 </div>
             </section>
+            <section class="contact-sec">
+                  <div class="container-fluid">
+                     <h2>Get Started with modenX</h2>
+                     <p>Connect with us to discover how modenX can help your business thrive in the phygital era.</p>
+                     
+                      <div class="form">
+                            <div class="common-form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Full Name">
+                                </div>
+                                <div class="form-group-inline">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Mobile Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                    <select id="yourSelectId" name="state">
+                                    <option value="AL">Alabama</option>
+                                        ...
+                                    <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Message" rows="6"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">I agree to be bound by the website's GDPR Policy, Privacy Policy, Refund Policy & Terms of Use.</label>
+                                </div>
+                                <input type="submit" placeholder="Contact Us">
+                                <p class="mandatory">All fields are mandatory</p>
+                            </div>
+
+                           <!-- Swiper -->
+                            <div class="swiper swiper-contact">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <h3>Reach Out <span>to Us</span></h3>
+                                        <a href="#">
+                                            <img src="assets/images/home/location.png" alt=""> 
+                                            <span>
+                                                <strong>India modenX India (P) Ltd.</strong>
+                                                <br>#6, Basement, Old #74 & New #139 R. Balakrishna Chettiyar Complex Panna Plaza Arcot Road, Kodambakkam, Chennai, Tamil Nadu - 600 024
+                                            </span>     
+                                        </a>
+
+                                        <a href="tel:+91 80 6235 8634">
+                                            <img src="assets/images/home/phone.png" alt=""> 
+                                            +91 80 6235 8634
+                                        </a>
+                                        <a href="mailto:support-india@modenx.com">
+                                            <img src="assets/images/home/mail.png" alt=""> 
+                                            support-india@modenx.com
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <img src="assets/images/home/location.png" alt=""> 
+                                            <span>
+                                                <strong>United States modenX (P) Ltd.</strong>
+                                                <br>#3, World Trade Center New York, USA NY - 10070
+                                            </span>
+                                        </a>
+
+                                        <a href="tel: +1 718 496 9071">
+                                        <img src="assets/images/home/phone.png" alt=""> 
+                                            +1 718 496 9071
+                                        </a>
+                                        <a href="mailto:support-usa@modenx.com">
+                                            <img src="assets/images/home/mail.png" alt=""> 
+                                            support-usa@modenx.com
+                                        </a>
+                                    </div>                                       
+                                    <!-- Add more slides as needed -->
+                                </div>
+
+                                <!-- Optional navigation buttons -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+
+                                <!-- Optional pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                      </div>
+                  </div>
+            </section>
         </main>
 
          <footer>
@@ -555,6 +655,7 @@
     <script src="assets/js/swiper-bundle.min.js" defer></script>
     <script src="assets/js/custom.js" defer></script>
     <script src="assets/js/footer-ants.js" defer></script>
+
 
 </body>
 </html>
