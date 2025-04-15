@@ -1724,7 +1724,7 @@ footer .footer-mobile {
 .navigation-dv {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 70px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
