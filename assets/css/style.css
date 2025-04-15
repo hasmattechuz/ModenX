@@ -130,7 +130,6 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 33px;
-  border-radius: 30px;
   text-align: center;
   border: 1px solid var(--mx-yellow);
   background: var(--mx-yellow);
@@ -138,12 +137,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px 40px;
-}
-
-.btn:hover {
-  color: var(--mx-yellow);
-  border: 1px solid var(--mx-yellow);
-  background: var(--mx-blue);
 }
 
 .btn-ico-cst {
@@ -175,11 +168,84 @@ img {
   margin-bottom: 35px;
 }
 
+.btn-dv {
+  position: relative;
+  width: 420px;
+  height: 53px;
+  overflow: hidden;
+  border: 1px solid var(--mx-yellow);
+  border-radius: 30px;
+}
 .btn-dv .btn {
   width: 420px;
   max-width: 100%;
+  border: 1px solid var(--mx-yellow);
+  -webkit-mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png);
+  mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png);
+  -webkit-mask-size: 3000% 100%;
+  mask-size: 3000% 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(29) forwards;
+  animation: ani2 0.7s steps(29) forwards;
+}
+.btn-dv .btn:hover {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+.btn-dv .mas {
+  color: var(--mx-yellow);
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 33px;
 }
 
+@-webkit-keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@keyframes ani {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+@-webkit-keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+@keyframes ani2 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -1879,6 +1945,7 @@ footer .footer-mobile {
 }
 .update-section picture img {
   min-height: 500px;
+  object-fit: cover;
 }
 
 .contact-sec {
