@@ -28,7 +28,8 @@ const storiesSlider = new Swiper(".swiper-stories", {
   },
 });
 
-$(document).ready(function () {
+$(document).ready(function () { 
+  
   $(".menu-btn").click(function () {
     $("nav").toggleClass("open-nav");
     $("body").toggleClass("nav-active");
@@ -160,11 +161,25 @@ const swiper = new Swiper('.swiper-contact', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    // on: {
+    //   slideChange: function () {
+    //     const totalSlides = this.slides.length - this.loopedSlides * 2; 
+    //     const currentIndex = this.realIndex + 1;
+    //     const progress = (currentIndex / totalSlides) * 100;
+    //     document.querySelector('.progress-fill').style.width = progress + '%';
+    //   }
+    // }
+    
    
   });
-
+ // Set initial progress
+    window.addEventListener('load', () => {
+      document.querySelector('.progress-fill').style.width = '33.33%'; // for 3 slides
+    });
 
  $('#mySelect').select2({
     placeholder: "Subject",
     allowClear: true
 });
+
+ AOS.init();
