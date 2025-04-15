@@ -338,6 +338,12 @@ input[type=checkbox] + label {
   color: #000;
   position: relative;
 }
+@media only screen and (max-width: 991px) {
+  input[type=checkbox] + label {
+    gap: 10px;
+    line-height: 1.2;
+  }
+}
 
 input[type=checkbox] {
   display: none;
@@ -355,6 +361,14 @@ input[type=checkbox] + label:before {
   color: transparent;
   transition: 0.2s;
 }
+@media only screen and (max-width: 991px) {
+  input[type=checkbox] + label:before {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    border-radius: 2px;
+  }
+}
 
 input[type=checkbox] + label:after {
   content: "";
@@ -371,6 +385,14 @@ input[type=checkbox]:checked + label:after {
   transform: scale(1);
   width: 36px;
   height: 25px;
+}
+@media only screen and (max-width: 991px) {
+  input[type=checkbox]:checked + label:after {
+    width: 16px;
+    height: 17px;
+    background-size: contain;
+    left: 3px;
+  }
 }
 
 .select2-container {
@@ -1937,7 +1959,29 @@ footer .footer-mobile {
   height: 600px;
   max-width: 100%;
   z-index: -1;
+  pointer-events: none;
+}
+
+.img-stroke3_5 {
+  position: absolute;
+  top: -360px;
+  right: -85px;
+  width: 600px !important;
+  height: 600px;
+  max-width: 100%;
+  z-index: -1;
   transform: rotate(-28.917deg);
+  pointer-events: none;
+}
+
+.img-stroke3_6 {
+  position: absolute;
+  bottom: -360px;
+  right: -85px;
+  width: 600px !important;
+  height: 600px;
+  max-width: 100%;
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -2369,13 +2413,15 @@ footer .footer-mobile {
 
 .update-section {
   padding: 70px 0;
+  position: relative;
+  overflow: hidden;
 }
 .update-section h2 {
   position: relative;
 }
 .update-section .swiper-slide {
   border-radius: 30px;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 .update-section .swiper-slide .icon {
   transition: 0.3s ease-in-out;
@@ -2408,6 +2454,20 @@ footer .footer-mobile {
 }
 .update-section .update-inner .btn-dv a {
   display: block;
+}
+.update-section .swiper-scrollbar {
+  position: relative;
+  margin-top: 35px;
+  top: 0;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 7px;
+  background: var(--mx-grey);
+}
+.update-section .swiper-scrollbar .swiper-scrollbar-drag {
+  background: var(--mx-yellow);
 }
 .update-section .swiper-pagination {
   position: relative;
@@ -2452,6 +2512,13 @@ footer .footer-mobile {
 
 .contact-sec {
   padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .contact-sec {
+    padding-bottom: 0;
+  }
 }
 .contact-sec h2 span {
   position: relative;

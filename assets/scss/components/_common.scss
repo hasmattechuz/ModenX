@@ -355,6 +355,10 @@ input[type=checkbox]+label {
     padding: 0;
     color: #000;
     position: relative;
+     @media only screen and (max-width: 991px) {
+        gap: 10px;
+        line-height: 1.2;
+     }
 }
 
 input[type=checkbox] {
@@ -372,6 +376,13 @@ input[type=checkbox]+label:before {
     vertical-align: bottom;
     color: transparent;
     transition: .2s;
+
+    @media only screen and (max-width: 991px) {
+        width: 14px;
+        height: 14px;
+        min-width: 14px;
+        border-radius: 2px;
+    }
 }
 
 input[type=checkbox]+label:after {
@@ -389,6 +400,12 @@ input[type=checkbox]:checked+label:after {
     transform: scale(1);
     width: 36px;
     height: 25px;
+     @media only screen and (max-width: 991px) {
+        width: 16px;
+        height: 17px;
+        background-size: contain;
+        left: 3px;
+     }
 
 }
 .select2-container{
