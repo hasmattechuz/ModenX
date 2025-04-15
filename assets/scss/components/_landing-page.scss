@@ -972,25 +972,16 @@
         }
     }
 
-    .progress-bar {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 5px;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.1);
-    }
-
-    .progress-fill {
-        height: 100%;
-        background: #007aff;
-        width: 0%;
-        transition: width 0.3s ease;
-    }
-
-    picture {
-        img {
-            min-height: 500px;
+  .progress-fill {
+    height: 100%;
+    background: #007aff;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+    picture{
+        img{
+             min-height: 500px;
+             object-fit: cover;
         }
 
     }
