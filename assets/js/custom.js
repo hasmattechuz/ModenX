@@ -105,7 +105,7 @@ $(document).ready(function () {
 });
 
 // swiper menu
-if (window.innerWidth < 768) {
+if (window.innerWidth < 992) {
   const swiper = new Swiper(".swiper-menu", {
     loop: true,
     slidesPerView: 1,
@@ -122,17 +122,17 @@ if (window.innerWidth < 768) {
     // Optional: responsive settings
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
     },
   });
 }
 
 const swiper = new Swiper('.swiper-contact', {
-    loop: true,
+    loop: true,    
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -183,3 +183,7 @@ const swiper = new Swiper('.swiper-contact', {
 });
 
  AOS.init();
+
+  $('.mobile-contact').click(function() {
+    $('.swiper-menu').slideToggle(); // toggles between show and hide
+  });

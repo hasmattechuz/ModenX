@@ -1,38 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #dcf343;
-      }
-
-      .cls-2 {
-        clip-path: url(#clippath);
-      }
-
-      .cls-3 {
-        fill: #074bb6;
-      }
-    </style>
-    <clipPath id="clippath">
-      <circle class="cls-3" cx="23.95" cy="23.99" r="4.71"/>
-    </clipPath>
-  </defs>
-  <path class="cls-1" d="M22.94,46.3c-2.63,0-5.01-1.81-5.62-4.47l-5.08-22.01c-.71-3.1,1.22-6.2,4.32-6.92l8.49-1.96c1.5-.35,3.05-.09,4.35.73,1.31.82,2.22,2.09,2.56,3.59l5.08,22.01c.35,1.5.09,3.05-.73,4.35-.82,1.31-2.09,2.22-3.59,2.56l-8.48,1.96c-.43.1-.87.15-1.3.15ZM26.35,12.08c-.34,0-.68.04-1.02.12l-8.49,1.96c-2.41.56-3.92,2.97-3.36,5.38l5.08,22.01c.56,2.41,2.97,3.92,5.38,3.36l8.48-1.96c1.17-.27,2.16-.98,2.8-1.99.63-1.02.84-2.22.57-3.39l-5.08-22.01c-.27-1.17-.98-2.16-1.99-2.79-.72-.45-1.54-.68-2.37-.68Z"/>
-  <rect class="cls-3" x="16.97" y="14.3" width="9.29" height="2.33" rx="1.09" ry="1.09" transform="translate(-2.92 5.26) rotate(-13)"/>
-  <rect class="cls-3" x="20.91" y="30.08" width="9.29" height="2.33" rx="1.09" ry="1.09" transform="translate(-6.37 6.55) rotate(-13)"/>
-  <rect class="cls-3" x="20.64" y="33.29" width="11.32" height="2.33" rx="1.09" ry="1.09" transform="translate(-7.07 6.8) rotate(-13)"/>
-  <circle class="cls-3" cx="23.95" cy="23.99" r="4.71"/>
-  <g>
-    <circle class="cls-3" cx="23.95" cy="23.99" r="4.71"/>
-    <g class="cls-2">
-      <path class="cls-1" d="M23.73,25.07c-1.09,0-2.07-.75-2.33-1.85-.14-.62-.04-1.26.3-1.8s.87-.92,1.49-1.06c.62-.14,1.26-.04,1.8.3s.92.87,1.06,1.49c.14.62.04,1.26-.3,1.8-.34.54-.87.92-1.49,1.06-.18.04-.36.06-.54.06ZM23.74,21.57c-.08,0-.17,0-.25.03-.29.07-.53.24-.69.49-.16.25-.21.55-.14.83.14.59.73.96,1.33.83.29-.07.53-.24.69-.49.16-.25.21-.55.14-.83-.07-.29-.24-.53-.49-.69-.18-.11-.38-.17-.58-.17Z"/>
-      <path class="cls-1" d="M27.7,27.53c-.32-1.37-1.58-3.08-2.68-3.15l.08-1.28c1.89.12,3.47,2.53,3.85,4.14l-1.25.29Z"/>
-      <path class="cls-1" d="M20.81,29.12c-.37-1.62,0-4.47,1.64-5.41l.63,1.11c-.96.54-1.34,2.64-1.03,4.01l-1.25.29Z"/>
-    </g>
-  </g>
-  <rect class="cls-1" x="23.49" y="3.13" width="1.28" height="6.4" transform="translate(-.68 3.75) rotate(-8.75)"/>
-  <rect class="cls-1" x="27.84" y="5.1" width="7.82" height="1.28" transform="translate(9.2 28.82) rotate(-55.91)"/>
-  <rect class="cls-1" x="31.52" y="9.28" width="6.35" height="1.28" transform="translate(-1.37 11.16) rotate(-17.92)"/>
-  <circle class="cls-1" cx="27.35" cy="39.03" r="1.94"/>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 45" width="26" height="45">
+	<title>phone</title>
+	<defs>
+		<image width="26" height="45" id="img1" href="data:image/png;base64,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"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Folder 2" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
 </svg>
