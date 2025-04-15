@@ -50,7 +50,12 @@
         }
 
         @media (max-width: 1700px) {
+            margin-left: calc((100% - 1390px) / 2);
             max-width: 552px;
+        }
+
+        @media (max-width: 1550px) {
+            margin-left: 0;
         }
 
         h1 {
@@ -144,7 +149,8 @@
     }
 
     @media (max-width:1700px) {
-        grid-template-columns: calc(100% - 176px) 120px;
+        grid-template-columns: calc(100% - 150px) 120px;
+        gap: 30px;
     }
 }
 
@@ -267,6 +273,10 @@
     &.blue-fre-section {
         .content-dv {
             max-width: 862px;
+
+            @media (max-width: 1700px) {
+                max-width: 680px;
+            }
         }
     }
 
@@ -471,6 +481,12 @@
     height: 100px;
     z-index: -1;
     pointer-events: none;
+
+    @media (max-width:1700px) {
+        top: 88px;
+        left: -15px;
+        width: 370px;
+    }
 }
 
 
@@ -512,6 +528,13 @@
     top: 70px;
     left: -35px;
     z-index: -1;
+
+    @media (max-width: 1700px) {
+        width: 200px;
+        height: 70px;
+        top: 60px;
+        left: -30px;
+    }
 }
 
 /* End of Stroke Animation */
@@ -653,6 +676,10 @@
     .content-dv {
         max-width: 454px;
         position: relative;
+
+        @media (max-width: 1700px) {
+            max-width: 375px;
+        }
     }
 }
 
@@ -662,6 +689,10 @@
     align-content: flex-start;
     gap: 60px 35px;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 1700px) {
+        gap: 30px 35px;
+    }
 }
 
 .news-section {
@@ -692,6 +723,10 @@
         h2 {
             margin-bottom: 15px;
         }
+    }
+
+    @media (max-width: 1700px) {
+        row-gap: 35px;
     }
 }
 
@@ -731,14 +766,14 @@
     }
 
     .text-dv {
-        padding: 20px 35px;
+        padding: 20px var(--p35);
 
         p.fs16 {
             color: var(--mx-yellow);
         }
 
         h3 {
-            line-height: 47px;
+            line-height: var(--headingLH3_2);
             margin-block: 10px;
         }
     }
@@ -758,7 +793,7 @@
         }
 
         .text-dv {
-            padding: 20px 35px;
+            padding: 20px var(--p35);
             flex: calc(100% - 192px);
         }
     }
@@ -972,16 +1007,17 @@
         }
     }
 
-  .progress-fill {
-    height: 100%;
-    background: #007aff;
-    width: 0%;
-    transition: width 0.3s ease;
-  }
-    picture{
-        img{
-             min-height: 500px;
-             object-fit: cover;
+    .progress-fill {
+        height: 100%;
+        background: #007aff;
+        width: 0%;
+        transition: width 0.3s ease;
+    }
+
+    picture {
+        img {
+            min-height: 500px;
+            object-fit: cover;
         }
 
     }
