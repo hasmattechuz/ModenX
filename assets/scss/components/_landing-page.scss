@@ -508,6 +508,13 @@
     top: 34px;
     right: -15px;
     z-index: -1;
+
+    @media (max-width: 1700px) {
+        width: 200px;
+        height: 70px;
+        top: 28px;
+        right: -30px;
+    }
 }
 
 .img-stroke8 {
@@ -839,6 +846,14 @@
     .btn-dv {
         margin-top: -55px;
         position: relative;
+    }
+
+    @media (max-width: 1700px) {
+        margin-left: calc((100% - 1340px) / 2);
+    }
+
+    @media (max-width: 1550px) {
+        margin-left: 0;
     }
 }
 

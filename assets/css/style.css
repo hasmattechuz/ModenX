@@ -1775,6 +1775,14 @@ footer .footer-mobile {
   right: -15px;
   z-index: -1;
 }
+@media (max-width: 1700px) {
+  .img-stroke7 {
+    width: 200px;
+    height: 70px;
+    top: 28px;
+    right: -30px;
+  }
+}
 
 .img-stroke8 {
   position: absolute;
@@ -2071,6 +2079,16 @@ footer .footer-mobile {
 .stories-inner .btn-dv {
   margin-top: -55px;
   position: relative;
+}
+@media (max-width: 1700px) {
+  .stories-inner {
+    margin-left: calc((100% - 1340px) / 2);
+  }
+}
+@media (max-width: 1550px) {
+  .stories-inner {
+    margin-left: 0;
+  }
 }
 
 .card-slider-root {
