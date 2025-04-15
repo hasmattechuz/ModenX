@@ -323,6 +323,17 @@
             justify-content: center;
         }
     }
+    .btn-dv{
+         &:hover{
+				background: var(--mx-yellow);
+				border-color: var(--mx-yellow);
+			 }
+			 .btn{
+				 @media only screen and (max-width: 420px) {
+					line-height: 1.2;
+				 }
+			 }
+    }
 }
 
 .blue-block-inner {

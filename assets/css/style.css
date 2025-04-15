@@ -1843,6 +1843,15 @@ footer .footer-mobile {
 .blue-block-section.blue-apply-section .img-dv {
   justify-content: center;
 }
+.blue-block-section .btn-dv:hover {
+  background: var(--mx-yellow);
+  border-color: var(--mx-yellow);
+}
+@media only screen and (max-width: 420px) {
+  .blue-block-section .btn-dv .btn {
+    line-height: 1.2;
+  }
+}
 
 .blue-block-inner {
   display: grid;
