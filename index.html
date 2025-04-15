@@ -4,10 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="theme-color" content="#074BB6">
+    <meta name="msapplication-navbutton-color" content="#074BB6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#074BB6">
+    <link href='./assets/images/favicon.png' rel='shortcut icon'>
     <title>Home - modenX</title>
     <link rel="stylesheet" href="./assets/fonts/montserrat/stylesheet.css" onload="this.media='all'">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" onload="this.media='all'">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/select2.min.css" />
+    <link href="./assets/css/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" onload="this.media='all'">
 </head>
     
@@ -88,7 +94,7 @@
                                                 <a href="#">
                                                     <img src="assets/images/home/location.svg" alt=""> 
                                                     <span>
-                                                        <strong>India modenX India (P) Ltd.</strong>
+                                                        <strong><span>India</span> modenX India (P) Ltd.</strong>
                                                         <br>#6, Basement, Old #74 & New #139 R. Balakrishna Chettiyar Complex Panna Plaza Arcot Road, Kodambakkam, Chennai, Tamil Nadu - 600 024
                                                    </span>     
                                                 </a>
@@ -137,6 +143,15 @@
                                     <li><a href="https://www.linkedin.com/" target="_blank"><span class="icon-linkedin"></span></a></li>
                                 </ul>
                             </div>
+                            <div class="poilcy d-none">
+                                <h4>Our Policies:</h4>
+                                <div>
+                                    <a href="#">GDPR</a>
+                                    <a href="#">Privacy</a>
+                                    <a href="#">Refund</a>
+                                    <a href="#">Terms</a>
+                                </div>
+                            </div>
                         </nav>
                     </div>
                     
@@ -145,13 +160,12 @@
         </header>
 
         <main>
-
             <section class="banner-section">
                 <div class="container-fluid">
                     <div class="banner-inner">
                         <div class="banner-content">
-                            <h1>Welcome to the New Era of <strong> <img src="assets/images/stroke/stroke10.svg" alt="stroke" class="img-stroke1"> Connected Retail</strong></h1>
-                            <div class="text-dv">
+                            <h1 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500">Welcome to the New Era of <strong> <img src="assets/images/stroke/stroke10.svg" alt="stroke" class="img-stroke1"> Connected Retail</strong></h1>
+                            <div class="text-dv" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1600">
                                 <p>Step into the future of shopping with modenX your <strong>ultimate partner for creating immersive, customer-centric retail experiences.</strong></p>
                             </div>
                         </div>
@@ -173,13 +187,13 @@
                     <div class="phygital-inner">
 
                         <div class="content-dv">
-                            <h2>Revolutionising Retail with Digital Innovation <strong>Phygital</strong></h2>
-                            <div class="desc-global">
+                            <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500">Revolutionising Retail with Digital Innovation <strong>Phygital</strong></h2>
+                            <div class="desc-global" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1600">
                                 <p>At <strong>modenX</strong>, we are reshaping the retail industry by seamlessly blending digital innovation with in-person interactions. We empower you to create tailored, immersive customer experiences that leave a lasting impression.</p>
                             </div>
 
                             <div class="card-lst">
-                                <div class="card">
+                                <div class="card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1700">
                                     <div class="card-txt">
                                         <h4>Innovative Technology:</h4>
                                         <p>Seamlessly integrate cutting-edge digital tools into your existing physical retail spaces.</p>
@@ -189,7 +203,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <div class="card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1800">
                                     <div class="card-txt">
                                         <h4>Unmatched Personalisation:</h4>
                                         <p>Use real-time data to deliver tailored experiences, fostering loyalty and engagement.</p>
@@ -199,7 +213,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card">
+                                <div class="card" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1900">
                                     <div class="card-txt">
                                         <h4>Phygital Transformation:</h4>
                                         <p>Stay ahead in a fast-evolving market by merging the best of online and in-store shopping.</p>
@@ -210,13 +224,15 @@
                                 </div>
                             </div>
 
-                            <div class="btn-dv">
-                                <a href="#" class="btn btn-primary">Learn More About modenX</a>
+                            <div class="btn-dv" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000">                              
+                                <a href="#" class="btn btn-primary">
+                                    Learn More About modenX                                     
+                                </a>
                             </div>
                         </div>
 
                         <div class="phygital-right-dv">
-                            <div class="video-group">
+                            <div class="video-group" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500">
                                 <video 
                                     class="video-player"
                                     poster="assets/images/home/video-poster.webp"
@@ -265,6 +281,10 @@
                         <div class="img-stroke3">
                             <img src="assets/images/stroke/stroke19.svg" alt="img" class="stroke" />
                         </div>
+
+                        <div class="img-stroke3_2">
+                            <img src="assets/images/stroke/stroke19.svg" alt="img" class="stroke" />
+                        </div>
     
                         <div class="primary-user-card item1">
                             <div class="img-dv">
@@ -282,6 +302,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Optimise inventory with <br> behavioural insights.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -293,6 +316,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Recognise your <br> customers instantly <br> for tailored service.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -304,6 +330,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Build loyalty through personalised experiences.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -315,13 +344,16 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Predict customer <br> needs with <br> AI-driven tools.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
                     </div>
 
                     <div class="for-rc-inner for-consumers-inner">
-                        <div class="img-stroke3">
+                        <div class="img-stroke3_3">
                             <img src="assets/images/stroke/stroke19.svg" alt="img" class="stroke" />
                         </div>
     
@@ -341,6 +373,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Enjoy quick QR check-ins <br> for a personalised shopping <br> experience.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -352,6 +387,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Receive <br> recommendations <br> tailored to your <br> preferences.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -363,6 +401,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Experience consistent, hassle-free store visits.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -374,6 +415,9 @@
                                 </div>
                                 <div class="text-dv">
                                     <h3>Stay updated on <br> promotions and <br> stock availability.</h3>
+                                    <div class="desc-dv">
+                                        <p>At modenX, we know the future of retail lies in the seamless integration of digital tools with physical shopping.</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -461,6 +505,93 @@
                 </div>
             </section>
 
+            <section class="stories-section">
+                <div class="container-fluid">
+                    <div class="stories-inner">
+                        <div class="content-dv">
+                            <h2> <strong>Success Stories</strong> <br> That Inspire</h2>
+                            <div class="img-stroke7">
+                                <img src="assets/images/stroke/stroke3.svg" alt="img" class="stroke" />
+                            </div>
+
+                            <div class="desc-global">
+                                <p>At modenX, we're proud to have helped retailers like you enhance engagement, boost loyalty, and drive sales. Here's what they're saying:</p>
+                            </div>
+                        </div>
+
+                        <div class="card-slider-root">
+                            <div class="swiper swiper-stories">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="stories-card">
+                                            <div class="quotes-dv">
+                                                <img src="assets/images/quotes.png" alt="quotes" class="img-fluid" />
+                                            </div>
+                                            <div class="text-content-dv">
+                                                <h3>This is dummy text, currently placed by Marching Ants. This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</h3>
+                                            </div>
+                                            <div class="user-row-dv">
+                                                <img src="assets/images/user-img.png" alt="User" class="img-fluid img-user" />
+                                                <div class="txt-dv">
+                                                    <p>Mr. Customer</p>
+                                                    <p class="fs16">@mrcustomer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="stories-card">
+                                            <div class="quotes-dv">
+                                                <img src="assets/images/quotes.png" alt="quotes" class="img-fluid" />
+                                            </div>
+                                            <div class="text-content-dv">
+                                                <h3>This is dummy text, currently placed by Marching Ants. This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</h3>
+                                            </div>
+                                            <div class="user-row-dv">
+                                                <img src="assets/images/user-img.png" alt="User" class="img-fluid img-user" />
+                                                <div class="txt-dv">
+                                                    <p>Mr. Customer</p>
+                                                    <p class="fs16">@mrcustomer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="stories-card">
+                                            <div class="quotes-dv">
+                                                <img src="assets/images/quotes.png" alt="quotes" class="img-fluid" />
+                                            </div>
+                                            <div class="text-content-dv">
+                                                <h3>This is dummy text, currently placed by Marching Ants. This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</h3>
+                                            </div>
+                                            <div class="user-row-dv">
+                                                <img src="assets/images/user-img.png" alt="User" class="img-fluid img-user" />
+                                                <div class="txt-dv">
+                                                    <p>Mr. Customer</p>
+                                                    <p class="fs16">@mrcustomer</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="navigation-dv">
+                                    <div class="swiper-btn-arrow swiper-next"><svg width="13" height="21" viewBox="0 0 13 21" fill="none"><path d="M1.00864 8.93175L8.98872 0.941584C9.37208 0.568306 9.87651 0.356445 10.4213 0.356445C10.9661 0.356445 11.4604 0.568306 11.8438 0.941584C12.6307 1.72849 12.6307 3.00975 11.8438 3.79666L5.2862 10.3542L11.8438 16.9118C12.6307 17.6987 12.6307 18.98 11.8438 19.7669C11.0569 20.5538 9.77563 20.5538 8.98872 19.7669L1.00864 11.7767C0.221729 10.9999 0.221729 9.71866 1.00864 8.93175Z" fill="#DCF343"/></svg></div>
+                                    <div class="swiper-btn-arrow swiper-prev"><svg width="13" height="21" viewBox="0 0 13 21" fill="none"><path d="M12.4089 11.7769L4.42878 19.7671C4.04541 20.1403 3.54098 20.3522 2.99619 20.3522C2.45141 20.3522 1.95707 20.1403 1.5737 19.7671C0.786793 18.9801 0.786793 17.6989 1.5737 16.912L8.13129 10.3544L1.5737 3.79682C0.786793 3.00991 0.786793 1.72866 1.5737 0.941745C2.36061 0.154835 3.64187 0.154835 4.42878 0.941745L12.4089 8.93191C13.1958 9.70873 13.1958 10.99 12.4089 11.7769Z" fill="#DCF343"/></svg></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-dv">
+                            <a href="#" class="btn btn-primary">View All Success Stories</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
             <section class="blue-block-section blue-gsn-section">
                 <div class="container-fluid">
                     <div class="blue-block-inner">
@@ -485,62 +616,157 @@
                 </div>
             </section>
 
-          
-            
-             <section class="update-section">
-                <div class="container-fluid">
-                    <div class="update-inner">
-                        
-
-                        <!-- <div class="content-dv">
-                            <h2><strong>Insights</strong> and  Updates</h2>
-
-                            <div class="img-stroke5">
-                                <img src="assets/images/stroke/stroke2.svg" alt="img" class="stroke" />
+            <div class="news-insights-parent">
+                <section class="news-section">
+                    <div class="container-fluid">
+                        <div class="news-inner">
+                            <div class="img-stroke3_4">
+                                <img src="assets/images/stroke/stroke19.svg" alt="img" class="stroke" />
                             </div>
+
+                            <div class="content-dv">
+                                <div class="img-stroke6">
+                                    <img src="assets/images/stroke/stroke4.svg" alt="img" class="stroke" />
+                                </div>
+
+                                <h2>In the <strong>News</strong></h2>
+                                <div class="desc-dv">
+                                    <p>Explore how modenX is making headlines in the world of retail transformation.</p>
+                                </div>
+                            </div>
+
+                            <div class="news-blue-root news-blue-home-root">
+                                <div class="news-blue-card full-news-card">
+                                    <a href="#" class="news-blue-link-card">
+                                        <div class="img-dv">
+                                            <img src="assets/images/home/news-img.jpg" alt="news" class="img-fluid" />
+                                        </div>
+                                        <div class="text-dv">
+                                            <p class="fs16">26 February 2025</p>
+                                            <h3>This is dummy text, currently placed by Marching Ants.</h3>
+                                            <div class="desc-dv">
+                                                <p>This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="news-blue-card half-news-card">
+                                    <a href="#" class="news-blue-link-card">
+                                        <div class="img-dv">
+                                            <img src="assets/images/home/news-img.jpg" alt="news" class="img-fluid" />
+                                        </div>
+                                        <div class="text-dv">
+                                            <p class="fs16">26 February 2025</p>
+                                            <h3>This is dummy text, currently placed by Marching Ants.</h3>
+                                            <div class="desc-dv">
+                                                <p>This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="news-blue-card half-news-card">
+                                    <a href="#" class="news-blue-link-card">
+                                        <div class="img-dv">
+                                            <img src="assets/images/home/news-img.jpg" alt="news" class="img-fluid" />
+                                        </div>
+                                        <div class="text-dv">
+                                            <p class="fs16">26 February 2025</p>
+                                            <h3>This is dummy text, currently placed by Marching Ants.</h3>
+                                            <div class="desc-dv">
+                                                <p>This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="btn-dv">
+                                <a href="#" class="btn btn-primary">Stay Updated with modenX</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <section class="update-section">
+                <div class="container-fluid">
+                    <div class="update-inner">                       
+
+                        <div class="content-dv">
+                            <h2><strong>Insights</strong> and  Updates  
+                                <div class="img-stroke8">
+                                    <img src="assets/images/stroke/stroke5.svg" alt="img" class="stroke" />
+                                </div>
+                            </h2>                               
 
                             <div class="desc-global">
                                 <p>Stay informed on the latest trends and innovations shaping the future of retail.</p>
                             </div>
-                        </div> -->
+                              <div class="btn-dv">
+                                <a href="#" class="btn btn-primary">Explore Our Blog</a>
+                            </div>
+                        </div>
 
                         <div class="update-info-dv">
                                <div class="swiper swiper-update">
                                 <div class="swiper-wrapper">
                                     <a href="#" class="swiper-slide">                                       
                                         <div class="img-sec">
-                                            <img src="assets/images/home/img-rc.jpg" alt="retailers" class="img-fluid">
+                                             <picture>
+                                                <source media="(max-width: 767px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source media="(max-width: 1024px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <img src="assets/images/home/img-rc.jpg" alt="" class="img-fluid">
+                                            </picture>
                                         </div>
                                         <div class="content-sec">
                                             <h3>Unlocking Phygital Experiences:The Future of Retail</h3>    
-                                            <img src="assets/images/arrow-right.svg" alt="retailers" class="img-fluid">
+                                            <img src="assets/images/arrow-right.svg" alt="" class="img-fluid icon">
                                         </div>
                                     </a>
                                      <a href="#" class="swiper-slide">                                       
-                                        <div class="img-sec">
-                                            <img src="assets/images/home/img-rc.jpg" alt="retailers" class="img-fluid">
+                                         <div class="img-sec">
+                                             <picture>
+                                                <source media="(max-width: 767px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source media="(max-width: 1024px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <img src="assets/images/home/img-rc.jpg" alt="" class="img-fluid">
+                                            </picture>
                                         </div>
                                         <div class="content-sec">
                                             <h3>Unlocking Phygital Experiences:The Future of Retail</h3>    
-                                            <img src="assets/images/arrow-right.svg" alt="retailers" class="img-fluid">
+                                            <img src="assets/images/arrow-right.svg" alt="" class="img-fluid icon">
                                         </div>
                                     </a>
                                       <a href="#" class="swiper-slide">                                       
-                                        <div class="img-sec">
-                                            <img src="assets/images/home/img-rc.jpg" alt="retailers" class="img-fluid">
+                                         <div class="img-sec">
+                                             <picture>
+                                                <source media="(max-width: 767px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source media="(max-width: 1024px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <img src="assets/images/home/img-rc.jpg" alt="" class="img-fluid">
+                                            </picture>
                                         </div>
                                         <div class="content-sec">
                                             <h3>Unlocking Phygital Experiences:The Future of Retail</h3>    
-                                            <img src="assets/images/arrow-right.svg" alt="retailers" class="img-fluid">
+                                            <img src="assets/images/arrow-right.svg" alt="" class="img-fluid icon">
                                         </div>
                                     </a>
                                       <a href="#" class="swiper-slide">                                       
-                                        <div class="img-sec">
-                                            <img src="assets/images/home/img-rc.jpg" alt="retailers" class="img-fluid">
+                                         <div class="img-sec">
+                                             <picture>
+                                                <source media="(max-width: 767px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source media="(max-width: 1024px)" srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <source srcset="assets/images/home/img-rc.jpg" type="image/webp">
+                                                <img src="assets/images/home/img-rc.jpg" alt="" class="img-fluid">
+                                            </picture>
                                         </div>
                                         <div class="content-sec">
                                             <h3>Unlocking Phygital Experiences:The Future of Retail</h3>    
-                                            <img src="assets/images/arrow-right.svg" alt="retailers" class="img-fluid">
+                                            <img src="assets/images/arrow-right.svg" alt="" class="img-fluid icon" >
                                         </div>
                                     </a>                                    
                                     <!-- Add more slides as needed -->
@@ -548,12 +774,15 @@
 
                                 <!-- Optional pagination -->
                                 <div class="swiper-pagination"></div>
+
+                                <!-- Progress Bar -->
+                                <!-- <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div> -->
                             </div>
                         </div>
 
-                        <div class="btn-dv">
-                            <a href="#" class="btn btn-primary">Explore Our Blog</a>
-                        </div>
+                      
 
                     </div>
                 </div>
@@ -576,6 +805,7 @@
                                 <p>Join a team that's redefining retail experiences and be part of the next big thing in tech.</p>
                             </div>
                             <div class="btn-dv">
+                                <span class="mas">Apply Now</span>
                                 <a href="#" class="btn btn-primary">Apply Now</a>
                             </div>
                         </div>
@@ -737,17 +967,16 @@
         </footer>
     </div>
         
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-       <script>
-        $('#mySelect').select2({
-            placeholder: "Subject",
-            allowClear: true
-        });
-    </script>
+    <script src="assets/js/select2.min.js"></script> 
+    <script src="assets/js/aos.js"></script>    
     <script src="assets/js/custom.js" defer></script>
+    
     <script src="assets/js/footer-ants.js" defer></script>
+    <script>
+  
+    </script>
  
 
 
