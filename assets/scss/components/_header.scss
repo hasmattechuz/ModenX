@@ -241,7 +241,8 @@ nav {
 	}
 }
 .nav-left {
-    padding-inline: 70px;
+    padding-inline: var(--gutter70);
+	
 	ul {
 		li {
 			overflow: hidden;
@@ -436,6 +437,12 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--gutter);
+	@media only screen and (max-width: 991px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media only screen and (max-width: 767px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
 .contact-div{
     .link{

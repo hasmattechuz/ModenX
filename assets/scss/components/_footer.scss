@@ -50,6 +50,19 @@ footer {
 		justify-content: space-between;
 		max-width: 100%;
         padding-block: 42px;
+
+        @media (max-width: 1199px) {
+            padding-block: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 991px) {
+            padding-block: 30px;
+            justify-content: center;
+        }
 	}
 	p {	
 		display: flex;
@@ -121,6 +134,14 @@ footer {
             font-weight: 700;
             &.allreserved{
                 font-weight: 400;
+            }
+
+            @media (max-width: 1499px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 1199px) {
+                font-size: 14px;
             }
 		}
         .policies{
