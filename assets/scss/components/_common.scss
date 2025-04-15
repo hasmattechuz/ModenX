@@ -17,6 +17,9 @@
     --headingLH3: 54px;
     --p: 20px;
     --pLH: 34px;
+    
+    --fs16: 16px;
+    --fs16LH: 24px;
 
     --gutter: 35px;
 }
@@ -88,6 +91,11 @@ p {
     font-size: var(--p);
     line-height: var(--pLH);
     font-weight: 400;
+}
+
+.fs16 {
+    font-size: var(--fs16);
+    line-height: var(--fs16LH);
 }
 
 ul,

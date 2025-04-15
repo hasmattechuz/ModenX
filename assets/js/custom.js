@@ -13,10 +13,22 @@ function videoPlayer() {
   });
 }
 
+const storiesSlider = new Swiper(".swiper-stories", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 35,
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 1.5,
+    },
+  },
+});
+
 $(document).ready(function () {
-
-
-
   $(".menu-btn").click(function () {
     $("nav").toggleClass("open-nav");
     $("body").toggleClass("nav-active");
@@ -88,8 +100,8 @@ $(document).ready(function () {
   });
 
   videoPlayer();
+  storiesSlider();
 });
-
 
 // swiper menu
 if (window.innerWidth < 768) {
