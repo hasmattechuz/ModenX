@@ -1,17 +1,27 @@
 .contact-sec{
     padding: 70px 0;
+     h2{
+            span{
+                 position: relative;
+            }           
+            .down-arrow{
+                position: absolute;
+                top: -80px;
+                right: -420px;
+            }
+        }
     .form{
-        display: grid;
-        grid-template-columns: 1fr 646px;
-        gap: 36px;
+        display: flex;
+        gap: var(--gutter);
         margin-top: 55px;
     }
     .common-form{
         display: grid;
         gap: 35px;
+       
         .form-control{
             border-radius: 50px;
-            background: #F4F4F4;
+            background: var(--mx-grey);
             padding: 26px 37px;
             color: #A7A9AC;
             font-family: Montserrat;
@@ -49,13 +59,87 @@
         font-style: normal;
         font-weight: 400;
     }
-    .swiper{
-        .swiper-slide{
-            border-radius: 30px;
-            background: var(--mx-blue);
-            color: #fff;
-            padding: 64px 92px;
+    .contact-detail{
+        border-radius: 30px;
+        background: var(--mx-blue);        
+        padding: 64px 92px; 
+         max-width: 646px;
+        min-height: 620px;
+        max-height: 620px;
+        h3{
             color: var(--white);
+            margin-bottom: var(--gutter);
+            b{
+                color: var(--mx-yellow);
+            }
+        }    
+    }
+    .swiper{       
+        .swiper-slide{            
+            color: #fff;
+            color: var(--white);
+            display: grid;
+            gap: 20px;
+            a{
+                color: #fff;
+                display: flex;
+                align-items: center;
+                gap: var(--gutter);
+                img{
+                    max-width: 50px;
+                }
+                &:first-child{
+                    align-items: flex-start;
+                }
+                strong{
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .swiper-pagination{
+            position: relative;
+            margin-top: 35px;
+            .swiper-pagination-bullet{
+                border-radius: 10px;
+                background: rgba(33, 32, 33, 0.50);
+                min-width: 91px;
+                height: 7px;
+                position: relative;
+                overflow: hidden;
+                opacity: 1;
+                &.swiper-pagination-bullet-active{
+                    &::before{
+                        content: "";
+                        background-color: var(--mx-yellow);
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        animation: fill 5s;
+                        border-radius: 10px;
+                    }
+                }
+                
+            }
         }
     }
+     
+      
+
 }
+@keyframes fill{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+ 
+
+     
+  

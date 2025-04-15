@@ -13,10 +13,22 @@ function videoPlayer() {
   });
 }
 
+const storiesSlider = new Swiper(".swiper-stories", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 35,
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 1.5,
+    },
+  },
+});
+
 $(document).ready(function () {
-
-
-
   $(".menu-btn").click(function () {
     $("nav").toggleClass("open-nav");
     $("body").toggleClass("nav-active");
@@ -88,8 +100,8 @@ $(document).ready(function () {
   });
 
   videoPlayer();
+  storiesSlider();
 });
-
 
 // swiper menu
 if (window.innerWidth < 768) {
@@ -118,12 +130,34 @@ if (window.innerWidth < 768) {
   });
 }
 
-const swiper = new Swiper('.swiper-contact', {
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+// const swiper = new Swiper('.swiper-contact', {
+//     loop: true,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//      autoplay: {
+//         delay: 5000,
+//         disableOnInteraction: false,
+//       },
+//   });
 
-
+const swiper_update = new Swiper(".swiper-update", {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 35, // Enable looping
+  simulateTouch: true, // Enable drag/swipe simulation
+  touchStartPreventDefault: false, // Prevent default touch behavior if needed
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
