@@ -164,3 +164,7 @@ const swiper = new Swiper('.swiper-contact', {
   });
 
 
+ $('#mySelect').select2({
+    placeholder: "Subject",
+    allowClear: true
+});

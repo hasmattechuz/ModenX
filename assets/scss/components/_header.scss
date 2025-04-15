@@ -88,7 +88,9 @@
 		}
 	}
 }
-
+.poilcy{
+	display: none;
+}
 
 
 .menu-close { display: inline-flex; width: 80px; height: 80px; flex-wrap: wrap; align-items: center; justify-content: center; background: var(--yellow); border-radius: 100%; font-size: 48px; color: var(--white); position: absolute; top: 43px; right: 40px; cursor: pointer;}
