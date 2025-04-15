@@ -111,18 +111,19 @@ if (window.innerWidth < 992) {
     slidesPerView: 1,
     spaceBetween: 30,
     allowTouchMove: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+     pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+   
     // Optional: responsive settings
     breakpoints: {
       768: {
         slidesPerView: 1,
+         pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       },
       1024: {
         slidesPerView: 1,
@@ -186,4 +187,6 @@ const swiper = new Swiper('.swiper-contact', {
 
   $('.mobile-contact').click(function() {
     $('.swiper-menu').slideToggle(); // toggles between show and hide
+    $(this).parent().toggleClass('active');
   });
+  

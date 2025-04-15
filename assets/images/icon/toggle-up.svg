@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55 54" width="55" height="54">
+	<title>toggle-up</title>
+	<style>
+		.s0 { fill: #074bb6 } 
+		.s1 { fill: none;stroke: #dcf343;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4 } 
+	</style>
+	<path fill-rule="evenodd" class="s0" d="m10.8 0h34c5.5 0 10 4.5 10 10v34c0 5.5-4.5 10-10 10h-34c-5.6 0-10-4.5-10-10v-34c0-5.5 4.4-10 10-10z"/>
+	<g>
+		<path class="s1" d="m44.3 24.1v-9.4c0-2.2-1.8-4-4-4h-9.4"/>
+		<path class="s1" d="m11.8 29.9l-0.1 9.4c0 2.2 1.8 4 4 4h9.4"/>
+	</g>
+</svg>
