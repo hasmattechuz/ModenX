@@ -118,28 +118,28 @@ if (window.innerWidth < 768) {
   });
 }
 
-// const swiper = new Swiper('.swiper-contact', {
-//     loop: true,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//      autoplay: {
-//         delay: 5000, 
-//         disableOnInteraction: false, 
-//       },
-//   });
+const swiper = new Swiper('.swiper-contact', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+     autoplay: {
+        delay: 5000, 
+        disableOnInteraction: false, 
+      },
+  });
 
   const swiper_update = new Swiper('.swiper-update', {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 35,            // Enable looping
-  simulateTouch: true,    // Enable drag/swipe simulation
-  touchStartPreventDefault: false, // Prevent default touch behavior if needed
+    simulateTouch: true,    // Enable drag/swipe simulation
+    touchStartPreventDefault: false, // Prevent default touch behavior if needed
     pagination: {
         el: '.swiper-pagination',
         clickable: true,

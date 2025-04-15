@@ -1394,6 +1394,16 @@ footer .footer-mobile {
   pointer-events: none;
 }
 
+.img-stroke6 {
+  position: absolute;
+  top: -33px;
+  left: -55px;
+  width: 270px;
+  height: 100px;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* End of Stroke Animation */
 .primary-user-card {
   position: relative;
@@ -1516,6 +1526,9 @@ footer .footer-mobile {
 .update-section {
   padding: 70px 0;
 }
+.update-section h2 {
+  position: relative;
+}
 .update-section .swiper-slide {
   border-radius: 30px;
   overflow: hidden;
@@ -1530,6 +1543,11 @@ footer .footer-mobile {
 }
 .update-section .content-sec h3 {
   color: var(--white);
+}
+.update-section .update-inner {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: var(--gutter);
 }
 .update-section .swiper-pagination {
   position: relative;
@@ -1554,6 +1572,9 @@ footer .footer-mobile {
   height: 100%;
   animation: fill 5s;
   border-radius: 10px;
+}
+.update-section picture img {
+  min-height: 500px;
 }
 
 .contact-sec {
