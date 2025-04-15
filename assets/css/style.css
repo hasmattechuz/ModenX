@@ -180,8 +180,8 @@ img {
   width: 420px;
   max-width: 100%;
   border: 1px solid var(--mx-yellow);
-  -webkit-mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png);
-  mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png);
+  -webkit-mask: url(../../assets/images/mask.png);
+  mask: url(../../assets/images/mask.png);
   -webkit-mask-size: 3000% 100%;
   mask-size: 3000% 100%;
   border: none;
