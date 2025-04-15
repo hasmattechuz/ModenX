@@ -30,21 +30,31 @@
 
 @media (max-width: 767px) {
     :root {
+        --heading1: 54px;
+        --headingLH1: 66px;
+        --heading2: 36px;
+        --headingLH2: 47px;
+        --heading3: 24px;
+        --headingLH3: 34px;
+        --p: 20px;
+        --pLH: 34px;
+
+        --gutter70: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
         --heading1: 48px;
         --headingLH1: 54px;
         --heading2: 24px;
         --headingLH2: 34px;
-        --heading3: 28px;
-        --headingLH3: 36px;
+        --heading3: 24px;
+        --headingLH3: 34px;
         --p: 14px;
         --pLH: 24px;
 
-        --gutter: 35px;
         --gutter70: 20px;
-
-        --p35: 35px;
-        --mt35: 35px;
-        --mb35: 35px;
     }
 }
 
