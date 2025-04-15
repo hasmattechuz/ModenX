@@ -1,5 +1,4 @@
 :root {
-    // --font-family: 'Manrope', sans-serif;
     --font-family: 'Montserrat', sans-serif;
 
     --white: #fff;
@@ -22,6 +21,31 @@
     --fs16LH: 24px;
 
     --gutter: 35px;
+    --gutter70: 70px;
+
+    --p35: 35px;
+    --mt35: 35px;
+    --mb35: 35px;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --heading1: 48px;
+        --headingLH1: 54px;
+        --heading2: 24px;
+        --headingLH2: 34px;
+        --heading3: 28px;
+        --headingLH3: 36px;
+        --p: 14px;
+        --pLH: 24px;
+
+        --gutter: 35px;
+        --gutter70: 20px;
+
+        --p35: 35px;
+        --mt35: 35px;
+        --mb35: 35px;
+    }
 }
 
 // Global Styles
@@ -114,8 +138,8 @@ strong {
 
 .container-fluid {
     width: 100%;
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-right: var(--gutter70);
+    padding-left: var(--gutter70);
     margin-right: auto;
     margin-left: auto;
 
@@ -174,12 +198,12 @@ img {
 
 .content-dv {
     h2 {
-        margin-bottom: 35px;
+        margin-bottom: var(--mb35);
     }
 }
 
 .desc-global {
-    margin-bottom: 35px;
+    margin-bottom: var(--mb35);
 }
 
 .btn-dv {
