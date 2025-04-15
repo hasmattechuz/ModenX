@@ -28,7 +28,8 @@ const storiesSlider = new Swiper(".swiper-stories", {
   },
 });
 
-$(document).ready(function () {
+$(document).ready(function () { 
+  
   $(".menu-btn").click(function () {
     $("nav").toggleClass("open-nav");
     $("body").toggleClass("nav-active");
@@ -180,3 +181,5 @@ const swiper = new Swiper('.swiper-contact', {
     placeholder: "Subject",
     allowClear: true
 });
+
+ AOS.init();
