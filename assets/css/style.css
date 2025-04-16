@@ -40,6 +40,7 @@
     --headingLH3_2: 34px;
     --p: 18px;
     --pLH: 27px;
+    --fs16: 14px;
     --gutter70: 50px;
     --gutter30: 20px;
     --gutter: 25px;
@@ -201,7 +202,7 @@ a {
 
 .btn {
   color: var(--mx-blue);
-  font-size: 16px;
+  font-size: var(--fs16);
   font-weight: 700;
   line-height: 33px;
   text-align: center;
@@ -251,6 +252,11 @@ img {
   border: 1px solid var(--mx-yellow);
   border-radius: 30px;
 }
+@media only screen and (max-width: 567px) {
+  .btn-dv {
+    width: 100%;
+  }
+}
 .btn-dv:hover {
   border-color: var(--mx-blue);
 }
@@ -279,7 +285,7 @@ img {
   top: 10px;
   position: absolute;
   overflow: hidden;
-  font-size: 16px;
+  font-size: var(--fs16);
   font-weight: 700;
   line-height: 33px;
 }
@@ -344,6 +350,12 @@ input[type=checkbox] + label {
     line-height: 1.2;
   }
 }
+@media only screen and (max-width: 767px) {
+  input[type=checkbox] + label {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
 
 input[type=checkbox] {
   display: none;
@@ -369,6 +381,11 @@ input[type=checkbox] + label:before {
     border-radius: 2px;
   }
 }
+@media only screen and (max-width: 767px) {
+  input[type=checkbox] + label:before {
+    margin-top: 2px;
+  }
+}
 
 input[type=checkbox] + label:after {
   content: "";
@@ -392,6 +409,11 @@ input[type=checkbox]:checked + label:after {
     height: 17px;
     background-size: contain;
     left: 3px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  input[type=checkbox]:checked + label:after {
+    top: 1px;
   }
 }
 
@@ -577,7 +599,7 @@ input[type=checkbox]:checked + label:after {
   z-index: 99;
 }
 .nav-active .header-logo .white-logo {
-  display: block;
+  display: block !important;
   animation: opacitylogo 2.5s linear;
 }
 .nav-active .header-logo .black-logo {
@@ -2588,7 +2610,17 @@ footer .footer-mobile {
 @media only screen and (max-width: 991px) {
   .contact-sec .common-form .form-control {
     border-radius: 25px;
+    padding: 15px 12px;
   }
+}
+.contact-sec .common-form .form-control::placeholder {
+  color: #A7A9AC;
+}
+.contact-sec .common-form .form-control::-webkit-placeholder {
+  color: #A7A9AC;
+}
+.contact-sec .common-form .form-control::-moz-placeholder {
+  color: #A7A9AC;
 }
 .contact-sec .common-form .form-group-inline {
   display: grid;
@@ -2610,11 +2642,16 @@ footer .footer-mobile {
   cursor: pointer;
 }
 .contact-sec .mandatory {
-  color: #000;
+  color: var(--black);
   font-family: var(--font-family);
-  font-size: 16px;
+  font-size: var(--fs16);
   font-style: normal;
   font-weight: 400;
+}
+@media only screen and (max-width: 567px) {
+  .contact-sec .mandatory {
+    text-align: center;
+  }
 }
 .contact-sec .contact-detail {
   border-radius: 30px;
