@@ -22,7 +22,7 @@ const storiesSlider = new Swiper(".swiper-stories", {
     prevEl: ".swiper-prev",
   },
   breakpoints: {
-    1200: {
+    768: {
       slidesPerView: 1.5,
     },
   },
