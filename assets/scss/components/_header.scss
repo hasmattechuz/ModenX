@@ -193,7 +193,8 @@ nav {
 	position: fixed;
 	left: 0;
 	top: -100%;
-	transform: translateY(-100%);
+	// transform: translateY(-100%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
 	width: 100%;
 	height: 100vh;
 	background: var(--mx-blue);	
@@ -201,7 +202,7 @@ nav {
 	display: flex;	
     flex-direction: column;
 	justify-content: space-between;
-	transition: all 0.8s ease-in-out;
+	transition: all 2s ease-in-out;
 	text-transform: uppercase;
 	@media only screen and (max-width: 1500px) {
 		padding-block: 140px 0;
@@ -210,9 +211,10 @@ nav {
 		padding-block: 100px 0;
 	}
 	&.open-nav {
-		transition: all 0.8s ease-in-out;
+		transition: all 1s ease-in-out;
 		top: 0;
-		transform: translateY(0);
+		// transform: translateY(0);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 		z-index: 9;
 		 @media only screen and (max-width: 767px) {
 			min-height: 100vh;
@@ -222,9 +224,10 @@ nav {
 			ul {
 				li {
 					a {
-						transform: translateY(0);
-						opacity: 1;
-						transition: all 0.5s ease-in-out;
+						// transform: translateY(0);
+						transform: translate(0px, 0px);
+						// opacity: 1;
+						transition: all 1s ease-in-out;
 					}
 				}
 			}
@@ -337,9 +340,10 @@ nav {
 				font-size: var(--heading3);
 				line-height:  var(--headingLH3);
 				height: 100%;
-				transition: all 0.5s ease-in-out;
-				transform: translateY(100px);
-				opacity: 0;
+				// transition: all 0.5s ease-in-out;
+				// transform: translateY(100px);
+				transform: translate(0px, 100px);				
+				// opacity: 0;
 				font-weight: 700;
 				display: inline-block;
                 position: relative;
@@ -389,6 +393,8 @@ nav {
 			}
 		}
 	}
+	
+	
 }
 .nav-img {
 	width: 447px;
@@ -495,10 +501,10 @@ a {
 	transition: all 200ms linear;
 	margin: 0;
 }
-.menu-btn:hover .menu-btn__line-left,
-.menu-btn:hover .menu-btn__line-right {
-	width: 16.5px;
-}
+// .menu-btn:hover .menu-btn__line-left,
+// .menu-btn:hover .menu-btn__line-right {
+// 	transform: rotate(360deg);
+// }
 body {
 	&.nav-active {
 		.menu-btn__line {
@@ -661,7 +667,7 @@ header {
 			display: block;
 		}
 		.black-logo{
-			display: none;			
+			display: none;						
 		}
 		.navbar {
 			padding: 10px 0;
@@ -671,6 +677,7 @@ header {
 		}
 
 	}
+	
 }
 .nav-right{
     background: rgba(0, 0, 0, 0.50);
