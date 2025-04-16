@@ -2,10 +2,10 @@
   --font-family: "Montserrat", sans-serif;
   --white: #fff;
   --black: #000;
-  --mx-blue: #074BB6;
-  --mx-yellow: #DCF343;
+  --mx-blue: #074bb6;
+  --mx-yellow: #dcf343;
   --mx-black: #212021;
-  --mx-grey: #F4F4F4;
+  --mx-grey: #f4f4f4;
   --heading1: 72px;
   --headingLH1: 90px;
   --heading2: 48px;
@@ -409,7 +409,7 @@ input[type=checkbox]:checked + label:after {
   background: var(--mx-grey);
   border: none;
   padding: 20px 27px;
-  color: #A7A9AC;
+  color: #a7a9ac;
   font-family: Montserrat;
   font-size: var(--p);
   font-style: normal;
