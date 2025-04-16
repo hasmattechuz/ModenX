@@ -107,7 +107,7 @@ $(document).ready(function () {
 
 // swiper menu
 if (window.innerWidth < 992) {
-  const swiper = new Swiper(".swiper-menu", {
+  const swiper1 = new Swiper(".swiper-menu", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
@@ -115,21 +115,8 @@ if (window.innerWidth < 992) {
      pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      },
-   
-    // Optional: responsive settings
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
-         pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      },
-      1024: {
-        slidesPerView: 1,
-      },
-    },
+      },   
+    
   });
 }
 
@@ -150,7 +137,7 @@ const swiper = new Swiper('.swiper-contact', {
   });
 
   const swiper_update = new Swiper('.swiper-update', {
-    loop: true,
+    loop: false,
     slidesPerView: 2,
     spaceBetween: 35,            // Enable looping
     simulateTouch: true,    // Enable drag/swipe simulation
@@ -167,6 +154,20 @@ const swiper = new Swiper('.swiper-contact', {
         el: '.swiper-scrollbar',
         draggable: true,
       },
+
+       // Optional: responsive settings
+    breakpoints: {
+      320: {
+        slidesPerView: 1,       
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 20,     
+      },
+      1200: {
+        slidesPerView: 2,
+      },
+    },
     
    
   });
@@ -177,7 +178,7 @@ const swiper = new Swiper('.swiper-contact', {
 });
 
  AOS.init({   
-    offset: -200       // adjust this to control when animation triggers
+    
   });  
 
   $('.mobile-contact').click(function() {

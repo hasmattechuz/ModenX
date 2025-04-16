@@ -39,10 +39,14 @@
     --p35: 25px;
     --mt35: 25px;
     --mb35: 25px;
+    --p70:70px;
+    --p50:50px;
 
     --max-w1920: 1920px;
     --max-w1440: 1440px;
     --max-w1240: 1240px;
+
+    
 }
 
 // @media (max-width: 1700px) {
@@ -82,12 +86,13 @@
         --p: 14px;
         --pLH: 24px;
 
+        --gutter: 15px;
         --gutter70: 20px;
         --pl70: 20px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     :root {
         --heading1: 42px;
         --headingLH1: 52px;
@@ -101,6 +106,14 @@
 
         --gutter70: 20px;
         --pl70: 20px;
+
+         --mb35: 15px;
+    }
+}
+@media (max-width: 991px) {
+    :root {
+        --p70:50px;
+        --p50:50px;
     }
 }
 
@@ -296,7 +309,7 @@ img {
 
 .btn-dv {
     position: relative;
-    width: 420px;
+    width: 350px;
     height: 53px;
     max-width: 100%;
     overflow: hidden;
@@ -398,7 +411,7 @@ img {
 input[type="checkbox"]+label {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 10px;
     margin: 0;
     cursor: pointer;
     padding: 0;
@@ -424,12 +437,13 @@ input[type="checkbox"]+label:before {
     border: 1px solid #000;
     border-radius: 5px;
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    min-width: 30px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
     vertical-align: bottom;
     color: transparent;
     transition: 0.2s;
+    margin-top: 3px;
 
     @media only screen and (max-width: 991px) {
         width: 14px;
@@ -447,16 +461,17 @@ input[type="checkbox"]+label:after {
     transition: 0.2s;
     position: absolute;
     background: url(../../assets/images/arrow.svg) no-repeat;
-    left: 5px;
-    top: 0;
+    left: 3px;
+    top: 3px;
     transform: scale(0);
     transition: 0.2s ease-in-out;
 }
 
 input[type="checkbox"]:checked+label:after {
     transform: scale(1);
-    width: 36px;
-    height: 25px;
+    width: 26px;
+    height: 15px;
+    background-size: contain;
 
     @media only screen and (max-width: 991px) {
         width: 16px;
