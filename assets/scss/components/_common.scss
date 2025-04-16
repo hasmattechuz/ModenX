@@ -1,12 +1,12 @@
 :root {
-    --font-family: 'Montserrat', sans-serif;
+    --font-family: "Montserrat", sans-serif;
 
     --white: #fff;
     --black: #000;
-    --mx-blue: #074BB6;
-    --mx-yellow: #DCF343;
+    --mx-blue: #074bb6;
+    --mx-yellow: #dcf343;
     --mx-black: #212021;
-    --mx-grey: #F4F4F4;
+    --mx-grey: #f4f4f4;
 
     --heading1: 72px;
     --headingLH1: 90px;
@@ -32,7 +32,7 @@
 
     --max-w1920: 1920px;
     --max-w1440: 1440px;
-    --max-w1200: 1240px;
+    --max-w1240: 1240px;
 }
 
 @media (max-width: 1700px) {
@@ -57,7 +57,8 @@
         --mb35: 25px;
     }
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1200px) {
     :root {
         --heading1: 48px;
         --headingLH1: 54px;
@@ -73,6 +74,7 @@
         --pl70: 20px;
     }
 }
+
 @media (max-width: 767px) {
     :root {
         --heading1: 48px;
@@ -200,6 +202,10 @@ strong {
     @media (max-width: 1550px) {
         max-width: var(--max-w1240);
     }
+
+    @media (max-width: 1200px) {
+        max-width: 100%;
+    }
 }
 
 .btn,
@@ -262,34 +268,37 @@ img {
 .btn-dv {
     position: relative;
     width: 420px;
-    height: 53px;    
-    max-width: 100%;  
-    overflow: hidden;   
-    border: 1px solid var(--mx-yellow);    
+    height: 53px;
+    max-width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--mx-yellow);
     border-radius: 30px;
-     &:hover {
+
+    &:hover {
         border-color: var(--mx-blue);
+
         .btn {
             background: var(--mx-blue);
             -webkit-animation: ani 0.7s steps(29) forwards;
             animation: ani 0.7s steps(29) forwards;
         }
     }
+
     .btn {
         width: 100%;
-        max-width: 100%;                     
+        max-width: 100%;
         border: 1px solid var(--mx-blue);
         -webkit-mask: url(../../assets/images/mask.png);
         mask: url(../../assets/images/mask.png);
         // mask: url(https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png);
         -webkit-mask-size: 3000% 100%;
         mask-size: 3000% 100%;
-        border: none;            
+        border: none;
         cursor: pointer;
         -webkit-animation: ani2 0.7s steps(29) forwards;
         animation: ani2 0.7s steps(29) forwards;
-       
     }
+
     .mas {
         color: var(--mx-blue);
         text-align: center;
@@ -299,54 +308,63 @@ img {
         overflow: hidden;
         font-size: 16px;
         font-weight: 700;
-        line-height: 33px;          
+        line-height: 33px;
     }
 }
+
 @-webkit-keyframes ani {
-  from {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-  to {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
 }
+
 @keyframes ani {
-  from {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-  to {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
 }
+
 @-webkit-keyframes ani2 {
-  from {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
-  to {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
 }
+
 @keyframes ani2 {
-  from {
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-  }
-  to {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
 }
+
 .mb-0 {
     margin-bottom: 0 !important;
 }
 
-input[type=checkbox]+label {
+input[type="checkbox"]+label {
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -355,17 +373,18 @@ input[type=checkbox]+label {
     padding: 0;
     color: #000;
     position: relative;
-     @media only screen and (max-width: 991px) {
+
+    @media only screen and (max-width: 991px) {
         gap: 10px;
         line-height: 1.2;
-     }
+    }
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
     display: none;
 }
 
-input[type=checkbox]+label:before {
+input[type="checkbox"]+label:before {
     content: "";
     border: 1px solid #000;
     border-radius: 5px;
@@ -375,7 +394,7 @@ input[type=checkbox]+label:before {
     min-width: 30px;
     vertical-align: bottom;
     color: transparent;
-    transition: .2s;
+    transition: 0.2s;
 
     @media only screen and (max-width: 991px) {
         width: 14px;
@@ -385,9 +404,9 @@ input[type=checkbox]+label:before {
     }
 }
 
-input[type=checkbox]+label:after {
+input[type="checkbox"]+label:after {
     content: "";
-    transition: .2s;
+    transition: 0.2s;
     position: absolute;
     background: url(../../assets/images/arrow.svg) no-repeat;
     left: 5px;
@@ -396,28 +415,30 @@ input[type=checkbox]+label:after {
     transition: 0.2s ease-in-out;
 }
 
-input[type=checkbox]:checked+label:after {
+input[type="checkbox"]:checked+label:after {
     transform: scale(1);
     width: 36px;
     height: 25px;
-     @media only screen and (max-width: 991px) {
+
+    @media only screen and (max-width: 991px) {
         width: 16px;
         height: 17px;
         background-size: contain;
         left: 3px;
-     }
-
+    }
 }
-.select2-container{
+
+.select2-container {
     width: 100% !important;
 }
+
 .select2-container--default {
     .select2-selection {
         border-radius: 50px;
         background: var(--mx-grey);
         border: none;
         padding: 20px 27px;
-        color: #A7A9AC;
+        color: #a7a9ac;
         font-family: Montserrat;
         font-size: var(--p);
         font-style: normal;
