@@ -19,58 +19,56 @@
     // --pLH: 34px;
 
     --heading1: 50px;
-    --headingLH1: 70px;
-    --heading2: 38px;
-    --headingLH2: 49px;
-    --heading3: 26px;
-    --headingLH3: 44px;
-    --headingLH3_2: 37px;
-    --heading6: 20px;
-    --headingLH6: 32px;
-    --p: 16px;
-    --pLH: 27px;
+    --headingLH1: 65px;
+    --heading2: 36px;
+    --headingLH2: 48px;
+    --heading3: 24px;
+    --headingLH3: 36px;
+    --headingLH3_2: 36px;
+    --p: 15px;
+    --pLH: 24px;
 
-    --fs16: 16px;
-    --fs16LH: 24px;
+    --fs16: 14px;
+    --fs16LH: 21px;
 
-    --gutter: 35px;
-    --gutter30: 30px;
+    --gutter: 25px;
+    --gutter30: 20px;
     --gutter70: 70px;
     --pl70: 70px;
 
-    --p35: 35px;
-    --mt35: 35px;
-    --mb35: 35px;
+    --p35: 25px;
+    --mt35: 25px;
+    --mb35: 25px;
 
     --max-w1920: 1920px;
     --max-w1440: 1440px;
     --max-w1240: 1240px;
 }
 
-@media (max-width: 1700px) {
-    :root {
-        --heading1: 54px;
-        --headingLH1: 66px;
-        --heading2: 36px;
-        --headingLH2: 47px;
-        --heading3: 24px;
-        --headingLH3: 34px;
-        --headingLH3_2: 34px;
-        --p: 18px;
-        --pLH: 27px;
+// @media (max-width: 1700px) {
+//     :root {
+//         --heading1: 54px;
+//         --headingLH1: 66px;
+//         --heading2: 36px;
+//         --headingLH2: 47px;
+//         --heading3: 24px;
+//         --headingLH3: 34px;
+//         --headingLH3_2: 34px;
+//         --p: 18px;
+//         --pLH: 27px;
 
-        --fs16: 14px;
+//         --fs16: 14px;
 
-        --gutter70: 50px;
-        --gutter30: 20px;
-        --gutter: 25px;
+//         --gutter70: 50px;
+//         --gutter30: 20px;
+//         --gutter: 25px;
 
-        --pl70: 50px;
-        --p35: 25px;
-        --mt35: 25px;
-        --mb35: 25px;
-    }
-}
+//         --pl70: 50px;
+//         --p35: 25px;
+//         --mt35: 25px;
+//         --mb35: 25px;
+//     }
+// }
 
 @media (max-width: 1200px) {
     :root {
@@ -78,9 +76,9 @@
         --headingLH1: 54px;
         --heading2: 24px;
         --headingLH2: 34px;
-        --heading3: 24px;
-        --headingLH3: 34px;
-        --headingLH3_2: 34px;
+        --heading3: 20px;
+        --headingLH3: 28px;
+        --headingLH3_2: 28px;
         --p: 14px;
         --pLH: 24px;
 
@@ -91,13 +89,13 @@
 
 @media (max-width: 767px) {
     :root {
-        --heading1: 48px;
-        --headingLH1: 54px;
+        --heading1: 42px;
+        --headingLH1: 52px;
         --heading2: 24px;
         --headingLH2: 34px;
-        --heading3: 24px;
-        --headingLH3: 34px;
-        --headingLH3_2: 34px;
+        --heading3: 20px;
+        --headingLH3: 30px;
+        --headingLH3_2: 30px;
         --p: 14px;
         --pLH: 24px;
 
@@ -204,18 +202,19 @@ strong {
     padding-left: var(--gutter70);
     margin-right: auto;
     margin-left: auto;
+    max-width: 1920px;
 
-    @media (min-width: 2000px) {
-        max-width: var(--max-w1920);
-    }
+    // @media (min-width: 2000px) {
+    //     max-width: var(--max-w1920);
+    // }
 
-    @media (max-width: 1700px) {
-        max-width: var(--max-w1440);
-    }
+    // @media (max-width: 1700px) {
+    //     max-width: var(--max-w1440);
+    // }
 
-    @media (max-width: 1550px) {
-        max-width: var(--max-w1240);
-    }
+    // @media (max-width: 1550px) {
+    //     max-width: var(--max-w1240);
+    // }
 
     @media (max-width: 1200px) {
         max-width: 100%;
@@ -277,6 +276,22 @@ img {
 
 .desc-global {
     margin-bottom: var(--mb35);
+}
+
+.display-desktop {
+    display: block !important;
+
+    @media only screen and (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+.display-mobile {
+    display: none !important;
+
+    @media only screen and (max-width: 991px) {
+        display: block !important;
+    }
 }
 
 .btn-dv {

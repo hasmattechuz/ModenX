@@ -16,7 +16,7 @@ function videoPlayer() {
 const storiesSlider = new Swiper(".swiper-stories", {
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 35,
+  spaceBetween: 20,
   navigation: {
     nextEl: ".swiper-next",
     prevEl: ".swiper-prev",
@@ -24,7 +24,8 @@ const storiesSlider = new Swiper(".swiper-stories", {
   breakpoints: {
     768: {
       slidesPerView: 1.5,
-    },
+      spaceBetween: 25,
+    }
   },
 });
 
