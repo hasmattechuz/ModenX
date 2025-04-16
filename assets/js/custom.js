@@ -172,10 +172,12 @@ const swiper = new Swiper('.swiper-contact', {
   
   $('#mySelect').select2({
     placeholder: "Subject",
-    allowClear: true
+    // allowClear: true
 });
 
- AOS.init();
+ AOS.init({   
+    offset: -200       // adjust this to control when animation triggers
+  });  
 
   $('.mobile-contact').click(function() {
     $('.swiper-menu').slideToggle(); // toggles between show and hide
