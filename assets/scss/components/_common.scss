@@ -64,9 +64,9 @@
         --headingLH1: 54px;
         --heading2: 24px;
         --headingLH2: 34px;
-        --heading3: 24px;
-        --headingLH3: 34px;
-        --headingLH3_2: 34px;
+        --heading3: 20px;
+        --headingLH3: 28px;
+        --headingLH3_2: 28px;
         --p: 14px;
         --pLH: 24px;
 
@@ -263,6 +263,22 @@ img {
 
 .desc-global {
     margin-bottom: var(--mb35);
+}
+
+.display-desktop {
+    display: block !important;
+
+    @media only screen and (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+.display-mobile {
+    display: none !important;
+
+    @media only screen and (max-width: 991px) {
+        display: block !important;
+    }
 }
 
 .btn-dv {
