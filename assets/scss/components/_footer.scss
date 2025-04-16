@@ -44,12 +44,15 @@
 /*animation*/
 footer {
 	background: var(--mx-blue);
+    @media (max-width: 991px) {
+       background: var(--mx-yellow);
+    }
 	.container-fluid {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		max-width: 100%;
-        padding-block: 42px;
+        padding-block: 0;
 
         @media (max-width: 1199px) {
             padding-block: 10px;
@@ -69,13 +72,19 @@ footer {
 		margin-bottom: 0;
         line-height: 1;
         color: var(--mx-yellow);
+         @media (max-width: 991px) {
+            color: var(--mx-blue);
+        }
 		a {
 			color: var(--mx-yellow);
 			border-left: 1px solid var(--mx-yellow);
 			padding: 0 6px;
             overflow: visible;
             position: relative;
-			&:first-child {
+            @media (max-width: 991px) {
+                color: var(--mx-blue);
+            }
+            &:first-child {
 				margin-left: 6px;
                 border: none;
 			}
@@ -132,8 +141,23 @@ footer {
 		span {
 			display: flex;
             font-weight: 700;
+             @media (max-width: 991px) {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                row-gap: 10px;
+            }
+        
             &.allreserved{
                 font-weight: 400;
+                 @media (max-width: 991px) {
+                    padding-left: 0;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                 }
             }
 
             @media (max-width: 1499px) {
@@ -146,6 +170,9 @@ footer {
 		}
         .policies{
             margin-left: 10px;
+            @media (max-width: 991px) {
+                display: none;
+            }
             strong{
                 margin-right: 5px;
             }
@@ -155,6 +182,10 @@ footer {
         }
 	}
 	.footer-bottom {
+        @media (max-width: 991px) {
+            flex-direction: column;
+            gap: 12px;
+        }
 		.content-inner {
 			position: static;
 		}
@@ -268,9 +299,18 @@ footer {
         &:hover {
             background: transparent;
         }
+        .ma-logo{
+            display: flex;
+            @media (max-width: 1024px) {
+                width: 50px;
+            }
+        }
     }
     .footer-ma-logo {
         min-width: 120px;
+         @media (max-width: 991px) {
+            min-width: auto;
+         }
     }
     .footer-mobile {
 		display: none;
@@ -282,7 +322,10 @@ footer {
 	.footer-desktop {
 		display: none;
 	}
-    .footer-mobile {
-		display: block;
-	}	
+    footer {
+        .footer-mobile {
+            display: block;
+        }
+    }
+    	
 }

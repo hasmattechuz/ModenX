@@ -13,6 +13,8 @@
   --heading3: 26px;
   --headingLH3: 44px;
   --headingLH3_2: 37px;
+  --heading6: 20px;
+  --headingLH6: 32px;
   --p: 16px;
   --pLH: 27px;
   --fs16: 16px;
@@ -444,6 +446,12 @@ input[type=checkbox]:checked + label:after {
   flex-direction: row-reverse;
   height: auto;
 }
+@media only screen and (max-width: 991px) {
+  .select2-container--default .select2-selection {
+    border-radius: 25px;
+    padding: 15px 12px;
+  }
+}
 .select2-container--default .select2-selection .select2-selection__arrow {
   top: 50%;
   transform: translateY(-50%);
@@ -497,8 +505,8 @@ input[type=checkbox]:checked + label:after {
 }
 
 .header {
-  padding: 25px 0;
-  min-height: 126px;
+  padding: 10px 0;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,6 +576,7 @@ input[type=checkbox]:checked + label:after {
 }
 .menu-right .right-btn .btn-dv {
   width: 220px;
+  animation: opacitylogo 2.5s linear;
 }
 @media only screen and (max-width: 991px) {
   .menu-right .right-btn .btn-dv {
@@ -1352,12 +1361,17 @@ header.nav-down .navbar .navbar-brand {
 footer {
   background: var(--mx-blue);
 }
+@media (max-width: 991px) {
+  footer {
+    background: var(--mx-yellow);
+  }
+}
 footer .container-fluid {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 100%;
-  padding-block: 42px;
+  padding-block: 0;
 }
 @media (max-width: 1199px) {
   footer .container-fluid {
@@ -1381,12 +1395,22 @@ footer p {
   line-height: 1;
   color: var(--mx-yellow);
 }
+@media (max-width: 991px) {
+  footer p {
+    color: var(--mx-blue);
+  }
+}
 footer p a {
   color: var(--mx-yellow);
   border-left: 1px solid var(--mx-yellow);
   padding: 0 6px;
   overflow: visible;
   position: relative;
+}
+@media (max-width: 991px) {
+  footer p a {
+    color: var(--mx-blue);
+  }
 }
 footer p a:first-child {
   margin-left: 6px;
@@ -1440,8 +1464,26 @@ footer p span {
   display: flex;
   font-weight: 700;
 }
+@media (max-width: 991px) {
+  footer p span {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+}
 footer p span.allreserved {
   font-weight: 400;
+}
+@media (max-width: 991px) {
+  footer p span.allreserved {
+    padding-left: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 @media (max-width: 1499px) {
   footer p span {
@@ -1456,11 +1498,22 @@ footer p span.allreserved {
 footer p .policies {
   margin-left: 10px;
 }
+@media (max-width: 991px) {
+  footer p .policies {
+    display: none;
+  }
+}
 footer p .policies strong {
   margin-right: 5px;
 }
 footer p .policies a {
   font-weight: 400;
+}
+@media (max-width: 991px) {
+  footer .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 footer .footer-bottom .content-inner {
   position: static;
@@ -1563,8 +1616,21 @@ footer .logo-to-hover:hover + .footer-hover-content > .walking-ants-container .w
 footer .logo-to-hover:hover {
   background: transparent;
 }
+footer .logo-to-hover .ma-logo {
+  display: flex;
+}
+@media (max-width: 1024px) {
+  footer .logo-to-hover .ma-logo {
+    width: 50px;
+  }
+}
 footer .footer-ma-logo {
   min-width: 120px;
+}
+@media (max-width: 991px) {
+  footer .footer-ma-logo {
+    min-width: auto;
+  }
 }
 footer .footer-mobile {
   display: none;
@@ -1574,7 +1640,7 @@ footer .footer-mobile {
   .footer-desktop {
     display: none;
   }
-  .footer-mobile {
+  footer .footer-mobile {
     display: block;
   }
 }
@@ -2621,6 +2687,7 @@ footer .footer-mobile {
 }
 .update-section .swiper-slide .icon {
   transition: 0.3s ease-in-out;
+  width: 15px;
 }
 .update-section .swiper-slide:hover .icon {
   transform: translateX(10px);
@@ -2632,6 +2699,7 @@ footer .footer-mobile {
   padding: 10px 28px;
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 .update-section .content-sec h3 {
   color: var(--white);
@@ -2661,6 +2729,9 @@ footer .footer-mobile {
   overflow: hidden;
   height: 7px;
   background: var(--mx-grey);
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
 .update-section .swiper-scrollbar .swiper-scrollbar-drag {
   background: var(--mx-yellow);
@@ -2702,7 +2773,7 @@ footer .footer-mobile {
   transition: width 0.3s ease;
 }
 .update-section picture img {
-  min-height: 500px;
+  min-height: 400px;
   object-fit: cover;
 }
 
