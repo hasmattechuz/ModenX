@@ -1844,8 +1844,14 @@ footer .footer-mobile {
   justify-content: center;
 }
 .blue-block-section .btn-dv:hover {
-  background: var(--mx-yellow);
-  border-color: var(--mx-yellow);
+  background: #1D3568;
+  border-color: #1D3568;
+}
+.blue-block-section .btn-dv:hover .btn {
+  color: var(--white);
+}
+.blue-block-section .btn-dv:hover .mas {
+  color: var(--white);
 }
 @media only screen and (max-width: 420px) {
   .blue-block-section .btn-dv .btn {
@@ -1962,7 +1968,7 @@ footer .footer-mobile {
 
 .img-stroke3_4 {
   position: absolute;
-  top: -360px;
+  top: -220px;
   right: -85px;
   width: 600px !important;
   height: 600px;
@@ -2222,6 +2228,7 @@ footer .footer-mobile {
 
 .news-section {
   position: relative;
+  padding-bottom: 70px;
 }
 
 .news-insights-parent {
@@ -2423,7 +2430,6 @@ footer .footer-mobile {
 .update-section {
   padding: 70px 0;
   position: relative;
-  overflow: hidden;
 }
 .update-section h2 {
   position: relative;
