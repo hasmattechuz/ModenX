@@ -22,11 +22,96 @@ const storiesSlider = new Swiper(".swiper-stories", {
     prevEl: ".swiper-prev",
   },
   breakpoints: {
+     567: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    767: {
+      slidesPerView: 1,
+      spaceBetween: 25,
+    },
     768: {
       slidesPerView: 1.5,
       spaceBetween: 25,
     }
   },
+});
+
+const coreValueSlider = new Swiper(".swiper-core-values", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 25,
+    }
+  },
+});
+
+const RetailersSlider = new Swiper(".swiper-retailers", {
+  loop: false,
+    slidesPerView: 1,
+    spaceBetween: 15,            // Enable looping
+    simulateTouch: true,    // Enable drag/swipe simulation
+    touchStartPreventDefault: false, // Prevent default touch behavior if needed
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },  
+     scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+      breakpoints: {
+      567: {
+        slidesPerView: 1    
+      },
+      767: {
+        slidesPerView: 2,
+      },
+    },
+
+       // Optional: responsive settings
+   
+});
+const ConsumerSlider = new Swiper(".swiper-consumer", {
+  loop: false,
+    slidesPerView: 1,
+    spaceBetween: 15,            // Enable looping
+    simulateTouch: true,    // Enable drag/swipe simulation
+    touchStartPreventDefault: false, // Prevent default touch behavior if needed
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },  
+     scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+      breakpoints: {
+      567: {
+        slidesPerView: 1    
+      },
+      767: {
+        slidesPerView: 2,
+      },
+    },
+
+       // Optional: responsive settings
+   
 });
 
 $(document).ready(function () { 
@@ -103,6 +188,9 @@ $(document).ready(function () {
 
   videoPlayer();
   storiesSlider();
+  coreValueSlider();
+  RetailersSlider();
+  ConsumerSlider();
 });
 
 // swiper menu
@@ -168,6 +256,28 @@ const swiper = new Swiper('.swiper-contact', {
         slidesPerView: 2,
       },
     },
+    
+   
+  });
+
+  const swiper_challenges = new Swiper('.swiper-challenges', {
+    loop: true,
+    slidesPerView: 1.5,
+    spaceBetween: 35,            // Enable looping
+    simulateTouch: true,    // Enable drag/swipe simulation
+    touchStartPreventDefault: false, // Prevent default touch behavior if needed
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },  
+     scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
     
    
   });

@@ -136,17 +136,14 @@
 }
 
 .phygital-section {
-    padding: 70px 0;
+    padding: var(--p70) 0;
     background-color: var(--mx-grey);
     position: relative;
     min-height: 100dvh;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-    @media (max-width: 991px) {
-        padding-block: 50px;
-    }
+   
 }
 
 .phygital-inner {
@@ -496,6 +493,9 @@
     padding: 100px 0 120px;
     overflow: hidden;
     position: relative;
+    @media only screen and (max-width: 767px) {
+       padding: var(--p70) 0;
+    }
 
     .container-fluid {
         display: grid;
@@ -509,64 +509,74 @@
     grid-template-rows: auto auto;
     gap: var(--gutter);
     position: relative;
+    @media only screen and (max-width: 567px) {
+        grid-template-columns: 1fr;     
+    }
 
     &.for-retailers-inner {
-        .item1 {
-            grid-column: 1;
-            grid-row: 1;
-        }
+        @media only screen and (min-width: 568px) {
+            .item1 {
+                grid-column: 1;
+                grid-row: 1;
+                
+            }
 
-        .item2 {
-            grid-column: 2 / span 2;
-            grid-row: 1;
-        }
+            .item2 {
+                grid-column: 2 / span 2;
+                grid-row: 1;
+            }
 
-        .item3 {
-            grid-column: 1;
-            grid-row: 2;
-        }
+            .item3 {
+                grid-column: 1;
+                grid-row: 2;
+            }
 
-        .item4 {
-            grid-column: 2;
-            grid-row: 2;
-        }
+            .item4 {
+                grid-column: 2;
+                grid-row: 2;
+            }
 
-        .item5 {
-            grid-column: 3;
-            grid-row: 2;
+            .item5 {
+                grid-column: 3;
+                grid-row: 2;
+            }
         }
+            
     }
 
     &.for-consumers-inner {
-        .item1 {
-            grid-column: 3;
-            grid-row: 1;
-        }
+         @media only screen and (min-width: 568px) {
+            .item1 {
+                grid-column: 3;
+                grid-row: 1;
+            }
 
-        .item2 {
-            grid-column: 1 / span 2;
-            grid-row: 1;
-        }
+            .item2 {
+                grid-column: 1 / span 2;
+                grid-row: 1;
+            }
 
-        .item3 {
-            grid-column: 1;
-            grid-row: 2;
-        }
+            .item3 {
+                grid-column: 1;
+                grid-row: 2;
+            }
 
-        .item4 {
-            grid-column: 2;
-            grid-row: 2;
-        }
+            .item4 {
+                grid-column: 2;
+                grid-row: 2;
+            }
 
-        .item5 {
-            grid-column: 3;
-            grid-row: 2;
+            .item5 {
+                grid-column: 3;
+                grid-row: 2;
+            }
         }
     }
 
-    .stretch-height {
+    .stretch-height {        
         top: -90px;
         height: calc(100% + 90px);
+        
         @media (max-width: 1200px) {
             top: -140px;
             height: calc(100% + 140px);
@@ -574,6 +584,10 @@
          @media only screen and (max-width: 991px) {
             top: -60px;
             height: calc(100% + 60px);
+        }
+         @media only screen and (max-width: 567px) {
+            top: 0;
+            height: 100%;
         }
 
         .primary-image-link {
@@ -927,6 +941,9 @@
             height: 240px;
             padding: 10px;
         }
+        @media (max-width: 567px) {
+            height: 350px;
+        }
     }
 }
 
@@ -987,6 +1004,44 @@
     overflow: hidden;
     @media (max-width: 767px) {
         padding: 80px 0 0;
+    }
+}
+.for-rc-desktop{
+     @media (max-width: 767px) {
+        display: none;
+    }
+}
+.for-rc-mobile{
+    display: none;
+    padding: var(--p70) 0;
+    @media (max-width: 767px) {
+        display: block;
+    }
+    .swiper-scrollbar {
+        position: relative;
+        margin-top: 20px;
+        top: 0;
+        width: 100%;
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 7px;
+        background: var(--mx-grey);
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+
+        .swiper-scrollbar-drag {
+            background: var(--mx-yellow)
+        }
+    }
+    .primary-user-card{
+         @media (max-width: 767px) {
+            margin-bottom: 15px;
+         }
+    }
+    .consumer-mobile{
+        margin-top: 40px;
     }
 }
 
@@ -1131,7 +1186,7 @@
 }
 
 .stories-section {
-    padding: 70px 0 70px;
+    padding: var(--p70) 0;
     background-color: var(--mx-grey);
     position: relative;
     overflow: hidden;
@@ -1143,9 +1198,12 @@
 
 .stories-inner {
     display: grid;
-    grid-template-columns:calc(25% - var(--gutter)/2) calc(75% - var(--gutter)/2);
+    grid-template-columns:calc(30% - var(--gutter)/2) calc(70% - var(--gutter)/2);
     column-gap: var(--gutter);
     // margin-left: calc((100% - 1240px) / 2);
+    @media only screen and (max-width:567px) {
+        grid-template-columns: 100%;
+    }
 
     .content-dv {
         position: relative;
@@ -1168,6 +1226,9 @@
 
         @media (max-width: 1200px) {
             margin-top: 69px;
+        }
+         @media (max-width: 567px) {
+            margin-top: 0;
         }
     }
 
@@ -1196,6 +1257,9 @@
 .card-slider-root {
     position: relative;
     width: calc(100% + 70px);
+    @media (max-width: 567px) {
+       width: 100%;
+    }
 
     .swiper {
         padding-top: 89px;
@@ -1203,6 +1267,7 @@
         @media (max-width: 1200px) {
             padding-top: 64px;
         }
+        
     }
 
 }
@@ -1219,6 +1284,10 @@
     @media (max-width: 1200px) {
         gap: 15px;
     }
+     @media (max-width: 567px) {
+        right: 0;
+         gap: 10px;
+     }
 }
 
 .swiper-btn-arrow {
@@ -1273,6 +1342,9 @@
         font-size: 20px;
         line-height: 1.5;
         font-weight: 400;
+        @media (max-width: 1700px) {
+            font-size: 18px;
+        }
 
         @media (max-width: 1200px) {
             font-size: 16px;
