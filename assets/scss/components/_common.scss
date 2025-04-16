@@ -25,16 +25,16 @@
     --heading3: 24px;
     --headingLH3: 36px;
     --headingLH3_2: 36px;
-    --p: 16px;
-    --pLH: 27px;
+    --p: 15px;
+    --pLH: 24px;
 
     --fs16: 14px;
     --fs16LH: 21px;
 
     --gutter: 25px;
     --gutter30: 20px;
-    --gutter70: 50px;
-    --pl70: 50px;
+    --gutter70: 70px;
+    --pl70: 70px;
 
     --p35: 25px;
     --mt35: 25px;
@@ -202,7 +202,7 @@ strong {
     padding-left: var(--gutter70);
     margin-right: auto;
     margin-left: auto;
-    max-width: 1340px;
+    max-width: 1920px;
 
     // @media (min-width: 2000px) {
     //     max-width: var(--max-w1920);
