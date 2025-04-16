@@ -58,6 +58,16 @@
 
              @media only screen and (max-width: 991px) {
                   border-radius: 25px;
+                      padding: 15px 12px;
+             }
+             &::placeholder{
+                color: #A7A9AC;
+             }
+             &::-webkit-placeholder{
+                color: #A7A9AC;
+             }
+             &::-moz-placeholder{
+                color: #A7A9AC;
              }
         }
         .form-group-inline{
@@ -81,11 +91,14 @@
         }
     }
     .mandatory{
-        color: #000;
+        color: var(--black);
         font-family: var(--font-family);
-        font-size: 16px;
+        font-size: var(--fs16);
         font-style: normal;
         font-weight: 400;
+        @media only screen and (max-width: 567px) {
+            text-align: center;
+        }
     }
     .contact-detail{
         border-radius: 30px;
