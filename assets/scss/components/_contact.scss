@@ -41,6 +41,7 @@
             resize: none;
         }
     }
+
     .common-form{
         display: grid;
         gap: var(--gutter);
@@ -266,6 +267,7 @@
     .title {
         margin-bottom: 40px;
         position: relative;
+        display: inline-block;
 
         @media (max-width: 767px) {
             margin-bottom: 20px;
@@ -471,5 +473,3 @@
         }
     }
 }
-     
-  

@@ -29,6 +29,22 @@ const storiesSlider = new Swiper(".swiper-stories", {
   },
 });
 
+const coreValueSlider = new Swiper(".swiper-core-values", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 25,
+    }
+  },
+});
+
 $(document).ready(function () { 
   
   $(".menu-btn").click(function () {
@@ -103,6 +119,7 @@ $(document).ready(function () {
 
   videoPlayer();
   storiesSlider();
+  coreValueSlider();
 });
 
 // swiper menu
@@ -152,6 +169,28 @@ const swiper = new Swiper('.swiper-contact', {
   const swiper_update = new Swiper('.swiper-update', {
     loop: true,
     slidesPerView: 2,
+    spaceBetween: 35,            // Enable looping
+    simulateTouch: true,    // Enable drag/swipe simulation
+    touchStartPreventDefault: false, // Prevent default touch behavior if needed
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },  
+     scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+    
+   
+  });
+
+  const swiper_challenges = new Swiper('.swiper-challenges', {
+    loop: true,
+    slidesPerView: 1.5,
     spaceBetween: 35,            // Enable looping
     simulateTouch: true,    // Enable drag/swipe simulation
     touchStartPreventDefault: false, // Prevent default touch behavior if needed
