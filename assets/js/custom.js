@@ -105,34 +105,35 @@ $(document).ready(function () {
 });
 
 // swiper menu
-if (window.innerWidth < 768) {
+if (window.innerWidth < 992) {
   const swiper = new Swiper(".swiper-menu", {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 30,
     allowTouchMove: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+     pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+   
     // Optional: responsive settings
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1,
+         pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
       },
       1024: {
-        slidesPerView: 3,
+        slidesPerView: 1,
       },
     },
   });
 }
 
 const swiper = new Swiper('.swiper-contact', {
-    loop: true,
+    loop: true,    
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -160,26 +161,24 @@ const swiper = new Swiper('.swiper-contact', {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    // on: {
-    //   slideChange: function () {
-    //     const totalSlides = this.slides.length - this.loopedSlides * 2; 
-    //     const currentIndex = this.realIndex + 1;
-    //     const progress = (currentIndex / totalSlides) * 100;
-    //     document.querySelector('.progress-fill').style.width = progress + '%';
-    //   }
-    // }
+    },  
+     scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
     
    
   });
- // Set initial progress
-    window.addEventListener('load', () => {
-      document.querySelector('.progress-fill').style.width = '33.33%'; // for 3 slides
-    });
-
- $('#mySelect').select2({
+  
+  $('#mySelect').select2({
     placeholder: "Subject",
     allowClear: true
 });
 
  AOS.init();
+
+  $('.mobile-contact').click(function() {
+    $('.swiper-menu').slideToggle(); // toggles between show and hide
+    $(this).parent().toggleClass('active');
+  });
+  
