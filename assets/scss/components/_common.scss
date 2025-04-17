@@ -584,3 +584,29 @@ input[type="checkbox"]:checked+label:after {
         }
     }
 }
+
+// Read More link css
+
+.read-more-btn {
+    color: var(--mx-blue);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.7;
+    position: relative;
+    display: inline-block;
+
+    .img-stroke8 {
+        width: 140px;
+        height: 12px;
+        left: -8px;
+        top: auto;
+        bottom: 2px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+}

@@ -1392,6 +1392,7 @@
 .update-section {
     padding: var(--p70) 0;
     position: relative;
+    z-index: 1;
     @media only screen and (max-width: 567px) {
         padding-bottom: 123px;
     }
