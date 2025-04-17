@@ -114,6 +114,8 @@ const ConsumerSlider = new Swiper(".swiper-consumer", {
    
 });
 
+
+
 $(document).ready(function () { 
   
   $(".menu-btn").click(function () {
@@ -281,6 +283,11 @@ const swiper = new Swiper('.swiper-contact', {
     
    
   });
+
+
+  // About image slider
+
+  
   
   $('#mySelect').select2({
     placeholder: "Subject",

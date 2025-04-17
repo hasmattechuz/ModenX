@@ -600,6 +600,7 @@ input[type="checkbox"]:checked+label:after {
     line-height: 1.7;
     position: relative;
     display: inline-block;
+    z-index: 1;
 
     .img-stroke8 {
         width: 140px;
@@ -607,6 +608,7 @@ input[type="checkbox"]:checked+label:after {
         left: -8px;
         top: auto;
         bottom: 2px;
+        z-index: -1;
 
         img {
             width: 100%;

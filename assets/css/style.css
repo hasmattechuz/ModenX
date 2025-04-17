@@ -504,6 +504,7 @@ input[type=checkbox]:checked + label:after {
   line-height: 1.7;
   position: relative;
   display: inline-block;
+  z-index: 1;
 }
 .read-more-btn .img-stroke8 {
   width: 140px;
@@ -511,6 +512,7 @@ input[type=checkbox]:checked + label:after {
   left: -8px;
   top: auto;
   bottom: 2px;
+  z-index: -1;
 }
 .read-more-btn .img-stroke8 img {
   width: 100%;
@@ -4007,6 +4009,113 @@ footer .footer-mobile {
 .how-it-began .grid-right .img-container:nth-child(2) {
   grid-row: 1/3;
   grid-column: 2;
+}
+
+.innovate-with-us {
+  background: var(--mx-blue);
+  padding: 83px 0 128px;
+}
+.innovate-with-us .inner-grid {
+  max-width: 690px;
+}
+.innovate-with-us .inner-grid h2 {
+  color: var(--white);
+  margin-bottom: 35px;
+}
+.innovate-with-us .inner-grid h2 b {
+  color: var(--mx-yellow);
+}
+.innovate-with-us .inner-grid p {
+  color: var(--white);
+  margin-bottom: 70px;
+}
+.innovate-with-us .grid-image {
+  width: 600px;
+  height: 447px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.innovate-with-us .grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ceo-section {
+  padding: 140px 0 138px;
+  background: var(--mx-grey);
+}
+.ceo-section .inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+.ceo-section .grid-left {
+  position: relative;
+  padding-bottom: 35px;
+}
+.ceo-section .grid-left .read-more {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.ceo-section .grid-left h2 {
+  margin-bottom: 29px;
+}
+.ceo-section .grid-left p {
+  margin-top: 20px;
+}
+.ceo-section .grid-left p.desc {
+  max-width: 610px;
+}
+.ceo-section .grid-left .ceo-name {
+  margin-top: 0;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+.ceo-section .grid-left .ceo-name span {
+  display: block;
+  font-size: 16px;
+}
+.ceo-section .grid-left .ceo-name .img-stroke2 {
+  width: 159px;
+  height: 45px;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  z-index: -1;
+}
+.ceo-section .grid-left .ceo-name .img-stroke2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.images-block .title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.img-stroke15 {
+  width: 182px;
+  height: 74px;
+  position: absolute;
+  right: -140px;
+  top: 16px;
+  z-index: -1;
+}
+.img-stroke15 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .inner-banner-section {
