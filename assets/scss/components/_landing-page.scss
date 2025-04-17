@@ -930,6 +930,8 @@
         position: relative;
         z-index: 2;
         display: grid;
+        transform: translateY(20%);
+        transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 
         p {
             color: var(--white);
@@ -938,6 +940,8 @@
 
     .desc-dv {
         max-width: 70%;
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .primary-image-link {
@@ -950,9 +954,9 @@
         height: 350px;
         overflow: hidden;
 
-        .desc-dv {
-            display: none;
-        }
+        // .desc-dv {
+        //     display: none;
+        // }
 
         @media (max-width: 1200px) {
             height: 400px;
@@ -965,6 +969,18 @@
 
         @media (max-width: 567px) {
             height: 350px;
+        }
+    }
+
+    &:hover {
+        .text-dv {
+            transform: translateY(0%);
+            transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .desc-dv {
+            opacity: 1;
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
         }
     }
 }
