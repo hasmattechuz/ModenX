@@ -125,7 +125,10 @@ const ConsumerSlider = new Swiper(".swiper-consumer", {
   // Optional: responsive settings
 });
 
-$(document).ready(function () {
+
+
+$(document).ready(function () { 
+  
   $(".menu-btn").click(function () {
     $("nav").toggleClass("open-nav");
     $("body").toggleClass("nav-active");
@@ -267,29 +270,37 @@ const swiper_update = new Swiper(".swiper-update", {
   },
 });
 
-const swiper_challenges = new Swiper(".swiper-challenges", {
-  loop: true,
-  slidesPerView: 1.5,
-  spaceBetween: 35, // Enable looping
-  simulateTouch: true, // Enable drag/swipe simulation
-  touchStartPreventDefault: false, // Prevent default touch behavior if needed
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-});
+  const swiper_challenges = new Swiper('.swiper-challenges', {
+    loop: true,
+    slidesPerView: 1.5,
+    spaceBetween: 35,            // Enable looping
+    simulateTouch: true,    // Enable drag/swipe simulation
+    touchStartPreventDefault: false, // Prevent default touch behavior if needed
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },  
+     scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+    
+   
+  });
 
-$("#mySelect").select2({
-  placeholder: "Subject",
-  // allowClear: true
+
+  // About image slider
+
+  
+  
+  
+  $('#mySelect').select2({
+    placeholder: "Subject",
+    // allowClear: true
 });
 
 AOS.init({});

@@ -497,6 +497,30 @@ input[type=checkbox]:checked + label:after {
   fill: var(--mx-yellow);
 }
 
+.read-more-btn {
+  color: var(--mx-blue);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.7;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.read-more-btn .img-stroke8 {
+  width: 140px;
+  height: 12px;
+  left: -8px;
+  top: auto;
+  bottom: 2px;
+  z-index: -1;
+}
+.read-more-btn .img-stroke8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .blue-section {
   background-color: var(--mx-blue);
 }
@@ -2981,6 +3005,7 @@ footer .footer-mobile {
 .update-section {
   padding: var(--p70) 0;
   position: relative;
+  z-index: 1;
 }
 @media only screen and (max-width: 567px) {
   .update-section {
@@ -3913,6 +3938,191 @@ footer .footer-mobile {
 }
 .challenges-faced .update-inner .content-dv p {
   margin-bottom: 20px;
+}
+.challenges-faced .img-stroke8 {
+  width: 188px;
+  height: 105px;
+  left: auto;
+  top: auto;
+  right: 83px;
+  bottom: -31px;
+}
+.challenges-faced .img-stroke8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.how-it-began {
+  padding: 149px 0 140px;
+  position: relative;
+  overflow: hidden;
+}
+.how-it-began .section-stroke {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  bottom: -262px;
+  transform: rotate(95deg);
+  left: -149px;
+}
+.how-it-began .section-stroke img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.how-it-began .grid-wrapper {
+  display: grid;
+  grid-template-columns: 456px 1fr;
+  gap: 35px;
+}
+.how-it-began .grid-left .read-more {
+  margin-top: 10px;
+}
+.how-it-began .grid-left h2 {
+  margin-bottom: 55px;
+  position: relative;
+}
+.how-it-began .grid-left h2 .img-stroke {
+  width: 305px;
+  height: 60px;
+  position: absolute;
+  right: 88px;
+  bottom: -24px;
+  z-index: -1;
+}
+.how-it-began .grid-left h2 .img-stroke img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.how-it-began .grid-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 450px 450px;
+  gap: 35px;
+}
+.how-it-began .grid-right .img-container {
+  border-radius: 20px;
+}
+.how-it-began .grid-right .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.how-it-began .grid-right .img-container:nth-child(2) {
+  grid-row: 1/3;
+  grid-column: 2;
+}
+
+.innovate-with-us {
+  background: var(--mx-blue);
+  padding: 83px 0 128px;
+}
+.innovate-with-us .inner-grid {
+  max-width: 690px;
+}
+.innovate-with-us .inner-grid h2 {
+  color: var(--white);
+  margin-bottom: 35px;
+}
+.innovate-with-us .inner-grid h2 b {
+  color: var(--mx-yellow);
+}
+.innovate-with-us .inner-grid p {
+  color: var(--white);
+  margin-bottom: 70px;
+}
+.innovate-with-us .grid-image {
+  width: 600px;
+  height: 447px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.innovate-with-us .grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ceo-section {
+  padding: 140px 0 138px;
+  background: var(--mx-grey);
+}
+.ceo-section .inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+.ceo-section .grid-left {
+  position: relative;
+  padding-bottom: 35px;
+}
+.ceo-section .grid-left .read-more {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.ceo-section .grid-left h2 {
+  margin-bottom: 29px;
+}
+.ceo-section .grid-left p {
+  margin-top: 20px;
+}
+.ceo-section .grid-left p.desc {
+  max-width: 610px;
+}
+.ceo-section .grid-left .ceo-name {
+  margin-top: 0;
+  font-size: 20px;
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+.ceo-section .grid-left .ceo-name span {
+  display: block;
+  font-size: 16px;
+}
+.ceo-section .grid-left .ceo-name .img-stroke2 {
+  width: 159px;
+  height: 45px;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  z-index: -1;
+}
+.ceo-section .grid-left .ceo-name .img-stroke2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.images-block .title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.img-stroke15 {
+  width: 182px;
+  height: 74px;
+  position: absolute;
+  right: -140px;
+  top: 16px;
+  z-index: -1;
+}
+.img-stroke15 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .inner-banner-section {
