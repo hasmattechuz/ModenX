@@ -4150,7 +4150,13 @@ footer .footer-mobile {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 0 80px;
+  row-gap: 20px;
+}
+.inner-banner-section .banner-content h1,
+.inner-banner-section .banner-content h2 {
+  width: 100%;
 }
 @media (max-width: 767px) {
   .inner-banner-section .banner-content {
@@ -4227,6 +4233,21 @@ footer .footer-mobile {
 }
 .why-choose-section .core-values .stories-card h3 {
   font-weight: 700;
+}
+.why-choose-section .swiper-core-values .stories-card .quotes-img {
+  width: 140px;
+  height: 140px;
+}
+
+.culture-section {
+  position: relative;
+  padding: 70px 0;
+  overflow: hidden;
+}
+.culture-section .culture-inner {
+  display: grid;
+  row-gap: 30px;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

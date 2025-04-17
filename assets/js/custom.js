@@ -125,31 +125,25 @@ const ConsumerSlider = new Swiper(".swiper-consumer", {
   // Optional: responsive settings
 });
 
-
-
-$(document).ready(function () { 
+$(document).ready(function () {
   let isMenuOpen = false;
 
-  $('.menu-btn').on('click', function () {
-    const $body = $('body');
-    const $nav = $('nav');
+  $(".menu-btn").on("click", function () {
+    const $body = $("body");
+    const $nav = $("nav");
 
     if (!isMenuOpen) {
-      // First click – open menu
-      $body.removeClass('menu-inactive').addClass('nav-active');
-      $nav.removeClass('close-nav').addClass('open-nav');
+      $body.removeClass("menu-inactive").addClass("nav-active");
+      $nav.removeClass("close-nav").addClass("open-nav");
       isMenuOpen = true;
     } else {
-      // Second click – close menu
-      $body.removeClass('nav-active').addClass('menu-inactive');
-      $nav.removeClass('open-nav').addClass('close-nav');
+      $body.removeClass("nav-active").addClass("menu-inactive");
+      $nav.removeClass("open-nav").addClass("close-nav");
       isMenuOpen = false;
     }
   });
-  
 
   //* menu*//
-
   var didScroll;
   var lastScrollTop = 0;
   var delta = 5;
@@ -275,37 +269,57 @@ const swiper_update = new Swiper(".swiper-update", {
   },
 });
 
-  const swiper_challenges = new Swiper('.swiper-challenges', {
-    loop: true,
-    slidesPerView: 1.5,
-    spaceBetween: 35,            // Enable looping
-    simulateTouch: true,    // Enable drag/swipe simulation
-    touchStartPreventDefault: false, // Prevent default touch behavior if needed
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },  
-     scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-      },
-    
-   
-  });
+const swiper_challenges = new Swiper(".swiper-challenges", {
+  loop: true,
+  slidesPerView: 1.5,
+  spaceBetween: 35, // Enable looping
+  simulateTouch: true, // Enable drag/swipe simulation
+  touchStartPreventDefault: false, // Prevent default touch behavior if needed
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+});
 
+const swiper_benefits = new Swiper(".swiper-benefits", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20, 
+  simulateTouch: true,
+  touchStartPreventDefault: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 2.5,
+    }
+  },
+});
 
-  // About image slider
-
-  
-  
-  
-  $('#mySelect').select2({
-    placeholder: "Subject",
-    // allowClear: true
+$("#mySelect").select2({
+  placeholder: "Subject",
+  // allowClear: true
 });
 
 AOS.init({});
