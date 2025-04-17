@@ -637,27 +637,6 @@ input[type=checkbox]:checked + label:after {
   }
 }
 
-.nav-active {
-  overflow: hidden;
-  padding-right: 15px;
-}
-.nav-active .nav-up {
-  transform: none;
-}
-.nav-active .menu-right .right-btn {
-  opacity: 1;
-  visibility: visible;
-  display: block;
-  z-index: 99;
-}
-.nav-active .header-logo .white-logo {
-  display: block !important;
-  animation: opacitylogo 2.5s linear;
-}
-.nav-active .header-logo .black-logo {
-  display: none !important;
-}
-
 .logo {
   position: relative;
   z-index: 99;
@@ -1062,6 +1041,26 @@ a.nav-details:hover {
   margin: 0;
 }
 
+body.nav-active {
+  overflow: hidden;
+  padding-right: 15px;
+}
+body.nav-active .nav-up {
+  transform: none;
+}
+body.nav-active .menu-right .right-btn {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  z-index: 99;
+}
+body.nav-active .header-logo .white-logo {
+  display: block !important;
+  animation: opacitylogo 2.5s linear;
+}
+body.nav-active .header-logo .black-logo {
+  display: none !important;
+}
 body.nav-active .menu-btn__line {
   -webkit-transform: translate(0px, 0px) rotate(-45deg);
   transform: translate(0px, 0px) rotate(-45deg);
@@ -1079,6 +1078,35 @@ body.nav-active .menu-btn__line-right {
   -webkit-transform: translate(0px, -4px) rotate(-45deg);
   transform: translate(0px, -4px) rotate(-45deg);
   display: block;
+}
+
+.menu-inactive nav .nav-left ul li a {
+  transform: translate(0px, 100px);
+  transition: all 1s ease-in-out;
+}
+.menu-inactive nav .nav-left ul li:first-child a {
+  transition-delay: 1s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(2) a {
+  transition-delay: 1.1s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(3) a {
+  transition-delay: 1.3s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(4) a {
+  transition-delay: 1.5s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(5) a {
+  transition-delay: 1.7s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(6) a {
+  transition-delay: 1.9s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(7) a {
+  transition-delay: 2s;
+}
+.menu-inactive nav .nav-left ul li:nth-child(8) a {
+  transition-delay: 2.1s;
 }
 
 .main-menu {
