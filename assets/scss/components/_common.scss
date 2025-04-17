@@ -39,14 +39,14 @@
     --p35: 25px;
     --mt35: 25px;
     --mb35: 25px;
-    --p70:70px;
-    --p50:50px;
+    --p70: 70px;
+    --p50: 50px;
 
     --max-w1920: 1920px;
     --max-w1440: 1440px;
     --max-w1240: 1240px;
 
-    
+
 }
 
 // @media (max-width: 1700px) {
@@ -107,13 +107,14 @@
         --gutter70: 20px;
         --pl70: 20px;
 
-         --mb35: 15px;
+        --mb35: 15px;
     }
 }
+
 @media (max-width: 991px) {
     :root {
-        --p70:50px;
-        --p50:50px;
+        --p70: 50px;
+        --p50: 50px;
     }
 }
 
@@ -315,10 +316,12 @@ img {
     overflow: hidden;
     border: 1px solid var(--mx-yellow);
     border-radius: 30px;
+
     @media only screen and (max-width: 567px) {
-       width: 100%;
+        width: 100%;
     }
-     &:hover {
+
+    &:hover {
         border-color: var(--mx-blue);
 
         .btn {
@@ -421,11 +424,12 @@ input[type="checkbox"]+label {
     @media only screen and (max-width: 991px) {
         gap: 10px;
         line-height: 1.2;
-     }
-      @media only screen and (max-width: 767px) {
+    }
+
+    @media only screen and (max-width: 767px) {
         font-size: 12px;
         line-height: 1.5;
-      }
+    }
 }
 
 input[type="checkbox"] {
@@ -451,9 +455,10 @@ input[type="checkbox"]+label:before {
         min-width: 14px;
         border-radius: 2px;
     }
-     @media only screen and (max-width: 767px) {
+
+    @media only screen and (max-width: 767px) {
         margin-top: 2px;
-     }
+    }
 }
 
 input[type="checkbox"]+label:after {
@@ -478,10 +483,11 @@ input[type="checkbox"]:checked+label:after {
         height: 17px;
         background-size: contain;
         left: 3px;
-     }
-     @media only screen and (max-width: 767px) {
+    }
+
+    @media only screen and (max-width: 767px) {
         top: 1px;
-     }
+    }
 
 }
 
@@ -508,10 +514,10 @@ input[type="checkbox"]:checked+label:after {
         flex-direction: row-reverse;
         height: auto;
 
-         @media only screen and (max-width: 991px) {
-                border-radius: 25px;
-                padding: 15px 12px;
-         }
+        @media only screen and (max-width: 991px) {
+            border-radius: 25px;
+            padding: 15px 12px;
+        }
 
         .select2-selection__arrow {
             top: 50%;
@@ -607,6 +613,23 @@ input[type="checkbox"]:checked+label:after {
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+    }
+}
+
+.blue-section {
+    background-color: var(--mx-blue);
+
+    h1,
+    h2,
+    h3,
+    p {
+        color: var(--white);
+        word-break: break-word;
+
+        b,
+        strong {
+            color: var(--mx-yellow);
         }
     }
 }
