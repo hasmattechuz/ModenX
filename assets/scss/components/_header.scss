@@ -626,7 +626,7 @@ body {
             height: 100%;
             transition: all 0.5s ease-in-out;           
             font-weight: 700;
-            display: block;  
+            display: block;  			
 			@media only screen and (max-width: 991px) {
 				font-size: 0;
 			}
@@ -657,6 +657,10 @@ body {
 				gap: 10px;
 				align-items: center;
 				color: var(--white);
+				font-size: 18px;
+				@media only screen and (max-width: 991px) {
+                    font-size: 14px;
+ 				}
 				&:first-child{
 					align-items: flex-start;
 				}
