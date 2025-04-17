@@ -141,18 +141,25 @@
 
 .core-values {
     .stories-inner {
-        grid-template-columns: calc(30% - 17.5px) calc(72% - 17.5px);
-        align-items: center;
+        @media (min-width: 2000px) {
+            grid-template-columns: calc(25% - var(--gutter)/2) calc(75% - var(--gutter)/2);
+        }
     }
 
     .content-dv {
-        max-width: 100%;
+        max-width: 525px;
 
         .img-stroke7 {
             width: 260px;
-            height: 100px;
-            top: 14px;
-            right: 11px;
+            height: 90px;
+            top: 28px;
+            right: 35px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
     }
 }
