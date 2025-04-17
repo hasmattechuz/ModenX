@@ -317,9 +317,38 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
   },
 });
 
-$("#mySelect").select2({
-  placeholder: "Subject",
-  // allowClear: true
+  // About image slider
+
+  var swiper_imageSlider = new Swiper(".imageSlider", {
+    slidesPerView: 4,
+    spaceBetween: 35,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+
+  // Milestone slider
+
+  var swiper_milestone = new Swiper(".milestoneSlider", {
+    cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      mousewheel: true,
+      keyboard: true,
+  });
+  
+  
+  $('#mySelect').select2({
+    placeholder: "Subject",
+    // allowClear: true
 });
 
 AOS.init({});
@@ -327,4 +356,27 @@ AOS.init({});
 $(".mobile-contact").click(function () {
   $(".swiper-menu").slideToggle(); // toggles between show and hide
   $(this).parent().toggleClass("active");
+});
+
+// Read More / Read Less
+
+$('.read-less').hide();
+
+  $('.read-more-btn, .read-less').click(function() {
+    $('.more-text').slideToggle();
+
+    $('.read-more-btn, .read-less').toggle();
+  });
+
+
+  $(function() {
+	// (Optional) Active an item if it has the class "is-active"	
+	$(".accordion > .accordion-item.is-active").children(".accordion-panel").slideDown();
+	
+	$(".accordion > .accordion-item").click(function() {
+		// Cancel the siblings
+		$(this).siblings(".accordion-item").removeClass("is-active").children(".accordion-panel").slideUp();
+		// Toggle the item
+		$(this).toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
+	});
 });
