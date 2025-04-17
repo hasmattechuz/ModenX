@@ -258,8 +258,8 @@
     }
 }
 
-.ceo-section {
-    padding: 140px 0 138px;
+.ceo-section {   
+    padding: var(--p70) 0;
     background: var(--mx-grey);
 
     .inner-grid {

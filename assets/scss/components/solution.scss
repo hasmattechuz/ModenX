@@ -330,4 +330,39 @@
     }
 }
 
+.solution-leftright-sec{
+    background: transparent;
+    .img-stroke5-s{
+        position: absolute;
+        top: 99px;
+        left: 110px;
+        width: 320px;
+        height: 100px;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+.card-sec{
+    padding: var(--p70) 0;
+    background-color: var(--mx-grey);
+    position: relative;
+    .img-stroke-new1{
+        z-index: inherit;
+        width: 290px;
+        height: 140px;
+        top: 39px;
+        left: 5px;
+    }
+    h2{
+        margin-bottom: var(--mb35);
+    }
+    .card-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .card{
+            grid-template-columns: 1fr;
+    }
+}
 
