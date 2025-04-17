@@ -13,6 +13,7 @@ function videoPlayer() {
   });
 }
 
+
 function storiesSlider() {
   if ($(".swiper-stories").length) {
     return new Swiper(".swiper-stories", {
@@ -45,25 +46,25 @@ function storiesSlider() {
   }
 }
 
-const coreValueSlider = new Swiper(".swiper-core-values", {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2.5,
-      spaceBetween: 25,
+  const coreValueSlider = new Swiper(".swiper-core-values", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-next",
+      prevEl: ".swiper-prev",
     },
-    2000: {
-      slidesPerView: 4,
-      spaceBetween: 25,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 25,
+      },
+      2000: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+      },
     },
-  },
-});
+  });
 
 const RetailersSlider = new Swiper(".swiper-retailers", {
   loop: false,
@@ -369,7 +370,9 @@ $('.read-less').hide();
   });
 
 
-  $(function() {
+
+
+$(function() {
 	// (Optional) Active an item if it has the class "is-active"	
 	$(".accordion > .accordion-item.is-active").children(".accordion-panel").slideDown();
 	
@@ -380,3 +383,6 @@ $('.read-less').hide();
 		$(this).toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
 	});
 });
+
+
+

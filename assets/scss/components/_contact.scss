@@ -103,96 +103,7 @@
         @media only screen and (max-width: 567px) {
             text-align: center;
         }
-    }
-    .contact-detail{
-        border-radius: 30px;
-        background: var(--mx-blue);        
-        padding: 45px 50px; 
-        max-width: 646px;
-        min-height: 550px;
-        max-height: 550px;
-         @media (max-width: 1700px) {
-             padding:30px 40px; 
-         }
-
-        @media (max-width: 1499px) {
-            max-width: 100%;
-            height: auto;
-        }
-        @media (max-width: 991px) {
-            min-height: auto;
-            max-height: inherit;
-            max-width: inherit;
-            margin-left: -25px;
-            width: calc(100% + 50px);
-            border-radius: 0;
-            padding: var(--p50) var(--gutter70);
-            margin-top: 20px;
-        }
-
-        h3{
-            color: var(--white);
-            margin-bottom: var(--gutter);
-            b{
-                color: var(--mx-yellow);
-            }
-        }    
-    }
-    .swiper{       
-        .swiper-slide{            
-            color: #fff;
-            color: var(--white);
-            display: grid;
-            gap: 20px;
-            a{
-                color: #fff;
-                display: flex;
-                align-items: center;
-                gap: var(--gutter);
-                img{
-                    max-width: 50px;
-                }
-                &:first-child{
-                    align-items: flex-start;
-                }
-                strong{
-                    span{
-                        display: block;
-                    }
-                }
-            }
-        }
-        .swiper-pagination{
-            position: relative;
-            margin-top: 35px;
-            .swiper-pagination-bullet{
-                border-radius: 10px;
-                background: rgba(33, 32, 33, 0.50);
-                min-width: 91px;
-                height: 7px;
-                position: relative;
-                overflow: hidden;
-                opacity: 1;
-                &.swiper-pagination-bullet-active{
-                    &::before{
-                        content: "";
-                        background-color: var(--mx-yellow);
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        animation: fill 5s;
-                        border-radius: 10px;
-                    }
-                }
-                
-            }
-        }
-    }
-     
-      
-
+    } 
 }
 @keyframes fill{
     0%{
@@ -206,64 +117,15 @@
 
 // Contact page css
 
-.contact-banner {
-    background: var(--mx-blue);
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-
-    h1 {
-        color: var(--white);
-
-        b {
-            color: var(--mx-yellow);
-        }
-    }
-
-    .img-container {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-
-        @media (max-width: 1680px) {
-            max-width: 780px;
-        }
-
-        @media (max-width: 1366px) {
-            max-width: 740px;
-        }
-
-        @media (max-width: 1280px) {
-            max-width: 670px;
-        }
-
-        @media (max-width: 767px) {
-            max-width: 450px;
-            padding-top: 340px;
-        }
-    }
-}
 
 // Reach Out section
 
 .reach-out {
     position: relative;
     overflow: hidden;
+    padding: var(--p70) 0;
 
-    @media (max-width: 1680px) {
-        padding-top: 100px;
-    }
-
-    @media (max-width: 1180px) {
-        padding-top: 70px;
-    }
-
-    @media (max-width: 767px) {
-        padding-top: 50px;
-    }
+   
 
     .title {
         margin-bottom: 30px;
