@@ -1,2 +1,3 @@
 # Ignore CSS source maps
-assets/css/style.css.map
+**/style.css.map
+**/.DS_Store
