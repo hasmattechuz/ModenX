@@ -323,3 +323,19 @@
         grid-column: span 5;
     }
 }
+
+.career-benefits-section {
+    background-color: var(--white);
+
+    .stories-inner {
+        .content-dv {
+            margin-top: 0;
+        }
+    }
+
+    .card-slider-root {
+        .swiper {
+            padding-top: 0;
+        }
+    }
+}
