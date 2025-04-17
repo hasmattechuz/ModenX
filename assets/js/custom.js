@@ -295,7 +295,31 @@ const swiper_update = new Swiper(".swiper-update", {
 
   // About image slider
 
-  
+  var swiper_imageSlider = new Swiper(".imageSlider", {
+    slidesPerView: 4,
+    spaceBetween: 35,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+
+  // Milestone slider
+
+  var swiper_milestone = new Swiper(".milestoneSlider", {
+    cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      mousewheel: true,
+      keyboard: true,
+  });
   
   
   $('#mySelect').select2({
@@ -309,3 +333,13 @@ $(".mobile-contact").click(function () {
   $(".swiper-menu").slideToggle(); // toggles between show and hide
   $(this).parent().toggleClass("active");
 });
+
+// Read More / Read Less
+
+$('.read-less').hide();
+
+  $('.read-more-btn, .read-less').click(function() {
+    $('.more-text').slideToggle();
+
+    $('.read-more-btn, .read-less').toggle();
+  });
