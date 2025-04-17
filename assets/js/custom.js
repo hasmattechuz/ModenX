@@ -128,20 +128,25 @@ const ConsumerSlider = new Swiper(".swiper-consumer", {
 
 
 $(document).ready(function () { 
+  let isMenuOpen = false;
+
+  $('.menu-btn').on('click', function () {
+    const $body = $('body');
+    const $nav = $('nav');
+
+    if (!isMenuOpen) {
+      // First click – open menu
+      $body.removeClass('menu-inactive').addClass('nav-active');
+      $nav.removeClass('close-nav').addClass('open-nav');
+      isMenuOpen = true;
+    } else {
+      // Second click – close menu
+      $body.removeClass('nav-active').addClass('menu-inactive');
+      $nav.removeClass('open-nav').addClass('close-nav');
+      isMenuOpen = false;
+    }
+  });
   
-  $(".menu-btn").click(function () {
-    $("nav").toggleClass("open-nav");
-    $("body").toggleClass("nav-active");
-  });
-
-  $(".menu-close").click(function () {
-    $("nav").removeClass("open-nav");
-    $("body").removeClass("nav-active");
-  });
-
-  $(".close-icon").click(function () {
-    $("nav").removeClass("open-nav");
-  });
 
   //* menu*//
 
