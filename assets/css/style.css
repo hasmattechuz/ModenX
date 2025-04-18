@@ -788,12 +788,12 @@ input[type=checkbox]:checked + label:after {
 }
 @media (max-width: 767px) {
   .inner-banner-section .banner-img img {
-    max-height: 300px;
+    max-height: 250px;
   }
 }
 @media (max-width: 767px) {
   .inner-banner-section .banner-img {
-    max-height: 300px;
+    max-height: 250px;
     width: 75%;
   }
 }
@@ -807,6 +807,11 @@ input[type=checkbox]:checked + label:after {
   object-position: center center;
   max-height: 500px;
 }
+@media (max-width: 767px) {
+  .inner-banner-section.center-align .banner-img img {
+    max-height: 250px;
+  }
+}
 .inner-banner-section.center-justify-align .inner-banner {
   position: relative;
 }
@@ -817,12 +822,22 @@ input[type=checkbox]:checked + label:after {
   object-position: center center;
   max-height: 500px;
 }
+@media (max-width: 767px) {
+  .inner-banner-section.center-justify-align .banner-img img {
+    max-height: 250px;
+  }
+}
 .inner-banner-section.center-end-align .banner-img {
   align-items: center;
 }
 .inner-banner-section.center-end-align .banner-img img {
   object-position: center right;
   max-height: 500px;
+}
+@media (max-width: 767px) {
+  .inner-banner-section.center-end-align .banner-img img {
+    max-height: 250px;
+  }
 }
 
 .header {
