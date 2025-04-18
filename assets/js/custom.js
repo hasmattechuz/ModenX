@@ -303,6 +303,41 @@ const swiper_update = new Swiper(".swiper-update", {
   },
 });
 
+
+const swiper_solution_update = new Swiper(".swiper-solution-update", {
+  loop: false,
+  slidesPerView: 1.5,
+  spaceBetween: 35, // Enable looping
+  simulateTouch: true, // Enable drag/swipe simulation
+  touchStartPreventDefault: false, // Prevent default touch behavior if needed
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+
+  // Optional: responsive settings
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1200: {
+      slidesPerView: 1.5,
+    },
+  },
+});
+
 const swiper_challenges = new Swiper(".swiper-challenges", {
   loop: true,
   slidesPerView: 1.5,
