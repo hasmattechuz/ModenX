@@ -1308,11 +1308,7 @@
     }
 
     @media (max-width: 1700px) {
-        margin-left: calc((100% - 1340px) / 2);
-    }
-
-    @media (max-width: 1550px) {
-        margin-left: calc((100% - 1140px) / 2);
+        margin-left: calc((100% - 100%) / 2);
     }
 
     @media (max-width: 1200px) {

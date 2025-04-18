@@ -87,6 +87,10 @@ const coreValueSlider = new Swiper(".swiper-core-values", {
   },
   breakpoints: {
     768: {
+      slidesPerView: 1.5,
+      spaceBetween: 25,
+    },
+    1025: {
       slidesPerView: 2.5,
       spaceBetween: 25,
     },
