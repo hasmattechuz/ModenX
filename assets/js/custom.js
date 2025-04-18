@@ -400,19 +400,90 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
 });
 
 // Milestone slider
-var swiper_milestone = new Swiper(".milestoneSlider", {
-  cssMode: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-  },
-  mousewheel: true,
-  keyboard: true,
-});
+// var swiper_milestone = new Swiper(".milestoneSlider", {
+//    slidesPerView: "auto",
+//    slidesPerView: 1,
+//   spaceBetween: 30,
+//    effect: "fade",
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "progressbar"
+//   },
+//    pagination: {
+//       el: '.slider__pagination',
+//       clickable: true,
+//     },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   },
+//   // autoplay: {
+// 	// 	delay: 2000,
+// 	//  },
+// 	speed: 2000
+// });
+function initMilestoneSwiper() {
+    // Main Swiper
+    const mainSwiper = new Swiper(".milestoneSlider", {
+      // autoplay: {
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      // },
+      slidesPerView: 1,
+      pagination: {
+        el: ".swiper-pagination", // Progressbar
+        type: "progressbar",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange: function () {
+          pagingSwiper.slideTo(mainSwiper.activeIndex);
+          updateBulletPagination(mainSwiper.activeIndex);
+        }
+      }
+    });
+
+    // Paging Swiper for Bullet Pagination
+    const pagingSwiper = new Swiper(".milestoneSlider", {
+      allowTouchMove: false,
+      pagination: {
+        el: ".swiper-pagination2",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className}"></span>`;
+        },
+      },
+    });
+
+    // Bullet click events
+    function bindBulletClicks() {
+      const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
+      bullets.forEach((bullet, index) => {
+        bullet.addEventListener("click", () => {
+          mainSwiper.slideTo(index);
+        });
+      });
+    }
+
+    // Sync bullet state
+    function updateBulletPagination(activeIndex) {
+      const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
+      bullets.forEach((bullet, index) => {
+        bullet.classList.toggle("swiper-pagination-bullet-active", index === activeIndex);
+      });
+    }
+
+    // Initial bullet setup
+    bindBulletClicks();
+    updateBulletPagination(0);
+  }
+
+  // Initialize Swiper on DOM ready
+  document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
+
 
 $("#mySelect").select2({
   placeholder: "Subject",
