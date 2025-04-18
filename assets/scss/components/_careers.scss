@@ -63,6 +63,14 @@
             }
         }
     }
+
+    @media (max-width: 767px) {
+        .stories-inner {
+            .btn-dv {
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 .culture-section {
@@ -216,6 +224,22 @@
     .item8 {
         grid-column: span 2;
     }
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        grid-gap: 15px 0;
+
+        > *, > [class*="item"] {
+            grid-column: none;
+            height: auto;
+            border-radius: 20px;
+
+            .text-dv {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 .workplace-section {
@@ -227,6 +251,10 @@
         display: grid;
         row-gap: 30px;
         position: relative;
+
+        @media screen and (max-width: 767px) {
+            grid-template-columns: 100%;
+        }
     }
 }
 
@@ -262,6 +290,12 @@
 
         .content-dv {
             margin-top: 0;
+
+            @media (max-width:767px) {
+                br:nth-child(1) {
+                    display: none;
+                }                
+            }
         }
 
         @media only screen and (max-width:567px) {
@@ -283,6 +317,8 @@
 
 body {
     .open-roles-section {
+        overflow: hidden;
+
         .content-dv {
             margin-bottom: 0;
             padding-bottom: var(--gutter);
@@ -292,6 +328,11 @@ body {
         h3.accordion-thumb {
             font-size: var(--heading1);
             line-height: var(--headingLH1);
+
+            @media (max-width: 767px) {
+                font-size: var(--heading2);
+                line-height: var(--headingLH2);
+            }
         }
     }
 }
@@ -312,12 +353,28 @@ body {
         
             h3 {
                 margin-bottom: 30px;
+
+                @media (max-width: 767px) {
+                    margin-bottom: 20px;
+                }
             }
         
             ul {
                 display: grid;
                 row-gap: 15px;
                 margin-bottom: 30px;
+
+                @media (max-width: 767px) {
+                    row-gap: 10px;
+
+                    li::before {
+                        top: 12px;
+                    }
+                }
+            }
+
+            @media (max-width: 767px) {
+                grid-template-columns: 100%;
             }
         }
     }

@@ -314,6 +314,9 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
     1200: {
       slidesPerView: 2.5,
     },
+    2000: {
+      slidesPerView: 3.5,
+    },
   },
 });
 
