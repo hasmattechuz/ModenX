@@ -264,6 +264,14 @@ img {
 .desc-global {
     margin-bottom: var(--mb35);
 }
+.desc-global{
+    p{
+        margin-bottom: var(--mb35);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
 
 .display-desktop {
     display: block !important;

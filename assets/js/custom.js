@@ -45,6 +45,38 @@ function storiesSlider() {
   }
 }
 
+function storiesSolutionSlider() {
+  if ($(".swiper-stories-solution").length) {
+    return new Swiper(".swiper-stories-solution", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+      breakpoints: {
+        567: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        767: {
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 25,
+        },
+        2000: {
+          slidesPerView: 2.75,
+          spaceBetween: 25,
+        },
+      },
+    });
+  }
+}
+
 const coreValueSlider = new Swiper(".swiper-core-values", {
   loop: true,
   slidesPerView: 1,
@@ -200,9 +232,11 @@ $(document).ready(function () {
 
   videoPlayer();
   storiesSlider();
+  storiesSolutionSlider();
   coreValueSlider();
   RetailersSlider();
   ConsumerSlider();
+  
 });
 
 // swiper menu
