@@ -704,6 +704,7 @@ input[type=checkbox]:checked + label:after {
 .inner-banner-section {
   position: relative;
   overflow: hidden;
+  width: 100%;
   background-color: var(--mx-blue);
 }
 .inner-banner-section .inner-banner {
@@ -788,9 +789,6 @@ input[type=checkbox]:checked + label:after {
 .inner-banner-section.center-justify-align .banner-img img {
   object-position: center center;
   max-height: 500px;
-}
-.inner-banner-section.center-end-align .inner-banner {
-  position: relative;
 }
 .inner-banner-section.center-end-align .banner-img {
   align-items: center;
@@ -3542,11 +3540,11 @@ footer .footer-mobile {
   height: 254px;
   resize: none;
 }
-.contact-sec .common-form {
+.contact-sec .common-form, .contact-sec .wpcf7-form {
   display: grid;
   gap: var(--gutter);
 }
-.contact-sec .common-form .form-control {
+.contact-sec .common-form .form-control, .contact-sec .wpcf7-form .form-control {
   border-radius: 50px;
   background: var(--mx-grey);
   padding: 20px 27px;
@@ -3558,42 +3556,31 @@ footer .footer-mobile {
   width: 100%;
 }
 @media only screen and (max-width: 991px) {
-  .contact-sec .common-form .form-control {
+  .contact-sec .common-form .form-control, .contact-sec .wpcf7-form .form-control {
     border-radius: 25px;
     padding: 15px 12px;
   }
 }
-.contact-sec .common-form .form-control::placeholder {
+.contact-sec .common-form .form-control::placeholder, .contact-sec .wpcf7-form .form-control::placeholder {
   color: #A7A9AC;
 }
-.contact-sec .common-form .form-control::-webkit-placeholder {
+.contact-sec .common-form .form-control::-webkit-placeholder, .contact-sec .wpcf7-form .form-control::-webkit-placeholder {
   color: #A7A9AC;
 }
-.contact-sec .common-form .form-control::-moz-placeholder {
+.contact-sec .common-form .form-control::-moz-placeholder, .contact-sec .wpcf7-form .form-control::-moz-placeholder {
   color: #A7A9AC;
 }
-.contact-sec .common-form .form-group-inline {
+.contact-sec .common-form .form-group-inline, .contact-sec .wpcf7-form .form-group-inline {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 @media only screen and (max-width: 991px) {
-  .contact-sec .common-form .form-group-inline {
+  .contact-sec .common-form .form-group-inline, .contact-sec .wpcf7-form .form-group-inline {
     grid-template-columns: 1fr;
   }
 }
-.contact-sec .common-form input[type=submit] {
-  border-radius: 30px;
-  background: var(--mx-yellow);
-  min-width: 420px;
-  max-width: 420px;
-  border: none;
-  padding: 17px;
-  color: var(--mx-blue);
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
+.contact-sec .common-form input[type=submit], .contact-sec .wpcf7-form input[type=submit] {
   cursor: pointer;
 }
 .contact-sec .mandatory {
