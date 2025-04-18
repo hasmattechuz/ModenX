@@ -13,7 +13,6 @@ function videoPlayer() {
   });
 }
 
-
 function storiesSlider() {
   if ($(".swiper-stories").length) {
     return new Swiper(".swiper-stories", {
@@ -46,25 +45,25 @@ function storiesSlider() {
   }
 }
 
-  const coreValueSlider = new Swiper(".swiper-core-values", {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-next",
-      prevEl: ".swiper-prev",
+const coreValueSlider = new Swiper(".swiper-core-values", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-next",
+    prevEl: ".swiper-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 25,
     },
-    breakpoints: {
-      768: {
-        slidesPerView: 2.5,
-        spaceBetween: 25,
-      },
-      2000: {
-        slidesPerView: 4,
-        spaceBetween: 25,
-      },
+    2000: {
+      slidesPerView: 4,
+      spaceBetween: 25,
     },
-  });
+  },
+});
 
 const RetailersSlider = new Swiper(".swiper-retailers", {
   loop: false,
@@ -293,7 +292,7 @@ const swiper_challenges = new Swiper(".swiper-challenges", {
 const swiper_benefits = new Swiper(".swiper-benefits", {
   loop: true,
   slidesPerView: 1,
-  spaceBetween: 20, 
+  spaceBetween: 20,
   simulateTouch: true,
   touchStartPreventDefault: false,
   pagination: {
@@ -314,42 +313,37 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
     },
     1200: {
       slidesPerView: 2.5,
-    }
+    },
   },
 });
 
-  // About image slider
+// About image slider
+var swiper_imageSlider = new Swiper(".imageSlider", {
+  slidesPerView: 4,
+  spaceBetween: 35,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-  var swiper_imageSlider = new Swiper(".imageSlider", {
-    slidesPerView: 4,
-    spaceBetween: 35,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+// Milestone slider
+var swiper_milestone = new Swiper(".milestoneSlider", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
 
-
-  // Milestone slider
-
-  var swiper_milestone = new Swiper(".milestoneSlider", {
-    cssMode: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-      mousewheel: true,
-      keyboard: true,
-  });
-  
-  
-  $('#mySelect').select2({
-    placeholder: "Subject",
-    // allowClear: true
+$("#mySelect").select2({
+  placeholder: "Subject",
 });
 
 AOS.init({});
@@ -359,30 +353,37 @@ $(".mobile-contact").click(function () {
   $(this).parent().toggleClass("active");
 });
 
+if ($('.news-section').length > 0 && $('.update-section').length > 0) {
+  $('.news-section, .update-section').wrapAll('<div class="news-insights-parent"></div>');
+}
+
 // Read More / Read Less
 
-$('.read-less').hide();
+$(".read-less").hide();
 
-  $('.read-more-btn, .read-less').click(function() {
-    $('.more-text').slideToggle();
+$(".read-more-btn, .read-less").click(function () {
+  $(".more-text").slideToggle();
 
-    $('.read-more-btn, .read-less').toggle();
-  });
-
-
-
-
-$(function() {
-	// (Optional) Active an item if it has the class "is-active"	
-	$(".accordion > .accordion-item.is-active").children(".accordion-panel").slideDown();
-	
-	$(".accordion > .accordion-item").click(function() {
-		// Cancel the siblings
-		$(this).siblings(".accordion-item").removeClass("is-active").children(".accordion-panel").slideUp();
-		// Toggle the item
-		$(this).toggleClass("is-active").children(".accordion-panel").slideToggle("ease-out");
-	});
+  $(".read-more-btn, .read-less").toggle();
 });
 
+$(function () {
+  // (Optional) Active an item if it has the class "is-active"
+  $(".accordion > .accordion-item.is-active")
+    .children(".accordion-panel")
+    .slideDown();
 
-
+  $(".accordion > .accordion-item").click(function () {
+    // Cancel the siblings
+    $(this)
+      .siblings(".accordion-item")
+      .removeClass("is-active")
+      .children(".accordion-panel")
+      .slideUp();
+    // Toggle the item
+    $(this)
+      .toggleClass("is-active")
+      .children(".accordion-panel")
+      .slideToggle("ease-out");
+  });
+});
