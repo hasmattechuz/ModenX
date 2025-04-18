@@ -307,7 +307,6 @@ const swiper_update = new Swiper(".swiper-update", {
   },
 });
 
-
 const swiper_solution_update = new Swiper(".swiper-solution-update", {
   loop: false,
   slidesPerView: 1.5,
@@ -416,6 +415,22 @@ var swiper_milestone = new Swiper(".milestoneSlider", {
   },
   mousewheel: true,
   keyboard: true,
+});
+
+const swiperBlogBanner = new Swiper(".image-slider-swiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 55000,
+    disableOnInteraction: false,
+  },
 });
 
 $("#mySelect").select2({
