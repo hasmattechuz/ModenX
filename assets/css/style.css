@@ -5082,6 +5082,9 @@ body .open-roles-section h3.accordion-thumb {
   grid-template-columns: 1fr;
 }
 
+.solution-rc-desktop .container-fluid {
+  gap: 50px;
+}
 .solution-rc-desktop .img-stroke5 {
   top: 164px;
   left: 41vw;
