@@ -811,9 +811,11 @@ input[type="checkbox"]:checked+label:after {
         flex-wrap: wrap;
 
         @media (max-width: 767px) {
-            padding-top: 80px;
+            padding-top: 140px;
+            padding-bottom: 0;
             width: 100%;
             min-height: 600px;
+            align-items: flex-start;
         }
     }
 
@@ -832,7 +834,7 @@ input[type="checkbox"]:checked+label:after {
         }
 
         @media (max-width: 767px) {
-            padding-bottom: 300px;
+            padding-bottom: 242px;
         }
     }
 
