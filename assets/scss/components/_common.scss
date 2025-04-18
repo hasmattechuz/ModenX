@@ -802,6 +802,7 @@ input[type="checkbox"]:checked+label:after {
 .inner-banner-section {
     position: relative;
     overflow: hidden;
+    width: 100%;
     background-color: var(--mx-blue);
 
     .inner-banner {
@@ -899,10 +900,6 @@ input[type="checkbox"]:checked+label:after {
     }
 
     &.center-end-align {
-        .inner-banner {
-            position: relative;
-        }
-
         .banner-img {
             align-items: center;
 
