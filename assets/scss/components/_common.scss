@@ -45,6 +45,7 @@
     --max-w1920: 1920px;
     --max-w1440: 1440px;
     --max-w1240: 1240px;
+    --max-wblue: 1680px;
 }
 
 @media (max-width: 1200px) {
@@ -646,7 +647,7 @@ input[type="checkbox"]:checked+label:after {
     border-radius: 30px;
     background: var(--mx-blue);
     padding: 45px 50px;
-    max-width: 646px;
+    // max-width: 646px;
     min-height: 550px;
     max-height: 550px;
 

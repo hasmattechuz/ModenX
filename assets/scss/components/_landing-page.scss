@@ -298,6 +298,10 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    .container-fluid{
+        max-width: var(--max-wblue);
+        margin: 0 auto;
+    }
 
     .img-dv {
         display: flex;
@@ -485,6 +489,18 @@
             }
         }
 
+    }
+}
+.phygital-section + .blue-block-section{
+        padding-bottom: calc(var(--p70) - 20px);
+    .blue-block-inner{
+        align-items: flex-start;
+    }
+    .img-dv img{
+        max-width: 500px;
+    }
+    .container-fluid{
+        --max-wblue:1410px
     }
 }
 
