@@ -273,10 +273,26 @@ img {
     }
 }
 
+.display-ipad {
+    display: grid !important;
+
+    @media only screen and (max-width: 767px) {
+        display: none !important;
+    }
+}
+
 .display-mobile {
     display: none !important;
 
     @media only screen and (max-width: 991px) {
+        display: block !important;
+    }
+}
+
+.display-mobile-noipad {
+    display: none !important;
+
+    @media only screen and (max-width: 767px) {
         display: block !important;
     }
 }
