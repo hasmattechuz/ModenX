@@ -87,6 +87,10 @@ const coreValueSlider = new Swiper(".swiper-core-values", {
   },
   breakpoints: {
     768: {
+      slidesPerView: 1.5,
+      spaceBetween: 25,
+    },
+    1025: {
       slidesPerView: 2.5,
       spaceBetween: 25,
     },
@@ -303,7 +307,6 @@ const swiper_update = new Swiper(".swiper-update", {
   },
 });
 
-
 const swiper_solution_update = new Swiper(".swiper-solution-update", {
   loop: false,
   slidesPerView: 1.5,
@@ -484,6 +487,22 @@ function initMilestoneSwiper() {
   // Initialize Swiper on DOM ready
   document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
 
+
+const swiperBlogBanner = new Swiper(".image-slider-swiper", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 55000,
+    disableOnInteraction: false,
+  },
+});
 
 $("#mySelect").select2({
   placeholder: "Subject",
