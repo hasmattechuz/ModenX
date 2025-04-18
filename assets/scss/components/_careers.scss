@@ -259,7 +259,7 @@
 
     .stories-inner {
         grid-template-columns: calc(25% - var(--gutter) / 2) calc(75% - var(--gutter) / 2);
-        
+
         .content-dv {
             margin-top: 0;
         }
@@ -277,6 +277,48 @@
     .card-slider-root {
         .swiper {
             padding-top: 0;
+        }
+    }
+}
+
+body {
+    .open-roles-section {
+        .content-dv {
+            margin-bottom: 0;
+            padding-bottom: var(--gutter);
+            border-bottom: 1px solid var(--white);
+        }
+
+        h3.accordion-thumb {
+            font-size: var(--heading1);
+            line-height: var(--headingLH1);
+        }
+    }
+}
+
+.accordion {
+    .accordion-panel {
+        .open-roles-bd-root {
+            padding: 20px 0 0;
+            display: grid;
+            gap: var(--gutter);
+            grid-template-columns: repeat(2, 1fr);
+        
+            .open-roles-col {
+                &:nth-child(1) {
+                    grid-row: span 2;
+                }
+            }
+        
+            h3 {
+                margin-bottom: 30px;
+            }
+        
+            ul {
+                display: grid;
+                row-gap: 15px;
+                margin-bottom: 30px;
+            }
         }
     }
 }
