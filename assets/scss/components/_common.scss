@@ -858,12 +858,12 @@ input[type="checkbox"]:checked+label:after {
             max-height: 800px;
 
             @media (max-width: 767px) {
-                max-height: 300px;
+                max-height: 250px;
             }
         }
 
         @media (max-width: 767px) {
-            max-height: 300px;
+            max-height: 250px;
             width: 75%;
         }
     }
@@ -879,6 +879,10 @@ input[type="checkbox"]:checked+label:after {
             img {
                 object-position: center center;
                 max-height: 500px;
+
+                @media (max-width: 767px) {
+                    max-height: 250px;
+                }
             }
         }
     }
@@ -894,6 +898,10 @@ input[type="checkbox"]:checked+label:after {
             img {
                 object-position: center center;
                 max-height: 500px;
+
+                @media (max-width: 767px) {
+                    max-height: 250px;
+                }
             }
         }
     }
@@ -905,6 +913,10 @@ input[type="checkbox"]:checked+label:after {
             img {
                 object-position: center right;
                 max-height: 500px;
+
+                @media (max-width: 767px) {
+                    max-height: 250px;
+                }
             }
         }
     }
