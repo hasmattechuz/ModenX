@@ -281,6 +281,32 @@ const swiper = new Swiper(".swiper-contact", {
   },
 });
 
+
+ function initSyncedSwipers(mainSelector, thumbSelector) {
+    const mainSwiper = new Swiper(mainSelector, {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 1,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    const thumbSwiper = new Swiper(thumbSelector, {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 1,
+      slideToClickedSlide: true,
+    });
+
+    mainSwiper.controller.control = thumbSwiper;
+    thumbSwiper.controller.control = mainSwiper;
+  }
+
+  // Call the function
+  initSyncedSwipers('.main-swiper-contact', '.thumb-swiper-contact');
+
 const swiper_update = new Swiper(".swiper-update", {
   loop: false,
   slidesPerView: 2,
