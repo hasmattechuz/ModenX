@@ -3386,6 +3386,7 @@ footer .footer-mobile {
 .stories-card .quotes-dv {
   display: flex;
   flex-wrap: wrap;
+  width: 63px;
 }
 
 .update-section {
@@ -3574,6 +3575,9 @@ footer .footer-mobile {
   top: -23px;
   left: -45px;
   width: 210px;
+}
+.update-section.similar-blogs-section .swiper-scrollbar {
+  background-color: var(--white);
 }
 
 .swiper-progress-root .swiper-scrollbar {
@@ -5857,6 +5861,73 @@ body .open-roles-section h3.accordion-thumb {
   padding: 70px 0;
   margin: 0;
   position: relative;
+}
+
+.blog-user-col {
+  display: grid;
+  grid-template-columns: 60px calc(100% - 80px);
+  gap: var(--gutter30);
+  align-items: center;
+  align-content: center;
+}
+.blog-user-col .img-user {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.blog-user-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 50px;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  z-index: 1000;
+  min-width: 10rem;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: var(--mx-black);
+  text-align: left;
+  list-style: none;
+  background-color: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.dropdown-menu.show {
+  display: block;
+}
+.dropdown-menu.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dropdown-menu ul li {
+  width: 100%;
+}
+.dropdown-menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: var(--mx-black);
+  text-decoration: none;
+}
+.dropdown-menu ul li a:hover {
+  background-color: var(--mx-blue);
+  color: var(--white);
 }
 
 /*# sourceMappingURL=style.css.map */
