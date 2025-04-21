@@ -5960,12 +5960,11 @@ body .open-roles-section h3.accordion-thumb {
   position: relative;
 }
 .custom-share-dropdown .dropdown-menu ul li a {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   position: relative;
   padding: 10px;
-  background-color: transparent;
+  min-height: 68px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .custom-share-dropdown .dropdown-menu ul li a:hover {
   background-color: transparent;
@@ -5976,9 +5975,6 @@ body .open-roles-section h3.accordion-thumb {
   transform-style: preserve-3d;
   transition: all 0.5s ease;
 }
-.custom-share-dropdown .dropdown-menu ul li .flipcard:hover {
-  transform: rotateY(180deg);
-}
 .custom-share-dropdown .dropdown-menu ul li .flipcard img {
   width: 48px;
   height: 48px;
@@ -5988,14 +5984,16 @@ body .open-roles-section h3.accordion-thumb {
   backface-visibility: hidden;
 }
 .custom-share-dropdown .dropdown-menu ul li .flipcard .front {
-  display: table;
+  display: block;
   background: rgba(255, 255, 255, 0);
 }
 .custom-share-dropdown .dropdown-menu ul li .flipcard .back {
-  display: table;
+  display: block;
   transform: rotateY(180deg);
-  box-sizing: border-box;
   background: rgba(255, 255, 255, 0);
+}
+.custom-share-dropdown .dropdown-menu ul li .flipcard:hover {
+  transform: rotateY(180deg);
 }
 
 /*# sourceMappingURL=style.css.map */

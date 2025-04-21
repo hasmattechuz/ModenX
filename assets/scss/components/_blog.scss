@@ -399,20 +399,11 @@
                 position: relative;
 
                 a {
-                    display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
                     position: relative;
                     padding: 10px;
-                    background-color: transparent;
-
-                    // .img-hover {
-                    //     top: 10px;
-                    //     left: 9px;
-                    //     opacity: 0;
-                    //     transform: rotateY(180deg);
-                        
-                    // }
+                    min-height: 68px;
+                    display: flex;
+                    flex-wrap: wrap;
 
                     &:hover {
                         background-color: transparent;
@@ -425,10 +416,6 @@
                     transform-style: preserve-3d;
                     transition: all 0.5s ease;
                     
-                    &:hover {
-                        transform: rotateY(180deg);
-                    }
-
                     img {
                         width: 48px;
                         height: 48px;
@@ -439,15 +426,18 @@
                     }
 
                     .front {
-                        display: table;
+                        display: block;
                         background: rgba(255, 255, 255, 0);
                     }
 
                     .back {
-                        display: table;
+                        display: block;
                         transform: rotateY(180deg);
-                        box-sizing: border-box;
                         background: rgba(255, 255, 255, 0);
+                    }
+
+                    &:hover {
+                        transform: rotateY(180deg);
                     }
                 }
 
