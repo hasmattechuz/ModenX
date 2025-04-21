@@ -566,54 +566,43 @@ $(function () {
 });
 
 function CounterUp() {
-  if (typeof CountUp === 'undefined') {
-    console.error('CountUp library is not loaded');
-    return;
-  }
+  const section = document.querySelector('.partnering-section');
+  const counters = section.querySelectorAll('[data-countup-number]');
 
-  const countUpOptions = {
-    duration: 2, // Animation duration in seconds
-    useGrouping: true, // Use grouping (e.g., 1,000 instead of 1000)
+  // Counter function
+  const animateCounter = (el, target) => {
+    const duration = 2000;
+    const start = 0;
+    const end = parseInt(target.replace(/,/g, ''));
+    const increment = end / (duration / 16);
+
+    let current = start;
+    const update = () => {
+      current += increment;
+      if (current < end) {
+        el.textContent = Math.floor(current).toLocaleString();
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = end.toLocaleString();
+      }
+    };
+    update();
   };
 
-  function initCountUp() {
-    const counters = document.querySelectorAll("[data-countup-number]");
-    counters.forEach((counter) => {
-      const countTo = parseInt(counter.getAttribute("data-countup-number"), 10);
-      const countUp = new CountUp(counter, countTo, countUpOptions);
-      if (!countUp.error) {
-        countUp.start();
-      } else {
-        console.error(countUp.error);
+  // Observer to restart count every time visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        counters.forEach(counter => {
+          // Reset text before restarting
+          counter.textContent = '0';
+          animateCounter(counter, counter.getAttribute('data-countup-number'));
+        });
       }
     });
-  }
+  }, {
+    threshold: 0.5 // Trigger when 50% visible
+  });
 
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function onScroll() {
-    const section = document.querySelector(".partnering-section");
-    if (section && isElementInViewport(section)) {
-      initCountUp();
-      window.removeEventListener("scroll", onScroll);
-    }
-  }
-
-  const section = document.querySelector(".partnering-section");
-  if (section) {
-    window.addEventListener("scroll", onScroll);
-    // Check if element is already in viewport on page load
-    if (isElementInViewport(section)) {
-      initCountUp();
-    }
-  }
+  observer.observe(section);
 }
