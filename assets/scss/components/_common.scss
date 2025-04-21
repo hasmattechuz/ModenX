@@ -435,8 +435,8 @@ input[type="checkbox"]+label {
 input[type="checkbox"] {
     display: none;
 }
-
-input[type="checkbox"]+label:before {
+ 
+input[type="checkbox"]+label:before,.form-group:has(input[type="checkbox"])::before{
     content: "";
     border: 1px solid #000;
     border-radius: 5px;
@@ -448,6 +448,7 @@ input[type="checkbox"]+label:before {
     color: transparent;
     transition: 0.2s;
     margin-top: 3px;
+    position: absolute;
 
     @media only screen and (max-width: 991px) {
         width: 14px;
@@ -460,8 +461,13 @@ input[type="checkbox"]+label:before {
         margin-top: 2px;
     }
 }
-
-input[type="checkbox"]+label:after {
+.checkbox label{
+       padding-left: 30px;
+    z-index: 99;
+    position: relative;
+    cursor: pointer;
+}
+input[type="checkbox"]+label:after,.form-group:has(input[type="checkbox"])::after {
     content: "";
     transition: 0.2s;
     position: absolute;
@@ -472,7 +478,7 @@ input[type="checkbox"]+label:after {
     transition: 0.2s ease-in-out;
 }
 
-input[type="checkbox"]:checked+label:after {
+input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"]:checked)::after {
     transform: scale(1);
     width: 26px;
     height: 15px;
@@ -646,10 +652,10 @@ input[type="checkbox"]:checked+label:after {
 .contact-detail {
     border-radius: 30px;
     background: var(--mx-blue);
-    padding: 45px 50px;
+    padding: 25px 40px;
     // max-width: 646px;
-    min-height: 550px;
-    max-height: 550px;
+    min-height: 390px;
+    max-height: 390px;
 
     @media (max-width: 1700px) {
         padding: 30px 40px;

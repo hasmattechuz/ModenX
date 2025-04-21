@@ -45,12 +45,14 @@
     .common-form, .wpcf7-form {
         display: grid;
         gap: var(--gutter);
-       
+        .form-group{
+            position: relative;
+        }
         .form-control{
             border-radius: 50px;
             background: var(--mx-grey);
             padding: 20px 27px;
-            color: #A7A9AC;
+            color: var(--black);
             font-size: var(--p);
             font-style: normal;
             font-weight: 400;
@@ -58,7 +60,7 @@
             width: 100%;
 
              @media only screen and (max-width: 991px) {
-                  border-radius: 25px;
+                border-radius: 25px;
                 padding: 15px 12px;
              }
              &::placeholder{
@@ -78,12 +80,47 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
+            @media only screen and (min-width: 1800px) {
+                 grid-template-columns: 1fr 1fr 1fr;
+            }
             @media only screen and (max-width: 991px) {
                   grid-template-columns: 1fr;
+            }
+            .form-group{
+                &:nth-child(3){
+                    @media only screen and (max-width: 1800px) {
+                        grid-row: 2 / span 2;
+                        grid-column: span 2;
+                    }
+                }
             }
         }
         input[type="submit"]{
             cursor: pointer;
+        }
+        span.wpcf7-not-valid-tip {
+            position: absolute;
+            bottom: -24px;
+            left: 28px;
+            color: #f00;
+            font-size: 12px;
+        }
+        .checkbox{
+            a{
+                color: var(--black);
+                &:hover{
+                    color: var(--mx-blue);
+                }
+            }
+        }
+    }
+    .screen-reader-response{
+        display: none;
+        ul{
+            li{
+                color: #f00;
+                font-size: 12px; 
+            }
         }
     }
     .mandatory{
