@@ -629,9 +629,7 @@ body {
     @media (max-width: 1550px) {
         max-width: var(--max-w1240);
     }
-	@media only screen and (max-width: 991px) {
-		display: none;
-	}
+	
     .link{
 		 @media only screen and (max-width: 991px) {
           	margin-bottom: 15px;
@@ -752,7 +750,8 @@ header {
 			display: none;
 		}
 		.black-logo{
-		display: block;
+			display: block;
+		}
 	}
 
 	header{
@@ -766,16 +765,19 @@ header {
 						display: block;			
 					}
 				}
+		
 			.white-logo{
 				display: block;
 			}
 			.black-logo{
 				display: none;						
 			}
+		
+			
 		}
 	}
    
-	}
+	
 }
 .nav-right{
     background: rgba(0, 0, 0, 0.50);
@@ -791,7 +793,10 @@ header {
 	    background: #1D3568;
 		padding: 0;
 		min-height: auto;
-		position: relative;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		left: 0;
  	}
 }
 

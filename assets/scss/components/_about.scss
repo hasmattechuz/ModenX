@@ -470,7 +470,7 @@
             text-align: center;         
             inset: 25px 0 auto;
             max-width: calc(100% - 108px);
-            margin: 0 auto;
+            margin-left: 18%;
             .swiper-pagination-bullet{
                 width: 12px;
                 height: 12px;
@@ -490,6 +490,7 @@
         .swiper-btn-arrow{
             position: absolute;
             top: 27px;
+            z-index: 99;
             &::after{
                 font-size: 15px;
                 color: var(--mx-yellow);                
@@ -542,18 +543,18 @@
     display: grid;
     gap: var(--gutter);
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(4, 1fr) ;
     
     
 
     &.for-retailers-inner{
          .item1{
-            grid-column: 1/3;
-            grid-row: 1;
+               grid-column: 1 / 4;
+    grid-row: 1;
         }
         .item2{
-            grid-column: 5/3;
-            grid-row: 1 / 3;
+                grid-column: 4 / 6;
+    grid-row: 1 / 3;
 
             &.primary-image-card {
                 .primary-image-link {
@@ -562,8 +563,8 @@
             }
         }
         .item3{
-            grid-column: 5/9;
-            grid-row: 1 / 3;
+            grid-column: 6 / 9;
+    grid-row: 1 / 3;
 
             &.primary-image-card {
                 .primary-image-link {
@@ -572,13 +573,13 @@
             }
         }
         .item4{
-            grid-column: 1 / 3;
-            grid-row: 2 / 3;
+                grid-column: 1 / 4;
+    grid-row: 2 / 5;
             
         }
         .item5{
-            grid-column: 3/5;
-            grid-row: 2 / 5;
+            grid-column: 4 / 7;
+    grid-row: 3 / 5;
             &.primary-image-card {
                 .primary-image-link {
                     height: 100%;
@@ -586,12 +587,9 @@
             }
         }
         .item6{
-            grid-column: 1 / 3;
-            grid-row: 3 / 5;
+           grid-column: 7 / 9;
+        grid-row: 3 / 5;
         }
-        .item7{
-            grid-column: 5 / 9;
-            grid-row: 3 / 5;
-        }
+       
     }
 }

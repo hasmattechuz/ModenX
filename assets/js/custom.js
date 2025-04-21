@@ -448,95 +448,75 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
 });
 
 // Milestone slider
-// var swiper_milestone = new Swiper(".milestoneSlider", {
-//    slidesPerView: "auto",
-//    slidesPerView: 1,
-//   spaceBetween: 30,
-//    effect: "fade",
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "progressbar"
-//   },
-//    pagination: {
-//       el: '.slider__pagination',
-//       clickable: true,
+// function initMilestoneSwiper() {
+//   // Main Swiper
+//   const mainSwiper = new Swiper(".milestoneSlider", {
+//     // autoplay: {
+//     //   delay: 2000,
+//     //   disableOnInteraction: false,
+//     // },
+//     slidesPerView: 1,
+//     pagination: {
+//       el: ".swiper-pagination", // Progressbar
+//       type: "progressbar",
 //     },
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev"
-//   },
-//   // autoplay: {
-// 	// 	delay: 2000,
-// 	//  },
-// 	speed: 2000
-// });
-function initMilestoneSwiper() {
-  // Main Swiper
-  const mainSwiper = new Swiper(".milestoneSlider", {
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: false,
-    // },
-    slidesPerView: 1,
-    pagination: {
-      el: ".swiper-pagination", // Progressbar
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      slideChange: function () {
-        pagingSwiper.slideTo(mainSwiper.activeIndex);
-        updateBulletPagination(mainSwiper.activeIndex);
-      },
-    },
-  });
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//     on: {
+//       slideChange: function () {
+//         pagingSwiper.slideTo(mainSwiper.activeIndex);
+//         updateBulletPagination(mainSwiper.activeIndex);
+//       },
+//     },
+//   });
 
-  // Paging Swiper for Bullet Pagination
-  const pagingSwiper = new Swiper(".milestoneSlider", {
-    allowTouchMove: false,
-    pagination: {
-      el: ".swiper-pagination2",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return `<span class="${className}"></span>`;
-      },
-    },
-  });
+//   // Paging Swiper for Bullet Pagination
+//   const pagingSwiper = new Swiper(".milestoneSlider", {
+//     allowTouchMove: false,
+//     pagination: {
+//       el: ".swiper-pagination2",
+//       clickable: true,
+//      renderBullet: function (index, className) {
+//         const total = document.querySelectorAll(".milestoneSlider .swiper-slide").length;
+//         if (index === total - 1) return ''; // skip last bullet
+//         return `<span class="${className}"></span>`;
+//       }
+//     },
+//   });
 
-  // Bullet click events
-  function bindBulletClicks() {
-    const bullets = document.querySelectorAll(
-      ".swiper-pagination2 .swiper-pagination-bullet"
-    );
-    bullets.forEach((bullet, index) => {
-      bullet.addEventListener("click", () => {
-        mainSwiper.slideTo(index);
-      });
-    });
-  }
+//   // Bullet click events
+//   function bindBulletClicks() {
+//     const bullets = document.querySelectorAll(
+//       ".swiper-pagination2 .swiper-pagination-bullet"
+//     );
+//     bullets.forEach((bullet, index) => {
+//       bullet.addEventListener("click", () => {
+//         mainSwiper.slideTo(index);
+//       });
+//     });
+//   }
 
-  // Sync bullet state
-  function updateBulletPagination(activeIndex) {
-    const bullets = document.querySelectorAll(
-      ".swiper-pagination2 .swiper-pagination-bullet"
-    );
-    bullets.forEach((bullet, index) => {
-      bullet.classList.toggle(
-        "swiper-pagination-bullet-active",
-        index === activeIndex
-      );
-    });
-  }
+//   // Sync bullet state
+//   function updateBulletPagination(activeIndex) {
+//     const bullets = document.querySelectorAll(
+//       ".swiper-pagination2 .swiper-pagination-bullet"
+//     );
+//     bullets.forEach((bullet, index) => {
+//       bullet.classList.toggle(
+//         "swiper-pagination-bullet-active",
+//         index === activeIndex
+//       );
+//     });
+//   }
 
-  // Initial bullet setup
-  bindBulletClicks();
-  updateBulletPagination(0);
-}
+//   // Initial bullet setup
+//   bindBulletClicks();
+//   updateBulletPagination(0);
+// }
 
-document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
+// document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
 
 const swiperBlogBanner = new Swiper(".image-slider-swiper", {
   loop: true,
@@ -671,3 +651,29 @@ function Dropdown() {
     });
   }
 }
+
+var slider = new Swiper ('.milestoneSlider', {
+    slidesPerView: 1,
+    loop: false,
+    loopedSlides: 6, 
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+     pagination: {
+      el: ".swiper-pagination", // Progressbar
+      type: "progressbar",
+    },
+});
+
+
+var thumbs = new Swiper ('.gallery-thumbs', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    loop: false,
+    slideToClickedSlide: true,
+});
+
+
+slider.controller.control = thumbs;
+thumbs.controller.control = slider;
