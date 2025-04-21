@@ -88,6 +88,27 @@ footer {
             &.border-0{
                 border: none;
             }
+            &:hover{
+                    color: var(--mx-yellow);
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    transform-origin: right;
+                    background-color: var(--mx-yellow);
+                    transform: scaleX(0);
+                    transition: transform .3s ease;
+                }
+                &:hover{
+                    &::before{
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
 		
             &.main-link{
                 border: none;
@@ -180,18 +201,58 @@ footer {
             a{
                 font-weight: 400;
                 color: var(--mx-yellow);
-                border-left: 1px solid var(--mx-yellow);
-                padding: 0 6px;
+                // border-left: 1px solid var(--mx-yellow);
+                margin: 0 5px;
                 overflow: visible;
                 position: relative;
+                line-height: 1;
+                &:hover{
+                    color: var(--mx-yellow);
+                }
+                &::after{
+                    content: "";
+                    border-right: 1px solid var(--mx-yellow);
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    right: -8px;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    transform-origin: right;
+                    background-color: var(--mx-yellow);
+                    transform: scaleX(0);
+                    transition: transform .3s ease;
+                }
+                &:hover{
+                    &::before{
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
             }
         }
         .footer-list-ul{
             display: flex;
             li{
+                padding: 0 2px;
+                display: flex;
+                align-items: center;
                 &:first-child{
                     a{
                         border-left: 0;
+                    }
+                }
+                &:last-child{
+                    a{
+                        &::after{
+                            content: none;
+                        }
                     }
                 }
             }
@@ -203,7 +264,7 @@ footer {
 	.footer-bottom {
         overflow: hidden;
         position: relative;
-            min-height: 50px;
+        min-height: 50px;
         @media (max-width: 991px) {
             flex-direction: column;
             gap: 12px;
