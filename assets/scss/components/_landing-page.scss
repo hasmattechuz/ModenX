@@ -1663,6 +1663,16 @@
             }
         }
     }
+
+    &.similar-blogs-section {
+        background-color: var(--mx-grey);
+        
+        .img-stroke8 {
+            top: -23px;
+            left: -45px;
+            width: 210px;
+        }
+    }
 }
 
 .swiper-progress-root {

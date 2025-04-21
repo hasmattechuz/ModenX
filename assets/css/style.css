@@ -842,7 +842,7 @@ input[type=checkbox]:checked + label:after {
 }
 
 .mt-parent {
-  margin-top: 128px;
+  margin-top: 100px;
 }
 @media (max-width: 991px) {
   .mt-parent {
@@ -3573,6 +3573,14 @@ footer .footer-mobile {
     width: 210px;
   }
 }
+.update-section.similar-blogs-section {
+  background-color: var(--mx-grey);
+}
+.update-section.similar-blogs-section .img-stroke8 {
+  top: -23px;
+  left: -45px;
+  width: 210px;
+}
 
 .swiper-progress-root .swiper-scrollbar {
   position: relative;
@@ -4055,7 +4063,8 @@ footer .footer-mobile {
   height: 600px;
   z-index: -1;
 }
-.privacy-content p, .privacy-content span {
+.privacy-content p,
+.privacy-content span {
   color: var(--mx-black);
   margin-bottom: 25px;
   line-height: 1.7;
@@ -4087,21 +4096,21 @@ footer .footer-mobile {
   background-color: var(--mx-blue);
   transition: all 0.4s ease-in-out;
 }
-.privacy-content ul {
+.privacy-content ol {
   padding: 20px 0;
   counter-reset: count;
 }
-.privacy-content ul li {
+.privacy-content ol li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 6px;
 }
 @media (max-width: 567px) {
-  .privacy-content ul li {
+  .privacy-content ol li {
     padding-left: 15px;
   }
 }
-.privacy-content ul li:before {
+.privacy-content ol li:before {
   counter-increment: count;
   content: counter(count) ".";
   position: absolute;
@@ -4112,12 +4121,29 @@ footer .footer-mobile {
     padding-top: 20px;
   }
 }
-.privacy-content .contact-sec p, .privacy-content .contact-sec span {
+.privacy-content .contact-sec p,
+.privacy-content .contact-sec span {
   color: var(--white);
   margin-bottom: 0;
 }
 .privacy-content .contact-sec a:before {
   content: none;
+}
+
+.general-content {
+  padding: 0;
+}
+.general-content h1,
+.general-content h2,
+.general-content h3 {
+  margin-bottom: 25px;
+}
+.general-content ul {
+  padding: 20px 0 20px 20px;
+  list-style: disc;
+}
+.general-content ul li {
+  padding-bottom: 6px;
 }
 
 .about-page-reach-out .title .stroke-img {
@@ -5515,7 +5541,7 @@ body .open-roles-section h3.accordion-thumb {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: calc(100dvh - 128px);
+  min-height: calc(100dvh - 100px);
   display: flex;
   align-items: flex-end;
   overflow: hidden;
@@ -5748,6 +5774,41 @@ body .open-roles-section h3.accordion-thumb {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.static-banner-section .blg-cnt-image-dv::before {
+  z-index: 1;
+}
+.static-banner-section .blg-cnt-image-dv .blog-cnt-link-inner-card {
+  padding: var(--p70) 0;
+}
+.static-banner-section .blg-cnt-image-dv .overlay-img-dv {
+  z-index: 0;
+}
+.static-banner-section .readtime-list {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--white);
+  gap: 20px;
+}
+.static-banner-section .readtime-list li {
+  position: relative;
+}
+.static-banner-section .readtime-list li:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 16px;
+  left: -10px;
+  background-color: var(--white);
+  transform: translateY(-50%);
+}
+
+.blog-content-section {
+  padding: 70px 0;
+  margin: 0;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */
