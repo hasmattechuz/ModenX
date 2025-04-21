@@ -1468,6 +1468,7 @@
     .quotes-dv {
         display: flex;
         flex-wrap: wrap;
+        width: 63px;
     }
 }
 
@@ -1678,6 +1679,10 @@
             top: -23px;
             left: -45px;
             width: 210px;
+        }
+
+        .swiper-scrollbar {
+            background-color: var(--white);
         }
     }
 }
