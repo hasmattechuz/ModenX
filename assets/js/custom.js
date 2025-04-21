@@ -77,89 +77,97 @@ function storiesSolutionSlider() {
   }
 }
 
-const coreValueSlider = new Swiper(".swiper-core-values", {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  navigation: {
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 1.5,
-      spaceBetween: 25,
-    },
-    1025: {
-      slidesPerView: 2.5,
-      spaceBetween: 25,
-    },
-    2000: {
-      slidesPerView: 4,
-      spaceBetween: 25,
-    },
-  },
-});
-
-const RetailersSlider = new Swiper(".swiper-retailers", {
-  loop: false,
-  slidesPerView: 1,
-  spaceBetween: 15, // Enable looping
-  simulateTouch: true, // Enable drag/swipe simulation
-  touchStartPreventDefault: false, // Prevent default touch behavior if needed
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    567: {
+function coreValueSlider() {
+  if ($(".swiper-core-values").length) {
+    return new Swiper(".swiper-core-values", {
+      loop: true,
       slidesPerView: 1,
-    },
-    767: {
-      slidesPerView: 2,
-    },
-  },
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 1.5,
+          spaceBetween: 25,
+        },
+        1025: {
+          slidesPerView: 2.5,
+          spaceBetween: 25,
+        },
+        2000: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+      },
+    });
+  }
+}
 
-  // Optional: responsive settings
-});
-
-const ConsumerSlider = new Swiper(".swiper-consumer", {
-  loop: false,
-  slidesPerView: 1,
-  spaceBetween: 15, // Enable looping
-  simulateTouch: true, // Enable drag/swipe simulation
-  touchStartPreventDefault: false, // Prevent default touch behavior if needed
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    567: {
+function RetailersSlider() {
+  if ($(".swiper-retailers").length) {
+    return new Swiper(".swiper-retailers", {
+      loop: false,
       slidesPerView: 1,
-    },
-    767: {
-      slidesPerView: 2,
-    },
-  },
+      spaceBetween: 15,
+      simulateTouch: true,
+      touchStartPreventDefault: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        567: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  }
+}
 
-  // Optional: responsive settings
-});
+function ConsumerSlider() {
+  if ($(".swiper-consumer").length) {
+    return new Swiper(".swiper-consumer", {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      simulateTouch: true,
+      touchStartPreventDefault: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        567: {
+          slidesPerView: 1,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+      }
+    });
+  }
+}
 
 $(document).ready(function () {
   let isMenuOpen = false;
@@ -240,7 +248,7 @@ $(document).ready(function () {
   coreValueSlider();
   RetailersSlider();
   ConsumerSlider();
-  
+  CounterUp();
 });
 
 // swiper menu
@@ -426,67 +434,72 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
 // 	speed: 2000
 // });
 function initMilestoneSwiper() {
-    // Main Swiper
-    const mainSwiper = new Swiper(".milestoneSlider", {
-      // autoplay: {
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // },
-      slidesPerView: 1,
-      pagination: {
-        el: ".swiper-pagination", // Progressbar
-        type: "progressbar",
+  // Main Swiper
+  const mainSwiper = new Swiper(".milestoneSlider", {
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination", // Progressbar
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      slideChange: function () {
+        pagingSwiper.slideTo(mainSwiper.activeIndex);
+        updateBulletPagination(mainSwiper.activeIndex);
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      on: {
-        slideChange: function () {
-          pagingSwiper.slideTo(mainSwiper.activeIndex);
-          updateBulletPagination(mainSwiper.activeIndex);
-        }
-      }
-    });
+    },
+  });
 
-    // Paging Swiper for Bullet Pagination
-    const pagingSwiper = new Swiper(".milestoneSlider", {
-      allowTouchMove: false,
-      pagination: {
-        el: ".swiper-pagination2",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return `<span class="${className}"></span>`;
-        },
+  // Paging Swiper for Bullet Pagination
+  const pagingSwiper = new Swiper(".milestoneSlider", {
+    allowTouchMove: false,
+    pagination: {
+      el: ".swiper-pagination2",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}"></span>`;
       },
-    });
+    },
+  });
 
-    // Bullet click events
-    function bindBulletClicks() {
-      const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
-      bullets.forEach((bullet, index) => {
-        bullet.addEventListener("click", () => {
-          mainSwiper.slideTo(index);
-        });
+  // Bullet click events
+  function bindBulletClicks() {
+    const bullets = document.querySelectorAll(
+      ".swiper-pagination2 .swiper-pagination-bullet"
+    );
+    bullets.forEach((bullet, index) => {
+      bullet.addEventListener("click", () => {
+        mainSwiper.slideTo(index);
       });
-    }
-
-    // Sync bullet state
-    function updateBulletPagination(activeIndex) {
-      const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
-      bullets.forEach((bullet, index) => {
-        bullet.classList.toggle("swiper-pagination-bullet-active", index === activeIndex);
-      });
-    }
-
-    // Initial bullet setup
-    bindBulletClicks();
-    updateBulletPagination(0);
+    });
   }
 
-  // Initialize Swiper on DOM ready
-  document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
+  // Sync bullet state
+  function updateBulletPagination(activeIndex) {
+    const bullets = document.querySelectorAll(
+      ".swiper-pagination2 .swiper-pagination-bullet"
+    );
+    bullets.forEach((bullet, index) => {
+      bullet.classList.toggle(
+        "swiper-pagination-bullet-active",
+        index === activeIndex
+      );
+    });
+  }
 
+  // Initial bullet setup
+  bindBulletClicks();
+  updateBulletPagination(0);
+}
+
+document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
 
 const swiperBlogBanner = new Swiper(".image-slider-swiper", {
   loop: true,
@@ -511,12 +524,14 @@ $("#mySelect").select2({
 AOS.init({});
 
 $(".mobile-contact").click(function () {
-  $(".swiper-menu").slideToggle(); // toggles between show and hide
+  $(".swiper-menu").slideToggle();
   $(this).parent().toggleClass("active");
 });
 
-if ($('.news-section').length > 0 && $('.update-section').length > 0) {
-  $('.news-section, .update-section').wrapAll('<div class="news-insights-parent"></div>');
+if ($(".news-section").length > 0 && $(".update-section").length > 0) {
+  $(".news-section, .update-section").wrapAll(
+    '<div class="news-insights-parent"></div>'
+  );
 }
 
 // Read More / Read Less
@@ -549,3 +564,56 @@ $(function () {
       .slideToggle("ease-out");
   });
 });
+
+function CounterUp() {
+  if (typeof CountUp === 'undefined') {
+    console.error('CountUp library is not loaded');
+    return;
+  }
+
+  const countUpOptions = {
+    duration: 2, // Animation duration in seconds
+    useGrouping: true, // Use grouping (e.g., 1,000 instead of 1000)
+  };
+
+  function initCountUp() {
+    const counters = document.querySelectorAll("[data-countup-number]");
+    counters.forEach((counter) => {
+      const countTo = parseInt(counter.getAttribute("data-countup-number"), 10);
+      const countUp = new CountUp(counter, countTo, countUpOptions);
+      if (!countUp.error) {
+        countUp.start();
+      } else {
+        console.error(countUp.error);
+      }
+    });
+  }
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function onScroll() {
+    const section = document.querySelector(".partnering-section");
+    if (section && isElementInViewport(section)) {
+      initCountUp();
+      window.removeEventListener("scroll", onScroll);
+    }
+  }
+
+  const section = document.querySelector(".partnering-section");
+  if (section) {
+    window.addEventListener("scroll", onScroll);
+    // Check if element is already in viewport on page load
+    if (isElementInViewport(section)) {
+      initCountUp();
+    }
+  }
+}
