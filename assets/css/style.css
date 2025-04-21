@@ -6079,58 +6079,51 @@ body .open-roles-section h3.accordion-thumb {
 .dropdown-menu ul li {
   width: 100%;
 }
-.dropdown-menu ul li a {
-  display: block;
-  padding: 10px 20px;
-  color: var(--mx-black);
-  text-decoration: none;
-}
-.dropdown-menu ul li a:hover {
-  background-color: var(--mx-blue);
-  color: var(--white);
-}
 
 .custom-share-dropdown .dropdown-menu {
   min-width: 68px;
 }
 .custom-share-dropdown .dropdown-menu ul li {
-  min-height: 68px;
-  position: relative;
-}
-.custom-share-dropdown .dropdown-menu ul li a {
-  position: relative;
-  padding: 10px;
-  min-height: 68px;
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-}
-.custom-share-dropdown .dropdown-menu ul li a:hover {
-  background-color: transparent;
+  justify-content: center;
+  align-items: center;
 }
 .custom-share-dropdown .dropdown-menu ul li .flipcard {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: all 0.5s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
-.custom-share-dropdown .dropdown-menu ul li .flipcard img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  transition: all 0.5s ease;
+.custom-share-dropdown .dropdown-menu ul li .card-scl {
   position: absolute;
+  width: 100%;
+  height: 100%;
   backface-visibility: hidden;
 }
-.custom-share-dropdown .dropdown-menu ul li .flipcard .front {
+.custom-share-dropdown .dropdown-menu ul li .card-scl img {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.custom-share-dropdown .dropdown-menu ul li .card-scl.front {
   background: rgba(255, 255, 255, 0);
 }
-.custom-share-dropdown .dropdown-menu ul li .flipcard .back {
-  display: block;
+.custom-share-dropdown .dropdown-menu ul li .card-scl.back {
   transform: rotateY(180deg);
   background: rgba(255, 255, 255, 0);
 }
-.custom-share-dropdown .dropdown-menu ul li .flipcard:hover {
+.custom-share-dropdown .dropdown-menu ul li .dropdown-item-link {
+  position: relative;
+  width: 100%;
+  height: 68px;
+  perspective: 1000px;
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+}
+.custom-share-dropdown .dropdown-menu ul li .dropdown-item-link:hover .flipcard {
   transform: rotateY(180deg);
 }
 
