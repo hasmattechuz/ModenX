@@ -85,12 +85,18 @@
                                 </ul>
                                 <div class="poilcy">
                                     <h4>Our Policies:</h4>
-                                    <div class="policy-link">
+                                    <!-- <div class="policy-link">
                                         <a href="#">GDPR</a>
                                         <a href="#">Privacy</a>
                                         <a href="#">Refund</a>
                                         <a href="#">Terms</a>
-                                    </div>
+                                    </div> -->
+                                    <ul class="main-menu-list-ul">
+                                        <li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item"><a href="https://modenx.marchingants.org/gdpr/">GDPR</a></li>
+                                        <li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item"><a href="https://modenx.marchingants.org/privacy-policy/">Privacy</a></li>
+                                        <li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item"><a href="https://modenx.marchingants.org/refund/">Refund</a></li>
+                                        <li id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item"><a href="https://modenx.marchingants.org/terms/">Terms</a></li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="nav-right">
@@ -1019,11 +1025,11 @@
                      <p data-aos="fade-up"  data-aos-duration="1000">Connect with us to discover how modenX can help your business thrive in the phygital era.</p>
                      
                       <div class="form" >
-                            <div class="common-form" data-aos="fade-up"  data-aos-duration="1000">
-                                <div class="form-group">                                    
-                                    <input type="text" class="form-control" placeholder="Full Name">
-                                </div>
+                            <div class="common-form" data-aos="fade-up"  data-aos-duration="1000">                               
                                 <div class="form-group-inline">
+                                    <div class="form-group">                                    
+                                        <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Mobile Number">
                                     </div>
@@ -1040,10 +1046,13 @@
                                 <div class="form-group">
                                     <textarea class="form-control" placeholder="Message" rows="4"></textarea>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <input type="checkbox" id="check">
                                     <label for="check">I agree to be bound by the website's GDPR Policy, Privacy Policy, Refund Policy & Terms of Use.</label>
-                                </div>
+                                </div> -->
+                                <div class="form-group checkbox">
+                                <span class="wpcf7-form-control-wrap" data-name="your-acceptance"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="your-acceptance" value="1" id="check" aria-invalid="false"></span></span></span> <label for="check">I agree to be bound by the website's <a href="">GDPR Policy</a>, <a href="">Privacy Policy</a>, <a href="">Refund Policy</a> &amp; <a href="">Terms of Use.</a><label>
+                            </label></label></div>
                                 <div class="btn-dv">
                                     <span class="mas">Contact Us</span>
                                     <button class="btn" type="submit"> Contact Us</button>
@@ -1107,7 +1116,31 @@
 
          <footer>
             <div class="container-fluid footer-bottom">
-                <p data-aos="fade-up" data-aos-duration="500">
+                  <div class="footer-left" data-aos="fade-up" data-aos-duration="1000">
+                    <p >
+                        <span>©&nbsp;<span id="current-year"><?php echo date("Y");?></span>
+                        <a href="https://kp.marchingants.org/" target="_blank" class="main-link">modenX India Private Limited,</a>
+                        <span class="allreserved" style="padding-left: 0">All rights reserved.</span>      
+                    </p>         
+                    <div class="policies">
+                        <strong>Our Policies:</strong>
+                        <ul class="footer-list-ul">
+                            <li>
+                                 <a href="./privacy.html" id="privacy-link" class="footer-link border-0">GDPR</a>
+                            </li>
+                            <li>
+                                 <a href="./privacy.html" id="privacy-link" class="footer-link border-0">GDPR</a>
+                            </li>
+                            <li>
+                                 <a href="./privacy.html" id="privacy-link" class="footer-link border-0">GDPR</a>
+                            </li>
+                            <li>
+                                 <a href="./privacy.html" id="privacy-link" class="footer-link border-0">GDPR</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <p data-aos="fade-up" data-aos-duration="500">
                     <span>©&nbsp;<span id="current-year">2025</span>
                     <a href="https://kp.marchingants.org/" target="_blank" class="main-link">modenX India Private Limited,</a>
                     <span class="allreserved" style="padding-left: 0">All rights reserved.</span>               
@@ -1118,11 +1151,11 @@
                         <a href="./terms.html" id="terms-link" class="footer-link">Refund</a>
                         <a href="./terms.html" id="terms-link" class="footer-link">Terms</a>
                     </span>
-                </p>
+                </p> -->
                 <div class="footer-desktop">
                     <div class="footer-ma-logo" >
                         <div class="tooltip-link footer-ma-tooltip logo-to-hover desktop" >
-                            <a class="ma-logo" data-aos="fade-up" data-aos-duration="500">
+                            <a class="ma-logo" data-aos="fade-up" data-aos-duration="1000">
                                 <img src="assets/images/home/ma-logo.png" alt="Logo" />
                             </a>
                         </div>
@@ -1143,7 +1176,7 @@
                 </div>
                 <div class="footer-mobile" >
                     <div class="footer-ma-logo">
-                        <div class="tooltip-link footer-ma-tooltip logo-to-hover desktop"  data-aos="fade-up"  data-aos-duration="1800"> 
+                        <div class="tooltip-link footer-ma-tooltip logo-to-hover desktop"  data-aos="fade-up"  data-aos-duration="1000"> 
                             <a href="https://www.marchingantsglobal.com/" class="ma-logo">
                                 <img src="assets/images/home/ma-logo2.svg" alt="Logo" />
                             </a>
