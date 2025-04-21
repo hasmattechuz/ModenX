@@ -652,28 +652,54 @@ function Dropdown() {
   }
 }
 
-var slider = new Swiper ('.milestoneSlider', {
-    slidesPerView: 1,
-    loop: false,
-    loopedSlides: 6, 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-     pagination: {
-      el: ".swiper-pagination", // Progressbar
-      type: "progressbar",
-    },
+// var slider = new Swiper ('.milestoneSlider', {
+//     slidesPerView: 1,
+//     loop: false,
+//     loopedSlides: 6, 
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//      pagination: {
+//       el: ".swiper-pagination", // Progressbar
+//       type: "progressbar",
+//     },
+// });
+
+
+// var thumbs = new Swiper ('.gallery-thumbs', {
+//     slidesPerView: 4,
+//     // slidesPerGroup: 4,
+//     spaceBetween: 0,
+//     loop: false,
+//     slideToClickedSlide: true,
+// });
+
+
+// slider.controller.control = thumbs;
+// thumbs.controller.control = slider;
+
+
+var sliderThumbnail = new Swiper('.gallery-thumbs', {
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  slidesPerGroup: 4, // group navigation
 });
 
-
-var thumbs = new Swiper ('.gallery-thumbs', {
-    slidesPerView: 4,
-    spaceBetween: 0,
-    loop: false,
-    slideToClickedSlide: true,
+var slider = new Swiper('.milestoneSlider', {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+  },
+  thumbs: {
+    swiper: sliderThumbnail
+  }
 });
-
-
-slider.controller.control = thumbs;
-thumbs.controller.control = slider;

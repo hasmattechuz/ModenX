@@ -4,6 +4,8 @@
     overflow: hidden;
      @media only screen and (max-width: 991px) {
         padding-bottom: 0;
+        padding-top: var(--p70);
+
      }
      h2{
             span{
@@ -16,6 +18,10 @@
                 @media only screen and (max-width: 991px) {
                     top: -104px;
                     right: -110px;
+                }
+                @media only screen and (max-width: 767px) {
+                    top: -104px;
+                    right:-60px;
                 }
                 svg{
                     @media only screen and (max-width: 991px) {
@@ -30,6 +36,10 @@
         // grid-template-columns: 1fr 646px;
         gap: var(--gutter);
         margin-top: 55px;
+
+        @media (max-width: 1500px) {
+            grid-template-columns: calc(62% - 17.5px) calc(38% - 17.5px);
+        }
 
         @media (max-width: 1024px) {
             grid-template-columns: 100%;
@@ -83,7 +93,7 @@
             @media only screen and (min-width: 1800px) {
                  grid-template-columns: 1fr 1fr 1fr;
             }
-            @media only screen and (max-width: 991px) {
+            @media only screen and (max-width: 767px) {
                   grid-template-columns: 1fr;
             }
             .form-group{
@@ -92,6 +102,10 @@
                         grid-row: 2 / span 2;
                         grid-column: span 2;
                     }
+                     @media only screen and (max-width: 767px) {
+                        grid-column: auto;
+                        grid-row: auto;
+                     }
                 }
             }
         }

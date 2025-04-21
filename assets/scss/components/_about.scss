@@ -429,6 +429,33 @@
             object-fit: cover;
         }
     }
+    .swiper-container{
+        overflow: hidden;
+        .swiper-slide{
+            height: 50px;
+            img{
+                display: none;
+            }
+            &::before{
+                content: "";
+                background-color: var(--mx-yellow);
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                right: 30px;
+                top: 0;
+                z-index: 99;
+                display: block;
+                border-radius: 50%;
+            }
+            &.swiper-slide-thumb-active,&.swiper-slide-active,&.swiper-slide-next{
+                 &::before{
+                    transform: scale(1.2);
+                    background-color: var(--mx-blue);
+                 }
+            }
+        }
+    }
 
     .milestoneSlider {
         padding-top: 80px;
