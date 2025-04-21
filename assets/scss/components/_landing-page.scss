@@ -930,12 +930,19 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+        transition: background 0.5s ease-in-out;
 
         @media only screen and (max-width: 991px) {
             border-radius: 20px;
         }
     }
-
+    &:hover{
+        &::before{
+            //  background: linear-gradient(0deg, var(--mx-blue) -8.62%, rgb(7 75 182 / 40%) 50.07%);
+             background:linear-gradient(0deg, var(--mx-blue) 30%, rgba(7, 75, 182, 0.4) 60%);
+             transition: background 0.5s ease-in-out;
+        }
+    }
     h3 {
         color: var(--white);
     }

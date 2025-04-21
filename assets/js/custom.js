@@ -261,10 +261,14 @@ if (window.innerWidth < 992) {
     slidesPerView: 1,
     spaceBetween: 30,
     allowTouchMove: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
   });
 }
 
@@ -293,6 +297,10 @@ const swiper = new Swiper(".swiper-contact", {
         pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+       autoplay: {
+        delay: 3000, // Delay between slides in ms
+        disableOnInteraction: false, // Keeps autoplay running after user interaction
       },
     });
 
@@ -555,6 +563,12 @@ AOS.init({});
 $(".mobile-contact").click(function () {
   $(".swiper-menu").slideToggle();
   $(this).parent().toggleClass("active");
+
+
+  // Scroll up to the parent element
+  $('html, body').animate({
+    scrollTop: $('.nav-right').offset().top
+  }, 500); // 500ms for the scroll animation
 });
 
 if ($(".news-section").length > 0 && $(".update-section").length > 0) {

@@ -926,6 +926,9 @@ input[type=checkbox]:checked + label:after, .form-group:has(input[type=checkbox]
   z-index: 99;
 }
 .header-logo .white-logo {
+  display: block;
+}
+.header-logo .black-logo {
   display: none;
 }
 .header-logo img {
@@ -1010,7 +1013,7 @@ input[type=checkbox]:checked + label:after, .form-group:has(input[type=checkbox]
   margin-bottom: 20px;
   transform: translateY(250px);
   transition: all 0.5s ease-in-out;
-  transition-delay: 2.1s;
+  transition-delay: 1s;
   overflow: hidden;
   opacity: 0;
   display: none;
@@ -1604,23 +1607,33 @@ header.nav-down {
 header.nav-down.to-top {
   background-color: transparent !important;
 }
-header.nav-down.to-top .white-logo {
-  display: none;
-}
-header.nav-down.to-top .black-logo {
-  display: block;
-}
-header.nav-down .white-logo {
-  display: block;
-}
-header.nav-down .black-logo {
-  display: none;
-}
 header.nav-down .navbar {
   padding: 10px 0;
 }
 header.nav-down .navbar .navbar-brand {
   width: 120px;
+}
+
+.home .header-logo .white-logo {
+  display: none;
+}
+.home .header-logo .black-logo {
+  display: block;
+}
+.home .header-logo header.nav-down.to-top {
+  background-color: transparent !important;
+}
+.home .header-logo header.nav-down.to-top .white-logo {
+  display: none;
+}
+.home .header-logo header.nav-down.to-top .black-logo {
+  display: block;
+}
+.home .header-logo header.nav-down .white-logo {
+  display: block;
+}
+.home .header-logo header.nav-down .black-logo {
+  display: none;
 }
 
 .nav-right {
@@ -1638,6 +1651,7 @@ header.nav-down .navbar .navbar-brand {
     background: #1D3568;
     padding: 0;
     min-height: auto;
+    position: relative;
   }
 }
 
@@ -1824,6 +1838,25 @@ footer p a:first-child {
 footer p a.border-0 {
   border: none;
 }
+footer p a:hover {
+  color: var(--mx-yellow);
+}
+footer p a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform-origin: right;
+  background-color: var(--mx-yellow);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+footer p a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 footer p a.main-link {
   border: none;
   padding-left: 5px;
@@ -1883,16 +1916,51 @@ footer .policies strong {
 footer .policies a {
   font-weight: 400;
   color: var(--mx-yellow);
-  border-left: 1px solid var(--mx-yellow);
-  padding: 0 6px;
+  margin: 0 5px;
   overflow: visible;
   position: relative;
+  line-height: 1;
+}
+footer .policies a:hover {
+  color: var(--mx-yellow);
+}
+footer .policies a::after {
+  content: "";
+  border-right: 1px solid var(--mx-yellow);
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  right: -8px;
+}
+footer .policies a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform-origin: right;
+  background-color: var(--mx-yellow);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+footer .policies a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 footer .footer-list-ul {
   display: flex;
 }
+footer .footer-list-ul li {
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+}
 footer .footer-list-ul li:first-child a {
   border-left: 0;
+}
+footer .footer-list-ul li:last-child a::after {
+  content: none;
 }
 footer .footer-left {
   display: flex;
@@ -2891,11 +2959,16 @@ footer .footer-mobile {
   width: 100%;
   height: 100%;
   z-index: 1;
+  transition: background 0.5s ease-in-out;
 }
 @media only screen and (max-width: 991px) {
   .primary-image-card::before {
     border-radius: 20px;
   }
+}
+.primary-image-card:hover::before {
+  background: linear-gradient(0deg, var(--mx-blue) 30%, rgba(7, 75, 182, 0.4) 60%);
+  transition: background 0.5s ease-in-out;
 }
 .primary-image-card h3 {
   color: var(--white);
@@ -3756,9 +3829,26 @@ footer .footer-mobile {
 }
 .contact-sec .common-form .checkbox a, .contact-sec .wpcf7-form .checkbox a {
   color: var(--black);
+  position: relative;
 }
 .contact-sec .common-form .checkbox a:hover, .contact-sec .wpcf7-form .checkbox a:hover {
   color: var(--mx-blue);
+}
+.contact-sec .common-form .checkbox a::before, .contact-sec .wpcf7-form .checkbox a::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform-origin: right;
+  background-color: var(--mx-blue);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.contact-sec .common-form .checkbox a:hover::before, .contact-sec .wpcf7-form .checkbox a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .contact-sec .screen-reader-response {
   display: none;
@@ -3992,15 +4082,9 @@ footer .footer-mobile {
   height: 100%;
   object-fit: cover;
 }
-.contact-page-section .common-form {
-  width: 100%;
-  grid-template-columns: 1fr 1fr;
-}
-.contact-page-section .common-form .full-col {
-  grid-column: 1/3;
-}
-.contact-page-section .common-form .full-col .mandatory {
-  margin-top: 35px;
+
+.full-width .form {
+  grid-template-columns: 1fr;
 }
 
 .privacy-banner {
@@ -4628,7 +4712,7 @@ footer .footer-mobile {
   grid-template-columns: repeat(6, 1fr);
   text-align: center;
   inset: 25px 0 auto;
-  max-width: 68%;
+  max-width: calc(100% - 108px);
   margin: 0 auto;
 }
 .milestone .milestoneSlider .swiper-pagination2 .swiper-pagination-bullet {
@@ -4671,6 +4755,60 @@ footer .footer-mobile {
 .about-revolution-section.revolution-section .img-stroke5 {
   top: 52px;
   left: 190px;
+}
+
+.about-rc-section h2 {
+  margin-bottom: var(--mb35);
+}
+.about-rc-section h2 span {
+  color: var(--mx-blue);
+}
+.about-rc-section .container-fluid {
+  row-gap: var(--mb35);
+}
+
+.about-rc-inner {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto auto auto;
+}
+.about-rc-inner.for-retailers-inner .item1 {
+  grid-column: 1/3;
+  grid-row: 1;
+}
+.about-rc-inner.for-retailers-inner .item2 {
+  grid-column: 5/3;
+  grid-row: 1/3;
+}
+.about-rc-inner.for-retailers-inner .item2.primary-image-card .primary-image-link {
+  height: 100%;
+}
+.about-rc-inner.for-retailers-inner .item3 {
+  grid-column: 5/9;
+  grid-row: 1/3;
+}
+.about-rc-inner.for-retailers-inner .item3.primary-image-card .primary-image-link {
+  height: 100%;
+}
+.about-rc-inner.for-retailers-inner .item4 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+.about-rc-inner.for-retailers-inner .item5 {
+  grid-column: 3/5;
+  grid-row: 2/5;
+}
+.about-rc-inner.for-retailers-inner .item5.primary-image-card .primary-image-link {
+  height: 100%;
+}
+.about-rc-inner.for-retailers-inner .item6 {
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+.about-rc-inner.for-retailers-inner .item7 {
+  grid-column: 5/9;
+  grid-row: 3/5;
 }
 
 .revolution-section {
