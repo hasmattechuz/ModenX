@@ -298,7 +298,8 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    .container-fluid{
+
+    .container-fluid {
         max-width: var(--max-wblue);
         margin: 0 auto;
     }
@@ -356,8 +357,12 @@
             object-fit: contain;
 
             @media (max-width: 1200px) {
-                max-height: 50px;
+                max-height: 48px;
             }
+        }
+
+        @media (max-width: 767px) {
+            gap: 10px;
         }
     }
 
@@ -491,16 +496,20 @@
 
     }
 }
-.phygital-section + .blue-block-section{
-        padding-bottom: calc(var(--p70) - 20px);
-    .blue-block-inner{
+
+.phygital-section+.blue-block-section {
+    padding-bottom: calc(var(--p70) - 20px);
+
+    .blue-block-inner {
         align-items: flex-start;
     }
-    .img-dv img{
+
+    .img-dv img {
         max-width: 500px;
     }
-    .container-fluid{
-        --max-wblue:1410px
+
+    .container-fluid {
+        --max-wblue: 1410px
     }
 }
 
@@ -1156,6 +1165,7 @@
 
 .news-blue-root {
     position: relative;
+    z-index: 2;
 }
 
 .news-blue-card {
@@ -1458,6 +1468,7 @@
     padding: var(--p70) 0;
     position: relative;
     z-index: 1;
+
     @media only screen and (max-width: 567px) {
         padding-bottom: 123px;
     }
@@ -1479,6 +1490,10 @@
             .icon {
                 transform: translateX(10px);
             }
+        }
+
+        @media (max-width: 1200px) {
+            border-radius: 20px;
         }
     }
 
@@ -1611,14 +1626,52 @@
 
     picture {
         img {
-            min-height: 400px;
+            height: 400px;
             object-fit: cover;
 
             @media only screen and (max-width: 1024px) {
-                min-height: 350px;
+                height: 350px;
             }
         }
 
+    }
+
+    &.blog-update-section {
+        padding-bottom: 120px;
+
+        @media (max-width: 1200px) {
+            padding-bottom: var(--p70);
+
+            .update-inner {
+                gap: 30px;
+
+                .content-dv {
+                    position: relative;
+                }
+            }
+        }
+
+        .img-stroke8 {
+            top: 10px;
+            left: 80px;
+            width: 240px;
+
+            @media (max-width: 1200px) {
+                top: 3px;
+                left: -20px;
+                width: 210px;
+            }
+        }
+    }
+
+    &.similar-blogs-section {
+        background-color: var(--mx-grey);
+        
+        .img-stroke8 {
+            top: -23px;
+            left: -45px;
+            width: 210px;
+        }
     }
 }
 
