@@ -1,16 +1,18 @@
 function videoPlayer() {
-  const $video = $("#video-player");
-  const $toggleBtn = $("#btn-toggle1");
+  if ($(".video-group").length) {
+    const $video = $("#video-player");
+    const $toggleBtn = $("#btn-toggle1");
 
-  $toggleBtn.on("click", function () {
-    if ($video.get(0).paused) {
-      $video.get(0).play();
-      $toggleBtn.text("Pause");
-    } else {
-      $video.get(0).pause();
-      $toggleBtn.text("Play");
-    }
-  });
+    $toggleBtn.on("click", function () {
+      if ($video.get(0).paused) {
+        $video.get(0).play();
+        $toggleBtn.text("Pause");
+      } else {
+        $video.get(0).pause();
+        $toggleBtn.text("Play");
+      }
+    });
+  }
 }
 
 function storiesSlider() {
@@ -164,7 +166,7 @@ function ConsumerSlider() {
         767: {
           slidesPerView: 2,
         },
-      }
+      },
     });
   }
 }
@@ -249,6 +251,7 @@ $(document).ready(function () {
   RetailersSlider();
   ConsumerSlider();
   CounterUp();
+  Dropdown();
 });
 
 // swiper menu
@@ -592,43 +595,65 @@ $(function () {
 });
 
 function CounterUp() {
-  const section = document.querySelector('.partnering-section');
-  const counters = section.querySelectorAll('[data-countup-number]');
+  if ($(".partnering-section").length) {
+    const section = document.querySelector(".partnering-section");
+    const counters = section.querySelectorAll("[data-countup-number]");
 
-  // Counter function
-  const animateCounter = (el, target) => {
-    const duration = 2000;
-    const start = 0;
-    const end = parseInt(target.replace(/,/g, ''));
-    const increment = end / (duration / 16);
+    // Counter function
+    const animateCounter = (el, target) => {
+      const duration = 2000;
+      const start = 0;
+      const end = parseInt(target.replace(/,/g, ""));
+      const increment = end / (duration / 16);
 
-    let current = start;
-    const update = () => {
-      current += increment;
-      if (current < end) {
-        el.textContent = Math.floor(current).toLocaleString();
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = end.toLocaleString();
-      }
+      let current = start;
+      const update = () => {
+        current += increment;
+        if (current < end) {
+          el.textContent = Math.floor(current).toLocaleString();
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = end.toLocaleString();
+        }
+      };
+      update();
     };
-    update();
-  };
 
-  // Observer to restart count every time visible
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        counters.forEach(counter => {
-          // Reset text before restarting
-          counter.textContent = '0';
-          animateCounter(counter, counter.getAttribute('data-countup-number'));
+    // Observer to restart count every time visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            counters.forEach((counter) => {
+              // Reset text before restarting
+              counter.textContent = "0";
+              animateCounter(
+                counter,
+                counter.getAttribute("data-countup-number")
+              );
+            });
+          }
         });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% visible
       }
-    });
-  }, {
-    threshold: 0.5 // Trigger when 50% visible
-  });
+    );
 
-  observer.observe(section);
+    observer.observe(section);
+  }
+}
+
+function Dropdown() {
+  if ($(".dropdown-menu").length) {
+    $('.custom-dropdown .dropdown-toggle').on('click', function(e) {
+      e.stopPropagation(); // prevent document handler
+      $(this).next('.dropdown-menu').toggleClass('show');
+    });
+  
+    // Close any open dropdown when clicking anywhere else
+    $(document).on('click', function() {
+      $('.custom-dropdown .dropdown-menu.show').removeClass('show');
+    });
+  }
 }
