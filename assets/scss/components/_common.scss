@@ -544,7 +544,9 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
 
     .select2-selection__rendered {
         width: 100%;
+      
     }
+    
 
     .select2-dropdown {
         background: var(--mx-grey);
@@ -552,6 +554,7 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         overflow: hidden;
+        
     }
 
     .select2-search__field {
@@ -569,6 +572,12 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
         }
     }
 }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+        @media only screen and (max-width: 991px) {
+                line-height: 15px;
+        }
+    }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
