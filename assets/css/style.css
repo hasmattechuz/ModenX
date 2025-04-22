@@ -900,6 +900,10 @@ input[type=checkbox]:checked + label:after, .form-group:has(input[type=checkbox]
   border-radius: 10px;
 }
 
+.d-none {
+  display: none !important;
+}
+
 .header {
   padding: 10px 0;
   min-height: 100px;
@@ -2233,6 +2237,9 @@ footer .footer-mobile {
     max-width: 120px;
   }
 }
+.banner-inner .banner-content .text-dv {
+  max-width: 470px;
+}
 @media (min-width: 2000px) {
   .banner-inner {
     --pl70: 0;
@@ -2274,6 +2281,7 @@ footer .footer-mobile {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 490px;
   position: relative;
 }
 .phygital-inner .content-dv h2,
@@ -2336,18 +2344,19 @@ footer .footer-mobile {
 
 .phygital-right-dv {
   position: sticky;
-  top: 70px;
-  height: calc(100dvh - 138px);
+  top: 120px;
+  height: calc(100dvh - 120px);
   display: flex;
   align-items: center;
-  padding: 0 0 88px;
+  padding: 0 0 78px;
 }
 .phygital-right-dv .img-stroke2 {
   position: absolute;
-  bottom: 0;
+  bottom: -30px;
   right: -70px;
   z-index: -1;
   overflow: hidden;
+  width: 200px;
 }
 @media (max-width: 1700px) {
   .phygital-right-dv .img-stroke2 {
@@ -2401,6 +2410,12 @@ footer .footer-mobile {
 .video-group .btn-video-dv {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.video-group:hover .btn-video-dv {
+  opacity: 1;
 }
 .video-group .video-player {
   width: 100%;
@@ -2627,7 +2642,7 @@ footer .footer-mobile {
 }
 .for-rc-section .container-fluid {
   display: grid;
-  row-gap: 110px;
+  row-gap: 80px;
 }
 
 .for-rc-inner {
@@ -2727,6 +2742,12 @@ footer .footer-mobile {
 }
 .for-rc-inner .stretch-height .primary-image-link {
   height: 100%;
+}
+.for-rc-inner.for-retailers-inner .primary-image-card .text-dv, .for-rc-inner.for-consumers-inner .primary-image-card .text-dv {
+  transform: none;
+}
+.for-rc-inner.for-retailers-inner .primary-image-card .desc-dv, .for-rc-inner.for-consumers-inner .primary-image-card .desc-dv {
+  display: none;
 }
 
 /* Stroke Animation */
@@ -3039,28 +3060,49 @@ footer .footer-mobile {
 .primary-image-card {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --oneBI: -3.62%;
+  --twoBI: 50.07%;
   position: relative;
 }
 .primary-image-card::before {
   content: "";
   border-radius: 30px;
-  background: linear-gradient(0deg, var(--mx-blue) -3.62%, rgba(7, 75, 182, 0) 50.07%);
+  background: linear-gradient(0deg, var(--mx-blue) var(--oneBI), rgba(7, 75, 182, 0) var(--twoBI));
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: background 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 @media only screen and (max-width: 991px) {
   .primary-image-card::before {
     border-radius: 20px;
   }
 }
-.primary-image-card:hover::before {
-  background: linear-gradient(0deg, var(--mx-blue) 30%, rgba(7, 75, 182, 0.4) 60%);
-  transition: background 0.5s ease-in-out;
+.primary-image-card::after {
+  --oneBI: 30%;
+  --twoBI: 60%;
+  content: "";
+  border-radius: 30px;
+  background: linear-gradient(0deg, var(--mx-blue) var(--oneBI), rgba(7, 75, 182, 0) var(--twoBI));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+@media only screen and (max-width: 991px) {
+  .primary-image-card::after {
+    border-radius: 20px;
+  }
+}
+.primary-image-card:hover::after {
+  opacity: 1;
 }
 .primary-image-card h3 {
   color: var(--white);
@@ -3193,7 +3235,7 @@ footer .footer-mobile {
 
 .news-insights-parent {
   position: relative;
-  padding: 100px 0 0;
+  padding: 0;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -3419,6 +3461,15 @@ footer .footer-mobile {
 }
 .stories-inner .content-dv .img-stroke7 {
   z-index: 1;
+  left: 135px;
+  right: auto;
+}
+@media (max-width: 1200px) {
+  .stories-inner .content-dv .img-stroke7 {
+    left: 88px;
+    top: 20px;
+    width: 150px;
+  }
 }
 @media (max-width: 1200px) {
   .stories-inner .content-dv {
@@ -3719,6 +3770,12 @@ footer .footer-mobile {
   .update-section picture img {
     height: 350px;
   }
+}
+.update-section.insight-section .img-stroke8 {
+  top: -26px;
+  left: -54px;
+  width: 220px;
+  height: 100px;
 }
 .update-section.blog-update-section {
   padding-bottom: 120px;
