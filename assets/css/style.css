@@ -4067,23 +4067,24 @@ footer .footer-mobile {
   gap: 10px;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 @media (max-width: 1600px) {
   .social-column li {
     grid-template-columns: 72px 1fr;
   }
 }
+.social-column li:hover .img-container .main-img {
+  -webkit-animation: ani 0.7s steps(29) forwards;
+  animation: ani 0.7s steps(29) forwards;
+}
+.social-column li:hover .img-container .hover-img {
+  opacity: 1;
+}
 .social-column li .img-container {
   width: 60px;
   height: 100px;
   position: relative;
-}
-.social-column li .img-container:hover .main-img {
-  -webkit-animation: ani 0.7s steps(29) forwards;
-  animation: ani 0.7s steps(29) forwards;
-}
-.social-column li .img-container:hover .hover-img {
-  opacity: 1;
 }
 .social-column li .img-container .hover-img {
   position: absolute;

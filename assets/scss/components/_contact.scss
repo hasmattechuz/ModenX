@@ -318,33 +318,28 @@
         gap: 10px;
         align-items: center;
         position: relative;
+         cursor: pointer;
 
         @media (max-width: 1600px) {
             grid-template-columns: 72px 1fr;
+        }
+        &:hover{
+           
+             .img-container {
+                .main-img {
+                    -webkit-animation: ani 0.7s steps(29) forwards;
+                    animation: ani 0.7s steps(29) forwards;
+                }
+                .hover-img{
+                    opacity: 1;                   
+                }
+             }
         }
 
         .img-container {
             width: 60px;
             height: 100px;
             position: relative;
-             &:hover{
-                .main-img {
-                    -webkit-animation: ani 0.7s steps(29) forwards;
-                    animation: ani 0.7s steps(29) forwards;
-                }
-                .hover-img{
-                    opacity: 1;
-                    // object-fit: contain;
-                    // -webkit-mask: url(../../assets/images/mask.png);
-                    // mask: url(../../assets/images/mask.png);
-                    // -webkit-mask-size: 3000% 100%;
-                    // mask-size: 3000% 100%;
-                    // border: none;
-                    // cursor: pointer;
-                    //    -webkit-animation: ani 0.7s steps(29) forwards;
-                    //     animation: ani 0.7s steps(29) forwards;
-                }
-            }
              .hover-img{
                 position: absolute;
                 width: 100%;
