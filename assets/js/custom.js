@@ -535,6 +535,7 @@ const swiperBlogBanner = new Swiper(".image-slider-swiper", {
 
 $("#mySelect").select2({
   placeholder: "Subject",
+  minimumResultsForSearch: Infinity 
 });
 
 AOS.init({});
