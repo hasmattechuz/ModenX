@@ -633,6 +633,7 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
 .blue-section,
 .inner-banner-section {
     background-color: var(--mx-blue);
+    min-height: 100vh;
 
     h1,
     h2,

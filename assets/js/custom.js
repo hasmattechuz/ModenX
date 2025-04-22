@@ -261,10 +261,10 @@ if (window.innerWidth < 992) {
     slidesPerView: 1,
     spaceBetween: 30,
     allowTouchMove: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -298,10 +298,10 @@ const swiper = new Swiper(".swiper-contact", {
         el: ".swiper-pagination",
         clickable: true,
       },
-       autoplay: {
-        delay: 3000, // Delay between slides in ms
-        disableOnInteraction: false, // Keeps autoplay running after user interaction
-      },
+      //  autoplay: {
+      //   delay: 5000, 
+      //   disableOnInteraction: false, 
+      // },
     });
 
     const thumbSwiper = new Swiper(thumbSelector, {
@@ -448,75 +448,74 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
 });
 
 // Milestone slider
-// function initMilestoneSwiper() {
-//   // Main Swiper
-//   const mainSwiper = new Swiper(".milestoneSlider", {
-//     // autoplay: {
-//     //   delay: 2000,
-//     //   disableOnInteraction: false,
-//     // },
-//     slidesPerView: 1,
-//     pagination: {
-//       el: ".swiper-pagination", // Progressbar
-//       type: "progressbar",
-//     },
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     on: {
-//       slideChange: function () {
-//         pagingSwiper.slideTo(mainSwiper.activeIndex);
-//         updateBulletPagination(mainSwiper.activeIndex);
-//       },
-//     },
-//   });
+function initMilestoneSwiper() {
+  // Main Swiper
+  const mainSwiper = new Swiper(".milestoneSlider", {
+    slidesPerView: 1,
+    slidesPerGroup: 4,
+    pagination: {
+      el: ".swiper-pagination", // Progressbar
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      slideChange: function () {
+        const groupIndex = Math.floor(mainSwiper.activeIndex / 4);
+        pagingSwiper.slideTo(groupIndex);
+        updateBulletPagination(mainSwiper.activeIndex);
+      },
+    },
+  });
 
-//   // Paging Swiper for Bullet Pagination
-//   const pagingSwiper = new Swiper(".milestoneSlider", {
-//     allowTouchMove: false,
-//     pagination: {
-//       el: ".swiper-pagination2",
-//       clickable: true,
-//      renderBullet: function (index, className) {
-//         const total = document.querySelectorAll(".milestoneSlider .swiper-slide").length;
-//         if (index === total - 1) return ''; // skip last bullet
-//         return `<span class="${className}"></span>`;
-//       }
-//     },
-//   });
+  // Paging Swiper for Bullet Pagination
+  const pagingSwiper = new Swiper(".milestoneSlider", {
+    allowTouchMove: false,
+    pagination: {
+      el: ".swiper-pagination2",
+      clickable: true,
+      renderBullet: function (index, className) {
+        const totalSlides = document.querySelectorAll(".milestoneSlider .swiper-slide").length;
+        const totalGroups = Math.ceil(totalSlides / 4);
+        if (index >= totalGroups) return '';
+        return `<span class="${className}"></span>`;
+      },
+    },
+  });
 
-//   // Bullet click events
-//   function bindBulletClicks() {
-//     const bullets = document.querySelectorAll(
-//       ".swiper-pagination2 .swiper-pagination-bullet"
-//     );
-//     bullets.forEach((bullet, index) => {
-//       bullet.addEventListener("click", () => {
-//         mainSwiper.slideTo(index);
-//       });
-//     });
-//   }
+  // Bullet click events
+  function bindBulletClicks() {
+    const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
+    bullets.forEach((bullet, index) => {
+      bullet.addEventListener("click", () => {
+        mainSwiper.slideTo(index * 4);
+      });
+    });
+  }
 
-//   // Sync bullet state
-//   function updateBulletPagination(activeIndex) {
-//     const bullets = document.querySelectorAll(
-//       ".swiper-pagination2 .swiper-pagination-bullet"
-//     );
-//     bullets.forEach((bullet, index) => {
-//       bullet.classList.toggle(
-//         "swiper-pagination-bullet-active",
-//         index === activeIndex
-//       );
-//     });
-//   }
+  // Show 4 bullets at a time and highlight active
+  function updateBulletPagination(activeIndex) {
+    const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
+    const visibleCount = 4;
+    const groupIndex = Math.floor(activeIndex / 4);
+    const groupStart = Math.floor(groupIndex / visibleCount) * visibleCount;
+    const groupEnd = groupStart + visibleCount;
 
-//   // Initial bullet setup
-//   bindBulletClicks();
-//   updateBulletPagination(0);
-// }
+    bullets.forEach((bullet, index) => {
+      bullet.style.display = index >= groupStart && index < groupEnd ? "inline-block" : "none";
+      bullet.classList.toggle("swiper-pagination-bullet-active", index === groupIndex);
+    });
+  }
 
-// document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
+  // Init bullets
+  bindBulletClicks();
+  updateBulletPagination(0);
+}
+
+document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
+
 
 const swiperBlogBanner = new Swiper(".image-slider-swiper", {
   loop: true,
@@ -652,54 +651,29 @@ function Dropdown() {
   }
 }
 
-// var slider = new Swiper ('.milestoneSlider', {
-//     slidesPerView: 1,
-//     loop: false,
-//     loopedSlides: 6, 
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//      pagination: {
-//       el: ".swiper-pagination", // Progressbar
-//       type: "progressbar",
-//     },
+
+
+
+// var sliderThumbnail = new Swiper('.gallery-thumbs', {
+//   slidesPerView: 4,
+//   freeMode: true,
+//   watchSlidesVisibility: true,
+//   watchSlidesProgress: true,
+//   slidesPerGroup: 4, // group navigation
 // });
 
-
-// var thumbs = new Swiper ('.gallery-thumbs', {
-//     slidesPerView: 4,
-//     // slidesPerGroup: 4,
-//     spaceBetween: 0,
-//     loop: false,
-//     slideToClickedSlide: true,
+// var slider = new Swiper('.milestoneSlider', {
+//   slidesPerView: 1,
+//   slidesPerGroup: 1,
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "progressbar",
+//   },
+//   thumbs: {
+//     swiper: sliderThumbnail
+//   }
 // });
-
-
-// slider.controller.control = thumbs;
-// thumbs.controller.control = slider;
-
-
-var sliderThumbnail = new Swiper('.gallery-thumbs', {
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-  slidesPerGroup: 4, // group navigation
-});
-
-var slider = new Swiper('.milestoneSlider', {
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-  },
-  thumbs: {
-    swiper: sliderThumbnail
-  }
-});

@@ -489,8 +489,7 @@
             }
         }
         .swiper-pagination2{
-            position: absolute;          
-            z-index: 99;
+            position: absolute;   
             width: 100%;
             display: grid;
             grid-template-columns: repeat(6, 1fr);
@@ -517,7 +516,7 @@
         .swiper-btn-arrow{
             position: absolute;
             top: 27px;
-            z-index: 99;
+            z-index: 9999;
             &::after{
                 font-size: 15px;
                 color: var(--mx-yellow);                
