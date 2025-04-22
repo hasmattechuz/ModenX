@@ -310,7 +310,7 @@
 }
 
 .blog-content-section {
-    padding: 70px 0;
+    padding: var(--p70) 0;
     margin: 0;
     position: relative;
 }
@@ -336,6 +336,10 @@
     align-items: flex-start;
     justify-content: space-between;
     margin: 0 0 50px;
+
+    @media (max-width: 1200px) {
+        margin-bottom: 30px;
+    }
 }
 
 .custom-dropdown {

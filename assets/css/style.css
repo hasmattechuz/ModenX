@@ -757,7 +757,7 @@ input[type=checkbox]:checked + label:after, .form-group:has(input[type=checkbox]
   background-color: var(--mx-blue);
 }
 .inner-banner-section .inner-banner {
-  padding-top: 128px;
+  padding-top: 100px;
   width: 100%;
   min-height: calc(100dvh - 100px);
   display: flex;
@@ -2105,7 +2105,7 @@ footer .footer-mobile {
 .banner-section {
   position: relative;
   overflow: hidden;
-  padding-top: 128px;
+  padding-top: 100px;
 }
 .banner-section .container-fluid {
   max-width: 100%;
@@ -2122,7 +2122,7 @@ footer .footer-mobile {
   justify-content: space-between;
   align-items: center;
   gap: var(--gutter);
-  min-height: calc(100dvh - 126px);
+  min-height: calc(100dvh - 100px);
   padding-left: var(--pl70);
 }
 .banner-inner .banner-image {
@@ -2131,7 +2131,7 @@ footer .footer-mobile {
   overflow: hidden;
   flex: 0 0 50%;
   align-items: center;
-  height: calc(100dvh - 126px);
+  height: calc(100dvh - 100px);
 }
 .banner-inner .banner-image picture {
   width: 100%;
@@ -3703,8 +3703,26 @@ footer .footer-mobile {
   left: -45px;
   width: 210px;
 }
+@media (max-width: 767px) {
+  .update-section.similar-blogs-section .img-stroke8 {
+    top: -15px;
+    left: -45px;
+    width: 140px;
+  }
+}
 .update-section.similar-blogs-section .swiper-scrollbar {
   background-color: var(--white);
+}
+@media (max-width: 1200px) {
+  .update-section.similar-blogs-section {
+    padding-bottom: var(--p70);
+  }
+  .update-section.similar-blogs-section .update-inner {
+    gap: 30px;
+  }
+  .update-section.similar-blogs-section .update-inner .content-dv {
+    position: relative;
+  }
 }
 
 .swiper-progress-root .swiper-scrollbar {
@@ -6155,7 +6173,7 @@ body .open-roles-section h3.accordion-thumb {
 }
 
 .blog-content-section {
-  padding: 70px 0;
+  padding: var(--p70) 0;
   margin: 0;
   position: relative;
 }
@@ -6180,6 +6198,11 @@ body .open-roles-section h3.accordion-thumb {
   align-items: flex-start;
   justify-content: space-between;
   margin: 0 0 50px;
+}
+@media (max-width: 1200px) {
+  .blog-user-info {
+    margin-bottom: 30px;
+  }
 }
 
 .custom-dropdown {
