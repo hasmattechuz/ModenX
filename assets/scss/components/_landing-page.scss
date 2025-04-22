@@ -1,7 +1,7 @@
 .banner-section {
     position: relative;
     overflow: hidden;
-    padding-top: 128px;
+    padding-top: 100px;
 
     .container-fluid {
         max-width: 100%;
@@ -18,7 +18,7 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--gutter);
-    min-height: calc(100dvh - 126px);
+    min-height: calc(100dvh - 100px);
     padding-left: var(--pl70);
 
     .banner-image {
@@ -27,7 +27,7 @@
         overflow: hidden;
         flex: 0 0 50%;
         align-items: center;
-        height: calc(100dvh - 126px);
+        height: calc(100dvh - 100px);
 
         picture {
             width: 100%;
@@ -1716,10 +1716,28 @@
             top: -23px;
             left: -45px;
             width: 210px;
+
+            @media (max-width: 767px) {
+                top: -15px;
+                left: -45px;
+                width: 140px;
+            }
         }
 
         .swiper-scrollbar {
             background-color: var(--white);
+        }
+
+        @media (max-width: 1200px) {
+            padding-bottom: var(--p70);
+
+            .update-inner {
+                gap: 30px;
+
+                .content-dv {
+                    position: relative;
+                }
+            }
         }
     }
 }
