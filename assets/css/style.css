@@ -977,38 +977,50 @@ input[type=checkbox]:checked + label:after, .form-group:has(input[type=checkbox]
     gap: 7px;
   }
 }
-.menu-right .right-btn {
-  opacity: 0;
-  visibility: hidden;
-  display: none;
+
+.right-btn {
+  position: absolute;
+  top: 30px;
+  right: 128px;
+  text-transform: initial;
 }
-.menu-right .right-btn .btn-dv {
+@media only screen and (max-width: 1200px) {
+  .right-btn {
+    right: 70px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .right-btn {
+    top: 20px;
+  }
+}
+.right-btn .btn-dv {
   width: 140px;
   height: 40px;
 }
 @media only screen and (max-width: 991px) {
-  .menu-right .right-btn .btn-dv {
+  .right-btn .btn-dv {
     width: 130px;
   }
 }
 @media only screen and (max-width: 420px) {
-  .menu-right .right-btn .btn-dv {
+  .right-btn .btn-dv {
     width: 100px;
     height: 40px;
   }
 }
-.menu-right .right-btn .btn-dv:hover {
+.right-btn .btn-dv:hover {
   background: var(--white);
   border-color: var(--white);
 }
-.menu-right .right-btn .btn-dv .mas {
+.right-btn .btn-dv .mas {
   line-height: 19px;
 }
-.menu-right .right-btn .btn-dv .btn {
+.right-btn .btn-dv .btn {
   line-height: 19px;
 }
 @media only screen and (max-width: 420px) {
-  .menu-right .right-btn .btn-dv .btn {
+  .right-btn .btn-dv .btn {
     line-height: 1.3;
   }
 }
@@ -1255,11 +1267,11 @@ nav.open-nav .poilcy {
 }
 .nav-left .tooltip {
   visibility: hidden;
-  background-color: #fff;
+  background-color: var(--mx-yellow);
   color: #000;
   text-align: center;
   border-radius: 6px;
-  padding: 8px 10px;
+  padding: 6px 4px;
   position: absolute;
   z-index: 1;
   left: 0;
@@ -1272,6 +1284,7 @@ nav.open-nav .poilcy {
   left: 50%;
   transform: translateX(-50%);
   line-height: 1;
+  text-transform: initial;
 }
 .nav-left ul li {
   overflow: hidden;
@@ -1439,8 +1452,8 @@ body.nav-active .nav-up {
 body.nav-active .menu-right .right-btn {
   opacity: 1;
   visibility: visible;
-  display: block;
   z-index: 99;
+  transition: 0.1s ease;
 }
 body.nav-active .header-logo .white-logo {
   display: block !important;
@@ -1530,9 +1543,9 @@ body.nav-active .menu-btn__line-right {
     font-size: 0;
     display: none;
   }
-  .contact-div .link span {
-    position: relative;
-  }
+}
+.contact-div .link span {
+  position: relative;
 }
 .contact-div .link a {
   color: var(--white);
