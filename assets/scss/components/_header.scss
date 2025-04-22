@@ -61,11 +61,11 @@
     .right-btn{
         opacity: 0;
         visibility: hidden;
-        transition: all 3s;
+        // transition: all 3s;
         display: none;
 		.btn-dv{
 			width: 220px;
-			animation: opacitylogo 2.5s linear;
+			// animation: opacitylogo 1.6s linear;
 			 @media only screen and (max-width: 991px) {
 				width: 130px;
 			 }
@@ -77,11 +77,11 @@
 				background: var(--mx-yellow);
 				border-color: var(--mx-yellow);
 			 }
-			 .btn{
+			 .btn{				
 				 @media only screen and (max-width: 420px) {
 					line-height: 1.3;
 				 }
-			 }
+			 }			 
 		}
        
     }
@@ -305,19 +305,9 @@ nav {
     padding-right: var(--gutter70);
     padding-left: var(--gutter70);
     margin-right: auto;
-    margin-left: auto;
+    margin-left: auto;	
 
-    @media (min-width: 2000px) {
-        max-width: var(--max-w1920);
-    }
-
-    @media (max-width: 1700px) {
-        max-width: var(--max-w1440);
-    }
-
-    @media (max-width: 1550px) {
-        max-width: var(--max-w1240);
-    }	
+  
 	
 	ul {
 		li {
@@ -325,6 +315,7 @@ nav {
 			// height: 54px;
 			-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			padding-bottom: 50px;
 			@media only screen and (max-width: 991px) {
 				height: auto;
 			}
@@ -374,12 +365,6 @@ nav {
                         stroke-dashoffset: 0;
                     }
                 }
-			}
-			&:not(:last-child) {
-				padding-bottom: 50px;				
-				@media only screen and (max-width:991px) {
-                    padding-bottom: 0;
- 				}
 			}
 		}
 	}
@@ -498,7 +483,7 @@ a {
 body {
 	&.nav-active {
 		overflow: hidden;
-		padding-right: 15px;
+		padding-right: 0;
 			.nav-up{
 				transform: none;
 			}
@@ -598,8 +583,10 @@ body {
 
 .main-menu {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: var(--gutter);
+    grid-template-columns: repeat(4, 230px);
+    gap: var(--gutter);
+    justify-content: space-between;
+    max-width: calc(100% - 57px);
 	@media only screen and (max-width: 991px) {
 		grid-template-columns: repeat(3, 1fr);
 		max-height: calc(100vh - 232px);
@@ -615,17 +602,6 @@ body {
 	margin-right: auto;
 	padding-left: var(--gutter70);
     padding-right: var(--gutter70);
-	 @media (min-width: 2000px) {
-        max-width: var(--max-w1920);
-    }
-
-    @media (max-width: 1700px) {
-        max-width: var(--max-w1440);
-    }
-
-    @media (max-width: 1550px) {
-        max-width: var(--max-w1240);
-    }
 	
     .link{
 		 @media only screen and (max-width: 991px) {
@@ -827,13 +803,15 @@ header {
 @media (min-width: 992px) {
     .contact-div{
 		display: grid;
-		grid-template-columns: calc(25% - 17.5px) calc(75% - 17.5px);
-		gap: var(--gutter);
+        grid-template-columns: calc(27% - var(--gutter70) / 2) calc(73% - var(--gutter70) / 2);
+        gap: var(--gutter70);
+        max-width: calc(100% - 57px);
+        margin-left: 0;
 		.swiper-wrapper{
 			width: 100%;
 			display: grid;
-			grid-template-columns:calc(65% - 35px) calc(35% - 35px);
-        	gap: 70px;
+			grid-template-columns: 1fr 230px;
+			gap: 70px;
 		}
         .swiper-menu{
 			overflow: visible;

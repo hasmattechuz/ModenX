@@ -298,15 +298,15 @@ const swiper = new Swiper(".swiper-contact", {
         el: ".swiper-pagination",
         clickable: true,
       },
-      //  autoplay: {
-      //   delay: 5000, 
-      //   disableOnInteraction: false, 
-      // },
+       autoplay: {
+        delay: 5000, 
+        disableOnInteraction: false, 
+      },
     });
 
     const thumbSwiper = new Swiper(thumbSelector, {
       loop: true,
-      spaceBetween: 10,
+      spaceBetween: 0,
       slidesPerView: 1,
       slideToClickedSlide: true,
     });

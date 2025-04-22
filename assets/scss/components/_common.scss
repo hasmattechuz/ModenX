@@ -765,7 +765,6 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
     background-color: var(--mx-blue);
     padding-top: 160px;
     padding-bottom: 20px;
-    min-height: 100vh;
 
     @media (max-width: 1199px) {
         padding-top: 110px;

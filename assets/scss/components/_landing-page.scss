@@ -107,12 +107,32 @@
                 object-fit: contain;
                 transform: rotate(-153.591deg);
 
-                // @media (max-width: 1700px) {
-                //     top: 42px;
-                //     right: 52px;
-                //     width: 185px;
-                //     height: 100px;
-                // }
+                @media (max-width: 1200px) {
+                    top: 30px;
+                    left: 0;
+                    right: auto;
+                    width: 140px;
+                    position: relative;
+                    margin-top: -60px;
+                }
+                 @media (max-width: 991px) {
+                    position: absolute;
+                    left: 150px;
+                    top: 130px;
+                    transform: rotate(-20deg);
+                }
+                 @media (max-width: 567px) {                        
+                    bottom: 0;
+                     top: auto;
+                 }
+            }
+            strong{
+               @media (max-width: 991px) {
+                    display: block;
+               } 
+                @media (max-width: 567px) {
+                    max-width: 120px;
+               }
             }
         }
     }
@@ -836,9 +856,21 @@
     top: 60px;
     left: -35px;
     z-index: -1;
+     @media only screen and (max-width: 1320px) {
+        top: 115px;
+    }
+     @media only screen and (max-width: 1200px) {
+            width: 160px;
+            height: 110px;
+            top: 95px;
+            left: -25px;
+    }
+     @media only screen and (max-width: 1024px) {
+        top: 35px;
+     }
      @media only screen and (max-width: 991px) {
         width: 160px;
-        top: 30px;
+        top: 0px;
     }
 
     img {
