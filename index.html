@@ -18,7 +18,9 @@
 </head>
     
 <body class="home">
-    
+    <div class="landscape-message">
+		<h1>This site has been optimised for the best experience in portrait mode, please rotate your device to continue.</h1>
+	</div>
     <div class="wrapper">
         <header class="header">
             <div class="container-fluid">
@@ -43,7 +45,11 @@
                                     <span class="menu-btn__line menu-btn__line-right"></span>
                                 </button>
                          </div>
-                        <nav>      
+                        <nav>    
+                            
+                            <a href="index.html" class="nav-logo-link">        
+                                <img src="assets/images/modenX-white.svg" alt="Logo" class="img-fluid img-logo" />
+                            </a>
                              <div class="right-btn">
                                     <div class="btn-dv">
                                         <span class="mas">Login</span>
@@ -151,7 +157,7 @@
                                                 <a href="#" target="_blank">
                                                     <img src="assets/images/home/location.svg" alt=""> 
                                                     <div>
-                                                        <span><strong>The United States of America (USA)</strong></span>
+                                                        <span><strong>The United States of America (USA)</strong></span><br>
                                                         modenX Inc.
                                                         <br>3, World Trade Center, Floor 38<br> New York, NY 10007 <br> United States
                                                     </div>
@@ -220,7 +226,7 @@
                             </picture>
 
                             <div class="text-dv display-mobile" data-aos="fade-up"  data-aos-duration="1000">
-                                <p>Step into the future of shopping with modenX your <strong>ultimate partner for creating immersive, customer-centric retail experiences.</strong></p>
+                                <p>Step into the future of shopping with modenX - your <strong>ultimate partner for creating immersive, customer-centric retail experiences.</strong></p>
                             </div>
                         </div>
                     </div>
@@ -239,6 +245,23 @@
 
                             <div class="desc-global" data-aos="fade-up" data-aos-duration="1000">
                                 <p>At <strong>modenX</strong>, we are reshaping the retail industry by seamlessly blending digital innovation with in-person interactions. We empower you to create tailored, immersive customer experiences that leave a lasting impression.</p>
+                            </div>
+                             <div class="video-group video-group-mobile">
+                                <video 
+                                    class="video-player"
+                                    poster="assets/images/home/video-poster.webp"
+                                    id="video-player" 
+                                    src="https://modenx.com/wp-content/uploads/2024/02/modenx.mp4" 
+                                    autoplay 
+                                    loop 
+                                    muted 
+                                    playsinline 
+                                    controlslist="nodownload">
+                                </video>
+                                
+                                <div class="btn-video-dv">
+                                    <button class="btn-ico-cst btn-video" id="btn-toggle1">Pause</button>
+                                </div>
                             </div>
 
                             <div class="card-lst">
@@ -298,7 +321,7 @@
                             </div>
                         </div>
 
-                        <div class="btn-dv" data-aos="fade-up"  data-aos-duration="2000">  
+                        <div class="btn-dv" data-aos="fade-up"  data-aos-duration="1000">  
                             <span class="mas">Learn How modenX Transforms Retail  </span>                           
                             <a href="solution.html" class="btn btn-primary">                                  
                                 Learn How modenX Transforms Retail                                   
@@ -488,6 +511,9 @@
                                 <h2 class="h1">For <br> <b>Retailers</b></h2>
                             </div>
                         </div>
+                         <div class="img-stroke3-r-mobile">
+                            <img src="assets/images/stroke/stroke19.svg" alt="img" class="stroke" />
+                         </div>
                         <div class="swiper swiper-retailers" data-aos="fade-up"  data-aos-duration="1500">
                             <div class="swiper-wrapper">
                                 <div class="primary-image-card item2 swiper-slide">
@@ -548,7 +574,7 @@
                             </div>
                         </div>
                         <!-- Scrollbar -->
-                        <div class="swiper-scrollbar"></div>
+                        <div class="swiper-scrollbar" data-aos="fade-up"  data-aos-duration="1000"></div>
                     </div>
 
                     <div class="consumer-mobile">
@@ -560,6 +586,9 @@
                                 <h2 class="h1">For <br> <b>Consumers</b></h2>
                             </div>
                         </div>
+                        <div class="img-stroke3-c-mobile">
+                            <img src="assets/images/stroke/stroke19.svg" alt="img" class="stroke" />
+                         </div>
                         <div class="swiper swiper-consumer" data-aos="fade-up"  data-aos-duration="1500">
                             <div class="swiper-wrapper">
                                 <div class="primary-image-card item2 swiper-slide" >
@@ -617,11 +646,13 @@
                                         </div>
                                     </a>
                                 </div>
-                                    </div>
-                                </div>
-                                <!-- Scrollbar -->
-                                <div class="swiper-scrollbar"></div>
-                    </div>
+                            </div>
+                             
+                        </div>
+                         <!-- Scrollbar -->
+                            <div class="swiper-scrollbar scrollbar1" data-aos="fade-up"  data-aos-duration="1000"> </div>    
+                                                  
+                        </div>
                 </div>
             </section>
 
@@ -693,7 +724,7 @@
                             </div>
                             <div class="partnering-info-col" data-aos="fade-up"  data-aos-duration="1000">
                                 <p>Retailer Insights Delivered:</p>
-                                <h3><span data-countup-number="100,000">100,000</span>+ Data Points Analysed</h3>
+                                <h3><span data-countup-number="1,00,000">1,00,000</span>+ Data Points Analysed</h3>
                             </div>
                         </div>
 
@@ -1001,7 +1032,7 @@
                      <h2 data-aos="fade-up"  data-aos-duration="1000">
                         <span>Your modenX Journey Starts Here
                             <div class="down-arrow">
-                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 523.05 194.9" width="523.0499877929688" height="194.89999389648438" class="active">
+                                <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 523.05 194.9" width="523.0499877929688" height="194.89999389648438" class="active">
                                     <defs>
                                         <style>
                                         .cls-1 {
@@ -1011,7 +1042,11 @@
                                     </defs>
                                     <path class="cls-1 svg-elem-1" d="M463.43,139.58c-.16-19.84-7.09-39.65-20.13-57.47-13.11-17.92-31.57-32.37-51.98-40.71-23.87-9.75-51.72-12.91-80.53-9.14-17.13,2.24-34.57,6.88-51.85,13.78-42.46,16.97-79.66,45.68-107.33,68.81l-.16.13-.14.15c-2.13,2.35-4.52,4.46-7.12,6.29l-9.85-13.55c1.72-1.46,3.45-2.93,5.2-4.4l.22-.18.18-.22c4.91-6.01,6.52-13.17,7.01-18.11,1.42-14.3-4.39-30.17-14.44-39.51-6.05-5.62-18.53-7.81-33.38-5.86-.95.12-1.9.27-2.86.42-22.56,3.75-51.87,17.52-67.92,44.96l-14.51-7.8c18.86-32.68,53.31-49.02,79.73-53.41,1.2-.2,2.39-.38,3.57-.53,19.86-2.6,36.83,1.1,46.58,10.15,11.75,10.91,19.17,27.62,19.86,44.71l.23,5.74,4.58-3.47c29.89-22.63,57.51-38.86,84.44-49.62,18.54-7.41,37.31-12.39,55.8-14.81,31.66-4.15,62.4-.61,88.91,10.21,48.71,19.89,82.18,66.4,82.35,113.86l-16.47-.43Z"></path>
                                     <path class="cls-1 svg-elem-2" d="M477.31,136.95c.88.95.98.2,1.55-.51,2.88-3.64,8.16-14.83,10.23-19.48,1.09-2.44,5.91-16.44,6.83-17.02,3.02-1.91,11.73,1.47,13.07,4.61,1.14,2.67-2.41,10.96-3.61,13.89-7.34,17.9-18.94,33.69-25.12,52.52-.44,1.35-1.95,9.07-2.31,9.39-.51.45-2.36.26-3.15.15-.94-.13-8.96-3.5-9.27-3.9-.43-.57-.12-1.82-.4-2.6-.2-.56-1.19-.34-1.59-1.06-1.93-3.42-3.75-10-5.53-13.98-8.6-19.25-18.21-37.83-28.8-56.05,2.18-3.93,10.62-.45,13.01,2.24s2.67,5.2,3.94,7.88c.32.68,1.45.57,1.92,1.35,5.8,9.69,10.78,20.32,15.73,30.47,1.12.03.44-1.51.38-2.27-.74-10.1,13.13-5.63,13.13-5.63Z"></path>
-                                </svg>
+                                </svg> -->
+                                
+                            </div>
+                            <div class="img-stroke-contact">
+                                    <img src="assets/images/stroke/stroke6.svg" alt="img" class="stroke">
                             </div>
                         </span>
 
@@ -1033,6 +1068,7 @@
                                 </div>
                                  <div class="form-group">                                   
                                    <select id="mySelect" class="form-control">
+                                       <option></option>
                                         <option value="AL">Advertising & Marketing</option>
                                         <option value="WY">Careers</option>
                                         <option value="WY">Complaints/Feedback/Testimonials</option>
@@ -1086,7 +1122,7 @@
                                        <a href="#">
                                             <img src="assets/images/home/location-blue.svg" alt=""> 
                                             <span>
-                                               <strong>The United States of America (USA)</strong>
+                                               <strong>The United States of America (USA)</strong><br>
                                                 modenX Inc.
                                                 <br>3, World Trade Center, Floor 38<br> New York, NY 10007 <br> United States
                                             </span>    

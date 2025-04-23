@@ -156,7 +156,7 @@ function ConsumerSlider() {
         prevEl: ".swiper-button-prev",
       },
       scrollbar: {
-        el: ".swiper-scrollbar",
+        el: ".scrollbar1",
         draggable: true,
       },
       breakpoints: {
@@ -175,6 +175,10 @@ $(document).ready(function () {
   let isMenuOpen = false;
 
   $(".menu-btn").on("click", function () {
+    if ($('.nav-right').hasClass('active')) { 
+      $('.nav-right').removeClass('active'); 
+       $(".swiper-menu").slideToggle();
+    }
     const $body = $("body");
     const $nav = $("nav");
 
@@ -186,7 +190,8 @@ $(document).ready(function () {
       $body.removeClass("nav-active").addClass("menu-inactive");
       $nav.removeClass("open-nav").addClass("close-nav");
       isMenuOpen = false;
-    }
+    }   
+   
   });
 
   //* menu*//
@@ -288,6 +293,41 @@ const swiper = new Swiper(".swiper-contact", {
   },
 });
 
+// about progress slider start
+if ($(".swiper-progress").length >0){
+    const swiperprogress = new Swiper('.swiper-progress', {
+    loop: false,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChange: updatePagination,
+    }
+  });
+
+  // Call once on init
+  updatePagination.call(swiperprogress);
+
+  function updatePagination() {
+    const totalDots = 6;
+    const dots = document.querySelectorAll('.custom-pagination .dot');
+    const progressBar = document.querySelector('.progress-bar-fill');
+
+    const dotIndex = this.realIndex % totalDots;
+    const progressPercent = ((dotIndex + 1) / totalDots) * 100;
+
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove('active'));
+    if (dots[dotIndex]) dots[dotIndex].classList.add('active');
+
+    // Update progress bar
+    progressBar.style.width = progressPercent + '%';
+  }
+}
+
+// about progress slider end
 
  function initSyncedSwipers(mainSelector, thumbSelector) {
     const mainSwiper = new Swiper(mainSelector, {
@@ -447,76 +487,6 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
   },
 });
 
-// Milestone slider
-function initMilestoneSwiper() {
-  // Main Swiper
-  const mainSwiper = new Swiper(".milestoneSlider", {
-    slidesPerView: 1,
-    slidesPerGroup: 4,
-    pagination: {
-      el: ".swiper-pagination", // Progressbar
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    on: {
-      slideChange: function () {
-        const groupIndex = Math.floor(mainSwiper.activeIndex / 4);
-        pagingSwiper.slideTo(groupIndex);
-        updateBulletPagination(mainSwiper.activeIndex);
-      },
-    },
-  });
-
-  // Paging Swiper for Bullet Pagination
-  const pagingSwiper = new Swiper(".milestoneSlider", {
-    allowTouchMove: false,
-    pagination: {
-      el: ".swiper-pagination2",
-      clickable: true,
-      renderBullet: function (index, className) {
-        const totalSlides = document.querySelectorAll(".milestoneSlider .swiper-slide").length;
-        const totalGroups = Math.ceil(totalSlides / 4);
-        if (index >= totalGroups) return '';
-        return `<span class="${className}"></span>`;
-      },
-    },
-  });
-
-  // Bullet click events
-  function bindBulletClicks() {
-    const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
-    bullets.forEach((bullet, index) => {
-      bullet.addEventListener("click", () => {
-        mainSwiper.slideTo(index * 4);
-      });
-    });
-  }
-
-  // Show 4 bullets at a time and highlight active
-  function updateBulletPagination(activeIndex) {
-    const bullets = document.querySelectorAll(".swiper-pagination2 .swiper-pagination-bullet");
-    const visibleCount = 4;
-    const groupIndex = Math.floor(activeIndex / 4);
-    const groupStart = Math.floor(groupIndex / visibleCount) * visibleCount;
-    const groupEnd = groupStart + visibleCount;
-
-    bullets.forEach((bullet, index) => {
-      bullet.style.display = index >= groupStart && index < groupEnd ? "inline-block" : "none";
-      bullet.classList.toggle("swiper-pagination-bullet-active", index === groupIndex);
-    });
-  }
-
-  // Init bullets
-  bindBulletClicks();
-  updateBulletPagination(0);
-}
-
-document.addEventListener("DOMContentLoaded", initMilestoneSwiper);
-
-
 const swiperBlogBanner = new Swiper(".image-slider-swiper", {
   loop: true,
   pagination: {
@@ -544,11 +514,6 @@ $(".mobile-contact").click(function () {
   $(".swiper-menu").slideToggle();
   $(this).parent().toggleClass("active");
 
-
-  // Scroll up to the parent element
-  $('html, body').animate({
-    scrollTop: $('.nav-right').offset().top
-  }, 500); // 500ms for the scroll animation
 });
 
 if ($(".news-section").length > 0 && $(".update-section").length > 0) {
@@ -652,29 +617,3 @@ function Dropdown() {
   }
 }
 
-
-
-
-// var sliderThumbnail = new Swiper('.gallery-thumbs', {
-//   slidesPerView: 4,
-//   freeMode: true,
-//   watchSlidesVisibility: true,
-//   watchSlidesProgress: true,
-//   slidesPerGroup: 4, // group navigation
-// });
-
-// var slider = new Swiper('.milestoneSlider', {
-//   slidesPerView: 1,
-//   slidesPerGroup: 1,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     type: "progressbar",
-//   },
-//   thumbs: {
-//     swiper: sliderThumbnail
-//   }
-// });

@@ -493,11 +493,11 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
         width: 16px;
         height: 17px;
         background-size: contain;
-        left: 3px;
+        left: 2px;
     }
 
     @media only screen and (max-width: 767px) {
-        top: 1px;
+        top: 2px;
     }
 
 }
@@ -617,7 +617,7 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
 
 .read-more-btn {
     color: var(--mx-blue);
-    font-size: 20px;
+    font-size: var(--p);
     font-weight: 700;
     line-height: 1.7;
     position: relative;
@@ -625,9 +625,9 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
     z-index: 1;
 
     .img-stroke8 {
-        width: 140px;
+        width: 96px;
         height: 12px;
-        left: -8px;
+        left: -5px;
         top: auto;
         bottom: 2px;
         z-index: -1;
@@ -644,7 +644,6 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
 .blue-section,
 .inner-banner-section {
     background-color: var(--mx-blue);
-    min-height: 100vh;
 
     h1,
     h2,
@@ -859,7 +858,8 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
             padding-top: 140px;
             padding-bottom: 0;
             width: 100%;
-            min-height: 600px;
+            min-height: 100vh;
+            min-height: 100vh;
             align-items: flex-start;
         }
     }
@@ -1007,4 +1007,14 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
 
 .d-none {
     display: none !important;
+}
+
+.landscape-message {display: none;}
+
+@media screen and (max-width: 767px) and (orientation: landscape){
+    .landscape-message{ width: 100%; height: 100vh; background: var(--mx-blue); display: flex; align-items: center; justify-content: center;}
+    .landscape-message h1{font-size: 20px; color: var(--white); text-align: center; width: 80%;line-height: 1.5;}
+    body section, body header, body footer, body #loader-wrapper, body main {
+        display: none !important;
+    }
 }

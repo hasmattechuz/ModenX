@@ -4,12 +4,14 @@
     overflow: hidden;
      @media only screen and (max-width: 991px) {
         padding-bottom: 0;
-        padding-top: var(--p70);
 
      }
      h2{
             span{
                  position: relative;
+                 @media only screen and (max-width: 567px) {
+                    position: static;
+                 }
             }           
             .down-arrow{
                 position: absolute;
@@ -27,6 +29,38 @@
                     @media only screen and (max-width: 991px) {
                         width: 220px;
                     }
+                }
+            }
+            .img-stroke-contact{
+                width: 430px;
+                height: 100px;
+                top: -95px;
+                right: -140px;
+                left: auto;
+                pointer-events: none;
+                position: absolute;
+                z-index: -1;
+                 @media only screen and (max-width: 1200px) {
+                    width: 310px;
+                    height: 70px;
+                    top: -45px;
+                    right: -260px;
+                }
+                @media only screen and (max-width: 1024px) {
+                    width: 200px;
+                    height: 70px;
+                    top: -35px;
+                    right: -170px;
+                }
+                @media only screen and (max-width: 767px) {
+                    top: -41px;
+                    right: auto;
+                    left: 270px;
+                }
+                @media only screen and (max-width: 567px) {
+                    right: 0;
+                    left: auto;
+                    top: -66px;
                 }
             }
         }
@@ -118,6 +152,7 @@
             color: #f00;
             font-size: 12px;
         }
+        
         .checkbox{
             a{
                 color: var(--black);
@@ -145,6 +180,10 @@
                 }
             }
         }
+    }
+    .wpcf7-response-output{
+        color: #f00;
+        font-size: 12px;
     }
     .screen-reader-response{
         display: none;
