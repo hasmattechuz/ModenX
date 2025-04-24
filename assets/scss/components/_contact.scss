@@ -255,6 +255,7 @@
         margin-top: var(--mt35);
         @media only screen and (max-width: 991px) {
             grid-template-columns:100%;
+            position: relative;
         }
 
         .img-container {
@@ -311,6 +312,14 @@
         right: -100px;
         bottom: -420px;
         z-index: -1;
+         @media only screen and (max-width: 991px) {
+            width: 200px;
+            height: 200px;
+            bottom: auto;
+            right: -90px;
+            transform: rotate(0);
+            top: -70px;
+        }
 
         img {
             width: 100%;
@@ -535,9 +544,13 @@
     position: relative;
     @media only screen and (max-width: 991px) {
         padding-bottom: var(--p70);
+        padding-top: var(--p70);
     }
 
     h2 {
+        @media only screen and (max-width: 991px) {
+            position: relative;
+        }
         b {
             color: var(--mx-blue);
         }
@@ -595,6 +608,16 @@
         height: 700px;
         right: 0;
         bottom: -451px;
+        @media only screen and (max-width: 1400px) {
+            width: 639px;
+            height: 600px;          
+            bottom: -401px;
+        } 
+         @media only screen and (max-width: 1200px) {
+                width: 200px;
+                height: 200px;        
+                bottom: -110px;
+         }
         @media only screen and (max-width: 991px) {
             display: none;
         }  

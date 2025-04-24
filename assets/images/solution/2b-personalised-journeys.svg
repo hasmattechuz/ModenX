@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.01 62.06">
+  <path d="M1.72,42.79c1.35-5.47,4.2-10.77,8.82-13.99,4.63-3.22,11.21-3.92,15.89-.77,6.48,4.36,8.15,14.68,15.66,16.83,5.22,1.49,10.67-2.06,13.83-6.48,3.16-4.42,4.85-9.73,7.85-14.26s8.09-8.41,13.44-7.47c6.03,1.06,9.38,7.48,11.39,13.26,3.25,9.34,5.4,19.06,6.4,28.9-15.03,5.37-31.58,3-47.38.75-11.19-1.6-22.63-3.09-33.91-1.61-3.6.47-9.96,3.76-12.55.2s-.35-11.69.56-15.35Z" fill="#dcf343"/>
+  <g>
+    <path d="M19.46,0v58.81" fill="none" stroke="#074bb6" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M45.73,0v58.81" fill="none" stroke="#074bb6" stroke-miterlimit="10" stroke-width="2"/>
+    <path d="M72.01,0v58.81" fill="none" stroke="#074bb6" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+  <circle cx="19.46" cy="23.78" r="4.25" fill="#fff" stroke="#074bb6" stroke-miterlimit="10" stroke-width="2"/>
+  <polygon points="45.73 38.23 41.17 46.12 50.29 46.12 45.73 38.23" fill="#fff" stroke="#074bb6" stroke-miterlimit="10" stroke-width="2"/>
+  <rect x="67.22" y="5.08" width="9.16" height="9.16" fill="#fff" stroke="#074bb6" stroke-miterlimit="10" stroke-width="2"/>
+</svg>
