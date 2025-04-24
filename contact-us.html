@@ -13,7 +13,7 @@
     
 <body>
     <div class="wrapper">
-           <header class="header">
+        <header class="header">
             <div class="container-fluid">
                 <div class="header-inner">
                     <div class="header-logo">
@@ -36,7 +36,11 @@
                                     <span class="menu-btn__line menu-btn__line-right"></span>
                                 </button>
                          </div>
-                        <nav>      
+                        <nav>    
+                            
+                            <a href="index.html" class="nav-logo-link">        
+                                <img src="assets/images/modenX-white.svg" alt="Logo" class="img-fluid img-logo" />
+                            </a>
                              <div class="right-btn">
                                     <div class="btn-dv">
                                         <span class="mas">Login</span>
@@ -144,7 +148,8 @@
                                                 <a href="#" target="_blank">
                                                     <img src="assets/images/home/location.svg" alt=""> 
                                                     <div>
-                                                        <span><strong>modenX Inc.</strong></span>
+                                                        <span><strong>The United States of America (USA)</strong></span><br>
+                                                        modenX Inc.
                                                         <br>3, World Trade Center, Floor 38<br> New York, NY 10007 <br> United States
                                                     </div>
                                                 </a>
@@ -204,6 +209,9 @@
                     <p>This is dummy text, currently placed by Marching Ants. This text is only used to give you a visual feel of things & will in reality be replaced by your original content. This is dummy text, currently placed by Marching Ants. This text is only used to give you a visual feel of things & will in reality be replaced by your original content.This is dummy text, currently placed by Marching Ants. This text is only used to give you a visual feel of things & will in reality be replaced by your original content.</p>
 
                     <div class="map-grid">
+                        <div class="stroke-img">
+                        <img src="./assets/images/stroke/stroke19.svg" alt="">
+                    </div>
                         <div class="img-container">
                            
                             <div class="swiper thumb-swiper-contact">
@@ -263,9 +271,7 @@
                         </div>
                     </div>
 
-                    <div class="stroke-img">
-                        <img src="./assets/images/stroke/stroke19.svg" alt="">
-                    </div>
+                    
                 </div>
             </section>
 
@@ -344,6 +350,7 @@
                                 </div>
                                  <div class="form-group">                                   
                                    <select id="mySelect" class="form-control">
+                                        <option></option>
                                         <option value="AL">test</option>
                                         <option value="WY">test</option>
                                     </select>
@@ -356,7 +363,7 @@
                                     <label for="check">I agree to be bound by the website's GDPR Policy, Privacy Policy, Refund Policy & Terms of Use.</label>
                                 </div> -->
                                 <div class="form-group checkbox">
-                                <span class="wpcf7-form-control-wrap" data-name="your-acceptance"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="your-acceptance" value="1" id="check" aria-invalid="false"></span></span></span> <label for="check">I agree to be bound by the website's <a href="">GDPR Policy</a>, <a href="">Privacy Policy</a>, <a href="">Refund Policy</a> &amp; <a href="">Terms of Use.</a><label>
+                                <span class="wpcf7-form-control-wrap" data-name="your-acceptance"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox" name="your-acceptance" value="1" id="check" aria-invalid="false" checked></span></span></span> <label for="check">I agree to be bound by the website's <a href="">GDPR Policy</a>, <a href="">Privacy Policy</a>, <a href="">Refund Policy</a> &amp; <a href="">Terms of Use.</a><label>
                             </label></label></div>
                                 <div class="btn-dv">
                                     <span class="mas">Contact Us</span>
@@ -449,17 +456,20 @@
         </footer>
     </div>
         
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/jquery-3.6.0.min.js" defer></script>
+
+    <script>
+        // Delay play by 2000ms (2 seconds)
+        setTimeout(() => {
+            const video = document.getElementById("myVideo");
+            video.play();
+        },500000);
+        </script>
     <script src="assets/js/swiper-bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-       <script>
-        $('#mySelect').select2({
-            placeholder: "Subject",
-            allowClear: true
-        });
-    </script>
+    <script src="assets/js/select2.min.js" defer></script> 
+    <script src="assets/js/aos.js" defer></script>    
     <script src="assets/js/custom.js" defer></script>
-    <script src="assets/js/footer-ants.js" defer></script>
+    <script src="assets/js/footer-ants.js" defer></script>   
  
 
 

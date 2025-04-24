@@ -299,8 +299,8 @@ if ($(".swiper-progress").length >0){
     loop: false,
     slidesPerView: 1,
     navigation: {
-      nextEl: '#swiper-progress-next',
-      prevEl: '#swiper-progress-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
     on: {
       slideChange: updatePagination,
@@ -425,10 +425,10 @@ const swiper_solution_update = new Swiper(".swiper-solution-update", {
     },
   },
 });
-if ($(".swiper-challenges").length){
-  const swiper_challenges = new Swiper(".swiper-challenges", {
-  loop: true,
-  slidesPerView: 1.5,
+
+const swiper_challenges = new Swiper(".swiper-challenges", {
+  loop: false,
+  slidesPerView: 1.7,
   spaceBetween: 35, // Enable looping
   simulateTouch: true, // Enable drag/swipe simulation
   touchStartPreventDefault: false, // Prevent default touch behavior if needed
@@ -436,14 +436,15 @@ if ($(".swiper-challenges").length){
     el: ".swiper-pagination",
     clickable: true,
   },
- 
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
   },
 });
-}
-
 
 const swiper_benefits = new Swiper(".swiper-benefits", {
   loop: true,
