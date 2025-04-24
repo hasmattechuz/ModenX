@@ -63,6 +63,9 @@
         --gutter: 15px;
         --gutter70: 20px;
         --pl70: 20px;
+
+        --p70: 50px;
+        --p50: 30px;
     }
 }
 
@@ -436,8 +439,9 @@ input[type="checkbox"]+label {
 input[type="checkbox"] {
     display: none;
 }
- 
-input[type="checkbox"]+label:before,.form-group:has(input[type="checkbox"])::before{
+
+input[type="checkbox"]+label:before,
+.form-group:has(input[type="checkbox"])::before {
     content: "";
     border: 1px solid #000;
     border-radius: 5px;
@@ -463,16 +467,20 @@ input[type="checkbox"]+label:before,.form-group:has(input[type="checkbox"])::bef
         margin-top: 2px;
     }
 }
-.checkbox label{
+
+.checkbox label {
     padding-left: 30px;
     z-index: 99;
     position: relative;
     cursor: pointer;
+
     @media only screen and (max-width: 991px) {
-       padding-left: 25px
+        padding-left: 25px
     }
 }
-input[type="checkbox"]+label:after,.form-group:has(input[type="checkbox"])::after {
+
+input[type="checkbox"]+label:after,
+.form-group:has(input[type="checkbox"])::after {
     content: "";
     transition: 0.2s;
     position: absolute;
@@ -483,7 +491,8 @@ input[type="checkbox"]+label:after,.form-group:has(input[type="checkbox"])::afte
     transition: 0.2s ease-in-out;
 }
 
-input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"]:checked)::after {
+input[type="checkbox"]:checked+label:after,
+.form-group:has(input[type="checkbox"]:checked)::after {
     transform: scale(1);
     width: 26px;
     height: 15px;
@@ -544,9 +553,9 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
 
     .select2-selection__rendered {
         width: 100%;
-      
+
     }
-    
+
 
     .select2-dropdown {
         background: var(--mx-grey);
@@ -554,7 +563,7 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         overflow: hidden;
-        
+
     }
 
     .select2-search__field {
@@ -566,18 +575,19 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
     }
 
     .select2-results__option {
-            padding: 12px 27px;
+        padding: 12px 27px;
+
         &.select2-results__option--highlighted.select2-results__option--selectable {
             background-color: var(--mx-blue);
         }
     }
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered{
-        @media only screen and (max-width: 991px) {
-                line-height: 15px;
-        }
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    @media only screen and (max-width: 991px) {
+        line-height: 15px;
     }
+}
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
@@ -677,6 +687,7 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
         min-height: 100%;
         max-height: 100%;
     }
+
     @media (max-width: 1700px) {
         min-height: 440px;
         max-height: 440px;
@@ -718,7 +729,8 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
                 display: flex;
                 align-items: center;
                 gap: var(--gutter);
-                &:hover{
+
+                &:hover {
                     color: var(--mx-yellow);
                 }
 
@@ -987,7 +999,7 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
         position: relative;
         overflow: hidden;
         opacity: 1;
-        
+
         &.swiper-pagination-bullet-active {
             &::before {
                 content: "";
@@ -1009,12 +1021,33 @@ input[type="checkbox"]:checked+label:after,.form-group:has(input[type="checkbox"
     display: none !important;
 }
 
-.landscape-message {display: none;}
+.landscape-message {
+    display: none;
+}
 
-@media screen and (max-width: 767px) and (orientation: landscape){
-    .landscape-message{ width: 100%; height: 100vh; background: var(--mx-blue); display: flex; align-items: center; justify-content: center;}
-    .landscape-message h1{font-size: 20px; color: var(--white); text-align: center; width: 80%;line-height: 1.5;}
-    body section, body header, body footer, body #loader-wrapper, body main {
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .landscape-message {
+        width: 100%;
+        height: 100vh;
+        background: var(--mx-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .landscape-message h1 {
+        font-size: 20px;
+        color: var(--white);
+        text-align: center;
+        width: 80%;
+        line-height: 1.5;
+    }
+
+    body section,
+    body header,
+    body footer,
+    body #loader-wrapper,
+    body main {
         display: none !important;
     }
 }
