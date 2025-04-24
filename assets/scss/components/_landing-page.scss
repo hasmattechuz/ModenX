@@ -348,6 +348,28 @@
     }
 }
 
+.btn-video-dv {
+    .btn-video {
+        .play-svg {
+            display: none;
+        }
+
+        .pause-svg {
+            display: block;
+        }
+
+        &.pause {
+            .play-svg {
+                display: block;
+            }
+
+            .pause-svg {
+                display: none;
+            }
+        }
+    }
+}
+
 .blue-block-section {
     padding: var(--p70) 0;
     background-color: var(--mx-blue);
@@ -737,6 +759,9 @@
             }
         }
 
+        @media (min-width: 568px) and (min-width: 991px) {
+
+        }
     }
 
     &.for-consumers-inner {
@@ -778,18 +803,13 @@
         }
 
         @media only screen and (max-width: 1024px) {
-            top: -25px;
-            height: calc(100% + 25px);
+            top: -43px;
+            height: calc(100% + 43px);
         }
 
         @media only screen and (max-width: 991px) {
-            top: -60px;
-            height: calc(100% + 60px);
-        }
-
-        @media only screen and (max-width: 991px) {
-            top: -30px;
-            height: calc(100% + 30px);
+            top: -115px;
+            height: calc(100% + 115px);
         }
 
         @media only screen and (max-width: 567px) {
@@ -1070,6 +1090,10 @@
         height: 260px;
     }
 
+    @media (max-width:1200px) {
+        border-radius: 20px;
+    }
+
     @media only screen and (max-width: 991px) {
         height: 180px;
     }
@@ -1098,6 +1122,10 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+
+        @media (max-width:1200px) {
+            border-radius: 20px;
+        }
     }
 
     .img-dv {
@@ -1151,7 +1179,7 @@
         z-index: 1;
         transition: all 0.5s ease-in-out;
 
-        @media only screen and (max-width: 991px) {
+        @media only screen and (max-width: 1200px) {
             border-radius: 20px;
         }
     }
@@ -1171,7 +1199,9 @@
         transition: all 0.5s ease-in-out;
         opacity: 0;
 
-
+        @media only screen and (max-width: 1200px) {
+            border-radius: 20px;
+        }
     }
 
     &:hover {
@@ -1189,6 +1219,10 @@
             }
         }
 
+        @media (min-width:768px) and (max-width:991px) {
+            --heading3: 16px;
+            --headingLH3: 24px;
+        }
     }
 
     .img-dv {
@@ -1202,7 +1236,7 @@
         height: 100%;
         overflow: hidden;
 
-        @media only screen and (max-width: 991px) {
+        @media only screen and (max-width: 1200px) {
             border-radius: 20px;
         }
 
