@@ -759,6 +759,9 @@
             }
         }
 
+        @media (min-width: 568px) and (min-width: 991px) {
+            
+        }
     }
 
     &.for-consumers-inner {
@@ -800,18 +803,13 @@
         }
 
         @media only screen and (max-width: 1024px) {
-            top: -25px;
-            height: calc(100% + 25px);
+            top: -43px;
+            height: calc(100% + 43px);
         }
 
         @media only screen and (max-width: 991px) {
-            top: -60px;
-            height: calc(100% + 60px);
-        }
-
-        @media only screen and (max-width: 991px) {
-            top: -30px;
-            height: calc(100% + 30px);
+            top: -115px;
+            height: calc(100% + 115px);
         }
 
         @media only screen and (max-width: 567px) {
@@ -1092,6 +1090,10 @@
         height: 260px;
     }
 
+    @media (max-width:1200px) {
+        border-radius: 20px;
+    }
+
     @media only screen and (max-width: 991px) {
         height: 180px;
     }
@@ -1123,6 +1125,10 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+
+        @media (max-width:1200px) {
+            border-radius: 20px;
+        }
     }
 
     .img-dv {
