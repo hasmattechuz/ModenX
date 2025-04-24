@@ -97,6 +97,10 @@
         p {
             max-width: 347px;
         }
+
+        @media (max-width:767px) {
+            padding: 0 20px 32px;
+        }
     }
 }
 
@@ -123,6 +127,10 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            @media (max-width:767px) {
+                min-height: auto;
+            }
         }
     }
     
