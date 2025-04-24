@@ -1,16 +1,26 @@
 function videoPlayer() {
   if ($(".video-group").length) {
-    const $video = $("#video-player");
-    const $toggleBtn = $("#btn-toggle1");
+    $(".video-group").each(function() {
+      const $video = $(this).find('.video-player');
+      const $toggleBtn = $(this).find('.btn-video');
+      const $btnIcon = $(this).find('.btn-ico-cst');
 
-    $toggleBtn.on("click", function () {
-      if ($video.get(0).paused) {
-        $video.get(0).play();
-        $toggleBtn.text("Pause");
-      } else {
-        $video.get(0).pause();
-        $toggleBtn.text("Play");
-      }
+      $toggleBtn.on("click", function () {
+        if ($video.get(0).paused) {
+          // Pause all other videos first
+          $('.video-player').each(function() {
+            this.pause();
+            $(this).closest('.video-group').find('.btn-ico-cst').removeClass('play').addClass('pause');
+          });
+          
+          // Play the clicked video
+          $video.get(0).play();
+          $btnIcon.removeClass('pause').addClass('play');
+        } else {
+          $video.get(0).pause();
+          $btnIcon.removeClass('play').addClass('pause');
+        }
+      });
     });
   }
 }
