@@ -3000,14 +3000,14 @@ footer .footer-mobile {
 }
 @media only screen and (max-width: 1024px) {
   .for-rc-inner .stretch-height {
-    top: -43px;
-    height: calc(100% + 43px);
+    top: -78px;
+    height: calc(100% + 78px);
   }
 }
 @media only screen and (max-width: 991px) {
   .for-rc-inner .stretch-height {
-    top: -115px;
-    height: calc(100% + 115px);
+    top: -118px;
+    height: calc(100% + 118px);
   }
 }
 @media only screen and (max-width: 567px) {
@@ -3285,6 +3285,12 @@ footer .footer-mobile {
     border-radius: 20px;
   }
 }
+@media (min-width: 768px) and (max-width: 1200px) {
+  .primary-user-card {
+    padding: 10px;
+    height: 220px;
+  }
+}
 @media only screen and (max-width: 991px) {
   .primary-user-card {
     height: 180px;
@@ -3336,6 +3342,11 @@ footer .footer-mobile {
 @media (max-width: 1700px) {
   .primary-user-card .img-dv img {
     max-height: 340px;
+  }
+}
+@media (max-width: 1200px) {
+  .primary-user-card .img-dv img {
+    max-height: 280px;
   }
 }
 @media (max-width: 991px) {
@@ -3456,11 +3467,6 @@ footer .footer-mobile {
   overflow: hidden;
 }
 @media (max-width: 1200px) {
-  .primary-image-card .primary-image-link {
-    height: 400px;
-  }
-}
-@media (max-width: 1024px) {
   .primary-image-card .primary-image-link {
     height: 100%;
     padding: 10px;
@@ -4363,6 +4369,7 @@ footer .footer-mobile {
 .contact-sec .common-form, .contact-sec .wpcf7-form {
   display: grid;
   gap: var(--gutter);
+  font-weight: 400;
 }
 .contact-sec .common-form .form-group, .contact-sec .wpcf7-form .form-group {
   position: relative;
