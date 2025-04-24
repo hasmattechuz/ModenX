@@ -1097,6 +1097,9 @@
     @media only screen and (max-width: 991px) {
         height: 180px;
     }
+    @media only screen and (max-width: 767px) {
+        height: auto;
+    }
 
     h2 {
         color: var(--white);
@@ -2052,9 +2055,9 @@
             left: -45px;
             width: 210px;
 
-            @media (max-width: 767px) {
+            @media (max-width: 1024px) {
                 top: -15px;
-                left: -45px;
+                left: -25px;
                 width: 140px;
             }
         }

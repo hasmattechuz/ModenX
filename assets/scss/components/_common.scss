@@ -946,6 +946,9 @@ input[type="checkbox"]:checked+label:after,
 
         .banner-img {
             align-items: center;
+            @media (max-width: 767px) {
+                width: 100%;
+            }
 
             img {
                 object-position: center center;
