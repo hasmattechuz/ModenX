@@ -55,7 +55,8 @@
 
 .swiper-core-values {
     .stories-card {
-        padding: 0 30px 42px;
+        padding: 0 25px 42px;
+
         .quotes-img {
             width: 164px;
             height: 164px;
@@ -77,6 +78,10 @@
         p {
             max-width: 347px;
         }
+
+        @media (max-width:767px) {
+            padding: 0 20px 32px;
+        }
     }
 }
 
@@ -96,6 +101,10 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+
+            @media (max-width:767px) {
+                min-height: auto;
+            }
         }
     }
     
