@@ -238,7 +238,7 @@
             gap: 0;
 
             .grid-left {
-                padding-right: 35px;
+                padding-right: 25px;
             }
         }
     }
@@ -292,7 +292,7 @@
         }
 
         @media (max-width:1200px) {
-            grid-auto-rows: 250px 250px;
+            grid-auto-rows: 200px 200px;
         }
     }
 }
