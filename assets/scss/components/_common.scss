@@ -253,6 +253,20 @@ a {
     height: 53px;
     font-weight: 500;
     cursor: pointer;
+
+    svg.share-svg {
+        width: 34px;
+        height: 34px;
+        padding: 0 3px 0 0;
+    }
+
+    @media (max-width:767px) {
+
+        .play-svg,
+        .pause-svg {
+            width: 16px;
+        }
+    }
 }
 
 img {
@@ -1052,7 +1066,8 @@ input[type="checkbox"]:checked+label:after,
     }
 }
 
-.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
     opacity: 1;
     background: #688ecb;
 }

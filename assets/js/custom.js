@@ -3,21 +3,22 @@ function videoPlayer() {
     $(".video-group").each(function() {
       const $video = $(this).find('.video-player');
       const $toggleBtn = $(this).find('.btn-video');
+      const $btnIcon = $(this).find('.btn-ico-cst');
 
       $toggleBtn.on("click", function () {
         if ($video.get(0).paused) {
           // Pause all other videos first
           $('.video-player').each(function() {
             this.pause();
-            $(this).closest('.video-group').find('.btn-video').text("Play");
+            $(this).closest('.video-group').find('.btn-ico-cst').removeClass('play').addClass('pause');
           });
           
           // Play the clicked video
           $video.get(0).play();
-          $(this).text("Pause");
+          $btnIcon.removeClass('pause').addClass('play');
         } else {
           $video.get(0).pause();
-          $(this).text("Play");
+          $btnIcon.removeClass('play').addClass('pause');
         }
       });
     });

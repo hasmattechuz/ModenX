@@ -348,6 +348,28 @@
     }
 }
 
+.btn-video-dv {
+    .btn-video {
+        .play-svg {
+            display: none;
+        }
+
+        .pause-svg {
+            display: block;
+        }
+
+        &.pause {
+            .play-svg {
+                display: block;
+            }
+
+            .pause-svg {
+                display: none;
+            }
+        }
+    }
+}
+
 .blue-block-section {
     padding: var(--p70) 0;
     background-color: var(--mx-blue);
