@@ -874,18 +874,7 @@
 
     }
 
-    &.for-retailers-inner,
-    &.for-consumers-inner {
-        .primary-image-card {
-            .text-dv {
-                transform: none;
-            }
-
-            .desc-dv {
-                display: none;
-            }
-        }
-    }
+   
 }
 
 /* Stroke Animation */
@@ -1318,7 +1307,7 @@
         position: relative;
         z-index: 2;
         display: grid;
-        // transform: translateY(20%);
+        transform: translateY(20%);
         transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 
         p {
@@ -1330,7 +1319,7 @@
         max-width: 70%;
         opacity: 0;
         transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-        display: none;
+        // display: none;
     }
 
     .primary-image-link {
@@ -2221,5 +2210,23 @@
         background: #007aff;
         width: 0%;
         transition: width 0.3s ease;
+    }
+}
+
+body.home {
+     .for-retailers-inner,
+    .for-consumers-inner {
+        .primary-image-card {
+            &::after{
+                content: none;
+            }
+            .text-dv {
+                transform: none;
+            }
+
+            .desc-dv {
+                display: none;
+            }
+        }
     }
 }
