@@ -460,7 +460,7 @@ const swiper_solution_update = new Swiper(".swiper-solution-update", {
 if ($(".swiper-challenges").length){
   const swiper_challenges = new Swiper(".swiper-challenges", {
   loop: true,
-  slidesPerView: 1.5,
+  slidesPerView: 1.8,
   spaceBetween: 35, // Enable looping
   simulateTouch: true, // Enable drag/swipe simulation
   touchStartPreventDefault: false, // Prevent default touch behavior if needed
@@ -478,7 +478,7 @@ if ($(".swiper-challenges").length){
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.7,
     },
   },
 });

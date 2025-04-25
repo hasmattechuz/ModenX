@@ -38,7 +38,7 @@
         }
     }
     .text-dv{
-        transform: translateY(20%);
+        transform: translateY(50%);
     }
     .desc-dv{
         display: block;
@@ -75,6 +75,21 @@
     }
 
     .primary-image-card  {
+        &:first-child{
+            .text-dv{
+                transform: translateY(0);
+            }
+            .desc-dv{
+                opacity: 1;
+            }
+            &::before{
+                content: none;
+            }
+            &::after{
+                opacity: 1;
+                background: linear-gradient(358.9deg, #074BB6 0.11%, rgba(7, 75, 182, 0.1) 96.54%);
+            }
+        }
         .primary-image-link {
             height: 480px;
             @media only screen and (max-width: 567px) {
@@ -224,6 +239,9 @@
 
     .update-inner {
         grid-template-columns: calc(35% - var(--gutter) / 2) calc(65% - var(--gutter) / 2);
+        @media (max-width: 1460px) {
+                grid-template-columns: calc(38% - var(--gutter) / 2) calc(62% - var(--gutter) / 2);
+        }
         @media (max-width: 567px) {
             grid-template-columns: 100%
         }
@@ -246,11 +264,11 @@
     .img-stroke8 {
         width: 188px;
         height: 105px;
-        left: auto;
+        left: 270px;
         top: auto;
-        right: 83px;
+        right: 0;
         bottom: -31px;
-         @media only screen and (max-width: 1400px) {
+         @media only screen and (max-width: 1352px) {
             width: 148px;
             height: 65px;
             right: auto;
@@ -326,6 +344,9 @@
         .read-more {
             margin-top: 10px;
         }
+        p{
+            margin-top: 10px;
+        }
 
 
         h2 {
@@ -368,7 +389,7 @@
     .grid-right {
         display: grid;
         grid-template-columns:1fr 2fr;
-        grid-auto-rows: 350px 350px;
+        grid-auto-rows: 300px 300px;
         gap: var(--gutter);
         .img-container {
             border-radius: 20px;
@@ -397,6 +418,10 @@
 .innovate-with-us {
     background: var(--mx-blue);
     overflow: hidden;
+    padding: calc(var(--p70) + 30px) 0;
+     @media only screen and (max-width: 1024px) {
+        padding: var(--p70) 0;
+     }
     .inner-grid {
         max-width: 690px;
          @media only screen and (max-width: 1200px) {
@@ -490,23 +515,31 @@
         }
         .ceo-name {
             margin-top: 0;
-            font-size: 20px;
+            font-size: 24px;
             display: inline-block;
             position: relative;
             overflow: visible;
             z-index: 1;
+            @media only screen and (max-width: 991px) {
+                font-size: 20px;
+            }
             span {
                 display: block;
                 font-size: 16px;
             }
 
             .img-stroke2 {
-                width: 159px;
+                width: 210px;
                 height: 45px;
                 position: absolute;
-                left: -20px;
-                top: 0;
+                left: -30px;
+                top: 3px;
                 z-index: -1;
+                @media only screen and (max-width: 991px) {
+                    width: 170px;
+                    left: -20px;
+                    top: -1px;                    
+                }
 
                 img {
                     width: 100%;
@@ -663,10 +696,10 @@
     }
     .img-stroke19{
         position: absolute;
-        bottom: -200px;
+        bottom: -210px;
         left: 0;
-        transform: rotate(263deg);
-        width: 360px;
+        transform: rotate(270deg);
+        width: 480px;
         @media (max-width: 567px) {
             display: none;
         }
@@ -734,7 +767,7 @@
             }
 
             .slider-right {
-                height: 444px;
+                height: 400px;
                 border-radius: 30px;
                 overflow: hidden;
                 @media (max-width: 991px) {
@@ -755,7 +788,7 @@
         
         .swiper-btn-arrow{
             position: absolute;
-            top: 27px;
+            top: 31px;
             z-index: 9999;
             @media (max-width: 1200px) {
                 top: 39px;
@@ -816,7 +849,7 @@
 
     .dot.active {
       background: var(--mx-blue);
-      transform: scale(1.2);
+      transform: scale(1.7);
     }
 
     .progress-bar-container {
