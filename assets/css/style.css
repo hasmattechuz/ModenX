@@ -649,7 +649,7 @@ input[type=checkbox]:checked + label:after,
   color: var(--white);
   margin-bottom: var(--mb35);
 }
-.contact-detail h3 b {
+.contact-detail h3 b, .contact-detail h3 strong {
   color: var(--mx-yellow);
 }
 .contact-detail .swiper .swiper-slide {
@@ -962,6 +962,10 @@ input[type=checkbox]:checked + label:after,
 .swiper-button-prev.swiper-button-disabled {
   opacity: 1;
   background: #688ecb;
+}
+
+address {
+  font-style: normal;
 }
 
 .header {
