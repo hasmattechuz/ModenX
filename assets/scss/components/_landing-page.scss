@@ -803,13 +803,13 @@
         }
 
         @media only screen and (max-width: 1024px) {
-            top: -43px;
-            height: calc(100% + 43px);
+            top: -78px;
+            height: calc(100% + 78px);
         }
 
         @media only screen and (max-width: 991px) {
-            top: -115px;
-            height: calc(100% + 115px);
+            top: -118px;
+            height: calc(100% + 118px);
         }
 
         @media only screen and (max-width: 567px) {
@@ -1094,6 +1094,11 @@
         border-radius: 20px;
     }
 
+    @media (min-width:768px) and (max-width:1200px) {
+        padding: 10px;
+        height: 220px;
+    }
+
     @media only screen and (max-width: 991px) {
         height: 180px;
     }
@@ -1140,13 +1145,18 @@
         overflow: hidden;
 
         img {
-            object-fit: cover;
+            object-fit: contain;
             max-height: 300px;
             width: 100%;
             border-radius: 0 0 30px 0;
+            object-position: bottom right;
 
             @media (max-width: 1700px) {
-                max-height: 340px;
+                max-height: 320px;
+            }
+
+            @media (max-width:1200px) {
+                max-height: 280px;
             }
 
             @media (max-width:991px) {
@@ -1284,10 +1294,6 @@
         // }
 
         @media (max-width: 1200px) {
-            height: 400px;
-        }
-
-        @media (max-width: 1024px) {
             height: 100%;
             padding: 10px;
             min-height: 250px;

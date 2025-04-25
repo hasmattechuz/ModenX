@@ -89,6 +89,8 @@
     .common-form, .wpcf7-form {
         display: grid;
         gap: var(--gutter);
+        font-weight: 400;
+        
         .form-group{
             position: relative;
         }
