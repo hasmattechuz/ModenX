@@ -2932,6 +2932,14 @@ footer .footer-mobile {
   display: grid;
   row-gap: 80px;
 }
+@media only screen and (max-width: 1200px) {
+  .for-rc-section .img-stroke3 {
+    top: -160px;
+    right: -90px;
+    width: 300px !important;
+    height: 300px;
+  }
+}
 
 .for-rc-inner {
   display: grid;
