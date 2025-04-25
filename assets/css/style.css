@@ -827,7 +827,7 @@ input[type=checkbox]:checked + label:after,
   position: absolute;
   bottom: 0;
   right: 0;
-  max-height: calc(100% - 128px);
+  max-height: 100%;
   pointer-events: none;
 }
 .inner-banner-section .banner-img img {
@@ -6386,9 +6386,14 @@ footer .footer-mobile {
   }
 }
 
+.no-apply-desktop-more .more-text {
+  margin-bottom: 20px;
+}
+
 @media (min-width: 1200px) {
   .no-apply-desktop-more .more-text {
     display: block;
+    margin-bottom: 20px;
   }
   .no-apply-desktop-more .read-more {
     display: none;
