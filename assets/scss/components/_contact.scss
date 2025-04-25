@@ -285,11 +285,18 @@
                 .swiper-slide{
                     border-radius: 30px;
                     overflow: hidden;
+                    background: var(--mx-grey);
                      @media only screen and (max-width: 991px) {
                         border-radius: 0;
                     }
+                    &:hover{
+                        iframe{
+                            filter: grayscale(0);
+                        }
+                    }
                 }
                 iframe{
+                    filter: grayscale(1);
                     @media only screen and (max-width: 991px) {
                         height: 30vh;
                     }

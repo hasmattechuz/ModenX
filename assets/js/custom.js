@@ -364,7 +364,7 @@ if ($(".swiper-progress").length > 0) {
 
  function initSyncedSwipers(mainSelector, thumbSelector) {
     const mainSwiper = new Swiper(mainSelector, {
-      loop: true,
+      loop: false,
       spaceBetween: 10,
       slidesPerView: 1,
         pagination: {
@@ -378,10 +378,11 @@ if ($(".swiper-progress").length > 0) {
     });
 
     const thumbSwiper = new Swiper(thumbSelector, {
-      loop: true,
+      loop: false,
       spaceBetween: 0,
       slidesPerView: 1,
       slideToClickedSlide: true,
+      
     });
 
     mainSwiper.controller.control = thumbSwiper;
