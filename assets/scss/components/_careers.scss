@@ -700,6 +700,10 @@ body {
                 font-size: var(--heading2);
                 line-height: var(--headingLH2);
             }
+
+            #scroll-down {
+                top: 50px;
+            }
         }
 
         @media (max-width:1200px) {
