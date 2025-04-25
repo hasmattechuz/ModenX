@@ -736,7 +736,7 @@ input[type="checkbox"]:checked+label:after,
         color: var(--white);
         margin-bottom: var(--mb35);
 
-        b {
+        b, strong {
             color: var(--mx-yellow);
         }
     }
@@ -1091,3 +1091,11 @@ input[type="checkbox"]:checked+label:after,
     background: #688ecb;
 }
 
+
+address {
+    font-style: normal;
+}
+
+.d-block {
+    display: block !important;
+}

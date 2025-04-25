@@ -422,7 +422,9 @@
         }
         p {
             color: var(--white);
-            margin-bottom: 70px;
+        }
+        .desc-global {
+            margin-bottom: var(--p70);
         }
     }
     .grid-image {
