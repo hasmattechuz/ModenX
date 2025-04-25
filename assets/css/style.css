@@ -3344,14 +3344,15 @@ footer .footer-mobile {
   overflow: hidden;
 }
 .primary-user-card .img-dv img {
-  object-fit: cover;
+  object-fit: contain;
   max-height: 300px;
   width: 100%;
   border-radius: 0 0 30px 0;
+  object-position: bottom right;
 }
 @media (max-width: 1700px) {
   .primary-user-card .img-dv img {
-    max-height: 340px;
+    max-height: 320px;
   }
 }
 @media (max-width: 1200px) {
