@@ -3357,17 +3357,22 @@ footer .footer-mobile {
 }
 @media (max-width: 1700px) {
   .primary-user-card .img-dv img {
-    max-height: 320px;
+    max-height: 300px;
   }
 }
 @media (max-width: 1200px) {
   .primary-user-card .img-dv img {
-    max-height: 280px;
+    max-height: 260px;
   }
 }
 @media (max-width: 991px) {
   .primary-user-card .img-dv img {
-    max-height: 220px;
+    max-height: 210px;
+  }
+}
+@media (max-width: 767px) {
+  .primary-user-card .img-dv img {
+    max-height: 170px;
   }
 }
 .primary-user-card .text-dv {
