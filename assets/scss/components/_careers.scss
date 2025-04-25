@@ -73,10 +73,17 @@
     }
 }
 
+.no-apply-desktop-more {
+    .more-text {
+        margin-bottom: 20px;
+    } 
+}
+
 @media (min-width:1200px) {
     .no-apply-desktop-more {
         .more-text {
             display: block;
+            margin-bottom: 20px;
         } 
 
         .read-more {
