@@ -866,6 +866,7 @@
       border-radius: 50%;
         transform: scale(1);
        transition: 0.3s ease-in-out;
+       cursor: pointer;
        @media only screen and (max-width: 991px) {
             width: 10px;
             height: 10px;
@@ -876,7 +877,7 @@
         // }
     }
 
-    .dot.active,.dot.last-active {
+    .dot.active,.dot.completed {
       background: var(--mx-blue);
       transform: scale(1.7);
        @media only screen and (max-width: 567px) {
@@ -1101,7 +1102,7 @@
     }
 }
 
-.about-contact,.page-about-us{
+.about-contact,.page-about-us .contact-sec{
     h2{
         .down-arrow{
             
@@ -1122,5 +1123,34 @@
              }
         }
     }
+}
+
+.page-retail-phygital-solutions .contact-sec{
+     h2{
+        .down-arrow{  
+            @media only screen and (min-width: 768px) {
+                    left: 333px;
+                    top: -18px;
+                    width: 310px;
+             } 
+             @media only screen and (min-width: 1024px) {
+                left: 362px;
+                top: -35px;
+                width: 440px;
+             }         
+             
+             @media only screen and (min-width: 1201px) {
+                left: 537px;
+                width: 44vw;
+                top:-47px;
+             }
+              @media only screen and (min-width: 1800px) {
+                top: -109px;
+                left: 537px;
+                width: 64vw;
+             }
+        }
+    }
+    
 }
 

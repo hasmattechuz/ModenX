@@ -6316,6 +6316,7 @@ body.home .for-consumers-inner .primary-image-card .desc-dv {
   border-radius: 50%;
   transform: scale(1);
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 @media only screen and (max-width: 991px) {
   .milestone .dot {
@@ -6323,12 +6324,12 @@ body.home .for-consumers-inner .primary-image-card .desc-dv {
     height: 10px;
   }
 }
-.milestone .dot.active, .milestone .dot.last-active {
+.milestone .dot.active, .milestone .dot.completed {
   background: var(--mx-blue);
   transform: scale(1.7);
 }
 @media only screen and (max-width: 567px) {
-  .milestone .dot.active, .milestone .dot.last-active {
+  .milestone .dot.active, .milestone .dot.completed {
     transform: scale(1.2);
   }
 }
@@ -6515,24 +6516,53 @@ body.home .for-consumers-inner .primary-image-card .desc-dv {
 }
 
 @media only screen and (min-width: 1201px) {
-  .about-contact h2 .down-arrow, .page-about-us h2 .down-arrow {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow {
     top: 10px;
     width: 580px;
     left: 406px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .about-contact h2 .down-arrow, .page-about-us h2 .down-arrow {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow {
     top: -5px;
     width: 740px;
     left: 400px;
   }
 }
 @media only screen and (min-width: 1600px) {
-  .about-contact h2 .down-arrow, .page-about-us h2 .down-arrow {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow {
     top: -22px;
     left: 401px;
     width: 900px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-retail-phygital-solutions .contact-sec h2 .down-arrow {
+    left: 333px;
+    top: -18px;
+    width: 310px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .page-retail-phygital-solutions .contact-sec h2 .down-arrow {
+    left: 362px;
+    top: -35px;
+    width: 440px;
+  }
+}
+@media only screen and (min-width: 1201px) {
+  .page-retail-phygital-solutions .contact-sec h2 .down-arrow {
+    left: 537px;
+    width: 44vw;
+    top: -47px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .page-retail-phygital-solutions .contact-sec h2 .down-arrow {
+    top: -109px;
+    left: 537px;
+    width: 64vw;
   }
 }
 

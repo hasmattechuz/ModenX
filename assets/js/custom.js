@@ -329,6 +329,14 @@ if ($(".swiper-progress").length > 0) {
   // Call once on init
   updatePagination.call(swiperprogress);
 
+  // Make pagination dots clickable
+  const dots = document.querySelectorAll('.custom-pagination .dot');
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      swiperprogress.slideTo(index);
+    });
+  });
+
   function updatePagination() {
     const totalDots = 6;
     const dots = document.querySelectorAll('.custom-pagination .dot');
@@ -342,17 +350,21 @@ if ($(".swiper-progress").length > 0) {
 
     // Reset all dots
     dots.forEach((dot, index) => {
-      dot.classList.remove('active', 'prev', 'inactive');
+      dot.classList.remove('active', 'prev', 'inactive', 'last-active', 'completed');
 
       if (index === dotIndex) {
         dot.classList.add('active');
-      } else if (index === prevIndex) {
-        dot.classList.add('prev');
+      } else if (index === prevIndex && dotIndex > 0) {
+        dot.classList.add('prev', 'last-active'); // Apply last-active to the previous dot
       } else {
         dot.classList.add('inactive');
       }
+
+      // Add 'completed' class to all dots up to the current index
+      if (index <= dotIndex) {
+        dot.classList.add('completed');
+      }
     });
-    if (dotIndex > 0) dots[dotIndex - 1].classList.add('last-active'); 
 
     // Update progress bar
     progressBar.style.width = progressPercent + '%';
