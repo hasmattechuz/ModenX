@@ -1893,7 +1893,7 @@ header.nav-down .navbar .navbar-brand {
   .contact-div .swiper-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 1fr 1fr;
     gap: 70px;
   }
   .contact-div .swiper-menu {
@@ -6649,6 +6649,13 @@ body.home .for-consumers-inner .primary-image-card .desc-dv {
     transform: rotate(6deg);
     width: 100px;
   }
+}
+.why-choose-section .core-values .swiper-slide {
+  height: auto;
+  min-height: 100%;
+}
+.why-choose-section .core-values .swiper-slide .stories-card {
+  height: 100%;
 }
 .why-choose-section .core-values .stories-card h3 {
   font-weight: 700;

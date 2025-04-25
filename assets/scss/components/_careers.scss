@@ -123,6 +123,13 @@
                 }
             }
         }
+        .swiper-slide{
+            height: auto;
+            min-height: 100%;
+            .stories-card{
+                height: 100%;
+            }
+        }
 
         .stories-card {
             h3 {
