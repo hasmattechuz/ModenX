@@ -1165,15 +1165,19 @@
             object-position: bottom right;
 
             @media (max-width: 1700px) {
-                max-height: 320px;
+                max-height: 300px;
             }
 
             @media (max-width:1200px) {
-                max-height: 280px;
+                max-height: 260px;
             }
 
             @media (max-width:991px) {
-                max-height: 220px;
+                max-height: 210px;
+            }
+
+            @media (max-width:767px) {
+                max-height: 170px;
             }
         }
     }
