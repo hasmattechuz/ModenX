@@ -39,6 +39,12 @@
     }
     .text-dv{
         transform: translateY(50%);
+        @media only screen and (max-width: 1500px) {
+             transform: translateY(80%);
+        }
+         @media only screen and (max-width: 1200px) {
+             transform: translateY(50%);
+        }
     }
     .desc-dv{
         display: block;
@@ -838,6 +844,9 @@
       margin-top: 10px;
       gap: 10px;
       margin: 0 auto -8px;
+       @media only screen and (max-width: 567px) {
+            margin: 0 auto -7px;
+      }
     }
 
     .dot {
@@ -857,9 +866,12 @@
         // }
     }
 
-    .dot.active {
+    .dot.active,.dot.last-active {
       background: var(--mx-blue);
       transform: scale(1.7);
+       @media only screen and (max-width: 567px) {
+           transform: scale(1.2);
+        }
     }
 
     .progress-bar-container {
@@ -869,6 +881,9 @@
       background-color: var(--mx-grey);
       border-radius: 4px;
       overflow: hidden;
+      @media only screen and (max-width: 567px) {
+            height: 5px;
+      }
     }
 
     .progress-bar-fill {
@@ -1076,14 +1091,26 @@
     }
 }
 
-.about-contact{
+.about-contact,.page-about-us{
     h2{
         .down-arrow{
-             @media only screen and (min-width: 1200px) {
-                top: -50px;
+            
+             @media only screen and (min-width: 1201px) {
+                top: 10px;
+                width: 580px;
+                left: 406px;
+            }
+              @media only screen and (min-width: 1400px) {
+                top: -5px;
+                width: 740px;
                 left: 400px;
-                width: 60vw;
+             }
+              @media only screen and (min-width: 1600px) {
+                top: -22px;
+                left: 401px;
+                width: 900px;
              }
         }
     }
 }
+

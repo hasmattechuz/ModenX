@@ -352,6 +352,7 @@ if ($(".swiper-progress").length > 0) {
         dot.classList.add('inactive');
       }
     });
+    if (dotIndex > 0) dots[dotIndex - 1].classList.add('last-active'); 
 
     // Update progress bar
     progressBar.style.width = progressPercent + '%';
