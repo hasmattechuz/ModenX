@@ -7305,7 +7305,7 @@ body .open-roles-section h3.accordion-thumb {
 }
 .accordion .accordion-panel {
   margin: 0;
-  padding-bottom: 0.8rem;
+  padding-bottom: 25px;
   display: none;
 }
 .accordion .accordion-panel p {
@@ -7597,8 +7597,8 @@ body .open-roles-section h3.accordion-thumb {
 }
 .solution-leftright-sec .img-stroke4-s {
   position: absolute;
-  right: 0;
-  bottom: -280px;
+  right: -60px;
+  bottom: -260px;
   width: 420px;
   height: 420px;
   transform: rotate(90deg);
@@ -7636,6 +7636,8 @@ body .open-roles-section h3.accordion-thumb {
   }
 }
 .solution-leftright-sec .grid-right {
+  display: flex;
+  flex-wrap: wrap;
   max-height: 500px;
   overflow: hidden;
   border-radius: 30px;
@@ -7647,6 +7649,19 @@ body .open-roles-section h3.accordion-thumb {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+.solution-leftright-sec .grid-left {
+  padding-right: 30px;
+}
+@media (max-width: 1700px) {
+  .solution-leftright-sec .grid-left {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  .solution-leftright-sec .grid-left {
+    padding-right: 0;
+  }
 }
 
 .card-sec {
@@ -7692,6 +7707,8 @@ body .open-roles-section h3.accordion-thumb {
   }
 }
 .card-sec .card {
+  align-items: flex-start;
+  align-content: flex-start;
   grid-template-columns: 1fr;
 }
 @media only screen and (max-width: 1024px) {
@@ -7703,6 +7720,7 @@ body .open-roles-section h3.accordion-thumb {
 .card-sec .card-img {
   width: 80px;
   height: 70px;
+  object-fit: contain;
 }
 @media only screen and (max-width: 1500px) {
   .card-sec .card-img {
@@ -7756,7 +7774,7 @@ body .open-roles-section h3.accordion-thumb {
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 210px 210px 210px;
 }
 @media only screen and (max-width: 991px) {
   .solution-rc-inner {
@@ -7771,7 +7789,7 @@ body .open-roles-section h3.accordion-thumb {
     height: 100%;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1200px) {
   .solution-rc-inner.for-retailers-inner .primary-image-link {
     min-height: 100%;
   }
@@ -7798,6 +7816,9 @@ body .open-roles-section h3.accordion-thumb {
   grid-column: 1/3;
   grid-row: 2/3;
 }
+.solution-rc-inner.for-retailers-inner .item4.primary-image-card .primary-image-link {
+  height: 100%;
+}
 .solution-rc-inner.for-retailers-inner .item5 {
   grid-column: 3/5;
   grid-row: 2/5;
@@ -7809,28 +7830,37 @@ body .open-roles-section h3.accordion-thumb {
   grid-column: 1/3;
   grid-row: 3/5;
 }
+.solution-rc-inner.for-retailers-inner .item6.primary-image-card .primary-image-link {
+  height: 100%;
+}
 .solution-rc-inner.for-retailers-inner .item7 {
   grid-column: 5/9;
   grid-row: 3/5;
+}
+.solution-rc-inner.for-retailers-inner .item7.primary-image-card .primary-image-link {
+  height: 100%;
 }
 
 .solution-consumers-inner {
   display: grid;
   gap: var(--gutter);
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 250px 250px 250px;
+  grid-template-rows: 210px 210px 210px;
 }
 @media only screen and (max-width: 991px) {
   .solution-consumers-inner {
     grid-template-rows: 200px 200px 200px;
   }
 }
+.solution-consumers-inner.for-consumers-inner .primary-user-card {
+  height: 210px;
+}
 @media only screen and (max-width: 991px) {
   .solution-consumers-inner.for-consumers-inner .primary-user-card {
     height: 100%;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1200px) {
   .solution-consumers-inner.for-consumers-inner .primary-image-link {
     min-height: 100%;
   }
@@ -7871,6 +7901,9 @@ body .open-roles-section h3.accordion-thumb {
   grid-column: 1/5;
   grid-row: 3/5;
 }
+.solution-consumers-inner.for-consumers-inner .item6.primary-image-card .primary-image-link {
+  height: 100%;
+}
 
 .solution-consumers-content {
   position: relative;
@@ -7900,6 +7933,7 @@ body .open-roles-section h3.accordion-thumb {
 }
 .solution-blue-section.blue-block-section .content-dv {
   max-width: 100%;
+  padding: var(--p70) 0;
 }
 @media only screen and (max-width: 991px) {
   .solution-blue-section.blue-block-section .content-dv {
@@ -8071,6 +8105,40 @@ body .open-roles-section h3.accordion-thumb {
     left: 65px;
     width: 220px;
   }
+}
+
+.rc-for-shape-root {
+  position: relative;
+  overflow: hidden;
+}
+.rc-for-shape-root .img-stroke3_2 {
+  transform: none;
+  left: auto;
+  bottom: -300px;
+  right: -150px;
+  width: 500px !important;
+  height: 500px;
+}
+@media (max-width: 1700px) {
+  .rc-for-shape-root .img-stroke3_2 {
+    bottom: -240px;
+  }
+}
+@media (max-width: 1200px) {
+  .rc-for-shape-root .img-stroke3_2 {
+    width: 270px !important;
+    height: 270px;
+    bottom: -170px;
+    right: -60px;
+  }
+}
+@media (max-width: 767px) {
+  .rc-for-shape-root .img-stroke3_2 {
+    display: none;
+  }
+}
+.rc-for-shape-root .solution-rc-inner {
+  position: relative;
 }
 
 .image-slider-section {
