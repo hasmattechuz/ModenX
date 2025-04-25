@@ -7305,7 +7305,7 @@ body .open-roles-section h3.accordion-thumb {
 }
 .accordion .accordion-panel {
   margin: 0;
-  padding-bottom: 0.8rem;
+  padding-bottom: 25px;
   display: none;
 }
 .accordion .accordion-panel p {
@@ -7933,6 +7933,7 @@ body .open-roles-section h3.accordion-thumb {
 }
 .solution-blue-section.blue-block-section .content-dv {
   max-width: 100%;
+  padding: var(--p70) 0;
 }
 @media only screen and (max-width: 991px) {
   .solution-blue-section.blue-block-section .content-dv {
