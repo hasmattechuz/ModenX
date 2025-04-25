@@ -1364,6 +1364,22 @@
             max-width: 100%;
         }
     }
+    .img-stroke4{
+        @media (max-width: 1200px) {
+            right: -65px;
+            bottom: -150px;
+            width: 300px;
+            height: 300px;
+        }
+        @media (max-width: 767px) {
+                right: -45px;
+                top: 50%;
+                width: 160px;
+                height: 160px;
+                transform: translateY(-50%) rotate(90deg);
+                bottom: auto;
+        }
+    }
 }
 
 .partnering-info-dv {
@@ -2013,7 +2029,7 @@
             @media only screen and (max-width: 1024px) {
                 top: -15px;
                 left: -20px;
-                width: 150px;
+                width: 140px;
             }
         }
 

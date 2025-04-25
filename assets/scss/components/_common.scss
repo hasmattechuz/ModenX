@@ -558,12 +558,22 @@ input[type="checkbox"]:checked+label:after,
             height: 15px;
             background: url(../../assets/images/arrow-down.svg) no-repeat;
             background-size: contain;
+            transition: 0.3s ease-in-out;
 
             b {
                 display: none;
             }
         }
     }
+    &.select2-container--open{
+         .select2-selection {
+             .select2-selection__arrow {
+                transform: rotate(180deg);
+                    margin-top: -6px;
+             }
+         }
+    }
+
 
     .select2-selection__rendered {
         width: 100%;
@@ -694,23 +704,22 @@ input[type="checkbox"]:checked+label:after,
     background: var(--mx-blue);
     padding: 25px 40px;
     // max-width: 646px;
-    min-height: 390px;
-    max-height: 390px;
+    min-height: calc(100% - 128px);
+    max-height: calc(100% - 128px);
 
     @media (min-width: 1800px) {
-        min-height: 100%;
-        max-height: 100%;
+      
     }
 
-    @media (max-width: 1700px) {
-        min-height: 440px;
-        max-height: 440px;
-    }
+    // @media (max-width: 1700px) {
+    //     min-height: 440px;
+    //     max-height: 440px;
+    // }
 
-    @media (max-width: 1499px) {
-        max-width: 100%;
-        height: auto;
-    }
+    // @media (max-width: 1499px) {
+    //     max-width: 100%;
+    //     height: auto;
+    // }
 
     @media (max-width: 991px) {
         min-height: auto;
@@ -725,7 +734,7 @@ input[type="checkbox"]:checked+label:after,
 
     h3 {
         color: var(--white);
-        margin-bottom: var(--gutter);
+        margin-bottom: var(--mb35);
 
         b {
             color: var(--mx-yellow);
@@ -754,6 +763,9 @@ input[type="checkbox"]:checked+label:after,
 
                 &:first-child {
                     align-items: flex-start;
+                    @media only screen and (max-width: 991px) {
+                        min-height: 144px;
+                    }
                 }
 
                 strong {
@@ -766,7 +778,11 @@ input[type="checkbox"]:checked+label:after,
 
         .swiper-pagination {
             position: relative;
-            margin-top: 15px;
+            margin-top: var(--mb35);
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .swiper-pagination-bullet {
                 border-radius: 10px;

@@ -293,13 +293,22 @@ const swiper = new Swiper(".swiper-contact", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+   // Optional: responsive settings
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+      pagination: false,
+    },
+    992: {
+      slidesPerView: 1,
+    },
   },
 });
 
