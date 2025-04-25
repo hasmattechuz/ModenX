@@ -2769,13 +2769,18 @@ footer .footer-mobile {
   flex-wrap: wrap;
   align-items: flex-end;
   width: 400px;
-  height: calc(100% - 72px);
+  height: calc(100% - 40px);
   position: relative;
-  margin-top: -109px;
+  margin-top: -60px;
+}
+@media (max-width: 1200px) {
+  .blue-block-section.blue-device-section .img-dv {
+    width: 340px;
+  }
 }
 @media (max-width: 991px) {
   .blue-block-section.blue-device-section .img-dv {
-    width: 330px;
+    width: 300px;
   }
 }
 @media (max-width: 767px) {
@@ -2867,7 +2872,7 @@ footer .footer-mobile {
   justify-content: center;
 }
 .blue-block-section.blue-apply-section picture {
-  max-width: 360px;
+  max-width: 380px;
   display: flex;
 }
 .blue-block-section .btn-dv:hover {
@@ -4149,9 +4154,9 @@ footer .footer-mobile {
   }
 }
 .update-section.insight-section .img-stroke8 {
-  top: -16px;
-  left: -29px;
-  width: 190px;
+  top: -22px;
+  left: -45px;
+  width: 210px;
   height: 100px;
 }
 @media only screen and (max-width: 1024px) {
