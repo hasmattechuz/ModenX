@@ -304,8 +304,8 @@ const swiper = new Swiper(".swiper-contact", {
 });
 
 // about progress slider start
-if ($(".swiper-progress").length >0){
-    const swiperprogress = new Swiper('.swiper-progress', {
+if ($(".swiper-progress").length > 0) {
+  const swiperprogress = new Swiper('.swiper-progress', {
     loop: false,
     slidesPerView: 1,
     navigation: {
@@ -328,14 +328,27 @@ if ($(".swiper-progress").length >0){
     const dotIndex = this.realIndex % totalDots;
     const progressPercent = ((dotIndex + 1) / totalDots) * 100;
 
-    // Update active dot
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[dotIndex]) dots[dotIndex].classList.add('active');
+    // Calculate previous index with wrap-around
+    const prevIndex = (dotIndex - 1 + totalDots) % totalDots;
+
+    // Reset all dots
+    dots.forEach((dot, index) => {
+      dot.classList.remove('active', 'prev', 'inactive');
+
+      if (index === dotIndex) {
+        dot.classList.add('active');
+      } else if (index === prevIndex) {
+        dot.classList.add('prev');
+      } else {
+        dot.classList.add('inactive');
+      }
+    });
 
     // Update progress bar
     progressBar.style.width = progressPercent + '%';
   }
 }
+
 
 // about progress slider end
 
@@ -451,6 +464,14 @@ if ($(".swiper-challenges").length){
     el: ".swiper-scrollbar",
     draggable: true,
   },
+   breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1.5,
+    },
+  },
 });
 }
 
@@ -493,6 +514,15 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+     0: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    991: {
+      slidesPerView: 4,
+    },
   },
 });
 
