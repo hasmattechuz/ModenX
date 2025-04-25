@@ -968,6 +968,10 @@ address {
   font-style: normal;
 }
 
+.d-block {
+  display: block !important;
+}
+
 .header {
   padding: 10px 0;
   min-height: 100px;
@@ -5754,7 +5758,9 @@ footer .footer-mobile {
 }
 .innovate-with-us .inner-grid p {
   color: var(--white);
-  margin-bottom: 70px;
+}
+.innovate-with-us .inner-grid .desc-global {
+  margin-bottom: var(--p70);
 }
 .innovate-with-us .grid-image {
   width: 600px;
