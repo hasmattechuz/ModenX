@@ -62,11 +62,8 @@
 .vision-grid {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 700px;
+    grid-template-columns: 3fr 2fr;
     gap: var(--gutter);
-    @media only screen and (max-width: 1024px) {
-       grid-template-columns: 3fr 2fr;
-    }
     @media only screen and (max-width: 567px) {
         grid-template-columns: 1fr
     }
@@ -79,7 +76,7 @@
 
     .primary-image-card  {
         .primary-image-link {
-            height: 500px;
+            height: 480px;
             @media only screen and (max-width: 567px) {
                 height: 330px;
             }

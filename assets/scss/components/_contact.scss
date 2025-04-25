@@ -75,7 +75,7 @@
         grid-template-columns: calc(60% - 17.5px) calc(40% - 17.5px);
         // grid-template-columns: 1fr 646px;
         gap: var(--gutter);
-        margin-top: 55px;
+        margin-top: 35px;
 
         @media (max-width: 1500px) {
             grid-template-columns: calc(62% - 17.5px) calc(38% - 17.5px);
@@ -428,7 +428,7 @@
         @media (max-width: 1600px) {
             grid-template-columns: 52px 1fr;
             gap: 15px;
-            padding: 15px 20px;
+            padding: 20px;
         }
         @media only screen and (max-width: 1199px) {
             border-radius: 20px;
