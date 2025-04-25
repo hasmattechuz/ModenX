@@ -756,6 +756,14 @@
 
     }
 }
+.for-rc-section-height{
+    .primary-user-card{
+        height: 210px;
+    }
+    .about-rc-inner{
+            grid-template-rows: repeat(4, 210px);
+    }
+}
 
 .for-rc-inner {
     display: grid;

@@ -555,6 +555,7 @@
 }
 
 .images-block {
+    display: none;
     .title {
         display: inline-block;
         position: relative;
@@ -613,6 +614,13 @@
                     top: auto;
                     bottom: -29px;
             }
+        }
+    }
+    + .contact-sec{
+        padding-top: var(--p70);
+        margin-top: -60px;
+        @media only screen and (max-width: 767px) {
+            margin-top: -30px;
         }
     }
 }
@@ -915,6 +923,9 @@
     }
     .container-fluid{
         row-gap: var(--mb35);
+    }
+    .h1{
+        margin-bottom: 0;
     }
 
 }
