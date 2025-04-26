@@ -406,6 +406,11 @@ nav {
 			transform: none;
  		}
 	}
+	#menu-item-502{
+		.tooltip {
+			margin-left: 3px;
+		}
+	}
 	ul {
 		 @media only screen and (max-width: 1199px) {
 			margin-top: 15px;

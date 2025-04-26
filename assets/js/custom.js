@@ -410,14 +410,14 @@ const swiper_update = new Swiper(".swiper-update", {
   spaceBetween: 35, // Enable looping
   simulateTouch: true, // Enable drag/swipe simulation
   touchStartPreventDefault: false, // Prevent default touch behavior if needed
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
@@ -504,15 +504,7 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
   slidesPerView: 1,
   spaceBetween: 20,
   simulateTouch: true,
-  touchStartPreventDefault: false,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  touchStartPreventDefault: false,  
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
@@ -538,6 +530,10 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
     el: ".swiper-pagination",
     clickable: true,
   },
+   navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   breakpoints: {
      0: {
       slidesPerView: 2,
@@ -555,13 +551,9 @@ const swiperBlogBanner = new Swiper(".image-slider-swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
   autoplay: {
-    delay: 55000,
-    disableOnInteraction: false,
+    delay: 3000, // 3 seconds between slides
+    disableOnInteraction: false, // keeps autoplay active after user interactions
   },
 });
 
@@ -679,3 +671,10 @@ function Dropdown() {
   }
 }
 
+
+
+document.querySelectorAll('a[href="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+  });
+});

@@ -45,6 +45,9 @@
          @media only screen and (max-width: 1200px) {
              transform: translateY(50%);
         }
+         @media only screen and (max-width: 1024px) {
+             transform: translateY(0);
+         }
     }
     .desc-dv{
         display: block;
@@ -241,6 +244,9 @@
     .primary-image-card {
         .text-dv{
             transform: translateY(60%);
+            @media only screen and (max-width: 1024px) {
+                transform: translateY(0);
+            }
         }
         &:hover{
             .text-dv{
@@ -264,6 +270,11 @@
 
         .content-dv {
             max-width: 550px;
+            h2{
+              @media (max-width: 567px) {
+                max-width: 300px;
+              }  
+            }
 
             p {
                 margin-bottom: 20px;
@@ -385,11 +396,11 @@
                       width: 165px;
                 }
                 @media only screen and (max-width: 767px) {
-                    width: 245px;
+                    width: 215px;
                     right: auto;
                     height: auto;
-                    left: -20px;
-                    bottom: -20px;
+                    left: 20px;
+                    bottom: -23px;
                 }
 
                 img {
@@ -407,6 +418,9 @@
         grid-template-columns:1fr 2fr;
         grid-auto-rows: 300px 300px;
         gap: var(--gutter);
+        @media only screen and (max-width: 567px) {
+            grid-template-columns:1fr 1fr;
+        }
         .img-container {
             border-radius: 20px;
             img {
@@ -426,7 +440,7 @@
             grid-auto-rows: 200px 200px;
         }
         @media only screen and (max-width: 567px) {
-             grid-auto-rows: 100px 100px
+             grid-auto-rows: 160px 160px;
         }
     }
 }
@@ -463,6 +477,9 @@
         }
         .desc-global {
             margin-bottom: var(--p70);
+            @media only screen and (max-width: 767px) {
+                margin-bottom: var(--mb35);
+            }
         }
     }
     .grid-image {
@@ -566,6 +583,26 @@
                     display: block;
                 }
             }
+        }
+    }
+    .ceo-pic-mobile{
+        display: none;
+         @media only screen and (max-width: 767px) {
+            display: block;
+            height: 510px;            
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: var(--mb35);
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .desk{
+         @media only screen and (max-width: 767px) {
+               display: none;
         }
     }
 }
@@ -801,6 +838,7 @@
                 }
                 @media (max-width: 567px) {
                     border-radius: 20px;
+                    height: 500px;
                 }
 
                 img {

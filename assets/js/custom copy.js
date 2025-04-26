@@ -35,7 +35,7 @@ function storiesSlider() {
           spaceBetween: 25,
         },
         768: {
-          slidesPerView: 1.5,
+          slidesPerView: 1.8,
           spaceBetween: 25,
         },
         2000: {

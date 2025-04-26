@@ -607,9 +607,17 @@ input[type="checkbox"]:checked+label:after,
     }
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    @media only screen and (max-width: 991px) {
-        line-height: 15px;
+.select2-container--default .select2-selection--single  {
+     .select2-selection__rendered{
+        padding-left: 0;
+        color: var(--black);
+        @media only screen and (max-width: 991px) {
+            line-height: 15px;
+        }
+    }
+   
+   .select2-selection__placeholder{
+        color: #A7A9AC;
     }
 }
 
@@ -897,11 +905,12 @@ input[type="checkbox"]:checked+label:after,
         flex-wrap: wrap;
 
         @media (max-width: 767px) {
-            padding-top: 140px;
+            // padding-top: 140px;
+            padding-top: 80px;
             padding-bottom: 0;
             width: 100%;
-            min-height: 100vh;
-            min-height: 100vh;
+            min-height:600px;
+            max-height:600px;
             align-items: flex-start;
         }
     }
@@ -921,7 +930,8 @@ input[type="checkbox"]:checked+label:after,
         }
 
         @media (max-width: 767px) {
-            padding-bottom: 242px;
+            // padding-bottom: 242px;
+            padding-bottom: 0;
         }
     }
 
@@ -936,6 +946,10 @@ input[type="checkbox"]:checked+label:after,
         right: 0;
         max-height: 100%;
         pointer-events: none;
+         @media (max-width: 767px) {
+               position: relative;
+               bottom: auto;
+            }
 
         img {
             width: 100%;
@@ -950,8 +964,8 @@ input[type="checkbox"]:checked+label:after,
         }
 
         @media (max-width: 767px) {
-            max-height: 250px;
-            width: 75%;
+            max-height: 300px;
+            width: 85%;
         }
     }
 
@@ -964,14 +978,18 @@ input[type="checkbox"]:checked+label:after,
             align-items: center;
             @media (max-width: 767px) {
                 width: 100%;
+                // bottom: var(--p35);                
             }
 
             img {
                 object-position: center center;
                 max-height: 500px;
+                 @media (max-width: 1200px) {
+                    max-height: 400px;
+                 }
 
                 @media (max-width: 767px) {
-                    max-height: 250px;
+                    max-height: 210px;
                 }
             }
         }

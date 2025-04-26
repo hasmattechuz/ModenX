@@ -313,6 +313,25 @@
     padding: var(--p70) 0;
     margin: 0;
     position: relative;
+    overflow: hidden;
+    .img-stroke2{
+        position: absolute;
+        width: 450px;
+        height: 450px;
+        right: 0;
+        bottom: -337px;
+        transform: rotate(354deg);
+         @media only screen and (max-width: 991px) {
+              width: 330px;
+            height: 330px;
+            bottom: -237px;
+         }
+         @media only screen and (max-width: 767px) {
+            width: 190px;
+            height: 190px;
+            bottom: -110px;
+         }
+    }
 }
 
 .blog-user-col {
@@ -327,7 +346,9 @@
         height: 60px;
         border-radius: 50%;
         overflow: hidden;
-        object-fit: cover;
+        object-fit: contain;
+        background: #eee;
+        padding: 5px;
     }
 
     @media (max-width:767px) {
@@ -478,5 +499,11 @@
                 padding: 0 2px 0 0;
             }
         }
+    }
+}
+
+.similar-blogs-section {
+     .content-sec{
+        justify-content: space-between;
     }
 }
