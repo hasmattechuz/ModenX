@@ -160,18 +160,10 @@
         }
         .swiper-slide{
             height: auto;
-            min-height: 100%;
-            .stories-card{
-                height: 100%;
-            }
+            min-height: 100%;           
         }
 
-        .stories-card {
-            grid-template-rows: 50px auto;
-            h3 {
-                font-weight: 700;
-            }
-        }
+       
     }
 
     

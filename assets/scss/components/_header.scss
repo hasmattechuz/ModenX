@@ -918,6 +918,12 @@ header {
 			
 		}
 	}
+
+	.for-rc-mobile .primary-user-card{
+		@media (max-width: 768px) {
+			align-items: flex-end;
+		}
+	}
    
 	
 }
