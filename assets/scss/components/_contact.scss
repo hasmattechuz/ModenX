@@ -18,6 +18,7 @@
         }
      }
      h2{
+        margin-bottom: 10px;
             span{
                  position: relative;
                  @media only screen and (max-width: 567px) {
@@ -80,6 +81,16 @@
              @media only screen and (max-width: 991px) {
                     min-height: 48px;
             }
+            label{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 27px;
+                color: #A7A9AC;
+                @media only screen and (max-width: 991px) {
+                    left: 12px;
+                }
+            }
         }
         .form-control{
             border-radius: 50px;
@@ -106,7 +117,7 @@
                 color: #A7A9AC;
              }
         }
-        .form-control[type="file"] {
+       [type="file"] {
             font-size: 0;
             line-height: 26px;
             position: absolute;
@@ -118,16 +129,7 @@
                 -webkit-appearance: none;
                 visibility: hidden; /* Optional to fully hide */
             }
-            +label{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 27px;
-                color: #A7A9AC;
-                @media only screen and (max-width: 991px) {
-                    left: 12px;
-                }
-            }
+            
         }
         textarea.form-control{
             border-radius: 25px;
@@ -208,6 +210,7 @@
         font-size: var(--fs16);
         font-style: normal;
         font-weight: 400;
+        // margin-top: calc(-1* var(--gutter));
         @media only screen and (max-width: 567px) {
             text-align: center;
         }
@@ -306,6 +309,8 @@
                 }
                 iframe{
                     filter: grayscale(1);
+                    width: 100%;
+                    height: 100%;
                     @media only screen and (max-width: 991px) {
                         height: 80vh;
                     }
@@ -684,6 +689,9 @@
                 }
             }
         }
+    }
+    .contact-detail{
+        display: none;
     }
 
     @media only screen and (max-width: 991px) {

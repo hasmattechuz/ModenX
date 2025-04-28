@@ -472,6 +472,7 @@
     }
     h2{
         margin-bottom: var(--mb35);
+        position: relative;
     }
     .card-grid{
         display: grid;
@@ -721,15 +722,14 @@
 .solution-consumers-content{
     position: relative;
     .img-stroke8{
-        left: 360px;
-        bottom:-20px;
-        top: auto;
-        width: 420px;
-        height: 50px;
+            left: 360px;
+            top: 63px;
+            width: 420px;
+            height: 50px;
          @media only screen and (max-width: 1200px) {
-             left: 230px;
-            bottom: -26px;
+           left: 230px;
             width: 300px;
+            top: 47px;
         }
          
     }
@@ -813,28 +813,41 @@
 }
 
 .solution-stories-section{
+    .container-fluid{
+        padding: 0;
+         @media only screen and (max-width:768px) {
+            padding: 0 var(--gutter70);
+         }
+    }
+    .stories-card p{
+        max-width: 100%;
+    }
     .stories-inner{
         grid-template-columns: calc(40% - var(--gutter) / 2) calc(60% - var(--gutter) / 2);
         align-items: flex-start;
         
         
          @media only screen and (max-width:768px) {
-                 grid-template-columns: 100%
+                grid-template-columns: 100%
          }
          .card-slider-root{
             height: auto;
-            @media only screen and (max-width:767px) {
-                width: 100%;
-            }
+            width: 100%;            
          }
     }
     .content-dv{
         max-width: 600px;
         margin-top: 0;
+        padding-left: var(--gutter70);
+        @media only screen and (max-width:768px) {
+            padding-left: 0;
+        }
         .img-stroke7{      
-            left: 305px;
+            left: 385px;
             right: auto;
             top: 36px;
+            width: 200px;
+            height: 60px;
 
             @media only screen and (max-width: 1200px) {
                 left: 185px;
@@ -851,20 +864,25 @@
                 top: 26px;
                 width: 140px;
             }
-            @media only screen and (max-width: 767px) {
+            @media only screen and (max-width: 768px) {
                     left: 198px;
                     top: 1px;
                     width: 150px;
                     transform: rotate(-2deg);
             }
+            img{
+                width: auto;
+                height: auto;
+                object-fit: inherit;
+            }
             .desk{
-                @media only screen and (max-width: 767px) {
+                @media only screen and (max-width: 768px) {
                     display: none;
                 }
             }
             .mobile{
                 display: none;
-                @media only screen and (max-width: 767px) {
+                @media only screen and (max-width: 768px) {
                     display: block;
                 }
             }
@@ -937,7 +955,7 @@
     }
 }
 
-.rc-for-shape-root {
+.rc-for-shape-root,.solution-rc-desktop {
     position: relative;
     overflow: hidden;
 
@@ -967,5 +985,10 @@
 
     .solution-rc-inner {
         position: relative;
+    }
+}
+.solution-consumers-inner{
+    .img-stroke3_3,.img-stroke3_2{
+        display: none;
     }
 }
