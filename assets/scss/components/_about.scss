@@ -101,7 +101,7 @@
         }
         .primary-image-link {
             height: 480px;
-            @media only screen and (max-width: 567px) {
+            @media only screen and (max-width: 1024px) {
                 height: 330px;
             }
         }
@@ -230,6 +230,16 @@
         min-height: 100%;
         height: auto;       
     }
+    .stories-card{
+        p{
+            @media only screen and (max-width:1024px) {
+                max-width: 300px;
+            }
+            @media only screen and (max-width:768px) {
+                max-width: 100%;
+            }
+        }
+    }
 }
 .challenges-faced {
     background: var(--mx-grey);
@@ -237,7 +247,7 @@
     overflow-x: hidden;
     .container-fluid{
         padding-right: 0;
-        @media (max-width: 567px) {
+        @media (max-width: 768px) {
             padding-right: var(--gutter70);
         }
     }
@@ -264,14 +274,14 @@
         @media (max-width: 1460px) {
                 grid-template-columns: calc(38% - var(--gutter) / 2) calc(62% - var(--gutter) / 2);
         }
-        @media (max-width: 567px) {
+        @media (max-width: 768px) {
             grid-template-columns: 100%
         }
 
         .content-dv {
             max-width: 550px;
             h2{
-              @media (max-width: 567px) {
+              @media (max-width: 768px) {
                 max-width: 300px;
               }  
             }
@@ -284,6 +294,12 @@
         .primary-image-card {
             .primary-image-link {
                 height: 420px;
+                @media only screen and (max-width: 1200px) {
+                    height: 340px;
+                }
+                 @media only screen and (max-width: 767px) {
+                    height: 400px;
+                }
             }
         }
     }
@@ -360,7 +376,7 @@
         grid-template-columns: calc(35% - var(--gutter) / 2) calc(65% - var(--gutter) / 2);
         gap: var(--gutter);
        
-         @media (max-width:567px) {
+         @media (max-width:768px) {
             grid-template-columns:100%;
         }
 
@@ -372,7 +388,7 @@
             margin-top: 10px;
         }
         p{
-            margin-top: 10px;
+            // margin-top: 10px;
         }
 
 
@@ -393,9 +409,6 @@
                       
                 }
                 @media only screen and (max-width: 768px) {
-                      width: 165px;
-                }
-                @media only screen and (max-width: 767px) {
                     width: 215px;
                     right: auto;
                     height: auto;
@@ -418,8 +431,15 @@
         grid-template-columns:1fr 2fr;
         grid-auto-rows: 300px 300px;
         gap: var(--gutter);
-        @media only screen and (max-width: 567px) {
-            grid-template-columns:1fr 1fr;
+         @media (max-width:1200px) {
+            grid-auto-rows: 200px 200px;
+        }       
+        @media only screen and (max-width: 768px) {
+            grid-template-columns:1fr 1fr;   
+            grid-auto-rows: 250px 250px;         
+        }
+         @media only screen and (max-width: 567px) {
+             grid-auto-rows: 160px 160px;
         }
         .img-container {
             border-radius: 20px;
@@ -436,12 +456,7 @@
             }
         }
 
-        @media (max-width:1200px) {
-            grid-auto-rows: 200px 200px;
-        }
-        @media only screen and (max-width: 567px) {
-             grid-auto-rows: 160px 160px;
-        }
+       
     }
 }
 
@@ -489,11 +504,11 @@
         right: 0;
         bottom: 0;
         @media only screen and (max-width: 1200px) {
-            width: 420px;
+            width: 450px;
             height: auto;
         }
         @media only screen and (max-width: 991px) {
-            width: 350px;
+            width: 370px;
         }
          @media only screen and (max-width: 767px) {
             position: relative;
@@ -524,6 +539,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--gutter);
+        align-items: flex-start;
         @media only screen and (max-width: 991px) {
              grid-template-columns: 1fr;
         }
@@ -760,9 +776,13 @@
     .img-stroke19{
         position: absolute;
         bottom: -210px;
-        left: 0;
+        left: -50px;
         transform: rotate(270deg);
         width: 480px;
+        @media (max-width: 1024px) {
+            width: 360px;
+            left: -40px;
+        }
         @media (max-width: 567px) {
             display: none;
         }
@@ -834,7 +854,7 @@
                 border-radius: 30px;
                 overflow: hidden;
                 @media (max-width: 991px) {
-                    height: 390px;
+                    height: 220px;
                 }
                 @media (max-width: 567px) {
                     border-radius: 20px;

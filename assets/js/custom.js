@@ -28,7 +28,7 @@ function videoPlayer() {
 function storiesSlider() {
   if ($(".swiper-stories").length) {
     return new Swiper(".swiper-stories", {
-      loop: true,
+      loop: false,
       slidesPerView: 1,
       spaceBetween: 20,
       navigation: {
@@ -491,7 +491,7 @@ if ($(".swiper-challenges").length){
     0: {
       slidesPerView: 1,
     },
-    768: {
+    769: {
       slidesPerView: 1.7,
     },
   },
@@ -510,11 +510,11 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
     draggable: true,
   },
   breakpoints: {
-    767: {
-      slidesPerView: 2,
-    },
-    1200: {
-      slidesPerView: 2.5,
+    768: {
+      slidesPerView: 1,
+    },    
+    769: {
+      slidesPerView: 2.4,
     },
     2000: {
       slidesPerView: 3.5,
@@ -559,6 +559,10 @@ const swiperBlogBanner = new Swiper(".image-slider-swiper", {
 
 $("#mySelect").select2({
   placeholder: "Subject",
+  minimumResultsForSearch: Infinity 
+});
+$("#mySelect2").select2({
+  placeholder: "Select Job",
   minimumResultsForSearch: Infinity 
 });
 

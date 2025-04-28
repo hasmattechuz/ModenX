@@ -2,7 +2,7 @@
      padding: var(--p70) 0;
     color: var(--white);
     .content-dv{
-        margin-bottom: var(--gutter);
+        margin-bottom: var(--mb35);
         position: relative;
     }
     .img-stroke_s1{
@@ -30,28 +30,23 @@
     }
 
     #scroll-down {
-        top: 50px;
-
-        @media (max-width:1200px) {
-            top: 32px;
-        }
+        top: 50%;
+        transform: translateY(-50%) rotate(0);
     }
 }
 .accordion {
 	padding: 0;
 	list-style: none;
-     @media (max-width:767px) {
+     @media (max-width:1024px) {
          padding-top: var(--gutter);
      }
     .accordion-item {
         border-bottom: 1px solid var(--white);   
         &:first-child{
-            @media (max-width:767px) {
-                border-top: 1px solid var(--white);                 
-            }
+            border-top: 1px solid var(--white);   
         }   
         &:last-child{
-            border-bottom: none;
+            // border-bottom: none;
         }
         &.is-active{
             #scroll-down {
@@ -561,7 +556,7 @@
     display: grid;
     gap: var(--gutter);
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 210px 210px 210px;
+    grid-template-rows: 210px 235px 210px;
     
     @media only screen and (max-width: 1024px) {
          grid-template-rows: 200px 200px 200px;
@@ -766,6 +761,7 @@
         }
     }
     .img-dv{
+        margin-top: 30px;
        @media (max-width:991px) {
             position: relative;
             bottom: -30px;
@@ -773,6 +769,7 @@
         @media (max-width:767px) {
             bottom: 0;
             justify-content: center;
+            margin-top: 0;
         }
         img{
             max-width: 390px;

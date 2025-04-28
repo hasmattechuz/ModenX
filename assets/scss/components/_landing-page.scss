@@ -778,10 +778,13 @@
 }
 .for-rc-section-height{
     .primary-user-card{
-        height: 210px;
+        height: 100%;
     }
-    .about-rc-inner{
-            grid-template-rows: repeat(4, 210px);
+    .about-rc-inner,.about-consumers-inner{
+        grid-template-rows: repeat(4, 210px);
+        @media only screen and (max-width: 1024px) {
+            grid-template-rows: repeat(4, 170px);
+        }
     }
 }
 
@@ -1320,7 +1323,7 @@
         @media only screen and (max-width: 1200px) {
             border-radius: 20px;
         }
-
+       
         img {
             object-fit: cover;
             object-position: top;
@@ -1341,7 +1344,9 @@
         transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);   
         @media only screen and (max-width: 1024px) {
             transform: translateY(0);
-        }    
+            --p35: 20px;
+        }          
+        
 
         p {
             color: var(--white);
@@ -1758,10 +1763,7 @@
     .content-dv {
         position: relative;
         margin-top: 89px;
-        max-width: 425px;
-        @media only screen and (max-width:768px) {
-            margin-top: 0;
-        }
+        max-width: 425px;      
 
         h2 {
             margin-bottom: 25px;
@@ -1789,7 +1791,7 @@
             margin-top: 69px;
         }
 
-        @media (max-width: 567px) {
+        @media only screen and (max-width:768px) {
             margin-top: 0;
         }
     }
@@ -1797,6 +1799,9 @@
     .btn-dv {
         margin-top: -55px;
         position: relative;
+         @media (max-width:768px) {
+            margin-top: var(--mt35);
+         }
     }
 
     @media (min-width: 2000px) {
@@ -1836,7 +1841,7 @@
 .navigation-dv {
     position: absolute;
     top: 0;
-    right: 70px;
+    right: var(--gutter70);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -1946,6 +1951,10 @@
         display: flex;
         flex-wrap: wrap;
         width: 50px;
+         @media only screen and (max-width: 1024px) {
+            width: 35px;
+            align-items: flex-start;
+         }
     }
 }
 
