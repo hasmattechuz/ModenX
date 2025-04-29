@@ -181,6 +181,13 @@ function ConsumerSlider() {
   }
 }
 
+function setDescriptionHeights() {
+  $('.primary-image-card').each(function() {
+      const descHeight = $(this).find('.desc-dv').height();
+      $(this).css('--desc_height', descHeight + 'px');
+  });
+}
+
 $(document).ready(function () {
   let isMenuOpen = false;
 
@@ -267,6 +274,17 @@ $(document).ready(function () {
   ConsumerSlider();
   CounterUp();
   Dropdown();
+  setDescriptionHeights();
+    
+  $(window).on('resize', function() {
+    setDescriptionHeights();
+  });
+  
+  $(window).on('orientationchange', function() {
+    setTimeout(function() {
+      setDescriptionHeights();
+    }, 100);
+  });
 });
 
 // swiper menu
