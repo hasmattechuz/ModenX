@@ -1806,12 +1806,20 @@ body .swiper-scrollbar {
     font-size: 14px;
   }
 }
+.contact-div .swiper .swiper-slide a p {
+  font-size: 16px;
+}
+@media only screen and (max-width: 1600px) {
+  .contact-div .swiper .swiper-slide a p {
+    font-size: 14px;
+  }
+}
 .contact-div .swiper .swiper-slide a:hover {
   color: var(--mx-yellow);
 }
 .contact-div .swiper .swiper-slide a:first-child {
   align-items: flex-start;
-  min-height: 120px;
+  min-height: 143px;
 }
 .contact-div .swiper .swiper-slide a img {
   width: 24px;
@@ -4030,6 +4038,13 @@ footer .footer-mobile {
 }
 .stories-section .container-fluid {
   max-width: 100%;
+}
+.stories-section .swiper {
+  height: 100%;
+}
+.stories-section .swiper .swiper-slide {
+  min-height: 100%;
+  height: auto;
 }
 
 .stories-inner {
@@ -6361,6 +6376,9 @@ body.home .stories-section {
 .about-sect .img-stroke4-s {
   display: none;
 }
+.about-sect .btn-dv {
+  margin-top: var(--mb35);
+}
 
 .images-block {
   display: none;
@@ -6801,6 +6819,7 @@ body.home .stories-section {
 @media only screen and (max-width: 1024px) {
   .about-rc-inner {
     grid-template-rows: repeat(4, 170px);
+    height: auto;
   }
 }
 .about-rc-inner .primary-user-card {
@@ -6867,6 +6886,7 @@ body.home .stories-section {
 @media only screen and (max-width: 1024px) {
   .about-consumers-inner {
     grid-template-rows: repeat(4, 170px);
+    height: auto;
   }
 }
 .about-consumers-inner .img-stroke3_2 {
@@ -7082,6 +7102,12 @@ body.home .stories-section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.page-about-us .innovate-with-us .inner-grid {
+  gap: var(--gutter);
+}
+.page-about-us .innovate-with-us .img-dv picture {
+  width: auto;
 }
 
 .revolution-section {
@@ -7309,6 +7335,10 @@ body.home .stories-section {
   display: grid;
   row-gap: var(--gutter);
   position: relative;
+}
+.culture-section .primary-user-card h2 {
+  font-size: var(--heading1);
+  line-height: var(--headingLH1);
 }
 .culture-section .content-dv {
   position: relative;
@@ -7543,6 +7573,7 @@ body.home .stories-section {
   top: 20px;
   right: -12px;
   pointer-events: none;
+  height: auto;
 }
 .career-root .item4 .img-dv img {
   width: 100%;
@@ -8117,17 +8148,39 @@ body .open-roles-section h3.accordion-thumb {
 .page-careers .why-choose-section .container-fluid {
   padding: 0;
 }
-@media only screen and (max-width: 768px) {
-  .page-careers .why-choose-section .container-fluid {
-    padding: 0 var(--gutter70);
-  }
-}
 .page-careers .why-choose-section .content-dv {
   padding-left: var(--gutter70);
 }
 @media only screen and (max-width: 768px) {
   .page-careers .why-choose-section .content-dv {
-    padding-left: 0;
+    max-width: 100%;
+  }
+}
+.page-careers .why-choose-section .content-dv .img-stroke7 {
+  left: 370px;
+  top: 36px;
+}
+@media only screen and (max-width: 1366px) {
+  .page-careers .why-choose-section .content-dv .img-stroke7 {
+    left: 400px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .page-careers .why-choose-section .content-dv .img-stroke7 {
+    left: 60px;
+    top: 88px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .page-careers .why-choose-section .content-dv .img-stroke7 {
+    left: 100px;
+    top: 28px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-careers .why-choose-section .content-dv .img-stroke7 {
+    left: 271px;
+    top: 0;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -8142,6 +8195,41 @@ body .open-roles-section h3.accordion-thumb {
 }
 .page-careers .why-choose-section .card-slider-root {
   width: 100%;
+  padding-left: var(--gutter70);
+}
+.page-careers .why-choose-section .btn-dv {
+  margin-left: var(--gutter70);
+}
+@media only screen and (max-width: 567px) {
+  .page-careers .why-choose-section .btn-dv {
+    width: calc(100% - var(--gutter70));
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .page-careers .why-choose-section .navigation-dv {
+    right: var(--gutter70);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .page-careers .why-choose-section .stories-inner {
+    grid-template-columns: calc(37% - var(--gutter) / 2) calc(63% - var(--gutter) / 2);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-careers .why-choose-section .stories-inner {
+    grid-template-columns: 100%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .page-careers .why-choose-section .stories-inner .btn-dv {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .page-careers .why-choose-section .stories-inner .btn-dv {
+    margin-top: 30px;
+  }
 }
 
 .faq {
