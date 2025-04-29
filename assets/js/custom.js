@@ -100,12 +100,12 @@ function coreValueSlider() {
         prevEl: ".swiper-prev",
       },
       breakpoints: {
-        767: {
+        0: {
           slidesPerView: 1.5,
           spaceBetween: 25,
         },
         1025: {
-          slidesPerView: 1.5,
+          slidesPerView: 2.5,
           spaceBetween: 25,
         },
         2000: {

@@ -805,13 +805,19 @@ body {
 				@media only screen and (max-width: 1600px) {
                     font-size: 14px;
  				}
+				p{
+					font-size: 16px;
+					@media only screen and (max-width: 1600px) {
+						font-size: 14px;
+					}
+				}
 				&:hover{					
-							color:  var(--mx-yellow);						
+						color:  var(--mx-yellow);						
 						
 					}
 				&:first-child{
 					align-items: flex-start;					   
-					min-height: 120px;
+					min-height: 143px;
 					
 				}
 				img{

@@ -245,6 +245,10 @@
         row-gap: var(--gutter);
         position: relative;
     }
+    .primary-user-card h2{
+        font-size: var(--heading1);
+        line-height: var(--headingLH1);
+    }
 
     .content-dv {
         position: relative;
@@ -467,6 +471,7 @@
             top: 20px;
             right: -12px;
             pointer-events: none;
+            height: auto;
 
             img {
                 width: 100%;
@@ -1052,15 +1057,34 @@ body {
     .why-choose-section{
           .container-fluid{
             padding: 0;
-                @media only screen and (max-width: 768px) {
-                    padding: 0 var(--gutter70); 
-                } 
+                // @media only screen and (max-width: 768px) {
+                //     padding: 0 var(--gutter70); 
+                // } 
             }
             .content-dv{
                 padding-left: var(--gutter70); 
                 @media only screen and (max-width: 768px) {
-                    padding-left: 0;
-                }       
+                    max-width: 100%;
+                } 
+                 .img-stroke7{
+                    left: 370px;
+                    top: 36px;
+                    @media only screen and (max-width: 1366px) {
+                        left: 400px;
+                    }
+                    @media only screen and (max-width: 1200px) {
+                        left: 60px;
+                        top: 88px;
+                    }
+                    @media only screen and (max-width: 991px) {
+                        left: 100px;
+                        top: 28px;
+                    }
+                     @media only screen and (max-width:768px) {
+                            left: 271px;
+                            top: 0;
+                    }
+                 }      
 
             }
         .stories-card{
@@ -1073,6 +1097,35 @@ body {
         }
         .card-slider-root{
             width: 100%;
+             padding-left: var(--gutter70); 
+        }
+        .btn-dv{
+            margin-left: var(--gutter70); 
+            @media only screen and (max-width: 567px) {
+                width: calc(100% - var(--gutter70));
+                margin: 0 auto;
+             }
+        }
+        .navigation-dv{
+             @media only screen and (max-width: 567px) {
+                right: var(--gutter70);
+             }
+        }
+        .stories-inner{
+             @media only screen and (max-width: 1200px) {
+                grid-template-columns: calc(37% - var(--gutter) / 2) calc(63% - var(--gutter) / 2);
+             }
+             @media only screen and (max-width: 768px) {
+                grid-template-columns: 100%;
+             }
+             .btn-dv{
+                 @media only screen and (max-width: 1200px) {
+                    margin-top: 0;
+                 }
+                 @media only screen and (max-width: 768px) {
+                    margin-top: 30px;
+                 }
+             }
         }
     }
 }
