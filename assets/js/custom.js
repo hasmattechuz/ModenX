@@ -101,10 +101,10 @@ function coreValueSlider() {
       },
       breakpoints: {
         0: {
-          slidesPerView: 1.5,
+          slidesPerView: 1,
           spaceBetween: 25,
         },
-        1025: {
+        769: {
           slidesPerView: 2.5,
           spaceBetween: 25,
         },
@@ -294,10 +294,10 @@ if (window.innerWidth < 992) {
     slidesPerView: 1,
     spaceBetween: 30,
     allowTouchMove: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -311,10 +311,10 @@ const swiper = new Swiper(".swiper-contact", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
    // Optional: responsive settings
   breakpoints: {
     0: {
@@ -700,27 +700,44 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
     e.preventDefault();
   });
 });
-$('.primary-image-card').click(function(e) {
+$('.primary-image-card').on('click', function(e) {
     e.preventDefault();
 
     const $this = $(this);
     const isActive = $this.hasClass('active');
 
-    // Remove active class from all cards
+    // Remove all active classes
     $('.primary-image-card').removeClass('active');
-    // Remove any previous left-active/right-active classes from parent
     $('.vision-grid').removeClass('left-active right-active');
 
     if (!isActive) {
-        // If the clicked card wasn't active, activate it
         $this.addClass('active');
 
-        // Add the appropriate class to the vision-grid
         if ($this.index() === 0) {
             $('.vision-grid').addClass('left-active');
         } else {
             $('.vision-grid').addClass('right-active');
         }
     }
-    // else: do nothing to keep it toggled off
 });
+
+// Hover logic
+// $('.primary-image-card').on('mouseenter', function() {
+//     const $this = $(this);
+//     const isAnyActive = $('.primary-image-card.active').length > 0;
+
+//     if (!isAnyActive) {
+//         if ($this.index() === 0) {
+//             $('.vision-grid').addClass('left-active');
+//         } else {
+//             $('.vision-grid').addClass('right-active');
+//         }
+//     }
+// }).on('mouseleave', function() {
+//     const isAnyActive = $('.primary-image-card.active').length > 0;
+
+//     if (!isAnyActive) {
+//         $('.vision-grid').removeClass('left-active right-active');
+//     }
+// });
+

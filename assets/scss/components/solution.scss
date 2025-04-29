@@ -771,6 +771,11 @@
             justify-content: center;
             margin-top: 0;
         }
+        picture{
+             @media (max-width:767px) {
+                justify-content: center;
+             }
+        }
         img{
             max-width: 390px;
 

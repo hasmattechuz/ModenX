@@ -18,7 +18,7 @@
         }
      }
      h2{
-        margin-bottom: 10px;
+        margin-bottom: 15px;
             span{
                  position: relative;
                  @media only screen and (max-width: 567px) {
@@ -71,13 +71,29 @@
 
     .common-form, .wpcf7-form {
         display: grid;
-        gap: var(--gutter);
+        gap: 20px;
         font-weight: 400;
         
         .form-group{
             position: relative;
         }
         .upload-file{
+           
+            &::after{
+                content: "";
+                background: url(../../assets/images/upload.svg) no-repeat;
+                background-position: right center;
+                position: absolute;
+                right: 30px;
+                transform: translateY(-50%);
+                top: 50%;
+                width: 20px;
+                height: 20px;
+                background-size: contain;
+                @media only screen and (max-width:767px) {
+                    right: 20px;
+                }
+            }
              @media only screen and (max-width: 991px) {
                     min-height: 48px;
             }
@@ -161,12 +177,18 @@
             left: 28px;
             color: #f00;
             font-size: 12px;
+            @media only screen and (max-width: 991px) {
+                bottom: -22px;
+                left: 17px;
+                font-size: 11px;
+            }
         }
         
         .checkbox{
             a{
                 color: var(--black);
                 position: relative;
+                pointer-events: none;
                 &:hover{
                     color: var(--mx-blue);
                 }
@@ -192,8 +214,9 @@
         }
     }
     .wpcf7-response-output{
-        color: #f00;
+        color: #009806;
         font-size: 12px;
+        font-weight: 500;
     }
     .screen-reader-response{
         display: none;
