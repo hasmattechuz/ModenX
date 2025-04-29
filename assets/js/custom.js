@@ -28,7 +28,7 @@ function videoPlayer() {
 function storiesSlider() {
   if ($(".swiper-stories").length) {
     return new Swiper(".swiper-stories", {
-      loop: true,
+      loop: false,
       slidesPerView: 1,
       spaceBetween: 20,
       navigation: {
@@ -76,7 +76,7 @@ function storiesSolutionSlider() {
           slidesPerView: 1,
           spaceBetween: 25,
         },
-        768: {
+        769: {
           slidesPerView: 1.5,
           spaceBetween: 25,
         },
@@ -100,12 +100,12 @@ function coreValueSlider() {
         prevEl: ".swiper-prev",
       },
       breakpoints: {
-        768: {
+        767: {
           slidesPerView: 1.5,
           spaceBetween: 25,
         },
         1025: {
-          slidesPerView: 2.5,
+          slidesPerView: 1.5,
           spaceBetween: 25,
         },
         2000: {
@@ -444,14 +444,14 @@ const swiper_solution_update = new Swiper(".swiper-solution-update", {
   spaceBetween: 35, // Enable looping
   simulateTouch: true, // Enable drag/swipe simulation
   touchStartPreventDefault: false, // Prevent default touch behavior if needed
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: true,
@@ -491,7 +491,7 @@ if ($(".swiper-challenges").length){
     0: {
       slidesPerView: 1,
     },
-    768: {
+    769: {
       slidesPerView: 1.7,
     },
   },
@@ -510,11 +510,11 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
     draggable: true,
   },
   breakpoints: {
-    767: {
-      slidesPerView: 2,
-    },
-    1200: {
-      slidesPerView: 2.5,
+    768: {
+      slidesPerView: 1,
+    },    
+    769: {
+      slidesPerView: 2.4,
     },
     2000: {
       slidesPerView: 3.5,
@@ -559,6 +559,10 @@ const swiperBlogBanner = new Swiper(".image-slider-swiper", {
 
 $("#mySelect").select2({
   placeholder: "Subject",
+  minimumResultsForSearch: Infinity 
+});
+$("#mySelect2").select2({
+  placeholder: "Select Job",
   minimumResultsForSearch: Infinity 
 });
 
@@ -678,3 +682,22 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
     e.preventDefault();
   });
 });
+$('.primary-image-card').click(function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all cards
+        $('.primary-image-card').removeClass('active');
+        $(this).addClass('active');
+        
+        // Remove any previous left-active/right-active classes from parent
+        $('.vision-grid').removeClass('left-active right-active');
+        
+        // Check which card was clicked (first or second)
+        if ($(this).index() === 0) {
+            // First card clicked
+            $('.vision-grid').addClass('left-active');
+        } else {
+            // Second card clicked
+            $('.vision-grid').addClass('right-active');
+        }
+    });

@@ -469,6 +469,13 @@ nav {
 					}
                 }
 			}
+			&.current-menu-item{
+				a{
+					.button-stroke{
+						stroke-dashoffset: 0;
+					}
+				}
+			}
 			&.no-link{
 				a{				
 					&:hover{
@@ -787,7 +794,7 @@ body {
 			}
 			a{
 				display: inline-grid;
-    			grid-template-columns: 50px auto;
+    			grid-template-columns: 35px auto;
 				gap: 10px;
 				align-items: center;
 				color: var(--white);
@@ -978,7 +985,7 @@ header {
 @media (min-width: 992px) {
     .contact-div{
 		display: grid;
-        grid-template-columns: calc(28.2% - var(--gutter) / 2) calc(71.8% - var(--gutter) / 2);
+        grid-template-columns: calc(27.2% - var(--gutter) / 2) calc(72.8% - var(--gutter) / 2);
         gap: var(--gutter);
         margin-left: 0;
 		.swiper-wrapper{

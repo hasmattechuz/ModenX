@@ -85,7 +85,18 @@
         margin-bottom: 20px;
     }
 }
-
+.career-revolution-section{
+    .read-more {
+        @media only screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+    .more-text{
+         @media only screen and (max-width: 1024px) {
+            display: block;
+         }
+    }
+}
 .no-apply-desktop-more {
     .more-text {
         margin-bottom: 20px;
@@ -136,12 +147,18 @@
                     transform: rotate(6deg);
                     width: 100px;
                 }
+                @media (max-width:768px) { 
+                    top: 5px;                       
+                    left: 245px;                       
+                }
                 @media (max-width:567px) {
                     top: 6px;
                     left: 244px;
                 }
-                @media (max-width:567px) {
-                    display: none;
+                 @media (max-width:365px) {
+                    top: -34px;
+                    left: 160px;
+                    transform: rotate(-20deg);
                 }
                  .desk{
                     @media only screen and (max-width: 991px) {
@@ -278,6 +295,11 @@
         --p35: 20px
     }
 }
+.primary-user-card{
+    @media (min-width: 769px) and (max-width: 1200px) {
+        padding: var(--p35)
+    }
+}
 
 .primary-grey-card {
     position: relative;
@@ -303,7 +325,7 @@
             }
 
             @media (max-width: 1200px) {
-                height: 70px;
+                height: 90px;
             }
 
             @media (max-width: 767px) {
@@ -325,12 +347,21 @@
     .primary-user-card {
         height: 230px;
         overflow: hidden;
+        @media (max-width:1024px) {
+            height: 260px;
+        }
     }
     .primary-grey-card{
         height: 230px;
+        @media (max-width:1024px) {
+            height: 260px;
+        }
         &.icon-text-card{
             .img-dv{
                 margin-top: -30px;
+                 @media (max-width:1024px) {
+                    margin-top: -20px;
+                 }
                 @media (max-width: 767px) {
                   margin-top: 0;
                 }
@@ -390,8 +421,8 @@
             }
 
             @media (max-width:1200px) {
-                max-width: 270px;
-                top: 10px;
+                max-width: 300px;
+                top: -20px;
             }
 
             @media (max-width:767px) {
@@ -569,6 +600,7 @@
         >[class*="item"] {
             height: auto;
             border-radius: 20px;
+            min-height: 220px;
 
             .text-dv {
                 width: 100%;
@@ -605,7 +637,7 @@
         row-gap: 30px;
         position: relative;
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 768px) {
             grid-template-columns: 100%;
         }
 
@@ -613,10 +645,10 @@
             position: relative;
 
             .img-stroke6 {
-                width: 300px;
-                height: 90px;
-                top: -30px;
-                left: 310px;
+                width: 330px;
+                height: 100px;
+                top: -35px;
+                left: 300px;
 
                 img {
                     width: 100%;
@@ -638,6 +670,18 @@
                     left: 180px;
                 }
             }
+        }
+    }
+    .primary-image-card {
+        .primary-image-link{
+           @media (max-width:768px) {
+                min-height: 370px;
+            }
+        }
+    }
+    + .career-benefits-section{
+        @media (max-width:1024px) {
+            padding-top: 0;
         }
     }
 }
@@ -668,9 +712,34 @@
 
 .career-benefits-section {
     background-color: var(--white);
+    @media (max-width:768px) {
+        padding-bottom: calc(var(--p70) + 80px)
+    }
+    .card-slider-root{
+         @media only screen and (max-width:768px) {
+            width: 100%;
+         }
+    }
+     .primary-image-card {
+        .primary-image-link{
+            min-height: 270px;
+           @media (max-width:768px) {
+                min-height: 370px;
+            }
+        }
+    }
 
     .stories-inner {
         grid-template-columns: calc(25% - var(--gutter) / 2) calc(75% - var(--gutter) / 2);
+
+        @media only screen and (max-width:768px) {
+            grid-template-columns: 100%;
+        }
+
+        @media (min-width: 2000px) {
+            grid-template-columns: calc(20% - var(--gutter)/2) calc(80% - var(--gutter)/2);
+            width: auto;
+        }
 
         .img-stroke4 {
                 right: auto;
@@ -700,7 +769,7 @@
             height: 100px;
             left: 175px;
             top: 122px;
-            z-index: 0;
+            z-index: -1;
 
             @media (max-width: 1200px) {
                 width: 70px;
@@ -727,14 +796,7 @@
             }
         }
 
-        @media only screen and (max-width:567px) {
-            grid-template-columns: 100%;
-        }
-
-        @media (min-width: 2000px) {
-            grid-template-columns: calc(20% - var(--gutter)/2) calc(80% - var(--gutter)/2);
-            width: auto;
-        }
+      
     }
 
     .card-slider-root {
@@ -745,11 +807,31 @@
 
     @media (max-width:767px) {
         padding-bottom: 80px;
-    }
+    }    
 }
 .career-stories-team{
+    .container-fluid{
+        padding: 0;
+        @media only screen and (max-width: 768px) {
+            padding: 0 var(--gutter70); 
+        } 
+    }
     .content-dv{
-        max-width: 395px;
+        padding-left: var(--gutter70); 
+        @media only screen and (max-width: 768px) {
+            padding-left: 0;
+        }       
+
+    }
+    .card-slider-root{
+        width: 100%;
+    }
+    .swiper-slide{
+        min-height: 100%;
+        height: auto;       
+    }
+     .content-dv{
+        max-width: 395px;       
         h2{
             strong{
                 @media only screen and (max-width: 567px) {
@@ -757,6 +839,7 @@
                 }
             }
         }
+       
         .img-stroke7{
             left: 105px;
             right: auto;
@@ -770,8 +853,8 @@
                 left: 155px;
              }
             @media only screen and (max-width: 768px) {
-                left: 67px;
-                top: 51px;
+                left: 80px;
+                top: 18px;
             }
              @media only screen and (max-width: 567px) {
                 left: 178px;
@@ -793,15 +876,21 @@
             
         }
     }
+    .stories-card {
+        height: 100%;
+        h3{
+                @media only screen and (max-width: 1200px) {
+                font-size: 18px;
+            }
+        }  
+    }
 }
+   
 body {
     .open-roles-section {
         overflow: hidden;
 
         .content-dv {
-            margin-bottom: 0;
-            padding-bottom:0;
-            border-bottom: 1px solid var(--white);
             @media only screen and (max-width: 767px) {
                border: none;
                padding-right: 30px;
@@ -818,10 +907,6 @@ body {
             @media (max-width: 767px) {
                 font-size: var(--heading2);
                 line-height: var(--headingLH2);
-            }
-
-            #scroll-down {
-                top: 45px;
             }
         }
 
@@ -889,7 +974,7 @@ body {
                 }
             }
 
-            @media (max-width: 767px) {
+            @media (max-width: 768px) {
                 grid-template-columns: 100%;
             }
         }
@@ -927,11 +1012,17 @@ body {
     }
     .inner-banner-section {
         .inner-banner{
+             @media only screen and (max-width: 1200px) {
+                padding-top: 180px;                
+            }
             @media only screen and (max-width: 767px) {
                 padding-top: 180px;
             }
         }
         .banner-img{
+               @media (min-width: 991px) and (max-width: 1200px) {
+                 width: 67%;
+               }
             @media only screen and (max-width: 767px) {
                 max-height: initial;
                 width: 90%;
@@ -944,6 +1035,44 @@ body {
                     max-height: 220px;
                  }
             }
+        }
+    }
+    .revolution-section{
+        .more-text{
+            @media (min-width: 768px) {
+                display: block;
+            }
+        }
+        .read-more{
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    .why-choose-section{
+          .container-fluid{
+            padding: 0;
+                @media only screen and (max-width: 768px) {
+                    padding: 0 var(--gutter70); 
+                } 
+            }
+            .content-dv{
+                padding-left: var(--gutter70); 
+                @media only screen and (max-width: 768px) {
+                    padding-left: 0;
+                }       
+
+            }
+        .stories-card{
+            @media only screen and (max-width: 1024px) {
+                min-height: 280px;
+            }
+            @media only screen and (max-width: 768px) {
+                min-height: auto;
+            }
+        }
+        .card-slider-root{
+            width: 100%;
         }
     }
 }
