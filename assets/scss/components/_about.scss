@@ -38,16 +38,9 @@
         }
     }
     .text-dv{
-        transform: translateY(50%);
-        @media only screen and (max-width: 1500px) {
-             transform: translateY(80%);
+        @media only screen and (max-width: 1024px) {
+            transform: translateY(0);
         }
-         @media only screen and (max-width: 1200px) {
-             transform: translateY(50%);
-        }
-         @media only screen and (max-width: 1024px) {
-             transform: translateY(0);
-         }
     }
     .desc-dv{
         display: block;
@@ -261,7 +254,7 @@
     }
     .primary-image-card {
         .text-dv{
-            transform: translateY(60%);
+            // transform: translateY(60%);
             @media only screen and (max-width: 1024px) {
                 transform: translateY(0);
             }
