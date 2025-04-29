@@ -4042,6 +4042,9 @@ footer .footer-mobile {
 .stories-section .swiper {
   height: 100%;
 }
+.stories-section .swiper .swiper-wrapper {
+  height: auto;
+}
 .stories-section .swiper .swiper-slide {
   min-height: 100%;
   height: auto;
@@ -4251,7 +4254,9 @@ footer .footer-mobile {
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 5px;
+  background-color: var(--mx-grey);
 }
 .stories-card .quotes-dv {
   display: flex;
