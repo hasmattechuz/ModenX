@@ -92,7 +92,7 @@ function storiesSolutionSlider() {
 function coreValueSlider() {
   if ($(".swiper-core-values").length) {
     return new Swiper(".swiper-core-values", {
-      loop: true,
+      loop: false,
       slidesPerView: 1,
       spaceBetween: 20,
       navigation: {
@@ -701,21 +701,26 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
   });
 });
 $('.primary-image-card').click(function(e) {
-        e.preventDefault();
-        
-        // Remove active class from all cards
-        $('.primary-image-card').removeClass('active');
-        $(this).addClass('active');
-        
-        // Remove any previous left-active/right-active classes from parent
-        $('.vision-grid').removeClass('left-active right-active');
-        
-        // Check which card was clicked (first or second)
-        if ($(this).index() === 0) {
-            // First card clicked
+    e.preventDefault();
+
+    const $this = $(this);
+    const isActive = $this.hasClass('active');
+
+    // Remove active class from all cards
+    $('.primary-image-card').removeClass('active');
+    // Remove any previous left-active/right-active classes from parent
+    $('.vision-grid').removeClass('left-active right-active');
+
+    if (!isActive) {
+        // If the clicked card wasn't active, activate it
+        $this.addClass('active');
+
+        // Add the appropriate class to the vision-grid
+        if ($this.index() === 0) {
             $('.vision-grid').addClass('left-active');
         } else {
-            // Second card clicked
             $('.vision-grid').addClass('right-active');
         }
-    });
+    }
+    // else: do nothing to keep it toggled off
+});
