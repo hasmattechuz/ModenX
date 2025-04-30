@@ -6,6 +6,9 @@
         padding-bottom: 0;
 
      }
+    @media only screen and (max-width: 768px) {
+        padding-top: calc(var(--p70) + 20px);
+     }
      .img-stroke3_6{
           @media only screen and (max-width: 1200px) {
                 width: 460px;
@@ -67,6 +70,9 @@
             height: 130px;
             resize: none;
         }
+    }
+    .checkbox{
+        display: flex;
     }
 
     .common-form, .wpcf7-form {
@@ -216,6 +222,7 @@
     .wpcf7-response-output{
         color: #009806;
         font-size: 12px;
+        line-height: 1.4;
         font-weight: 500;
     }
     .screen-reader-response{

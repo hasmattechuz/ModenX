@@ -125,14 +125,14 @@ function RetailersSlider() {
       spaceBetween: 15,
       simulateTouch: true,
       touchStartPreventDefault: false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
       scrollbar: {
         el: ".swiper-scrollbar",
         draggable: true,
@@ -157,14 +157,14 @@ function ConsumerSlider() {
       spaceBetween: 15,
       simulateTouch: true,
       touchStartPreventDefault: false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
       scrollbar: {
         el: ".scrollbar1",
         draggable: true,
@@ -274,10 +274,14 @@ $(document).ready(function () {
   ConsumerSlider();
   CounterUp();
   Dropdown();
-  setDescriptionHeights();
+  setTimeout(function() {
+      setDescriptionHeights();
+    }, 100);
     
   $(window).on('resize', function() {
-    setDescriptionHeights();
+     setTimeout(function() {
+      setDescriptionHeights();
+    }, 100);
   });
   
   $(window).on('orientationchange', function() {
@@ -331,63 +335,86 @@ const swiper = new Swiper(".swiper-contact", {
 });
 
 // about progress slider start
-if ($(".swiper-progress").length > 0) {
-  const swiperprogress = new Swiper('.swiper-progress', {
-    loop: false,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '#swiper-progress-next',
-      prevEl: '#swiper-progress-prev',
-    },
-    on: {
-      slideChange: updatePagination,
-    }
-  });
-
-  // Call once on init
-  updatePagination.call(swiperprogress);
-
-  // Make pagination dots clickable
-  const dots = document.querySelectorAll('.custom-pagination .dot');
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      swiperprogress.slideTo(index);
+if (document.querySelector('.swiper-progress')) {
+    const swiperprogress = new Swiper('.swiper-progress', {
+      loop: false,
+      slidesPerView: 1,
+      navigation: {
+        nextEl: '#swiper-progress-next',
+        prevEl: '#swiper-progress-prev',
+      },
+      on: {
+        init: function () {
+          updatePagination.call(this);
+          toggleNavButtons(this);
+        },
+        slideChange: function () {
+          updatePagination.call(this);
+          toggleNavButtons(this);
+        }
+      }
     });
-  });
 
-  function updatePagination() {
-    const totalDots = 6;
+    // 🚨 Manually call init to trigger the "init" event
+    swiperprogress.init();
+
+    // Make pagination dots clickable
     const dots = document.querySelectorAll('.custom-pagination .dot');
-    const progressBar = document.querySelector('.progress-bar-fill');
-
-    const dotIndex = this.realIndex % totalDots;
-    const progressPercent = ((dotIndex + 1) / totalDots) * 100;
-
-    // Calculate previous index with wrap-around
-    const prevIndex = (dotIndex - 1 + totalDots) % totalDots;
-
-    // Reset all dots
     dots.forEach((dot, index) => {
-      dot.classList.remove('active', 'prev', 'inactive', 'last-active', 'completed');
-
-      if (index === dotIndex) {
-        dot.classList.add('active');
-      } else if (index === prevIndex && dotIndex > 0) {
-        dot.classList.add('prev', 'last-active'); // Apply last-active to the previous dot
-      } else {
-        dot.classList.add('inactive');
-      }
-
-      // Add 'completed' class to all dots up to the current index
-      if (index <= dotIndex) {
-        dot.classList.add('completed');
-      }
+      dot.addEventListener('click', () => {
+        swiperprogress.slideTo(index);
+      });
     });
 
-    // Update progress bar
-    progressBar.style.width = progressPercent + '%';
+    // Update dot classes and progress bar
+    function updatePagination() {
+      const totalDots = 6;
+      const dots = document.querySelectorAll('.custom-pagination .dot');
+      const progressBar = document.querySelector('.progress-bar-fill');
+
+      const dotIndex = this.realIndex % totalDots;
+      const progressPercent = ((dotIndex + 1) / totalDots) * 100;
+      const prevIndex = (dotIndex - 1 + totalDots) % totalDots;
+
+      dots.forEach((dot, index) => {
+        dot.classList.remove('active', 'prev', 'inactive', 'last-active', 'completed');
+
+        if (index === dotIndex) {
+          dot.classList.add('active');
+        } else if (index === prevIndex && dotIndex > 0) {
+          dot.classList.add('prev', 'last-active');
+        } else {
+          dot.classList.add('inactive');
+        }
+
+        if (index <= dotIndex) {
+          dot.classList.add('completed');
+        }
+      });
+
+      progressBar.style.width = progressPercent + '%';
+    }
+
+    // Add/remove disabled class to Prev/Next
+    function toggleNavButtons(swiper) {
+      const prevBtn = document.querySelector('#swiper-progress-prev');
+      const nextBtn = document.querySelector('#swiper-progress-next');
+
+      if (swiper.isBeginning) {
+        prevBtn.classList.add('disabled');
+      } else {
+        prevBtn.classList.remove('disabled');
+      }
+
+      if (swiper.isEnd) {
+        nextBtn.classList.add('disabled');
+      } else {
+        nextBtn.classList.remove('disabled');
+      }
+    }
   }
-}
+
+
 
 
 // about progress slider end
@@ -488,6 +515,17 @@ const swiper_solution_update = new Swiper(".swiper-solution-update", {
       slidesPerView: 1.5,
     },
   },
+   on: {
+    init: function () {
+      setDescriptionHeights(); // call on init
+    },
+    slideChangeTransitionEnd: function () {
+      setDescriptionHeights(); // call when slide changes
+    },
+    resize: function () {
+      setDescriptionHeights(); // call on resize
+    }
+  }
 });
 if ($(".swiper-challenges").length){
   const swiper_challenges = new Swiper(".swiper-challenges", {
@@ -518,7 +556,7 @@ if ($(".swiper-challenges").length){
 
 
 const swiper_benefits = new Swiper(".swiper-benefits", {
-  loop: true,
+  loop: false,
   slidesPerView: 1,
   spaceBetween: 20,
   simulateTouch: true,

@@ -292,6 +292,13 @@
         }
     }
 }
+.about-choose-section{
+    .card-slider-root{
+         @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
 .challenges-faced {
     background: var(--mx-grey);
     padding: var(--p70) 0;
@@ -985,8 +992,13 @@
     }
 
      .topbar-controls{
-        --spacing: 53px;
-        margin: calc(-1 * var(--spacing)) 0 var(--spacing);
+        --spacing: 51px;
+        margin: calc(-1 * var(--spacing)) auto var(--spacing);
+        max-width: calc(100% - 100px);
+        @media only screen and (max-width:1200px) {
+            max-width: calc(100% - 68px);
+            --spacing: 52px;
+      }
     }
 
     
@@ -998,8 +1010,8 @@
       margin-top: 10px;
       gap: 10px;
       margin: 0 auto -9px;
-       @media only screen and (max-width: 567px) {
-            margin: 0 auto -7px;
+       @media only screen and (max-width: 768px) {
+            margin: 0 auto -8px;
       }
     }
 
@@ -1034,7 +1046,7 @@
       margin: 0 auto;
       height: 6px;
       background-color: var(--mx-grey);
-      border-radius: 4px;
+    //   border-radius: 4px;
       overflow: hidden;
       @media only screen and (max-width: 567px) {
             height: 5px;
@@ -1451,7 +1463,9 @@
             gap: var(--gutter);
         }
         .img-dv picture{
-            width: auto;
+             @media only screen and (max-width: 768px) {
+                width: auto;
+             }
         }
     }
 }

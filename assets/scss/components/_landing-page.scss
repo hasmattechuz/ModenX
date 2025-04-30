@@ -23,9 +23,9 @@
     min-height: calc(100dvh - 100px);
     padding-left: var(--pl70);
      @media only screen and (max-width: 991px) {
-        min-height: calc(100vh - 100px);
-        max-height: calc(100vh - 100px);
-        max-height: calc(100svh - 100px);
+        min-height: calc(100vh - 120px);
+        max-height: calc(100vh - 120px);
+        max-height: calc(100svh - 120px);
         // min-height: calc(100dvh - 80px);
         // min-height: calc(100svh - 80px);
     }
@@ -120,7 +120,11 @@
         }
 
         h1 {
-            position: relative;            
+            position: relative;  
+             @media (max-width: 360px) {
+                --heading1: 36px;
+                --headingLH1: 46px;
+            }          
 
             .img-stroke1 {
                 position: absolute;
@@ -153,6 +157,11 @@
                     left: 150px;
                     bottom: 0;
                     top: auto;
+                }
+                @media (max-width: 360px) {
+                    left: 120px;
+                    bottom: -10px;
+                    width: 120px;
                 }
             }
 
@@ -1549,6 +1558,8 @@
         position: relative;
         margin-top: 20px;
         top: 0;
+        bottom: auto;
+        left: 0;
         width: 100%;
         display: flex;
         border-radius: 10px;
@@ -1568,9 +1579,6 @@
         @media (max-width: 768px) {
             margin-top: 30px;
         }
-        @media (max-width: 767px) {
-            margin-top: 60px;
-        }
     }
 
     .primary-user-card {
@@ -1589,7 +1597,7 @@
         position: relative;
 
         @media (max-width: 768px) {
-            margin-top: 100px;
+            margin-top: 90px;
         }
 
         .img-stroke3-c-mobile {
@@ -2151,6 +2159,7 @@
     picture {
         img {
             height: 400px;
+            width: 100%;
             object-fit: cover;
 
             @media only screen and (max-width: 1024px) {

@@ -8,6 +8,7 @@
     top: 0;
     width: 100%;
     z-index: 9;
+	background-color: var(--mx-blue);
 	@media only screen and (max-width: 991px) {
        	padding: 15px 0;
     	min-height: 80px;
@@ -653,6 +654,7 @@ body {
 	}
 	.swiper-scrollbar{
 		z-index: -1 !important;
+		left: 0;
 	}
 }
 .menu-inactive{
@@ -910,7 +912,9 @@ header {
 	}
 
 	header{
-			&.nav-down {		
+		background-color: transparent;
+			&.nav-down {	
+				background-color: var(--mx-blue);;	
 				&.to-top {
 					background-color: transparent !important;
 					.white-logo{
