@@ -1144,4 +1144,34 @@ body {
              }
         }
     }
+    .card-sec{
+        top: 29px;
+    }
+    .career-section-testi{
+        h2{
+            color: var(--black);
+            max-width: 402px;
+            strong{
+                color: var(--mx-blue);
+            }
+            br{
+                display: none;
+            }
+        }
+        .img-stroke7{
+            top: 80px;
+            left: 100px;
+            @media only screen and (max-width: 1200px) {
+                top: 20px;
+                left: 190px;
+            }
+             @media only screen and (max-width: 1024px) {
+                left: 140px;
+             }
+             @media only screen and (max-width: 768px) {
+                    left: 70px;
+             }
+        }
+    }
+
 }

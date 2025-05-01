@@ -141,7 +141,39 @@ function RetailersSlider() {
         567: {
           slidesPerView: 1,
         },
-        767: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  }
+}
+
+function RetailersMobileSlider() {
+  if ($(".swiper-retailers-mobile").length) {
+    return new Swiper(".swiper-retailers-mobile", {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      simulateTouch: true,
+      touchStartPreventDefault: false,
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+      // navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        567: {
+          slidesPerView: 1,
+        },
+        769: {
           slidesPerView: 2,
         },
       },
@@ -271,6 +303,7 @@ $(document).ready(function () {
   storiesSolutionSlider();
   coreValueSlider();
   RetailersSlider();
+  RetailersMobileSlider();
   ConsumerSlider();
   CounterUp();
   Dropdown();

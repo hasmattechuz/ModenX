@@ -816,11 +816,11 @@
 .page-contact-us{
       .inner-banner-section {
         .inner-banner{
-            @media only screen and (max-width: 767px) {
+            @media only screen and (max-width: 768px) {
                 padding-top: 180px;
             }
             .banner-img{
-                @media only screen and (max-width: 767px) {
+                @media only screen and (max-width: 768px) {
                     max-height: initial;
                     width: 90%;
                     position: absolute;
@@ -829,7 +829,7 @@
                     height: auto;
                 }
                 img{
-                    @media only screen and (max-width: 767px) {
+                    @media only screen and (max-width: 768px) {
                         max-height: 220px;
                     }
                 }
