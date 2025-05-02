@@ -292,13 +292,6 @@
         }
     }
 }
-.about-choose-section{
-    .card-slider-root{
-         @media (max-width: 768px) {
-            width: 100%;
-        }
-    }
-}
 .challenges-faced {
     background: var(--mx-grey);
     padding: var(--p70) 0;
@@ -1504,6 +1497,46 @@
         .img-dv picture{
              @media only screen and (max-width: 768px) {
                 width: auto;
+             }
+        }
+    }
+    .about-choose-section{
+        .card-slider-root{
+             width: 100%;   
+        }
+        h2{
+            br{
+                display: none;
+            }
+            strong{
+                display: block;
+            }
+        }
+       
+        .container-fluid{
+            padding: 0;
+            @media only screen and (max-width: 768px) {
+                 padding-left: var(--gutter70);
+                 padding-right: var(--gutter70);
+            }
+        }
+        .content-dv{
+            padding-left: var(--gutter70);
+            max-width: 545px;
+             @media only screen and (max-width: 768px) {
+                 padding-left: 0;
+             }
+             .img-stroke7{
+                left: 290px;
+                @media only screen and (max-width:1200px) {
+                    left: 190px;
+                }
+                @media only screen and (max-width: 768px) {
+                    left: 160px;
+                }
+                @media only screen and (max-width: 767px) {
+                    left: 201px;
+                }
              }
         }
     }

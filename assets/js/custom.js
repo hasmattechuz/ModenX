@@ -540,11 +540,7 @@ const swiper_solution_update = new Swiper(".swiper-solution-update", {
     320: {
       slidesPerView: 1,
     },
-    1024: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    1200: {
+    769: {
       slidesPerView: 1.5,
     },
   },
@@ -812,3 +808,10 @@ $('.primary-image-card').on('click', function(e) {
 //     }
 // });
 
+// $(document).ready(function () {
+//     $('.right-btn .btn-dv').addClass('no-hover-btn');
+
+//     setTimeout(function () {
+//       $('.right-btn .btn-dv').removeClass('no-hover-btn');
+//     }, 5000); 
+//   });
