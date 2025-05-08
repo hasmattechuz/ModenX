@@ -40,11 +40,7 @@ function storiesSlider() {
           slidesPerView: 1,
           spaceBetween: 0,
         },
-        767: {
-          slidesPerView: 1,
-          spaceBetween: 25,
-        },
-        768: {
+        769: {
           slidesPerView: 1.5,
           spaceBetween: 25,
         },
@@ -72,12 +68,8 @@ function storiesSolutionSlider() {
           slidesPerView: 1,
           spaceBetween: 0,
         },
-        767: {
+        768: {
           slidesPerView: 1,
-          spaceBetween: 25,
-        },
-        769: {
-          slidesPerView: 1.5,
           spaceBetween: 25,
         },
         2000: {
@@ -105,7 +97,42 @@ function coreValueSlider() {
           spaceBetween: 25,
         },
         769: {
-          slidesPerView: 2.5,
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 1.5,
+          spaceBetween: 25,
+        },
+        2000: {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        },
+      },
+    });
+  }
+}
+function solutioncoreValueSlider() {
+  if ($(".solution-stories-section .swiper-core-values").length) {
+    return new Swiper(".solution-stories-section .swiper-core-values", {
+      loop: false,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-next",
+        prevEl: ".swiper-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        769: {
+          slidesPerView: 1,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 1.5,
           spaceBetween: 25,
         },
         2000: {
@@ -302,6 +329,7 @@ $(document).ready(function () {
   storiesSlider();
   storiesSolutionSlider();
   coreValueSlider();
+  solutioncoreValueSlider();
   RetailersSlider();
   RetailersMobileSlider();
   ConsumerSlider();

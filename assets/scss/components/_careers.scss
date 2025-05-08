@@ -360,7 +360,7 @@
         &.icon-text-card{
             .img-dv{
                 margin-top: -30px;
-                 @media (max-width:1024px) {
+                 @media (max-width:1200px) {
                     margin-top: -20px;
                  }
                 @media (max-width: 767px) {
@@ -469,6 +469,7 @@
             right: -12px;
             pointer-events: none;
             height: auto;
+            margin-top: 0 !important;
 
             img {
                 width: 100%;
@@ -504,6 +505,9 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                @media (max-width: 1200px) {
+                    object-position: top;
+                }
             }
 
             @media (max-width: 767px) {
@@ -721,9 +725,7 @@
         padding-bottom: calc(var(--p70) + 80px)
     }
     .card-slider-root{
-         @media only screen and (max-width:768px) {
-            width: 100%;
-         }
+         width: 100%;
     }
      .primary-image-card {
         .primary-image-link{
@@ -996,6 +998,7 @@ body {
 .page-careers{
     .contact-sec{
         h2{
+                position: relative;
             .down-arrow{
                 @media only screen and (min-width: 768px) {
                         left: 302px;
@@ -1015,10 +1018,13 @@ body {
                 }
                 @media only screen and (min-width: 1600px) {
                     top: -22px;
-                    left: 155%;
+                    left: 529px;
                     width: 900px;
-                    transform: translateX(-50%);
+                    // transform: translateX(-50%);
                 }
+            }
+            b{
+                display: block;
             }
         }
     }
@@ -1033,7 +1039,7 @@ body {
         }
         .banner-img{
                @media (min-width: 991px) and (max-width: 1200px) {
-                 width: 67%;
+                 width: 57%;
                }
             @media only screen and (max-width: 767px) {
                 max-height: initial;
@@ -1064,13 +1070,13 @@ body {
     .why-choose-section{
           .container-fluid{
             padding: 0;
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 1023px) {
                     padding: 0 var(--gutter70); 
                 } 
             }
             .content-dv{
                 padding-left: var(--gutter70); 
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 1023px) {
                     max-width: 100%;
                     padding-left: 0;
                 } 
@@ -1085,8 +1091,8 @@ body {
                         top: 88px;
                     }
                     @media only screen and (max-width: 991px) {
-                        left: 100px;
-                        top: 28px;
+                        left: 153px;
+                        top: 40px;
                     }
                     @media only screen and (max-width:768px) {
                         left: 245px;
@@ -1111,7 +1117,7 @@ body {
         .card-slider-root{
             width: 100%;
             padding-left: var(--gutter70); 
-             @media only screen and (max-width: 768px) {
+             @media only screen and (max-width: 1023px) {
                 padding-left: 0;
              }
         }
@@ -1160,7 +1166,7 @@ body {
         }
         .img-stroke7{
             top: 80px;
-            left: 100px;
+            left: 180px;
             @media only screen and (max-width: 1200px) {
                 top: 20px;
                 left: 190px;

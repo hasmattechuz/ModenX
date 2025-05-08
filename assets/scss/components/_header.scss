@@ -782,7 +782,7 @@ body {
 
 				}
 			}
-			&:hover{
+			&:hover,&.active {
 				.button-stroke{
 					stroke-dashoffset: 0;
 				}

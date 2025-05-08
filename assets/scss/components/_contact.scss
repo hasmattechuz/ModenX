@@ -15,6 +15,9 @@
                 height: 510px;
           }
      }
+     p{
+        padding: 5px 0;
+     }
      .desc{
         p{
             margin-top: 10px;
@@ -73,6 +76,7 @@
     }
     .checkbox{
         display: flex;
+        pointer-events: none;
     }
 
     .common-form, .wpcf7-form {
@@ -102,6 +106,13 @@
             }
              @media only screen and (max-width: 991px) {
                     min-height: 48px;
+            }
+            .wpcf7-form-control-wrap{
+                span{
+                    position: absolute;
+                    right: 60px;
+                    top: 17px;
+                }
             }
             label{
                 position: absolute;
@@ -225,6 +236,11 @@
         line-height: 1.4;
         font-weight: 500;
     }
+    .invalid{
+        .wpcf7-response-output{
+            color: #f00;
+        }
+    }
     .screen-reader-response{
         display: none;
         ul{
@@ -240,6 +256,7 @@
         font-size: var(--fs16);
         font-style: normal;
         font-weight: 400;
+        display: none;
         // margin-top: calc(-1* var(--gutter));
         @media only screen and (max-width: 567px) {
             text-align: center;
@@ -342,7 +359,7 @@
                     width: 100%;
                     height: 100%;
                     @media only screen and (max-width: 991px) {
-                        height: 80vh;
+                        height: 440px;
                     }
                 }
             }

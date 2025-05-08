@@ -427,7 +427,7 @@
         grid-template-columns: calc(35% - var(--gutter) / 2) calc(65% - var(--gutter) / 2);
         gap: var(--gutter);
        
-         @media (max-width:768px) {
+         @media (max-width:1023px) {
             grid-template-columns:100%;
         }
 
@@ -663,7 +663,7 @@
     }
     .ceo-pic-mobile{
         display: none;
-         @media only screen and (max-width: 768px) {
+         @media only screen and (max-width: 1023px) {
             display: block;
             height: 510px;            
             overflow: hidden;
@@ -677,7 +677,7 @@
         }
     }
     .desk{
-         @media only screen and (max-width: 768px) {
+         @media only screen and (max-width: 1023px) {
                display: none;
         }
     }
@@ -1382,6 +1382,14 @@
             }
         }
     }
+
+    .solution-blue-section {
+        .img-dv{
+            @media only screen and (min-width: 991px) {
+                bottom: -9px;
+            }
+        }
+    }
 } 
 
 .page-about-us{
@@ -1515,7 +1523,7 @@
        
         .container-fluid{
             padding: 0;
-            @media only screen and (max-width: 768px) {
+            @media only screen and (max-width: 1023px) {
                  padding-left: var(--gutter70);
                  padding-right: var(--gutter70);
             }
@@ -1523,7 +1531,7 @@
         .content-dv{
             padding-left: var(--gutter70);
             max-width: 545px;
-             @media only screen and (max-width: 768px) {
+             @media only screen and (max-width: 1023px) {
                  padding-left: 0;
              }
              .img-stroke7{

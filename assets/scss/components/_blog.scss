@@ -24,7 +24,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: calc(100dvh - 100px);
+    min-height: calc(100vh - 100px);
     display: flex;
     align-items: flex-end;
     overflow: hidden;
@@ -115,7 +115,7 @@
     }
 
     @media (max-width: 767px) {
-        min-height: calc(100dvh - 80px);
+        min-height: calc(100vh - 80px);
     }
 }
 
@@ -222,17 +222,17 @@
 
         h3 {
             flex: 1;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // display: -webkit-box;
+            // -webkit-line-clamp: 2;
+            // line-clamp: 2;
+            // -webkit-box-orient: vertical;
 
-            @media (max-width: 767px) {
-                font-size: 14px;
-                line-height: 24px;
-            }
+            // @media (max-width: 767px) {
+            //     font-size: 14px;
+            //     line-height: 24px;
+            // }
         }
 
         @media (max-width: 767px) {
@@ -250,9 +250,9 @@
             width: 15px;
             object-fit: contain;
 
-            @media (max-width: 767px) {
-                width: 10px;
-            }
+            // @media (max-width: 767px) {
+            //     width: 10px;
+            // }
         }
 
         &:hover {
@@ -463,7 +463,7 @@
                 .dropdown-item-link {
                     position: relative;
                     width: 100%;
-                    height: 68px;
+                    height: 62px;
                     perspective: 1000px;
                     display: flex;
                     padding: 10px;
@@ -471,7 +471,7 @@
 
                     @media (max-width: 1200px) {
                         padding: 8px;
-                        height: 46px;
+                        height: 42px;
                     }
 
                     &:hover {

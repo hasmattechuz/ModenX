@@ -560,9 +560,12 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 210px 235px 210px;
     
-    @media only screen and (max-width: 1024px) {
-         grid-template-rows: 200px 200px 200px;
+    @media only screen and (max-width: 1200px) {
+         grid-template-rows: 190px 190px 190px;
         height: 100%;
+    }
+     @media only screen and (max-width:991px) {
+         grid-template-rows: 170px 170px 170px;
     }
     @media only screen and (max-width: 768px) {
           grid-template-columns: 100%;
@@ -582,7 +585,7 @@
     &.for-retailers-inner{
         .primary-user-card{
             height: 210px;
-            @media only screen and (max-width: 1024px) {
+            @media only screen and (max-width: 1200px) {
                 height: 100%;
             }
         }
@@ -661,9 +664,12 @@
     gap: var(--gutter);
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: 210px 210px 210px;
-     @media only screen and (max-width: 1024px) {
+     @media only screen and (max-width: 1200px) {
          grid-template-rows: 200px 200px 200px;
          height: 100%;
+    }
+     @media only screen and (max-width:991px) {
+         grid-template-rows: 170px 170px 170px;
     }
     @media only screen and (max-width: 768px) {
           grid-template-columns: 100%;
@@ -679,12 +685,18 @@
             min-height: 250px;
         }
     }
+    .text-dv{
+        @media only screen and (max-width:991px) {
+            bottom: 5px;
+            --p35: 10px;
+        }
+    }
 
    
      &.for-consumers-inner{
         .primary-user-card{
             height: 210px;
-            @media only screen and (max-width: 1024px) {
+            @media only screen and (max-width: 1200px) {
                 height: 100%;
             }
         }
@@ -792,7 +804,7 @@
         margin-top: 30px;
        @media (max-width:991px) {
             position: relative;
-            bottom: -30px;
+            bottom: -9px;
         }
         @media (max-width:767px) {
             bottom: 0;
@@ -848,7 +860,7 @@
 .solution-stories-section{
     .container-fluid{
         padding: 0;
-         @media only screen and (max-width:768px) {
+         @media only screen and (max-width:991px) {
             padding: 0 var(--gutter70);
          }
     }
@@ -858,7 +870,9 @@
     .stories-inner{
         grid-template-columns: calc(40% - var(--gutter) / 2) calc(60% - var(--gutter) / 2);
         align-items: flex-start;
-        
+        @media only screen and (max-width:991px) {
+               grid-template-columns: calc(50% - var(--gutter) / 2) calc(50% - var(--gutter) / 2);
+         }  
         
          @media only screen and (max-width:768px) {
                 grid-template-columns: 100%
@@ -872,7 +886,7 @@
         max-width: 600px;
         margin-top: 0;
         padding-left: var(--gutter70);
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width:991px) {
             padding-left: 0;
         }
         .img-stroke7{      
@@ -884,7 +898,7 @@
 
             @media only screen and (max-width: 1200px) {
                 left: 185px;
-                top: 23px;
+                top: 9px;
             }
 
             @media only screen and (max-width: 991px) {
@@ -894,7 +908,7 @@
             }
             @media only screen and (max-width: 768px) {
                 left: 185px;
-                top: 26px;
+                top: 20px;
                 width: 140px;
             }
             @media only screen and (max-width: 768px) {
