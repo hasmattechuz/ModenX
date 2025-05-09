@@ -164,7 +164,7 @@
         .quotes-img {
             width: 80px;
             height: 70px;
-            @media only screen and (max-width: 1300px) {
+            @media only screen and (max-width: 1500px) {
                 width: 60px;
                 height: 50px;
             }
@@ -1142,17 +1142,13 @@
             grid-template-rows: repeat(4, 170px);
             height: auto;
     }
-     @media only screen and (max-width: 1023px) {
+     @media only screen and (max-width: 768px) {
           grid-template-columns: 100%;
           grid-template-rows: auto;
           margin-bottom: 0;
     }
     .primary-user-card{
         height: 100%;
-
-        @media (min-width:991px) and (max-width:1200px) {
-            align-items: flex-end;
-        }
     }
     .img-stroke3{
         top: -110px;
@@ -1167,7 +1163,7 @@
          .item1{
             grid-column: 1 / 4;
             grid-row: 1;
-            @media only screen and (max-width: 1023px) {
+            @media only screen and (max-width: 768px) {
                 grid-column:1;
             }
         }
@@ -1235,7 +1231,7 @@
         grid-template-rows: repeat(4, 170px);
         height:auto;
     }
-     @media only screen and (max-width: 1023px) {
+     @media only screen and (max-width: 768px) {
           grid-template-columns: 100%;
           grid-template-rows: auto;
     }
@@ -1244,10 +1240,6 @@
     }
     .primary-user-card{
         height: 100%;
-
-        @media (min-width:991px) and (max-width:1200px) {
-            align-items: center;
-        }
     }
     .stretch-height{
         top: 0;
@@ -1258,7 +1250,7 @@
          .item1{
             grid-column: 6/9;
             grid-row: 1;
-            @media only screen and (max-width: 1023px) {
+            @media only screen and (max-width: 768px) {
                 grid-column:1;
             }
         }
@@ -1370,12 +1362,12 @@
     }
     .for-rc-mobile{
         .content-dv{
-            @media (max-width: 1023px) {
+            @media (max-width: 768px) {
                 position: relative;
             }
         }
         .img-stroke5{
-           @media (max-width: 1023px) {
+           @media (max-width: 768px) {
                 width: 338px;
                 height: auto;
                 top: 45px;
@@ -1404,7 +1396,8 @@
     .update-section {
         background: var(--mx-grey);
         padding: var(--p70) 0;
-        // overflow-x: hidden;
+        overflow-x: hidden;
+        
 
         h2{
             color: var(--mx-blue);

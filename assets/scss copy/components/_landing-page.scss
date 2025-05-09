@@ -220,9 +220,6 @@
     display: grid;
     grid-template-columns: 3fr 5fr;
     gap: var(--gutter);
-     @media (max-width: 991px) {
-        grid-template-columns: 100%;
-    }
 
     .content-dv {
         display: flex;
@@ -231,7 +228,7 @@
         max-width: 490px;
         position: relative;
 
-        @media only screen and (max-width: 991px) {
+        @media only screen and (max-width: 767px) {
             max-width: 100%;
         }
 
@@ -255,7 +252,9 @@
         }
     }
 
-   
+    @media (max-width: 767px) {
+        grid-template-columns: 100%;
+    }
 }
 
 .card-lst {
@@ -310,7 +309,7 @@
      @media (max-width:991px) {
         position: relative;
         top: auto;
-        height: auto;
+        height: 400px;
         padding: 0;
     }
      @media (max-width:767px) {
@@ -375,7 +374,7 @@
     border-radius: 20px;
     overflow: hidden;
 
-    @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: 767px) {
         display: none;
     }
 
@@ -404,7 +403,7 @@
     &.video-group-mobile {
         display: none;
 
-        @media only screen and (max-width: 991px) {
+        @media only screen and (max-width: 767px) {
             display: block;
             margin-bottom: var(--gutter);
         }
@@ -530,16 +529,13 @@
     &.blue-fre-section {
         .content-dv {
             max-width: 680px;
-            @media (max-width: 1200px) {
-                max-width: 100%;
-            }
         }
     }
 
     &.blue-device-section {
         padding: 0;
         margin-top: 0;
-        @media (max-width: 1023px) {
+        @media (max-width: 768px) {
             margin: calc(var(--p70) + 30px) 0 0;
         }
         @media (max-width: 767px) {
@@ -1141,7 +1137,10 @@
         width: 140px;
         top: 30px;
         left: -20px;
-         top: 0px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        top: 0px;
     }
 
     @media only screen and (max-width: 567px) {
@@ -1556,7 +1555,7 @@
 }
 
 .for-rc-desktop {
-    @media (max-width: 1023px) {
+    @media (max-width: 768px) {
         display: none;
     }
 }
@@ -1566,11 +1565,11 @@
     padding: var(--p70) 0;
     position: relative;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 768px) {
         display: block;
     }
     .content-dv{
-        @media (max-width: 1023px) {
+        @media (max-width: 768px) {
             margin-bottom: 30px;
         }
     }
@@ -1610,13 +1609,13 @@
     }
 
     .retailers-mobile {
-        @media (max-width: 1023px) {
+        @media (max-width: 768px) {
             margin-top: 30px;
         }
     }
 
     .primary-user-card {
-        @media (max-width: 1023px) {
+        @media (max-width: 768px) {
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -1649,7 +1648,7 @@
 }
 .for-rc-mobile-inner{
     &:first-child{
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
             margin-bottom: 20px;
         }
     }
@@ -2536,7 +2535,7 @@ body.home {
 
     .for-rc-mobile-inner{       
         &:first-child{
-            @media only screen and (max-width: 1023px) {
+            @media only screen and (max-width: 768px) {
                 margin-bottom: 90px;
                 margin-top: 40px;
             }

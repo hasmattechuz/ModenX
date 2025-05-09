@@ -128,7 +128,7 @@ function solutioncoreValueSlider() {
           spaceBetween: 25,
         },
         769: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 25,
         },
         1024: {
@@ -248,8 +248,6 @@ function setDescriptionHeights() {
 }
 
 $(document).ready(function () {
-  $("header").addClass("to-top nav-down");
-
   let isMenuOpen = false;
 
   $(".menu-btn").on("click", function () {

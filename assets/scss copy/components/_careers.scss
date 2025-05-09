@@ -514,8 +514,7 @@
                 position: absolute;
                 top: -40px;
                 left: 0;
-                // width: 340px;
-                width: 100%;
+                width: 340px;
                 height: 100%;
                 transform: rotate(52deg);
 
@@ -734,12 +733,6 @@
            @media (max-width:768px) {
                 min-height: 370px;
             }
-        }
-    }
-    .swiper-progress-root .swiper-scrollbar{
-        width: calc(100% - var(--gutter70));
-        @media (max-width:768px) {
-            width: 100%;
         }
     }
 
@@ -1162,10 +1155,10 @@ body {
     }
     .career-section-testi{
         h2{
-            color: var(--mx-blue);
+            color: var(--black);
             max-width: 402px;
             strong{
-                color: var(--black);
+                color: var(--mx-blue);
             }
             br{
                 display: none;

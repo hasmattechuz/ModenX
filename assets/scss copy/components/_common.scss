@@ -972,7 +972,7 @@ input[type="checkbox"]:checked+label:after,
         }
         
 
-        @media (max-width: 991px) {
+        @media (max-width: 768px) {
             // padding-top: 140px;
             padding-top: 110px;
             padding-bottom: 0;
@@ -998,14 +998,14 @@ input[type="checkbox"]:checked+label:after,
         h1,
         h2 {
             width: 100%;
-             @media (min-width: 992px) and (max-width: 1200px) { 
+             @media (min-width: 769px) and (max-width: 1200px) { 
                 --heading1: 52px;
                 --headingLH1: 62px;
                 width: 50%;
             }
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 768px) {
             // padding-bottom: 242px;
             padding-bottom: 0;
         }
@@ -1025,7 +1025,7 @@ input[type="checkbox"]:checked+label:after,
          @media (min-width: 769px) and (max-width: 1200px) { 
             width: 57%;
          }
-         @media (max-width: 991px) {
+         @media (max-width: 768px) {
                position: relative;
                bottom: auto;
             }
@@ -1040,12 +1040,12 @@ input[type="checkbox"]:checked+label:after,
                 max-height: 510px;
              }
 
-            @media (max-width: 991px) {
+            @media (max-width: 768px) {
                 max-height: 250px;
             }
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 768px) {
             max-height: 300px;
             width: 85%;
         }
@@ -1058,7 +1058,7 @@ input[type="checkbox"]:checked+label:after,
 
         .banner-img {
             align-items: center;
-            @media (max-width: 991px) {
+            @media (max-width: 768px) {
                 width: 100%;
                 // bottom: var(--p35);                
             }
@@ -1070,7 +1070,7 @@ input[type="checkbox"]:checked+label:after,
                     max-height: 400px;
                  }
 
-                @media (max-width: 991px) {
+                @media (max-width: 768px) {
                     max-height: 210px;
                 }
             }
@@ -1089,7 +1089,7 @@ input[type="checkbox"]:checked+label:after,
                 object-position: center center;
                 max-height: 500px;
 
-                @media (max-width: 991px) {
+                @media (max-width: 768px) {
                     max-height: 250px;
                 }
             }
@@ -1104,7 +1104,7 @@ input[type="checkbox"]:checked+label:after,
                 object-position: center right;
                 max-height: 500px;
 
-                @media (max-width: 991px) {
+                @media (max-width: 768px) {
                     max-height: 250px;
                 }
             }
