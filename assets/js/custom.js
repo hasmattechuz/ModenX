@@ -40,7 +40,11 @@ function storiesSlider() {
           slidesPerView: 1,
           spaceBetween: 0,
         },
-        769: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        993: {
           slidesPerView: 1.5,
           spaceBetween: 25,
         },
@@ -96,12 +100,16 @@ function coreValueSlider() {
           slidesPerView: 1,
           spaceBetween: 25,
         },
-        769: {
-          slidesPerView: 1,
+        768: {
+          slidesPerView: 2,
           spaceBetween: 25,
         },
         1024: {
           slidesPerView: 1.5,
+          spaceBetween: 25,
+        },
+        1201: {
+          slidesPerView: 2.5,
           spaceBetween: 25,
         },
         2000: {
@@ -127,7 +135,7 @@ function solutioncoreValueSlider() {
           slidesPerView: 1,
           spaceBetween: 25,
         },
-        769: {
+        768: {
           slidesPerView: 2,
           spaceBetween: 25,
         },
@@ -143,6 +151,7 @@ function solutioncoreValueSlider() {
     });
   }
 }
+
 
 function RetailersSlider() {
   if ($(".swiper-retailers").length) {
@@ -625,16 +634,67 @@ const swiper_benefits = new Swiper(".swiper-benefits", {
     draggable: true,
   },
   breakpoints: {
-    768: {
+    0: {
       slidesPerView: 1,
-    },    
+    }, 
     769: {
+      slidesPerView: 1.5,
+    },   
+    1024: {
       slidesPerView: 2.4,
     },
     2000: {
       slidesPerView: 3.5,
     },
   },
+  on: {
+    init: function () {
+      setDescriptionHeights(); // call on init
+    },
+    slideChangeTransitionEnd: function () {
+      setDescriptionHeights(); // call when slide changes
+    },
+    resize: function () {
+      setDescriptionHeights(); // call on resize
+    }
+  }
+});
+
+const swiper_workplace_benefits = new Swiper(".workplace-section .swiper-benefits", {
+  loop: false,
+  slidesPerView: 1,
+  spaceBetween: 20,
+  simulateTouch: true,
+  touchStartPreventDefault: false,  
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    }, 
+    769: {
+      slidesPerView:2,
+    },   
+    1024: {
+      slidesPerView: 2.4,
+    },
+    2000: {
+      slidesPerView: 3.5,
+    },
+  },
+  on: {
+    init: function () {
+      setDescriptionHeights(); // call on init
+    },
+    slideChangeTransitionEnd: function () {
+      setDescriptionHeights(); // call when slide changes
+    },
+    resize: function () {
+      setDescriptionHeights(); // call on resize
+    }
+  }
 });
 
 // About image slider
@@ -821,38 +881,31 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
 // });
 
 
- $('.primary-image-card').on('click', function(e){
+$('.primary-image-card').on('click', function(e){
       e.preventDefault(); // prevent default anchor action\
-
-      setTimeout(function() {
-          setDescriptionHeights();
-        }, 100);
-
  
       const $this = $(this);
-
+ 
       // Add 'active' class to the clicked card
       $(this).addClass('active');
         
       // Remove 'active' class from the *next* sibling card
       $(this).next('.primary-image-card').removeClass('active');
-
+ 
       // Optional: remove 'active' from previous sibling as well if needed
       $(this).prev('.primary-image-card').removeClass('active');
-
+ 
       $('.vision-grid').removeClass('left-active right-active');
-
+ 
     if ($this.index() === 0) {
       $('.vision-grid').addClass('left-active');   
-      setTimeout(function() {
-          setDescriptionHeights();
-        }, 100);    
     } else {
-        $('.vision-grid').addClass('right-active');    
-        setTimeout(function() {
-          setDescriptionHeights();
-        }, 100);     
+      $('.vision-grid').addClass('right-active');    
     }
+ 
+    setTimeout(function() {
+      setDescriptionHeights();
+    }, 400);
 });
 
 // Hover logic

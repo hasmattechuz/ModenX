@@ -66,6 +66,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            @media (max-width:1200px) {
+                min-height: calc(100vh - 100px);
+            }
+            @media (max-width:991px) {
+                min-height: calc(100vh - 280px);
+            }
         }
 
         @media (max-width:991px) {
@@ -207,6 +213,9 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+     @media (max-width: 991px) {
+        min-height: auto;
+     }
     .card{
         @media (max-width: 1200px) {
             grid-template-columns: calc(100% - 80px) 80px;
@@ -742,6 +751,12 @@
 
     .blue-block-inner {
         align-items: flex-start;
+        @media (min-width:992px) and (max-width:1200px) {
+              grid-template-columns: 400px calc(100% -  (410px - var(--gutter)));
+        }
+        @media (min-width:768px) and (max-width:991px) {
+              grid-template-columns: 320px calc(100% - 335px);
+        }
     }
 
     .img-dv img {
@@ -837,6 +852,7 @@
 
     @media only screen and (max-width:1200px) {
         height: 610px;
+        // height: 100%;
     }
 
     @media only screen and (max-width: 567px) {
@@ -1553,6 +1569,9 @@
     @media (max-width: 767px) {
         padding: 0;
     }
+    .news-section {
+        padding-top: var(--gutter70);
+    }
 }
 
 .for-rc-desktop {
@@ -1811,14 +1830,14 @@
     .container-fluid {
         max-width: 100%;
         padding: 0;
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 991px) {
             padding-left: var(--gutter70);
             padding-right: var(--gutter70);
         }
     }
     .content-dv{
         padding-left: var(--gutter70);
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 991px) {
             padding-left: 0;
         }
     }
@@ -1840,16 +1859,17 @@
 
 .stories-inner {
     display: grid;
-    grid-template-columns: calc(30% - var(--gutter)/2) calc(70% - var(--gutter)/2);
+    grid-template-columns: calc(31% - var(--gutter)/2) calc(69% - var(--gutter)/2);
     column-gap: var(--gutter);
 
     @media only screen and (max-width:991px) {
-        grid-template-columns: calc(35% - var(--gutter)/2) calc(65% - var(--gutter)/2);
+        // grid-template-columns: calc(35% - var(--gutter)/2) calc(65% - var(--gutter)/2);
+         grid-template-columns: 100%;
     }
 
-    @media only screen and (max-width:768px) {
-        grid-template-columns: 100%;
-    }
+    // @media only screen and (max-width:768px) {
+    //     grid-template-columns: 100%;
+    // }
 
     .content-dv {
         position: relative;
@@ -1881,8 +1901,7 @@
         @media (max-width: 1200px) {
             margin-top: 69px;
         }
-
-        @media only screen and (max-width:768px) {
+         @media (max-width: 991px) {
             margin-top: 0;
         }
     }
@@ -1890,8 +1909,10 @@
     .btn-dv {
         margin-top: -55px;
         position: relative;
+        margin-left: var(--gutter70);
          @media (max-width:768px) {
             margin-top: var(--mt35);
+            margin-left: 0;
          }
     }
 
@@ -2028,6 +2049,7 @@
         grid-template-columns: 60px calc(100% - 80px);
         gap: var(--gutter30);
         align-items: center;
+        margin-top: auto;
 
         .img-user {
             width: 60px;
@@ -2441,6 +2463,11 @@
                 display: block;
         }
 }
+body.home{
+      .stories-section{
+        display: none;
+    }
+}
 body.home,body.page-homepage-dupicate {
     .for-rc-section{
         padding: calc(var(--p70) + 30px) 0 calc(var(--p70) + 50px);
@@ -2482,6 +2509,7 @@ body.home,body.page-homepage-dupicate {
     }
 
     .contact-sec{
+         padding-top: calc(var(--p70) + 50px);
         h2{
             .img-stroke-contact{
                 display: block;
@@ -2530,9 +2558,7 @@ body.home,body.page-homepage-dupicate {
     .img-stroke3-r-mobile {
         display: block;
     }
-    .stories-section{
-        display: none;
-    }
+  
 
     .for-rc-mobile-inner{       
         &:first-child{
@@ -2551,4 +2577,9 @@ body.home,body.page-homepage-dupicate {
 .grecaptcha-badge{
     bottom: 64px !important;   
     z-index: 9;
+}
+.page-homepage-dupicate{
+    .news-section{
+        display:  block !important;
+    }
 }
