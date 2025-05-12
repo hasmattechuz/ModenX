@@ -797,24 +797,61 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
     e.preventDefault();
   });
 });
-$('.primary-image-card').on('click', function(e) {
-    e.preventDefault();
 
-    const $this = $(this);
-    const isActive = $this.hasClass('active');
 
-    // Remove all active classes
-    $('.primary-image-card').removeClass('active');
-    $('.vision-grid').removeClass('left-active right-active');
+// $('.primary-image-card').on('click', function(e) {
+//     e.preventDefault();
 
-    if (!isActive) {
-        $this.addClass('active');
+//     const $this = $(this);
+//     const isActive = $this.hasClass('active');
 
-        if ($this.index() === 0) {
-            $('.vision-grid').addClass('left-active');
-        } else {
-            $('.vision-grid').addClass('right-active');
-        }
+//     // Remove all active classes
+//     $('.primary-image-card').removeClass('active');
+//     $('.vision-grid').removeClass('left-active right-active');
+
+//     if (!isActive) {
+//         $this.addClass('active');
+
+//         if ($this.index() === 0) {
+//             $('.vision-grid').addClass('left-active');
+//         } else {
+//             $('.vision-grid').addClass('right-active');
+//         }
+//     }
+// });
+
+
+ $('.primary-image-card').on('click', function(e){
+      e.preventDefault(); // prevent default anchor action\
+
+      setTimeout(function() {
+          setDescriptionHeights();
+        }, 100);
+
+ 
+      const $this = $(this);
+
+      // Add 'active' class to the clicked card
+      $(this).addClass('active');
+        
+      // Remove 'active' class from the *next* sibling card
+      $(this).next('.primary-image-card').removeClass('active');
+
+      // Optional: remove 'active' from previous sibling as well if needed
+      $(this).prev('.primary-image-card').removeClass('active');
+
+      $('.vision-grid').removeClass('left-active right-active');
+
+    if ($this.index() === 0) {
+      $('.vision-grid').addClass('left-active');   
+      setTimeout(function() {
+          setDescriptionHeights();
+        }, 100);    
+    } else {
+        $('.vision-grid').addClass('right-active');    
+        setTimeout(function() {
+          setDescriptionHeights();
+        }, 100);     
     }
 });
 
