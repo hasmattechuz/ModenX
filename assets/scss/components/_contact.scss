@@ -34,6 +34,7 @@
 
         span {
             position: relative;
+            display: block;
 
             @media only screen and (max-width: 567px) {
                 position: static;
@@ -105,6 +106,8 @@
         }
 
         .upload-file {
+            background: var(--mx-grey);
+            border-radius: 50px;
 
             &::after {
                 content: "";
@@ -125,15 +128,7 @@
 
             @media only screen and (max-width: 991px) {
                 min-height: 48px;
-            }
-
-            .wpcf7-form-control-wrap {
-                span {
-                    position: absolute;
-                    right: 60px;
-                    top: 58px;
-                }
-            }
+            }           
 
             label {
                 position: absolute;
@@ -147,23 +142,31 @@
                 }
             }
 
-            .wpcf7-not-valid-tip {
-                top: auto;
-                background: #f4f4f4;
-                bottom: 17px;
-                z-index: 1;
-            }
+            // .wpcf7-not-valid-tip {
+            //     top: auto;
+            //     background: #f4f4f4;
+            //     bottom: 17px;
+            //     z-index: 1;
+            // }
 
             span[style="margin-left: 10px;"] {
+                position: absolute;
+                right: 60px;
+                top: 58px;
                 white-space: nowrap;
                 overflow: hidden;
                 width: calc(100% - 87px);
                 text-overflow: ellipsis;
-                top: 17px;
-                left: 13px;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 27px;
                 right: auto;
                 background: #f4f4f4;
                 z-index: 9;
+                 margin-left: 0 !important;
+                 @media only screen and (max-width: 991px) {
+                    left: 12px;  
+                }
             }
         }
 
@@ -198,19 +201,27 @@
 
         [type="file"] {
             font-size: 0;
-            line-height: 26px;
+            line-height: 0;
+            padding: 0;
             position: absolute;
             width: 100%;
             height: 100%;
             inset: 0;
+            appearance: none;          /* Reset default styling in Firefox */
+            -moz-appearance: none;     /* Specifically for Firefox */
+            -webkit-appearance: none; 
+            opacity: 0;
+            z-index: 99;
+            cursor: pointer;
 
-            &::-webkit-file-upload-button {
+            &::-webkit-file-upload-button{
                 appearance: none;
                 -webkit-appearance: none;
                 visibility: hidden;
                 border: none;
                 /* Optional to fully hide */
-            }
+                opacity: 0;
+            }                       
 
         }
 
@@ -248,7 +259,7 @@
         span.wpcf7-not-valid-tip {
             position: absolute;
             bottom: -24px;
-            left: 28px;
+            left: 27px;
             color: var(--mx-blue);
             font-size: 12px;
 
@@ -293,7 +304,7 @@
     }
 
     .wpcf7-response-output {
-        color: #009806;
+        color: var(--mx-blue);
         font-size: 14px;
         line-height: 1.4;
         font-weight: 500;

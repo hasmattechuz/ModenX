@@ -1133,7 +1133,7 @@
     .update-inner {
         grid-template-columns: calc(40% - var(--gutter) / 2) calc(60% - var(--gutter) / 2);
 
-        @media only screen and (max-width: 567px) {
+        @media only screen and (max-width: 991px) {
             grid-template-columns: 100%
         }
     }

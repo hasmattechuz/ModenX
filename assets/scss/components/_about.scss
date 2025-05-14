@@ -162,12 +162,8 @@
 .swiper-core-values {
     .stories-card {
         .quotes-img {
-            width: 80px;
-            height: 70px;
-            @media only screen and (max-width: 1300px) {
-                width: 60px;
-                height: 50px;
-            }
+           width: 60px;
+            height: 50px;            
 
             img {
                 width: 100%;
@@ -780,7 +776,7 @@
     margin-bottom: var(--p70);
     .swiper-slide {
         background-color: var(--mx-grey);
-        height: 120px;
+        height: 100px;
         border-radius: 30px;
          @media only screen and (max-width: 767px) {
              border-radius: 20px;
@@ -797,7 +793,7 @@
             img {
                 max-width: 200px;
                 @media only screen and (max-width: 767px) {
-                        max-width: 80%;
+                    max-width: 60%;
                 }
             }
         }
@@ -1400,10 +1396,75 @@
                 bottom: -9px;
             }
         }
-    }
+    } 
+    
+    .solution-update-section {
+            @media only screen and (max-width: 991px) {
+                padding-bottom: calc(var(--gutter70) + 120px);
+            }
+            .desc-global{
+                @media only screen and (max-width: 991px) {
+                    margin-bottom: 0;
+                }
+            }
+            .container-fluid {
+                padding-right: 0;
+
+                @media only screen and (max-width: 991px) {
+                    padding-right: var(--gutter70);
+                }
+            }
+            .swiper-scrollbar{
+                    width: calc(100% - var(--gutter70));
+                    @media (max-width:768px) {
+                        width: 100%;
+                    }
+                }
+            
+
+            .update-inner {
+                grid-template-columns: calc(40% - var(--gutter) / 2) calc(60% - var(--gutter) / 2);
+
+                @media only screen and (max-width: 991px) {
+                    grid-template-columns: 100%
+                }
+                .content-dv{
+                    @media only screen and (max-width: 991px) {
+                        position: static;
+                    }
+                }
+                .btn-dv{
+                    @media only screen and (max-width: 991px) {
+                        bottom: var(--p70);
+                        left: var(--gutter70);
+                    }
+                    @media only screen and (max-width: 567px) {
+                        width: calc(100% - (2 * var(--gutter70)));
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            .content-dv {
+                max-width: 600px;
+            }
+
+            .img-stroke8 {
+                top: 54px;
+                left: 155px;
+                width: 300px;
+
+                @media only screen and (max-width: 1024px) {
+                    top: 0;
+                    left: 65px;
+                    width: 220px;
+                }
+            }
+        }
 } 
 
-.page-about-us{
+.page-about-us,.page-about-us-duplicate{
     .update-section {
         background: var(--mx-grey);
         padding: var(--p70) 0;

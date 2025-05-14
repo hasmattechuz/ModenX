@@ -105,10 +105,6 @@ function coreValueSlider() {
           spaceBetween: 25,
         },
         1024: {
-          slidesPerView: 1.5,
-          spaceBetween: 25,
-        },
-        1201: {
           slidesPerView: 2.5,
           spaceBetween: 25,
         },
@@ -579,7 +575,10 @@ const swiper_solution_update = new Swiper(".swiper-solution-update", {
     320: {
       slidesPerView: 1,
     },
-    769: {
+    768: {
+      slidesPerView:2,
+    },
+    992: {
       slidesPerView: 1.5,
     },
   },
@@ -622,81 +621,118 @@ if ($(".swiper-challenges").length){
 });
 }
 
-
-const swiper_benefits = new Swiper(".swiper-benefits", {
-  loop: false,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  simulateTouch: true,
-  touchStartPreventDefault: false,  
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    }, 
-    769: {
-      slidesPerView: 1.5,
-    },   
-    1024: {
-      slidesPerView: 2.4,
+// const swiper_benefits = new Swiper(".swiper-benefits", {
+//   loop: false,
+//   slidesPerView: 1,
+//   spaceBetween: 20,
+//   simulateTouch: true,
+//   touchStartPreventDefault: false,  
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//     draggable: true,
+//   },
+//   breakpoints: {
+//     0: {
+//       slidesPerView: 1,
+//     }, 
+//     769: {
+//       slidesPerView: 1.5,
+//     },   
+//     1024: {
+//       slidesPerView: 2.4,
+//     },
+//     2000: {
+//       slidesPerView: 3.5,
+//     },
+//   },
+//   on: {
+//     init: function () {
+//       setDescriptionHeights(); // call on init
+//     },
+//     slideChangeTransitionEnd: function () {
+//       setDescriptionHeights(); // call when slide changes
+//     },
+//     resize: function () {
+//       setDescriptionHeights(); // call on resize
+//     }
+//   }
+// });
+if ($(".workplace-section .swiper-benefits").length){
+  const swiper_workplace_benefits = new Swiper(".workplace-section .swiper-benefits", {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    simulateTouch: true,
+    touchStartPreventDefault: false,  
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
     },
-    2000: {
-      slidesPerView: 3.5,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      }, 
+      769: {
+        slidesPerView:2,
+      },   
+      1024: {
+        slidesPerView: 2.4,
+      },
+      2000: {
+        slidesPerView: 3.5,
+      },
     },
-  },
-  on: {
-    init: function () {
-      setDescriptionHeights(); // call on init
-    },
-    slideChangeTransitionEnd: function () {
-      setDescriptionHeights(); // call when slide changes
-    },
-    resize: function () {
-      setDescriptionHeights(); // call on resize
+    on: {
+      init: function () {
+        setDescriptionHeights(); // call on init
+      },
+      slideChangeTransitionEnd: function () {
+        setDescriptionHeights(); // call when slide changes
+      },
+      resize: function () {
+        setDescriptionHeights(); // call on resize
+      }
     }
-  }
-});
-
-const swiper_workplace_benefits = new Swiper(".workplace-section .swiper-benefits", {
-  loop: false,
-  slidesPerView: 1,
-  spaceBetween: 20,
-  simulateTouch: true,
-  touchStartPreventDefault: false,  
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    }, 
-    769: {
-      slidesPerView:2,
-    },   
-    1024: {
-      slidesPerView: 2.4,
+  });
+}
+if ($(".career-benefits-section .swiper-benefits-reward").length){
+  const swiper_career_benefits = new Swiper(".career-benefits-section .swiper-benefits-reward", {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    simulateTouch: true,
+    touchStartPreventDefault: false,  
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
     },
-    2000: {
-      slidesPerView: 3.5,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      }, 
+      769: {
+        slidesPerView: 1.5,
+      },   
+      1024: {
+        slidesPerView: 2.4,
+      },
+      2000: {
+        slidesPerView: 3.5,
+      },
     },
-  },
-  on: {
-    init: function () {
-      setDescriptionHeights(); // call on init
-    },
-    slideChangeTransitionEnd: function () {
-      setDescriptionHeights(); // call when slide changes
-    },
-    resize: function () {
-      setDescriptionHeights(); // call on resize
+    on: {
+      init: function () {
+        setDescriptionHeights(); 
+      },
+      slideChangeTransitionEnd: function () {
+       setDescriptionHeights(); 
+      },
+      resize: function () {
+        setDescriptionHeights(); 
+      }
     }
-  }
-});
-
+  });
+}
 // About image slider
 var swiper_imageSlider = new Swiper(".imageSlider", {
   slidesPerView: 4,

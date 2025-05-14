@@ -1337,7 +1337,7 @@
             border-radius: 20px;
         }
         @media only screen and (max-width: 1024px) {
-            opacity: 1;
+            opacity: 1 !important;
         }
     }
 
@@ -1397,8 +1397,9 @@
         padding: 0 var(--p35);
         transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);   
         @media only screen and (max-width: 1024px) {
-            transform: translateY(0);
-            --p35: 20px;
+            transform: none !important;
+            --p35: 20px !important;
+            transition: none;
         }          
 
         p {
@@ -1570,7 +1571,57 @@
         padding: 0;
     }
     .news-section {
-        padding-top: var(--gutter70);
+        padding-top: calc(var(--p70) + 50px);
+        @media only screen and (max-width:991px) {
+            padding-top: var(--p70);
+        }
+        @media only screen and (max-width:767px) {
+            padding-bottom: 20px;
+        }
+        .img-stroke6{
+            width: 250px;
+            height: auto;
+            top: -44px;
+            left: 85px;
+            @media only screen and (max-width: 1200px) {
+                width: 180px;               
+                top: -32px;
+                left: 58px;
+            }
+            @media only screen and (max-width:767px) {
+                width: 130px;
+                top: -29px;
+                left: 110px;
+            }
+            @media only screen and (max-width:420px) {
+                width: 100px;
+                top: -20px;
+                left: 114px;
+            }
+            
+        }
+        .img-stroke3_5{
+            top: -430px;
+            @media only screen and (max-width: 1200px) {
+                top: -340px;
+                right: -30px;
+                width: 500px !important;
+                height: 500px;
+            }
+            @media only screen and (max-width:991px) {
+                top:-160px;
+                right: -72px;
+                width: 200px !important;
+                height: 200px;
+                transform: rotate(90deg);
+            }
+            @media only screen and (max-width:420px) {
+                top: -110px;
+                right: -43px;
+                width: 120px !important;
+                height: 120px;
+            }
+        }
     }
 }
 
@@ -1702,7 +1753,7 @@
         position: relative;
 
         h2 {
-            margin-bottom: 15px;
+            margin-bottom: var(--mb35);
         }
     }
 
@@ -2017,11 +2068,8 @@
     row-gap: 25px;
     border-radius: 30px;
     background: var(--white);
-    grid-template-rows: 70px auto;
+    grid-template-rows: 50px auto;
     height: 100%;
-    @media (max-width: 1700px) {
-        grid-template-rows: 50px auto;        
-    }
     @media (max-width: 1024px) {
         border-radius: 20px;
     }
@@ -2525,6 +2573,14 @@ body.home,body.page-homepage-dupicate {
     }
 
     .update-section {
+        .img-stroke3_4{
+            @media only screen and (max-width: 1200px) {
+                width: 440px !important;
+                height: 440px;
+                top: -165px;
+                right: -75px;
+            }
+        }
         .img-stroke8 {
             top: -22px;
             left: -45px;
@@ -2571,6 +2627,37 @@ body.home,body.page-homepage-dupicate {
              position: relative;
         }
     
+    }
+    .career-section-testi{
+        .content-dv {
+            .img-stroke7{
+                left: 195px;
+                top: 33px;
+                @media only screen and (max-width: 1200px) {
+                    left: 105px;
+                    top: 21px;
+                }
+                 @media only screen and (max-width: 991px) {
+                    left: 83px;
+                    top: 27px;
+                    width: 120px;
+                }
+            }
+        }
+        .stories-inner{
+            @media (min-width: 992px) and (max-width: 1200px) {
+                grid-template-columns: calc(36% - var(--gutter) / 2) calc(64% - var(--gutter) / 2);
+            }
+            .btn-dv{
+                @media (min-width: 992px) and (max-width: 1024px) {
+                    width: auto;
+                }
+                @media only screen and (max-width: 991px) {
+                    margin-top: 30px;
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
 
