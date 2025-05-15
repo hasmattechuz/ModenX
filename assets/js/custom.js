@@ -735,6 +735,7 @@ if ($(".career-benefits-section .swiper-benefits-reward").length){
 }
 // About image slider
 var swiper_imageSlider = new Swiper(".imageSlider", {
+  loop: true,
   slidesPerView: 4,
   spaceBetween: 35,
   pagination: {
@@ -744,6 +745,10 @@ var swiper_imageSlider = new Swiper(".imageSlider", {
    navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+   autoplay: {
+    delay: 3000, // 3 seconds between slides
+    disableOnInteraction: false, // keeps autoplay active after user interactions
   },
   breakpoints: {
      0: {

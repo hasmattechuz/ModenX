@@ -3952,9 +3952,8 @@ footer .footer-mobile {
 }
 @media only screen and (max-width: 1024px) {
   .primary-image-card .text-dv {
-    transform: none !important;
-    --p35: 20px !important;
-    transition: none;
+    transform: none;
+    --p35: 20px;
   }
 }
 .primary-image-card .text-dv p {
@@ -7074,9 +7073,15 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
   top: 16px;
   z-index: -1;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1200px) {
   .images-block .img-stroke {
-    left: 0;
+    right: -156px;
+    top: 6px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .images-block .img-stroke {
+    left: 15px;
     height: auto;
     top: 31px;
     width: 250px;
@@ -7088,7 +7093,7 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
   object-fit: cover;
   display: block;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .images-block .img-stroke .desk {
     display: none;
   }
@@ -7096,13 +7101,22 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
 .images-block .img-stroke .mobile {
   display: none;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .images-block .img-stroke .mobile {
     display: block;
   }
 }
+.images-block .img-stroke .mobile-partner {
+  display: none;
+}
 .images-block.partner-slider {
   margin-bottom: 0;
+  padding-bottom: var(--p70);
+}
+@media (max-width: 991px) {
+  .images-block.partner-slider h2 {
+    max-width: 370px;
+  }
 }
 .images-block.partner-slider .img-stroke {
   width: 252px;
@@ -7113,7 +7127,7 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
   bottom: -30px;
   z-index: -1;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .images-block.partner-slider .img-stroke {
     width: 142px;
     height: auto;
@@ -7121,6 +7135,19 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
     right: auto;
     top: auto;
     bottom: -29px;
+  }
+}
+.images-block.partner-slider .img-stroke .mobile {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  .images-block.partner-slider .img-stroke .mobile {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .images-block.partner-slider .img-stroke .mobile-partner {
+    display: block;
   }
 }
 .images-block + .contact-sec {
@@ -7666,22 +7693,39 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
   height: 100%;
 }
 
+@media only screen and (min-width: 568px) {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow, .page-about-us-duplicate .contact-sec h2 .down-arrow {
+    top: 26px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow, .page-about-us-duplicate .contact-sec h2 .down-arrow {
+    top: 18px;
+    left: 262px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow, .page-about-us-duplicate .contact-sec h2 .down-arrow {
+    left: 263px;
+    top: 5px;
+  }
+}
 @media only screen and (min-width: 1201px) {
-  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow, .page-about-us-duplicate .contact-sec h2 .down-arrow {
     top: 10px;
     width: 580px;
     left: 406px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow, .page-about-us-duplicate .contact-sec h2 .down-arrow {
     top: -5px;
     width: 740px;
     left: 400px;
   }
 }
 @media only screen and (min-width: 1600px) {
-  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow {
+  .about-contact h2 .down-arrow, .page-about-us .contact-sec h2 .down-arrow, .page-about-us-duplicate .contact-sec h2 .down-arrow {
     top: -22px;
     left: 401px;
     width: 900px;
@@ -7823,7 +7867,7 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
 .page-about-us .update-section .container-fluid, .page-about-us-duplicate .update-section .container-fluid {
   padding-right: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .page-about-us .update-section .container-fluid, .page-about-us-duplicate .update-section .container-fluid {
     padding-right: var(--gutter70);
   }
@@ -7839,7 +7883,7 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
     grid-template-columns: calc(38% - var(--gutter) / 2) calc(62% - var(--gutter) / 2);
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .page-about-us .update-section .update-inner, .page-about-us-duplicate .update-section .update-inner {
     grid-template-columns: 100%;
   }
@@ -7847,7 +7891,7 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
 .page-about-us .update-section .update-inner .content-dv, .page-about-us-duplicate .update-section .update-inner .content-dv {
   max-width: 550px;
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .page-about-us .update-section .update-inner .content-dv h2, .page-about-us-duplicate .update-section .update-inner .content-dv h2 {
     max-width: 300px;
   }
@@ -7898,7 +7942,7 @@ body.home .career-section-testi .content-dv .img-stroke7, body.page-homepage-dup
     height: auto;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 991px) {
   .page-about-us .update-section .img-stroke8, .page-about-us-duplicate .update-section .img-stroke8 {
     left: 100px;
   }

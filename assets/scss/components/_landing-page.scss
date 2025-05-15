@@ -1397,9 +1397,9 @@
         padding: 0 var(--p35);
         transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);   
         @media only screen and (max-width: 1024px) {
-            transform: none !important;
-            --p35: 20px !important;
-            transition: none;
+            transform: none;
+            --p35: 20px;
+            // transition: none;
         }          
 
         p {
