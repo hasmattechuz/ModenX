@@ -552,7 +552,6 @@ input[type="checkbox"]+label:before,
     padding-left: 10px;
     // z-index: 99;
     position: relative;
-    pointer-events: none;
 
     @media only screen and (max-width: 991px) {
         padding-left: 10px
@@ -996,10 +995,11 @@ input[type="checkbox"]:checked+label:after,
         height: 100%;
         width: 100%;
         display: flex;
-        align-items: center;
+        // align-items: center;
         flex-wrap: wrap;
         padding: 0 0 80px;
         row-gap: 20px;
+        flex-direction: column;
         @media (min-width: 769px) and (max-width: 1200px) { 
             padding: 0 0 100px;
          }
@@ -1020,6 +1020,9 @@ input[type="checkbox"]:checked+label:after,
                 --headingLH1: 62px;
                 width: 50%;
             }
+        }
+        p + p{
+            margin-top: -15px;
         }
 
        
@@ -1060,6 +1063,9 @@ input[type="checkbox"]:checked+label:after,
             @media (max-width: 768px) {
                 max-height: 250px;
             }
+        }
+        lottie-player{
+            display: none;
         }
 
         @media (max-width: 991px) {
@@ -1267,28 +1273,75 @@ address {
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	padding: 200px 0 60px;
+	padding: 50px 0 60px;
 	background: var(--mx-blue);
 	background-size: cover;
-    min-height: calc(100vh - 50px);
+    min-height:calc(100vh - 50px);
     @media only screen and (max-width: 991px) {
         min-height: calc(100vh - 136px);
+        padding-top: 20vh;
+        overflow: hidden;
     }
 }
 .error-404 {
 	text-align: center;
 	color: var(--white);
-	h2 {
-		max-width: 610px;
-		margin: 0 auto 30px;
+    
+    h1{       
+        font-weight: 700;
+        line-height: 1;
+        font-size: 110px;
+        color: #00000080;
+        text-align: center;
+        @media only screen and (max-width: 991px) {
+            font-size: 40px;
+        }
+    }
+    h2 {
+		margin: 0 auto 5px;        
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1;
+        @media only screen and (max-width: 991px) {
+            font-size: 40px;
+        }
 	}
+    p{        
+        font-weight: 400;
+        color: var(--white);
+        text-align: center;
+         @media only screen and (max-width: 991px) {
+            padding: 0 20px;
+         }
+    }
+    img{
+        @media only screen and (max-width: 767px) {
+            scale: 2;
+            padding: 5vh 0;
+        }
+    }
+    .newimg {
+        @media only screen and (max-width: 767px) {
+            scale: 1.6;
+            padding: 40px 0;
+            transform: translateX(-2px);
+        }
+    }
+    .error-p{
+        margin-top: 15px;
+        @media only screen and (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+    }
+	
 	a {
 		color: var(--mx-yellow);
 		position: relative;
+        font-weight: 700;
 		&:before {
 			content: '';
 			position: absolute;
-			bottom: -3px;
+			bottom: 1px;
 			left: 0;
 			width: 100%;
 			transition: all 0.4s ease-in-out;
@@ -1319,7 +1372,7 @@ address {
 
 /* End Error 404 Section */
 
-.privacy-policy{
+.privacy-policy,.page-gdpr-compliance,.page-terms-of-use,.page-refund-policy{
      .full-width{
          @media only screen and (max-width: 991px) {
             padding-bottom: 0;
@@ -1330,8 +1383,20 @@ address {
             min-height: auto;
             max-height: inherit;
             @media only screen and (max-width: 991px) {
+                min-height: auto;
+                max-height: inherit;
+                max-width: inherit;
+                margin-left: -20px;
                 width: calc(100% + 40px);
+                border-radius: 0;
+                padding: var(--p50) var(--gutter70);
+                margin-top: 20px;
             }
+        }
+        .form{
+             @media only screen and (max-width: 991px) {
+                    grid-template-columns: 100%;
+             }
         }
         
      }
@@ -1350,3 +1415,120 @@ address {
         }
     }
 }
+
+.page-id-18 {
+    .inner-banner-section.center-align .banner-img img{
+        display: none;
+    }
+    .inner-banner-section .banner-img lottie-player{
+        display: block;
+    }
+}
+
+.page-homepage-dupicate .home-rc-desktop{
+    .img-stroke3{
+        img{
+            display: none;
+        }
+    }
+}
+
+.search-result-section{
+    min-height: calc(100vh - 82px);
+    padding: 160px 0 0;
+    @media only screen and (max-width: 991px) {
+       
+        min-height: calc(100vh - 135px);
+        min-height: calc(100dvh - 135px);
+    }
+    @media only screen and (max-width: 767px) {
+         padding: 100px 0 0;
+    }
+    .section-title{
+        margin-bottom: 30px;
+        @media only screen and (max-width: 991px) {
+            margin-bottom: 20px;
+        }
+        h2{
+            font-size: 30px;
+           @media only screen and (max-width: 767px) {
+                font-size: 24px;
+            }
+            b{
+                display: block;
+                color: var(--mx-blue);
+            }
+        }
+    }
+    .search-result-list{
+        border-top: 1px solid var(--mx-black);
+        padding: 40px 0;   
+        @media only screen and (max-width: 991px) {               
+            padding: 20px 0;
+        }
+        h4{           
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 1.5;
+            color: var(--mx-black);
+            @media only screen and (max-width: 767px) {
+                font-size: 18px;
+            }
+        }
+    }
+    .search-result-link{
+        display: grid;
+        grid-template-columns: 1fr 30px;
+        align-items: flex-start;
+         .arrow-dv{
+           display: flex;
+            margin-top: 10px;
+           img{
+                transition: 0.3s ease-in-out;
+            }
+         } 
+        &:hover{
+            .arrow-dv{
+                img{
+                    transform: translateX(10px);
+                }               
+            }
+        }
+    }
+}
+
+.page-id-1194{
+    .milestone{
+        .img-stroke19{
+            img{
+                display: none;
+            }
+        }
+    }
+    .for-rc-section .img-stroke3, .how-it-began .section-stroke,.stroke-img-bottom{
+        img{
+            display: none;
+        }
+    }
+    .how-it-began .section-stroke{
+        left: -100px;
+    }
+    .full-width .stroke-img-bottom{
+            bottom: -226px;
+    }
+    .inner-banner-section.center-align .banner-img img{
+        display: none;
+    }
+    .inner-banner-section .banner-img lottie-player{
+        display: block;
+    }
+    .contact-page-section{
+        .down-arrow{
+            top: -20px !important;
+            width: 390px !important;
+            left: 391px !important;
+            transform: rotate(-10deg);
+            img{display: none;}
+        }
+    }
+} 

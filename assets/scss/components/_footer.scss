@@ -195,8 +195,7 @@ footer {
             align-items: center;
             color: var(--mx-yellow);
             line-height: 1;
-            display: none;
-            @media (max-width: 991px) {
+            @media only screen and (max-width: 991px) {
                 display: none;
             }
             strong{
@@ -240,6 +239,14 @@ footer {
                     }
                 }
             }
+            .current-menu-item{
+                a{
+                    &::before{
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
         }
         .footer-list-ul{
             display: flex;
@@ -263,7 +270,11 @@ footer {
         }
         .footer-left{
             display: flex;
-            align-items: center;
+            align-items: center;           
+            justify-content: center;
+            @media only screen and (max-width: 991px) {
+                 flex-direction: column;
+            }
         }
 	.footer-bottom {
         overflow: hidden;
