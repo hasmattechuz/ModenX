@@ -1434,7 +1434,7 @@ address {
 }
 
 .search-result-section{
-    min-height: calc(100vh - 82px);
+    min-height: calc(100vh - 50px);
     padding: 160px 0 0;
     @media only screen and (max-width: 991px) {
        
@@ -1460,7 +1460,7 @@ address {
             }
         }
     }
-    .search-result-list{
+    .search-result-row{
         border-top: 1px solid var(--mx-black);
         padding: 40px 0;   
         @media only screen and (max-width: 991px) {               
@@ -1474,6 +1474,10 @@ address {
             @media only screen and (max-width: 767px) {
                 font-size: 18px;
             }
+        }
+        p{
+            color: var(--mx-black);
+            display: none;
         }
     }
     .search-result-link{
@@ -1532,3 +1536,4 @@ address {
         }
     }
 } 
+
